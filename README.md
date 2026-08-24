@@ -1,19 +1,79 @@
 # Geekist Architecture Skills
 
-Portable agent skills for reviewing, creating and incrementally migrating backend and frontend codebases towards feature-first, package-shaped architecture.
+[![Licence: MIT](https://img.shields.io/badge/Licence-MIT-blue.svg)](LICENSE)
+
+Portable agent skills for reviewing, designing and incrementally migrating backend and frontend codebases towards feature-first, package-shaped architecture.
+
+The playbooks help coding agents make architecture decisions about ownership, public APIs, orchestration, dependencies and shared infrastructure. They are framework-neutral and adapt to the repository in front of them rather than imposing a fixed folder taxonomy.
 
 Published by [Geekist](https://geekist.co).
 
-## Skills
+## Install
 
-- `backend-slice-architecture`: feature-owned backend behaviour, explicit public surfaces, thin application orchestration and earned shared infrastructure.
-- `frontend-slice-architecture`: feature-owned UI and state, thin scene composition, explicit public surfaces and earned shared components and hooks.
+Install both architecture skills from the public repository:
 
-The playbooks are intentionally framework-neutral. They describe ownership and dependency boundaries without imposing a particular framework, package manager or repository taxonomy.
+```sh
+npx skills add theGeekist/skills
+```
 
-## Install locally from the canonical checkout
+The repository contains no MCP server, executable runtime or network dependency. Each skill is portable Markdown with YAML frontmatter, plus optional client metadata.
 
-Keep one Git checkout as the local source of truth and link its skill directories into each compatible client. Do not maintain copied client-specific variants.
+## Included architecture skills
+
+### Backend slice architecture
+
+`backend-slice-architecture` applies a capability-first backend architecture. Behaviour starts inside an owned capability, cross-capability workflows remain explicit, and shared infrastructure is introduced only when reuse has been earned.
+
+Use it to:
+
+- review service and package boundaries;
+- design explicit public APIs and prevent deep imports;
+- separate capability rules from application orchestration;
+- adapt capability ownership to `apps/`, `packages/`, `libs/`, modules or equivalent project roots;
+- plan incremental migration through code already being changed.
+
+### Frontend slice architecture
+
+`frontend-slice-architecture` applies a feature-first frontend architecture. UI, state and hooks begin inside an owned feature, scenes stay thin, and shared components or hooks emerge only after genuine reuse.
+
+Use it to:
+
+- review feature ownership and scene composition;
+- keep feature internals private behind explicit public surfaces;
+- separate route-level orchestration from feature behaviour;
+- support web, native and multi-platform frontends without prescribing a framework;
+- migrate existing applications by touch instead of reorganising them wholesale.
+
+## Architecture model
+
+Both skills share the same operating model:
+
+| Concern | Default home | Promoted home | Composition surface |
+| --- | --- | --- | --- |
+| Backend behaviour | Owned capability | Agnostic infrastructure or shared service | Application workflow or use case |
+| Frontend behaviour | Owned feature | Agnostic component, hook or service | Scene, page or route |
+
+The default direction of travel is local to shared. Early duplication is acceptable. Promotion happens when repetition is visible, the abstraction is stable and sharing improves correctness or reduces meaningful friction.
+
+`Package-shaped` means independently testable, with an explicit public surface and enforceable dependency boundaries. It does not require a `package.json`, a publishable package or a particular top-level directory.
+
+## Use with an agent
+
+Invoke a skill explicitly in clients that support named skills:
+
+```text
+Use $backend-slice-architecture to review this service boundary and propose the smallest migration-by-touch.
+```
+
+```text
+Use $frontend-slice-architecture to review this feature and scene composition without changing the framework.
+```
+
+Clients that support automatic skill selection can also select either playbook from its description.
+
+## Install from a canonical local checkout
+
+For active development, keep one Git checkout as the local source of truth and link its skill directories into compatible clients. This avoids copied, client-specific variants.
 
 ```sh
 git clone https://github.com/theGeekist/skills.git
@@ -28,9 +88,9 @@ The linker uses:
 - `~/.claude/skills` for Claude Code;
 - `~/.gemini/antigravity-cli/skills` when Antigravity CLI is installed.
 
-It leaves correct links untouched and fails if a destination already exists. Use `--adopt` only after reviewing the conflict; adoption moves the existing entry to a timestamped backup before creating the link.
+Correct links are left untouched. Existing destinations cause the command to fail safely. Use `--adopt` only after reviewing a conflict; it moves the existing entry to a timestamped backup before creating the link.
 
-### Update
+### Update the local checkout
 
 ```sh
 ./scripts/update-local.sh --dry-run
@@ -38,16 +98,6 @@ It leaves correct links untouched and fails if a destination already exists. Use
 ```
 
 The updater refuses dirty or detached checkouts, pulls with `--ff-only`, runs the official GitHub Agent Skills validator when available, and verifies the client links.
-
-### Consumer installation
-
-External users who do not need a source checkout can install the published release:
-
-```sh
-gh skill install theGeekist/skills
-```
-
-Product-specific metadata lives under `agents/` and does not change the portable `SKILL.md` instructions.
 
 ## Repository structure
 
@@ -68,33 +118,19 @@ scripts/
   update-local.sh
 ```
 
-The plugin and skill nesting is intentional distribution structure, not domain taxonomy. Each skill keeps its instructions at the root and uses only the client metadata directory defined by the Agent Skills conventions. Repository automation is isolated under `scripts/` because it operates across skills and does not belong to either skill package.
-
-## Use
-
-Invoke either skill explicitly when supported:
-
-```text
-Use $backend-slice-architecture to review this service boundary and propose the smallest migration-by-touch.
-```
-
-```text
-Use $frontend-slice-architecture to review this feature and scene composition without changing the framework.
-```
-
-Both skills can also be selected automatically from their descriptions by clients that support implicit skill invocation.
+The plugin and skill nesting is distribution structure, not domain taxonomy. Each skill keeps its instructions at its root. Repository-wide automation stays under `scripts/` because it operates across both skill packages.
 
 ## Compatibility
 
-The core content is plain Markdown with YAML frontmatter. The optional `agents/openai.yaml` files provide Codex-facing display metadata. No MCP server, executable, network access or external dependency is required.
+The skills follow the portable Agent Skills shape and include optional Codex-facing display metadata under `agents/openai.yaml`. They can be used by compatible agent clients without changing the core instructions.
 
 ## Publishing
 
-This repository is the canonical public source. Registry-specific records should point back here rather than carrying edited copies. See [PUBLISHING.md](PUBLISHING.md) for the release checklist and manual account steps.
+This repository is the canonical public source. Registry records should point back to an immutable release rather than carry edited copies. See [PUBLISHING.md](PUBLISHING.md) for the release checklist and account-specific steps.
 
 ## Contributing and security
 
-See [CONTRIBUTING.md](CONTRIBUTING.md) for proposed changes and [SECURITY.md](SECURITY.md) for private vulnerability reports.
+See [CONTRIBUTING.md](CONTRIBUTING.md) to propose changes and [SECURITY.md](SECURITY.md) to report vulnerabilities privately.
 
 ## Licence
 
