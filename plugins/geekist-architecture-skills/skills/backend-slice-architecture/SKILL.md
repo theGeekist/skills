@@ -1,6 +1,6 @@
 ---
 name: backend-slice-architecture
-description: Use when creating, refactoring, reviewing, or incrementally migrating backend architecture towards a feature-first, package-shaped model with explicit public APIs, a clear orchestration surface, and earned shared infrastructure.
+description: Use when creating, refactoring, reviewing, or incrementally migrating backend architecture towards a capability-first, package-shaped model with explicit public APIs, clear orchestration, and earned shared infrastructure across apps, packages, libraries, modules, or equivalent project roots.
 license: MIT
 metadata:
   author: Geekist
@@ -17,50 +17,55 @@ Inspect the repository's existing conventions and constraints before proposing p
 
 ## What this architecture is
 
-Use a feature-first, package-shaped backend where work starts local inside a feature/capability and is promoted outward only when it becomes genuinely agnostic.
+Use a capability-first, package-shaped backend where behaviour starts inside an owned capability boundary and is promoted outward only when it becomes genuinely agnostic.
 
-Do not treat this as a strict DDD/Hexagonal/Clean/MVC doctrine. Treat it as operating rules that optimize legibility, autonomy, and predictable change.
+`Package-shaped` describes an independently testable boundary with an explicit public surface and enforceable dependencies. It does not require a `package.json`, a publishable package, or a top-level directory named `packages`.
+
+Do not treat this as a strict DDD/Hexagonal/Clean/MVC doctrine. Treat it as operating rules that optimise legibility, autonomy, and predictable change.
 
 ## Core mental model
 
 Two homes, one direction of travel:
 
-1. `features/<capability>` (default)
-- Place capability-specific behavior here.
-- Let each feature own its internals.
+1. Capability boundary (default)
+- Place capability-specific behaviour in the repository's established package, library, module, or source boundary.
+- In workspaces this commonly means `packages/<capability>` or `libs/<capability>`.
+- In a single-package service this commonly means `src/<capability>` or `src/modules/<capability>`.
+- Let each capability own its internals.
 
-2. Global agnostic layer (earned)
-- Keep thin reusable plumbing in `adapters/` and `services/` only when truly capability-agnostic.
+2. Agnostic shared boundary (earned)
+- Keep reusable infrastructure and cross-cutting helpers in the repository's established shared packages, libraries, adapters, or services only when genuinely capability-agnostic.
 
-Direction of travel: feature -> global via promotion. Avoid reverse movement.
+Direction of travel: capability -> shared through promotion. Avoid reverse movement.
 
-Orchestration is one surface:
-- Place cross-capability stories in `application/`.
-- Do not allow features to coordinate other features directly.
+Orchestration is one explicit role:
+- Place cross-capability stories in the repository's application, use-case, workflow, or runtime composition surface.
+- Do not allow capabilities to coordinate other capabilities implicitly.
 
 ## Invariants (non-negotiable)
 
-1. Start in a feature
-- Implement new behavior in a feature unless it is explicitly agnostic from day one.
+1. Start in a capability
+- Implement new behaviour inside an owned capability boundary unless it is explicitly agnostic from day one.
 
-2. Isolate features
-- Never reach into another feature's internals.
-- Depend only on another feature's public surface.
+2. Isolate capabilities
+- Never reach into another capability's internals.
+- Depend only on another capability's public surface.
 
-3. Keep one orchestration surface
-- Put cross-feature sequencing and coordination in `application/`.
-- Compose feature behavior there; do not move feature rules there.
+3. Keep orchestration explicit
+- Put cross-capability sequencing and coordination in the repository's established orchestration surface.
+- Compose capability behaviour there; do not move capability rules there.
 
-4. Do not nest features
-- Never place one feature under another.
-- Split into sibling capabilities and coordinate in orchestration.
+4. Do not hide capability boundaries
+- Do not make an independently owned capability an internal implementation detail of another capability.
+- Organisational grouping directories are fine when they do not create ownership or import boundaries.
+- Keep independently owned capabilities as peers within the relevant grouping and coordinate them explicitly.
 
 5. Earn promotion through repetition
 - Allow early duplication.
 - Promote only when repetition is visible and painful.
 
 6. Make public surfaces explicit
-- Give every feature a front door (`index.ts` or `public.ts`).
+- Give every capability a front door appropriate to the ecosystem, such as package exports, `index.ts`, `public.ts`, module visibility, or an equivalent public API.
 - Block deep imports.
 
 7. Surface amber/red flags
@@ -68,140 +73,143 @@ Orchestration is one surface:
 
 ## Key concepts
 
-### Feature / capability
+### Capability
 
-Treat a feature as a cohesive unit with:
+Treat a capability as a cohesive unit with:
 - its own rules/state,
 - internal implementation ownership,
 - a clear public surface,
 - future extractability.
 
-Feature kinds can include business capabilities (Checkout), decision surfaces (Pricing), technical capabilities (Auth), and UI-adjacent backend capabilities (Template renderer).
+Capabilities can include business capabilities (Checkout), decision surfaces (Pricing), technical capabilities (Auth), and UI-adjacent backend capabilities (Template renderer).
 
 ### Orchestration surface
 
-Use `application/` to:
-- sequence features,
-- handle cross-feature flow concerns (idempotency, retries, sagas/workflows),
+Use the repository's application, use-case, workflow, or composition boundary to:
+- sequence capabilities,
+- handle cross-capability flow concerns (idempotency, retries, sagas/workflows),
 - map success/failure story paths.
 
-Do not encode feature domain rules here.
+Do not encode capability rules here.
 
 ### Global agnostic layer
 
 Keep this layer intentionally small:
-- `adapters/`: DB/HTTP/queue/cache/bus wrappers,
-- `services/`: logging, telemetry, idempotency, generic auth helpers,
+- adapter boundaries, which may be named `adapters/`, `infrastructure/`, `platform/`, or according to local convention: DB/HTTP/queue/cache/bus wrappers,
+- cross-cutting service boundaries, which may be folders or workspace projects: logging, telemetry, idempotency, generic auth helpers,
 - generic utilities with no business semantics.
 
 ## Rules for decisions
 
 ### Placement rules
 
-Default placement: feature.
+Default placement: capability.
 
 Place in global only if all are true:
 - no business semantics,
-- reusable across features without leaking assumptions,
-- behavior is stable,
+- reusable across capabilities without leaking assumptions,
+- behaviour is stable,
 - duplication would harm correctness/security/consistency.
 
 ### Promotion rules
 
 Promote when:
-- 2+ features independently implement the same concept,
+- 2+ capabilities independently implement the same concept,
 - repeated edits create friction,
 - abstraction is obvious (not speculative).
 
 Promotion targets:
-- `services/` for cross-cutting helpers,
-- `adapters/` for implementation wrappers,
+- the repository's cross-cutting service boundary for agnostic helpers,
+- its adapter, infrastructure, or platform boundary for implementation wrappers,
 - standalone capability only when clearly warranted.
 
 ### Dependency rules
 
-- `application/` may depend on feature public surfaces.
-- Features may depend on global `adapters/` and `services/`.
-- Features must not depend on other features' internals.
-- A feature may take a narrow, natural dependency on another feature's public surface when that is clearer than orchestration.
-- Do not use sibling dependencies for sequencing or coordination; keep those in `application/`.
+- Orchestration may depend on capability public surfaces.
+- Capabilities may depend on approved agnostic shared boundaries.
+- Capabilities must not depend on other capabilities' internals.
+- A capability may take a narrow, natural dependency on another capability's public surface when that is clearer than orchestration.
+- Do not use sibling dependencies for sequencing or coordination; keep those in the established orchestration surface.
 - Treat a growing sibling-dependency graph as a boundary signal to investigate, not as an automatic violation.
 
-### No nesting rule
+### Capability grouping rule
 
-If Feature A appears to contain a sub-feature:
-- split into Feature A + Feature B as siblings,
-- move coordination into orchestration.
+If Capability A appears to own Capability B, determine whether B is genuinely an internal implementation detail or an independently owned boundary. Keep independent capabilities as peers, which may sit beneath a shared domain grouping such as `packages/commerce/*` or `libs/commerce/*`. Move their coordination into the established orchestration surface.
 
 ## Amber / red flags
 
 Amber (watch):
-- simple changes repeatedly touch multiple features,
-- cross-feature imports begin appearing,
+- simple changes repeatedly touch multiple capabilities,
+- cross-capability imports begin appearing,
 - orchestration files grow rapidly,
-- duplicate logic appears across features,
+- duplicate logic appears across capabilities,
 - onboarding feedback says "hard to know where to start".
 
 Red (act now):
-- deep imports across features become normal,
-- single feature/orchestration/service/adapters file exceeds roughly 1K SLOC,
+- deep imports across capabilities become normal,
+- a single capability, orchestration, service, or adapter file exceeds roughly 1K SLOC,
 - orchestration becomes a rule monolith,
 - CI slows and teams compensate with long-lived branches.
 
 Standard responses:
 - duplication -> promote once abstraction is obvious,
-- oversized feature -> split into sibling capabilities,
-- oversized orchestration -> split workflows and push rules back into features,
+- oversized capability -> split into sibling capabilities,
+- oversized orchestration -> split workflows and push rules back into capabilities,
 - cross-imports -> enforce public surfaces and refactor immediately.
 
 ## Sizing rules
 
 Use size as a smoke alarm, not dogma.
 
-- Rough threshold: ~1K SLOC in one adapter/service/orchestration/feature file is a boundary warning.
-- If one behavior lifecycle requires hunting across many folders, boundary placement is wrong.
+- Rough threshold: ~1K SLOC in one adapter/service/orchestration/capability file is a boundary warning.
+- If one behaviour lifecycle requires hunting across many folders, boundary placement is wrong.
 
 ## Delivery channels
 
-Treat API/CLI/SDK as delivery adapters, not features.
+Treat API/CLI/SDK as delivery adapters, not capabilities.
 
 - HTTP/GraphQL/gRPC endpoints map requests to orchestration.
 - CLI commands map to orchestration.
-- Internal SDK is feature public surfaces.
-- External SDK is a separate artifact built from transport contracts, not feature internals.
+- Internal SDK is capability public surfaces.
+- External SDK is a separate artifact built from transport contracts, not capability internals.
 
 ## Internationalisation and configuration
 
 Treat internationalisation and configuration as normal architecture concerns from the start, even when the application initially has one language and one runtime configuration.
 
-- Keep user-facing strings identifiable and owned by the feature that introduces them.
+- Keep user-facing strings identifiable and owned by the capability that introduces them.
 - This establishes where strings are managed before translation becomes necessary.
 - Let the application or runtime shell compose locale behaviour and configuration sources.
-- Add configuration requirements as features are introduced or touched.
+- Add configuration requirements as capabilities are introduced or touched.
 - Prefer cross-runtime primitives where practical. UnJS packages can be useful options without becoming required choices.
-- Keep locale-sensitive presentation near delivery while the originating feature owns the meaning.
+- Keep locale-sensitive presentation near delivery while the originating capability owns the meaning.
 - Keep machine-facing identifiers, error codes and protocol values language-neutral.
-- Resolve configuration during application composition and provide features with the values they require.
+- Resolve configuration during application composition and provide capabilities with the values they require.
 
-## Existing monorepo adaptation
+## Workspace mapping
 
-Use this when a repo already has `apps/*` + `packages/*` and cannot be reorganized in one move.
+Follow the workspace's configured project roots. `apps/`, `packages/`, and `libs/` are equally sound project-root conventions when their actual roles and dependency boundaries are explicit. Folder names do not determine the architecture.
 
-### Monorepo mapping (naming-agnostic)
+### Common roles
 
-- Treat `apps/*` as runtime entrypoints (delivery + composition):
+- `apps/*` commonly contains deployable runtime entrypoints (delivery + composition):
   - inbound adapters (HTTP/GraphQL/gRPC, workers, cron, CLI)
   - orchestration/workflows/use-cases (thin sequencing)
   - composition root (DI/config/bootstrap)
 
-- Treat `packages/*` as extractable slices:
-  - feature/capability slices (default home for behaviour)
+- `apps/*` may also contain capability or library projects when that is the repository's established convention.
+- `packages/*` commonly contains workspace packages, including runtime applications, capability boundaries, and shared infrastructure. A package may be internal or publishable.
+- `libs/*` serves the same architectural role in repositories and toolchains that use library-oriented vocabulary.
+- Use project metadata, public surfaces, and runtime responsibility rather than the root folder name to determine a project's role.
+
+Capability packages or libraries contain:
+  - capability slices (default home for behaviour)
   - shared agnostic plumbing (earned home for adapters/services/utilities)
 
 Rules:
-- New behaviour starts in a feature slice inside `packages/*`.
+- New behaviour starts in a capability project under the workspace's established `packages/*`, `libs/*`, or equivalent root.
 - Cross-slice coordination lives in the app’s orchestration surface (or a shared orchestration package if multiple runtimes exist).
-- Slices expose a public API file; deep imports into slice internals are disallowed.
+- Slices expose an ecosystem-appropriate public surface; deep imports into slice internals are disallowed.
 - Promotion to shared packages happens only when repetition is visible and the abstraction is obvious.
 - Do not introduce new naming taxonomies unless the repo already uses them.
 
@@ -214,78 +222,93 @@ Rules:
 ### Path-of-correctness migration
 
 - Do not move old code first.
-- Add a new lane for all new behavior:
-- new capability packages in `packages/cap-*`,
-- new platform packages in `packages/platform-*`,
-- app orchestration under `apps/<runtime>/`.
+- Add new behaviour to capability projects under the repository's established workspace roots.
+- Keep runtime composition in the relevant application project, whether that lives under `apps/*`, `packages/*`, or another configured root.
 - Migrate old areas only when touched by real work.
 
 ### Boundary enforcement
 
 Enforce mechanically (lint/build/architecture tests), not by convention alone.
 
-- Allow `apps/* -> packages/*`.
-- Allow capability packages -> platform packages.
+- Allow runtime applications to depend on capability public surfaces.
+- Allow capability projects to depend on approved agnostic infrastructure projects.
 - Disallow deep imports between capability internals.
-- Require imports from `index.ts` or `public.ts` only.
+- Require imports through the ecosystem's public-surface mechanism.
 
 Typical tooling options:
 - TypeScript: ESLint import rules + TS path mapping.
 - Nx/Turborepo: module boundary rules.
 - Java: package visibility + ArchUnit.
 
-## Suggested folder shape
+## Illustrative folder shapes
 
-```text
-features/
-  <capability>/
-    domain/      (optional)
-    services/
-    ports/
-    adapters/    (optional)
-    index.ts or public.ts
+These are mappings of the same ownership model, not competing architectures or required names.
 
-application/
-  workflows/ or use-cases/
-
-adapters/
-  db, queues, cache, http, bus wrappers
-
-services/
-  logging, telemetry, idempotency, auth helpers
-
-app/
-  composition root, DI wiring, bootstrap
-```
-
-### Suggested folder shape (existing monorepo)
+### JavaScript/TypeScript workspace with `apps` and `packages`
 
 ```text
 apps/
   api/
-    adapters/
-    orchestration/
-    app/
-  worker/
-    jobs/
-    app/
+    src/
+      composition/
+      workflows/
 
 packages/
-  cap-checkout/
-    domain/
-    services/
-    ports/
-    public.ts
-  cap-inventory/
-  cap-pricing/
+  checkout/
+    src/
+    package.json
+  inventory/
+    src/
+    package.json
+  observability/
+    src/
+    package.json
+```
 
-  platform-db/
-  platform-messaging/
-  platform-observability/
+### Workspace with `apps` and `libs`
+
+```text
+apps/
+  api/
+
+libs/
+  commerce/
+    checkout/
+    inventory/
+  shared/
+    observability/
+```
+
+### Workspace using `packages` for every project
+
+```text
+packages/
+  api/
+    src/
+      composition/
+  checkout/
+    src/
+  inventory/
+    src/
+  observability/
+    src/
+```
+
+### Single-package service
+
+```text
+src/
+  modules/
+    checkout/
+    inventory/
+  application/
+    workflows/
+  infrastructure/
+  main.ts
 
 ```
 
-## Feature public surface contract
+## Capability public surface contract
 
 Expose:
 - small set of commands/queries/use-cases,
@@ -299,18 +322,18 @@ Do not expose:
 
 ## Evolution model
 
-1. Start feature-local and ship.
+1. Start capability-local and ship.
 2. Promote agnostic patterns once repetition is clear.
-3. Split large features into sibling capabilities.
+3. Split large capabilities into sibling capabilities.
 4. Let orchestration grow as thin workflow maps, not rule dumps.
 5. Let package/service extraction emerge naturally.
 
 ## Review/refactor checklist
 
-1. Start every new behavior in a feature.
-2. Verify each feature exports a clear public API file.
+1. Start every new behaviour inside an owned capability boundary.
+2. Verify each capability exposes a clear public surface appropriate to the ecosystem.
 3. Remove deep imports and replace with public-surface imports.
-4. Keep cross-feature sequencing in `application/` only.
+4. Keep cross-capability sequencing in the established orchestration surface.
 5. Track repeated logic and promote only when abstraction is obvious.
-6. Split oversized features/workflows before they become team bottlenecks.
-7. In monorepos, route all new work to `packages/cap-*` and remove direct cross-boundary imports.
+6. Split oversized capabilities/workflows before they become team bottlenecks.
+7. In workspaces, follow the configured `apps/*`, `packages/*`, `libs/*`, or equivalent project roots and remove direct internal cross-boundary imports.
