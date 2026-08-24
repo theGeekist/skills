@@ -2,15 +2,20 @@
 
 The canonical source should be a public Geekist-owned GitHub repository. Registry records should reference an immutable release rather than carrying independently edited copies.
 
+## Current release
+
+- Repository: <https://github.com/theGeekist/skills>
+- Release: `v1.0.0`
+- Agent Skills validation: passed with `gh skill publish --dry-run`
+- Direct install: `gh skill install theGeekist/skills`
+
 ## Release checklist
 
-1. Confirm the public organisation and repository name. The prepared metadata assumes `theGeekist/skills`.
-2. Confirm that Geekist is the copyright holder and MIT is the intended licence.
-3. Replace the placeholder private-reporting wording in `SECURITY.md` with a real security email or disclosure URL.
-4. Validate both skills and the Codex plugin.
-5. Test installation in clean Codex and Claude Code environments.
-6. Create a signed or annotated `v1.0.0` tag and GitHub release.
-7. Enable the issue tracker and add the `agent-skills`, `codex`, `claude-code`, `architecture`, `backend` and `frontend` repository topics.
+1. Confirm that Geekist is the copyright holder and MIT is the intended licence.
+2. Replace the placeholder private-reporting wording in `SECURITY.md` with a real security email or disclosure URL.
+3. Test installation in clean Codex and Claude Code environments.
+4. Add tag protection for release immutability.
+5. Enable any GitHub security features available to the organisation.
 
 ## Distribution order
 
@@ -72,12 +77,11 @@ LF agentregistry and AWS Agent Registry are useful for self-hosted or organisati
 
 ## Manual actions
 
-External publication requires a human with Geekist authority to:
+The GitHub repository and `v1.0.0` release are already public. Remaining external publication requires a human with Geekist authority to:
 
-- create or approve the public GitHub repository;
-- confirm the repository name, copyright holder and MIT licence;
+- confirm the copyright holder and MIT licence;
 - authenticate the Geekist GitHub, SkillMD and any optional registry accounts;
-- publish the initial tag/release;
 - submit and respond to ToolHive or directory reviews;
 - provide a public security contact;
+- configure a GitHub tag-protection ruleset;
 - decide whether ClawHub's MIT-0 terms are acceptable.
