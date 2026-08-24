@@ -50,14 +50,7 @@ This marketplace is Geekist-owned and does not require Anthropic review. Anthrop
 
 ### 4. SkillMD
 
-SkillMD supports instruction-only skills and reviewable multi-skill packs. A Geekist publisher must authenticate, run a dry run, publish and respond to review:
-
-```sh
-skillmd publish ./plugins/geekist-architecture-skills --dry-run --type pack
-skillmd publish ./plugins/geekist-architecture-skills --type pack
-```
-
-Check the current CLI syntax before the live submission: <https://skillmd.com/docs/cli>.
+SkillsMD supports instruction-only skills and reviews each skill separately. Submit each top-level path from `skills/` and respond to review. Treat successful registry discovery as separate evidence from repository validation.
 
 ### 5. ToolHive Catalog and Dockyard
 

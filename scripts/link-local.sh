@@ -51,7 +51,7 @@ esac
 
 script_dir=$(cd -- "$(dirname -- "${BASH_SOURCE[0]}")" && pwd -P)
 repo_root=$(cd -- "$script_dir/.." && pwd -P)
-skill_root="$repo_root/plugins/geekist-architecture-skills/skills"
+skill_root="$repo_root/skills"
 user_home_dir=${HOME:?HOME is required}
 backup_stamp=$(date -u '+%Y%m%dT%H%M%SZ')
 

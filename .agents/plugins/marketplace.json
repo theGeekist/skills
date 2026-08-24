@@ -8,7 +8,7 @@
       "name": "geekist-architecture-skills",
       "source": {
         "source": "local",
-        "path": "./plugins/geekist-architecture-skills"
+        "path": "."
       },
       "policy": {
         "installation": "AVAILABLE",

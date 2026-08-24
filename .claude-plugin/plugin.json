@@ -1,0 +1,13 @@
+{
+  "name": "geekist-architecture-skills",
+  "version": "1.4.0",
+  "description": "Feature-first backend and frontend architecture skills from Geekist.",
+  "author": {
+    "name": "Geekist",
+    "url": "https://geekist.co"
+  },
+  "homepage": "https://geekist.co",
+  "repository": "https://github.com/theGeekist/skills",
+  "license": "MIT",
+  "keywords": ["architecture", "agent-skills", "backend", "frontend", "feature-first"]
+}

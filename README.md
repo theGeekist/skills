@@ -102,23 +102,24 @@ The updater refuses dirty or detached checkouts, pulls with `--ff-only`, runs th
 ## Repository structure
 
 ```text
-plugins/
-  geekist-architecture-skills/
-    .codex-plugin/
-      plugin.json
-    skills/
-      backend-slice-architecture/
-        SKILL.md
-        agents/openai.yaml
-      frontend-slice-architecture/
-        SKILL.md
-        agents/openai.yaml
+.codex-plugin/
+  plugin.json
+.claude-plugin/
+  marketplace.json
+  plugin.json
+skills/
+  backend-slice-architecture/
+    SKILL.md
+    agents/openai.yaml
+  frontend-slice-architecture/
+    SKILL.md
+    agents/openai.yaml
 scripts/
   link-local.sh
   update-local.sh
 ```
 
-The plugin and skill nesting is distribution structure, not domain taxonomy. Each skill keeps its instructions at its root. Repository-wide automation stays under `scripts/` because it operates across both skill packages.
+The repository root is the plugin and `skills/` is the canonical collection exposed to clients and registries. Each skill keeps its instructions at its own root. Repository-wide automation stays under `scripts/` because it operates across both skills.
 
 ## Compatibility
 
