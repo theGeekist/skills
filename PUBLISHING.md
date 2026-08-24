@@ -5,7 +5,7 @@ The canonical source should be a public Geekist-owned GitHub repository. Registr
 ## Current release
 
 - Repository: <https://github.com/theGeekist/skills>
-- Release: `v1.1.0`
+- Release: `v1.2.0`
 - Agent Skills validation: passed with `gh skill publish --dry-run`
 - Direct install: `gh skill install theGeekist/skills`
 

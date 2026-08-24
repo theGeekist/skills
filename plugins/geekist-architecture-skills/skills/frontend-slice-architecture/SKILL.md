@@ -13,7 +13,7 @@ Apply this architecture when the user chooses this model or asks for a review ag
 
 ## Authority and adaptation
 
-Inspect the repository's framework, platform conventions and existing boundaries before proposing placement or changes. Treat this playbook as an architecture lens and target direction, not permission to reorganise unrelated code. Preserve established naming where it expresses the same boundaries, and migrate existing systems through the work already in scope.
+Inspect the repository's framework, platform conventions and existing boundaries before proposing placement or changes. Treat this playbook as a set of strong defaults and an architecture lens, not filesystem directives or permission to reorganise unrelated code. Preserve established naming where it expresses the same boundaries, and migrate existing systems through the work already in scope.
 
 ## What this architecture is
 
@@ -41,7 +41,9 @@ Orchestration is thin and explicit:
 * Place route-level composition in `scenes/<platform>/`.
 * Do not allow features to orchestrate other features directly.
 
-## Invariants (non-negotiable)
+## Strong defaults
+
+Depart from these defaults when the local context provides a concrete reason, and preserve consistency within the affected boundary.
 
 1. Start in a feature
 
@@ -49,7 +51,7 @@ Orchestration is thin and explicit:
 
 2. Isolate feature internals
 
-* Never deep-import another feature’s internals.
+* Avoid deep-importing another feature’s internals.
 * Depend only on another feature’s public surface (`features/<feature>/index.*`).
 
 3. Scenes own composition
@@ -57,10 +59,11 @@ Orchestration is thin and explicit:
 * Scenes compose pages/routes, layout, and feature modules.
 * Features do not coordinate other features; they expose capability.
 
-4. Do not nest features
+4. Do not hide feature boundaries
 
-* Never place one feature under another.
-* Split into sibling features and coordinate in scenes.
+* Avoid making an independently owned feature an internal implementation detail of another feature.
+* Organisational grouping directories are acceptable when they do not create ownership or import boundaries.
+* Prefer sibling features and explicit scene composition for independently owned behaviour.
 
 5. Earn promotion through repetition
 
@@ -69,12 +72,12 @@ Orchestration is thin and explicit:
 
 6. Make public surfaces explicit
 
-* Every feature must have a front door (`index.ts` / `index.js`).
+* Prefer a clear feature front door (`index.ts`, `index.js`, package exports, or the local equivalent).
 * Block deep imports.
 
 7. Keep components honest
 
-* Shared `components/*` are UI primitives/layout and must not contain feature workflow state.
+* Shared `components/*` should remain UI primitives/layout rather than carrying feature workflow state.
 * Shared `hooks/*` are cross-feature hooks only.
 
 8. Package-ready by default
@@ -82,7 +85,33 @@ Orchestration is thin and explicit:
 * Assume any feature subtree can receive a `package.json` later.
 * Keep boundaries and imports package-safe.
 
-## Folder contracts
+## File naming and nesting
+
+Prefer shallow feature internals. Add meaning to filenames before adding directories.
+
+* Name a file for its primary component, hook, operation, subject, boundary, or responsibility.
+* Do not repeat the enclosing feature name merely to make a filename globally unique.
+* Choose the repository's established ordering for compound names, whether modifier-subject (`<modifier>-<subject>`) or subject-modifier (`<subject>-<modifier>`), and use it consistently when combining comparable name parts.
+* Do not force unlike names into artificial grammar: components, hooks, operations, roles, platform variants, and framework suffixes may have different established forms.
+* Preserve framework-required and tool-recognised forms such as component casing, `use*` hooks, `.test`, `.spec`, `.stories`, `.web`, `.native`, `.ios`, `.android`, and generated filenames.
+* Prefer additional descriptive files over `components/`, `hooks/`, `state/`, `services/`, or `utils/` subdirectories while the feature remains easy to scan.
+* Strongly discourage nesting introduced only for taxonomy, anticipated growth, or file count aesthetics.
+* Add a directory only when substantial growth, a genuine internal boundary, generated-code isolation, framework requirements, or materially improved navigation justifies it.
+
+For example, a small feature can remain shallow:
+
+```text
+features/editor/
+  EditorCanvas.tsx
+  useEditorState.ts
+  save-document.ts
+  editor-api.ts
+  index.ts
+```
+
+The feature name need not prefix every file. When the directory grows considerably, introduce the smallest meaningful grouping supported by the files that actually exist.
+
+## Folder guidance
 
 ### `features/<feature>/` (default home)
 
@@ -94,7 +123,7 @@ A feature is a cohesive unit with:
 * optional local routing within the feature (but scenes own top-level routing),
 * a public API (`index.*`).
 
-Recommended feature shape:
+For a feature large enough to justify internal grouping, one possible shape is:
 
 ```text
 features/
@@ -136,7 +165,7 @@ scenes/
 Shared components are UI primitives/layout only:
 
 * may hold local UI state (toggling, animation, input state),
-* must not encode feature workflow rules,
+* should not encode feature workflow rules,
 * one export per file (or a well-scoped component module).
 
 ### `hooks/*` (global agnostic hooks)
@@ -157,17 +186,17 @@ Use only for cross-cutting front-end services:
 
 Do not put feature semantics here.
 
-## Public import rule (strict)
+## Public import guidance
 
 Import features from the feature root only.
 
-Allowed:
+Prefer:
 
 * `import { Editor } from '@/features/editor'`
 * `import { useAuth } from '@/hooks/useAuth'`
 * `import { Button } from '@/components/Button'`
 
-Not allowed:
+Avoid:
 
 * `import useEditorState from '@/features/editor/hooks/useEditorState'`
 * `import Canvas from '@/features/editor/components/Canvas'`
@@ -205,7 +234,7 @@ Promotion targets:
 
 * Scenes may depend on feature public surfaces.
 * Features may depend on global components/hooks/services.
-* Features must not depend on other features’ internals.
+* Features should not depend on other features’ internals.
 * A feature may take a narrow, natural dependency on another feature’s public surface when that is clearer than scene orchestration.
 * Do not use sibling dependencies for workflow sequencing or coordination; keep those in scenes.
 * Treat a growing sibling-dependency graph as a boundary signal to investigate, not as an automatic violation.
@@ -218,7 +247,7 @@ If Feature A appears to contain a sub-feature:
 * split into Feature A + Feature B as siblings,
 * coordinate in scenes (or a thin shared composition helper if truly cross-platform).
 
-## State rules (so features don’t rot)
+## State guidance
 
 1. Feature state lives with the feature
 
@@ -311,7 +340,7 @@ Enforce mechanically (lint/build), not by convention alone:
 * Disallow feature-to-feature internal imports
 * Allow scenes to compose features only via public surfaces
 
-## Suggested folder shape
+## Illustrative folder shape for a larger feature
 
 ```text
 components/

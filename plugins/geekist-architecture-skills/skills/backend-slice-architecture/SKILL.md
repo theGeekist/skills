@@ -42,13 +42,15 @@ Orchestration is one explicit role:
 - Place cross-capability stories in the repository's application, use-case, workflow, or runtime composition surface.
 - Do not allow capabilities to coordinate other capabilities implicitly.
 
-## Invariants (non-negotiable)
+## Strong defaults
+
+These are decision guides, not filesystem directives. Follow established repository and framework conventions when they express the same ownership and dependency boundaries. Depart from a default when the local context provides a concrete reason, and preserve consistency within the affected boundary.
 
 1. Start in a capability
 - Implement new behaviour inside an owned capability boundary unless it is explicitly agnostic from day one.
 
 2. Isolate capabilities
-- Never reach into another capability's internals.
+- Avoid reaching into another capability's internals.
 - Depend only on another capability's public surface.
 
 3. Keep orchestration explicit
@@ -70,6 +72,32 @@ Orchestration is one explicit role:
 
 7. Surface amber/red flags
 - Treat architecture smells as action triggers, not style debates.
+
+## File naming and nesting
+
+Prefer shallow capability internals. Add meaning to filenames before adding directories.
+
+- Name a file for its primary operation, subject, boundary, or responsibility.
+- Do not repeat the enclosing capability name merely to make a filename globally unique.
+- Choose the repository's established ordering for compound names, whether modifier-subject (`<modifier>-<subject>`) or subject-modifier (`<subject>-<modifier>`), and use it consistently when combining comparable name parts.
+- Do not force unlike names into artificial grammar: operations, subjects, roles, platform suffixes, and framework suffixes may have different established forms.
+- Preserve framework-required and tool-recognised forms such as `.controller`, `.module`, `.route`, `.test`, `.spec`, `.schema`, platform suffixes, and generated filenames.
+- Prefer additional descriptive filenames over type-based directories such as `services/`, `handlers/`, or `utils/` while the capability remains easy to scan.
+- Strongly discourage nesting introduced only for taxonomy, anticipated growth, or file count aesthetics.
+- Add a directory only when substantial growth, a genuine internal boundary, generated-code isolation, framework requirements, or materially improved navigation justifies it.
+
+For example, prefer a shallow capability such as:
+
+```text
+packages/checkout/src/
+  create-order.ts
+  calculate-total.ts
+  order-repository.ts
+  routes.ts
+  public.ts
+```
+
+over repeating `checkout` in every filename or creating speculative `services/`, `repositories/`, and `handlers/` layers.
 
 ## Key concepts
 
