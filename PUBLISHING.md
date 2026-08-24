@@ -5,7 +5,7 @@ The canonical source should be a public Geekist-owned GitHub repository. Registr
 ## Current release
 
 - Repository: <https://github.com/theGeekist/skills>
-- Release: `v1.3.0`
+- Release: `v1.4.0`
 - Agent Skills validation: passed with `gh skill publish --dry-run`
 - Direct install: `gh skill install theGeekist/skills`
 
@@ -70,7 +70,7 @@ LF agentregistry and AWS Agent Registry are useful for self-hosted or organisati
 
 ## Manual actions
 
-The GitHub repository and `v1.0.0` release are already public. Remaining external publication requires a human with Geekist authority to:
+The GitHub repository and `v1.4.0` release are public. Remaining external publication requires a human with Geekist authority to:
 
 - confirm the copyright holder and MIT licence;
 - authenticate the Geekist GitHub, SkillMD and any optional registry accounts;
