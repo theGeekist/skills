@@ -2,7 +2,6 @@
 name: frontend-slice-architecture
 description: Use when creating, refactoring, reviewing, or incrementally migrating frontend architecture towards a feature-first, package-shaped model with explicit public APIs, thin scene-level composition, and earned shared UI and hooks.
 license: MIT
-version: 1.0.0
 metadata:
   author: Geekist
   homepage: https://geekist.co

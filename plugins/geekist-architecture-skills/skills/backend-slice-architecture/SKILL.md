@@ -2,7 +2,6 @@
 name: backend-slice-architecture
 description: Use when creating, refactoring, reviewing, or incrementally migrating backend architecture towards a feature-first, package-shaped model with explicit public APIs, a clear orchestration surface, and earned shared infrastructure.
 license: MIT
-version: 1.0.0
 metadata:
   author: Geekist
   homepage: https://geekist.co
