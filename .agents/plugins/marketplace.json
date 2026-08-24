@@ -1,0 +1,20 @@
+{
+  "name": "geekist",
+  "interface": {
+    "displayName": "Geekist"
+  },
+  "plugins": [
+    {
+      "name": "geekist-architecture-skills",
+      "source": {
+        "source": "local",
+        "path": "./plugins/geekist-architecture-skills"
+      },
+      "policy": {
+        "installation": "AVAILABLE",
+        "authentication": "ON_INSTALL"
+      },
+      "category": "Developer Tools"
+    }
+  ]
+}

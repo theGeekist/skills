@@ -1,0 +1,5 @@
+version: 1
+interface:
+  display_name: "Backend Slice Architecture"
+  short_description: "Feature-first backend boundaries and orchestration"
+  default_prompt: "Use $backend-slice-architecture to review backend placement, public boundaries, orchestration, and incremental migration."

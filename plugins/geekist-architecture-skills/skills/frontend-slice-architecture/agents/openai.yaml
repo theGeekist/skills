@@ -1,0 +1,5 @@
+version: 1
+interface:
+  display_name: "Frontend Slice Architecture"
+  short_description: "Feature-first frontend boundaries and composition"
+  default_prompt: "Use $frontend-slice-architecture to review frontend placement, public boundaries, scene composition, and incremental migration."

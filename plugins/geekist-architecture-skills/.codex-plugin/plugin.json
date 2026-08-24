@@ -1,0 +1,27 @@
+{
+  "name": "geekist-architecture-skills",
+  "version": "1.0.0",
+  "description": "Feature-first backend and frontend architecture skills from Geekist.",
+  "author": {
+    "name": "Geekist",
+    "url": "https://geekist.co"
+  },
+  "homepage": "https://geekist.co",
+  "repository": "https://github.com/theGeekist/skills",
+  "license": "MIT",
+  "keywords": ["architecture", "agent-skills", "backend", "frontend", "feature-first"],
+  "skills": "./skills/",
+  "interface": {
+    "displayName": "Geekist Architecture Skills",
+    "shortDescription": "Feature-first backend and frontend architecture",
+    "longDescription": "Portable playbooks for feature ownership, public boundaries, thin orchestration and incremental migration.",
+    "developerName": "Geekist",
+    "category": "Developer Tools",
+    "capabilities": ["Read", "Write"],
+    "websiteURL": "https://geekist.co",
+    "defaultPrompt": [
+      "Review this backend using Geekist slice architecture.",
+      "Review this frontend using Geekist slice architecture."
+    ]
+  }
+}
