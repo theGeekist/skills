@@ -1,15 +1,19 @@
 ---
 name: frontend-slice-architecture
-description: "Use when creating, refactoring, reviewing, or incrementally migrating frontend architecture towards a feature-first, package-shaped model with explicit public APIs, thin scene-level composition, and earned shared UI and hooks."
+description: Use when creating, refactoring, reviewing, or incrementally migrating frontend architecture towards a feature-first, package-shaped model with explicit public APIs, thin scene-level composition, and earned shared UI and hooks.
 license: MIT
 metadata:
   author: Geekist
   homepage: https://geekist.co
 ---
 
-# Frontend architecture
+# Frontend Slice Architecture Playbook
 
-Keep related interface behaviour together, protect feature interfaces and make page-level coordination explicit. Apply this model when the user chooses it or requests a review against it.
+Apply this architecture when the user chooses this model or asks for a review against it.
+
+## Preserve the architecture rules
+
+The architecture rules below and in the required references retain the original wording. Organisation and explanatory wording may change only while preserving every rule, exception and intended meaning. Any architectural rule change requires the user's explicit approval. The language baseline governs communication; it does not override or weaken architecture rules.
 
 <!-- shared-baseline:start -->
 Use current project terms and decisions. Explain an unfamiliar term near its first consequential use; distinguish a proposed meaning from an accepted one. Preserve exact identifiers and technical constraints.
@@ -21,28 +25,79 @@ Keep implementation progress separate from validation. Pair a material evidence 
 Check consistency, accessibility, readability and repeatability. Use sources for claims and real events for progress. Preserve uncertainty that affects a decision without inventing certainty or unnecessary approval gates.
 <!-- shared-baseline:end -->
 
-## Start with the repository
+## Authority and adaptation
 
-Read existing instructions, decisions, framework/platform conventions and affected code before recommending placement. Preserve established names where they express equivalent boundaries. These are strong defaults, not permission to reorganise unrelated code. Depart for a concrete local reason and keep the affected boundary consistent. React is optional.
+Inspect the repository's framework, platform conventions and existing boundaries before proposing placement or changes. Treat this playbook as a set of strong defaults and an architecture lens, not filesystem directives or permission to reorganise unrelated code. Preserve established naming where it expresses the same boundaries, and migrate existing systems through the work already in scope.
 
-A **feature** owns a cohesive area's user interface, state and implementation. Its **public surface** is the components, functions and types others may use. A **deep import** bypasses it to reach internals. **Package-shaped** means independently testable with an explicit interface and enforceable dependencies; a feature need not already have a `package.json`.
+## What this architecture is
 
-A **scene** is a page or screen shell that brings features together. **Orchestration** coordinates their workflow. A frontend **hook** connects components to state or framework behaviour; it differs from an agent lifecycle hook.
+Use a feature-first, package-shaped frontend where work starts local inside a feature and is promoted outward only when it becomes genuinely agnostic.
 
-## Keep the decision core
+Do not treat this as a strict React doctrine. Treat it as operating rules that optimize legibility, autonomy, predictable change, and packaging readiness.
 
-- Start UI behaviour in its owning feature unless independent of feature rules from day one. Keep local UI, state, hooks and components together, with an explicit public interface appropriate to the ecosystem.
-- Keep independently owned features as peers; organisational grouping may remain where it creates no hidden ownership or import boundary. Split independent nested features into siblings and coordinate them through scenes or a genuinely cross-platform composition helper.
-- Scenes own route/page composition, layout, top-level navigation/parameters/loaders and composition-time policies. Keep workflow sequencing there; keep feature rules and state in their feature.
-- Scenes may depend on feature public surfaces; features may use approved global components, hooks and services. A narrow, natural public dependency on a sibling is allowed when clearer than scene orchestration, but must not coordinate a workflow. Investigate a growing dependency graph rather than automatically rejecting every sibling dependency. Avoid scene-level reuse; promote reusable behaviour into features or shared components.
-- Treat internals as private and mechanically enforce imports through the feature root or equivalent public surface. Expose intended feature components, public hooks, types and optional route fragments. Keep internal components, state wiring, API mappers and volatile implementation types private. Preserve package-safe imports so extraction can happen later.
-- Allow early duplication. **Promotion** moves repeated, stable behaviour from feature-local code into shared code. Require repetition in two or more features, painful repeated edits and an obvious abstraction. Shared code must carry no feature semantics, leak no feature assumptions, and prevent meaningful correctness/consistency harm or constant rework. Avoid reversing the local-to-shared direction.
-- Shared UI stays primitive/layout-focused and may own local interaction state, but not feature workflow rules. Use one export per file or a well-scoped component module. Global hooks must serve genuine cross-feature behaviour; global services are cross-cutting wrappers, not homes for feature semantics.
-- Keep feature state local. Global state must genuinely span features and be stable. Prefer explicit data/events composed by scenes; introduce a shared store only when necessary and intentional.
-- Prefer shallow files with meaningful names. Preserve component casing, recognised hook/platform/framework suffixes and established compound-name conventions. Add internal grouping for real boundaries, generated code, framework needs, substantial growth or navigation; avoid speculative taxonomy and repeated feature prefixes.
-- Reuse feature behaviour across platforms; scene duplication is acceptable when presentation differs. Platform variants may live inside a feature while its public interface stays stable.
-- Design internationalisation and configuration from the start. Feature copy stays with the feature; genuinely shared copy stays with its component. The runtime shell composes locale/configuration. Format locale-sensitive values appropriately even for one English locale.
-- Adapt the model to established workspace roots. Add new behaviour through existing conventions and migrate old areas only when touched. Enforce boundaries mechanically and respond to oversized features/scenes, deep imports and workflow-heavy shared code with targeted changes.
+## Core mental model
+
+Two homes, one direction of travel:
+
+1. `features/<feature>` (default)
+
+* Place feature-specific UI, state, hooks, and local components here.
+* Let the feature own its internals.
+
+2. Global agnostic layer (earned)
+
+* Keep reusable UI and hooks in `components/` and `hooks/` only when truly feature-agnostic.
+
+Direction of travel: feature -> global via promotion. Avoid reverse movement.
+
+Orchestration is thin and explicit:
+
+* Place route-level composition in `scenes/<platform>/`.
+* Do not allow features to orchestrate other features directly.
+
+## Strong defaults
+
+Depart from these defaults when the local context provides a concrete reason, and preserve consistency within the affected boundary.
+
+1. Start in a feature
+
+* Implement new UI behaviour inside a feature unless it is explicitly agnostic from day one.
+
+2. Isolate feature internals
+
+* Avoid deep-importing another feature’s internals.
+* Depend only on another feature’s public surface (`features/<feature>/index.*`).
+
+3. Scenes own composition
+
+* Scenes compose pages/routes, layout, and feature modules.
+* Features do not coordinate other features; they expose capability.
+
+4. Do not hide feature boundaries
+
+* Avoid making an independently owned feature an internal implementation detail of another feature.
+* Organisational grouping directories are acceptable when they do not create ownership or import boundaries.
+* Prefer sibling features and explicit scene composition for independently owned behaviour.
+
+5. Earn promotion through repetition
+
+* Allow early duplication (especially hooks and small UI).
+* Promote only when repetition is visible and painful.
+
+6. Make public surfaces explicit
+
+* Prefer a clear feature front door (`index.ts`, `index.js`, package exports, or the local equivalent).
+* Block deep imports.
+
+7. Keep components honest
+
+* Shared `components/*` should remain UI primitives/layout rather than carrying feature workflow state.
+* Shared `hooks/*` are cross-feature hooks only.
+
+8. Package-ready by default
+
+* Assume any feature subtree can receive a `package.json` later.
+* Keep boundaries and imports package-safe.
 
 ## Load only the relevant detail
 
@@ -54,7 +109,7 @@ Read the indicated reference **before deciding or changing that concern**. A ful
 | Monorepo roles, migration, boundary enforcement or folder examples | [Workspace and migration](references/workspace-and-migration.md) |
 | Architecture review, dependency smells, size or refactor completion | [Review signals and checklist](references/review.md) |
 
-Each reference preserves the detailed rules; folder examples are options rather than mandatory names. Read only the relevant sections, not unrelated platform examples.
+Each reference preserves the original detailed rules verbatim; folder examples are options rather than mandatory names. Read only the relevant sections, not unrelated platform examples.
 
 ## Explain the recommendation
 

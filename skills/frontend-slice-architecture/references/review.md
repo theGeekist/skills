@@ -1,6 +1,6 @@
-# Review signals and completion checklist
+# Review signals and checklist
 
-Apply these detailed rules when the core skill routes you to this concern. Preserve equivalent repository conventions; examples are illustrative.
+Read these original rules before deciding or changing this concern.
 
 ## Amber / red flags
 
@@ -26,6 +26,7 @@ Standard responses:
 * oversized feature -> split into sibling features,
 * oversized scene -> push rules/state back into features; keep scene thin,
 * deep imports -> enforce public surfaces and refactor immediately.
+
 ## Review/refactor checklist
 
 1. Start every new behaviour in a feature.

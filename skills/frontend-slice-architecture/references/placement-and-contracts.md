@@ -1,17 +1,6 @@
 # Placement and public contracts
 
-Apply these detailed rules when the core skill routes you to this concern. Preserve equivalent repository conventions; examples are illustrative.
-
-## Find the relevant section
-
-- [File naming and nesting](#file-naming-and-nesting)
-- [Folder guidance](#folder-guidance)
-- [Public import guidance](#public-import-guidance)
-- [Rules for decisions](#rules-for-decisions)
-- [State guidance](#state-guidance)
-- [Multi-platform rule (web/native)](#multi-platform-rule-webnative)
-- [Internationalisation and configuration](#internationalisation-and-configuration)
-- [Feature public surface contract](#feature-public-surface-contract)
+Read these original rules before deciding or changing this concern.
 
 ## File naming and nesting
 
@@ -38,6 +27,7 @@ features/editor/
 ```
 
 The feature name need not prefix every file. When the directory grows considerably, introduce the smallest meaningful grouping supported by the files that actually exist.
+
 ## Folder guidance
 
 ### `features/<feature>/` (default home)
@@ -112,6 +102,7 @@ Use only for cross-cutting front-end services:
 * i18n wrapper
 
 Do not put feature semantics here.
+
 ## Public import guidance
 
 Import features from the feature root only.
@@ -128,6 +119,7 @@ Avoid:
 * `import Canvas from '@/features/editor/components/Canvas'`
 
 Treat feature internals as private implementation details.
+
 ## Rules for decisions
 
 ### Placement rules
@@ -171,6 +163,7 @@ If Feature A appears to contain a sub-feature:
 
 * split into Feature A + Feature B as siblings,
 * coordinate in scenes (or a thin shared composition helper if truly cross-platform).
+
 ## State guidance
 
 1. Feature state lives with the feature
@@ -185,11 +178,13 @@ If Feature A appears to contain a sub-feature:
 
 * pass data/events via props from scenes when composing features,
 * or use a shared cross-feature store only when necessary and intentional.
+
 ## Multi-platform rule (web/native)
 
 * Prefer **feature reuse** across platforms where behaviour is the same.
 * Accept **scene duplication** across platforms when presentation differs.
 * Allow feature internals to have platform variants when needed (`.web`, `.native`, `.ios`, `.android`) but keep the public API stable.
+
 ## Internationalisation and configuration
 
 Treat internationalisation and configuration as normal architecture concerns from the start, even when the application initially has one language and one runtime configuration.
@@ -201,6 +196,7 @@ Treat internationalisation and configuration as normal architecture concerns fro
 * Prefer cross-runtime primitives where practical. UnJS packages can be useful options without becoming required choices.
 * Use locale-aware formatting for dates, numbers, currencies, lists and similar values, even when English is the only current locale.
 * Keep feature copy with the feature and genuinely agnostic component copy with the component.
+
 ## Feature public surface contract
 
 Expose:

@@ -1,10 +1,10 @@
-# Workspace roles and incremental migration
+# Workspace and migration
 
-Apply these detailed rules when the core skill routes you to this concern. Preserve equivalent repository conventions; examples are illustrative.
+Read these original rules before deciding or changing this concern.
 
 ## Existing monorepo adaptation
 
-Use this when the repo already has `apps/*` + `packages/*` and cannot be reorganised in one move.
+Use this when the repo already has `apps/*` + `packages/*` and cannot be reorganized in one move.
 
 ### Monorepo mapping (naming-agnostic)
 
@@ -20,7 +20,7 @@ Use this when the repo already has `apps/*` + `packages/*` and cannot be reorgan
 
 Prefer adding a new slice under existing conventions and enforcing boundaries via public APIs + import rules.
 
-### Incremental migration
+### Path-of-correctness migration
 
 * Do not move old code first.
 * Add a new lane for all new behaviour:
@@ -36,6 +36,7 @@ Enforce mechanically (lint/build), not by convention alone:
 * Disallow deep imports into `features/<x>/**` except `features/<x>/index.*`
 * Disallow feature-to-feature internal imports
 * Allow scenes to compose features only via public surfaces
+
 ## Illustrative folder shape for a larger feature
 
 ```text

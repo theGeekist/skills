@@ -1,15 +1,6 @@
 # Placement and public contracts
 
-Apply these detailed rules when the core skill routes you to this concern. Preserve equivalent repository conventions; examples are illustrative.
-
-## Find the relevant section
-
-- [File naming and nesting](#file-naming-and-nesting)
-- [Key concepts](#key-concepts)
-- [Rules for decisions](#rules-for-decisions)
-- [Delivery channels](#delivery-channels)
-- [Internationalisation and configuration](#internationalisation-and-configuration)
-- [Capability public surface contract](#capability-public-surface-contract)
+Read these original rules before deciding or changing this concern.
 
 ## File naming and nesting
 
@@ -36,6 +27,7 @@ packages/checkout/src/
 ```
 
 over repeating `checkout` in every filename or creating speculative `services/`, `repositories/`, and `handlers/` layers.
+
 ## Key concepts
 
 ### Capability
@@ -52,7 +44,7 @@ Capabilities can include business capabilities (Checkout), decision surfaces (Pr
 
 Use the repository's application, use-case, workflow, or composition boundary to:
 - sequence capabilities,
-- handle cross-capability flow concerns: retries, idempotency (keeping repeated requests from duplicating effects), and sagas (multi-step workflows with compensating actions),
+- handle cross-capability flow concerns (idempotency, retries, sagas/workflows),
 - map success/failure story paths.
 
 Do not encode capability rules here.
@@ -63,6 +55,7 @@ Keep this layer intentionally small:
 - adapter boundaries, which may be named `adapters/`, `infrastructure/`, `platform/`, or according to local convention: DB/HTTP/queue/cache/bus wrappers,
 - cross-cutting service boundaries, which may be folders or workspace projects: logging, telemetry, idempotency, generic auth helpers,
 - generic utilities with no business semantics.
+
 ## Rules for decisions
 
 ### Placement rules
@@ -99,14 +92,16 @@ Promotion targets:
 ### Capability grouping rule
 
 If Capability A appears to own Capability B, determine whether B is genuinely an internal implementation detail or an independently owned boundary. Keep independent capabilities as peers, which may sit beneath a shared domain grouping such as `packages/commerce/*` or `libs/commerce/*`. Move their coordination into the established orchestration surface.
+
 ## Delivery channels
 
-Treat application programming interfaces (APIs), command-line interfaces (CLIs) and software development kits (SDKs) as delivery adapters, not capabilities.
+Treat API/CLI/SDK as delivery adapters, not capabilities.
 
 - HTTP/GraphQL/gRPC endpoints map requests to orchestration.
 - CLI commands map to orchestration.
 - Internal SDK is capability public surfaces.
-- External SDK is a separate artefact built from transport contracts, not capability internals.
+- External SDK is a separate artifact built from transport contracts, not capability internals.
+
 ## Internationalisation and configuration
 
 Treat internationalisation and configuration as normal architecture concerns from the start, even when the application initially has one language and one runtime configuration.
@@ -119,11 +114,12 @@ Treat internationalisation and configuration as normal architecture concerns fro
 - Keep locale-sensitive presentation near delivery while the originating capability owns the meaning.
 - Keep machine-facing identifiers, error codes and protocol values language-neutral.
 - Resolve configuration during application composition and provide capabilities with the values they require.
+
 ## Capability public surface contract
 
 Expose:
 - small set of commands/queries/use-cases,
-- boundary data types, such as data transfer objects (DTOs),
+- boundary DTO-like types,
 - optionally emitted events.
 
 Do not expose:

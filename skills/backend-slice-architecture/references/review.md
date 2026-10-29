@@ -1,6 +1,6 @@
-# Review signals and completion checklist
+# Review signals and checklist
 
-Apply these detailed rules when the core skill routes you to this concern. Preserve equivalent repository conventions; examples are illustrative.
+Read these original rules before deciding or changing this concern.
 
 ## Amber / red flags
 
@@ -13,7 +13,7 @@ Amber (watch):
 
 Red (act now):
 - deep imports across capabilities become normal,
-- a single capability, orchestration, service, or adapter file exceeds roughly 1,000 source lines of code (SLOC),
+- a single capability, orchestration, service, or adapter file exceeds roughly 1K SLOC,
 - orchestration becomes a rule monolith,
 - CI slows and teams compensate with long-lived branches.
 
@@ -22,12 +22,14 @@ Standard responses:
 - oversized capability -> split into sibling capabilities,
 - oversized orchestration -> split workflows and push rules back into capabilities,
 - cross-imports -> enforce public surfaces and refactor immediately.
+
 ## Sizing rules
 
 Use size as a smoke alarm, not dogma.
 
 - Rough threshold: ~1K SLOC in one adapter/service/orchestration/capability file is a boundary warning.
 - If one behaviour lifecycle requires hunting across many folders, boundary placement is wrong.
+
 ## Review/refactor checklist
 
 1. Start every new behaviour inside an owned capability boundary.

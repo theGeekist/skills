@@ -1,12 +1,6 @@
-# Workspace roles and incremental migration
+# Workspace and migration
 
-Apply these detailed rules when the core skill routes you to this concern. Preserve equivalent repository conventions; examples are illustrative.
-
-## Find the relevant section
-
-- [Workspace mapping](#workspace-mapping)
-- [Illustrative folder shapes](#illustrative-folder-shapes)
-- [Evolution model](#evolution-model)
+Read these original rules before deciding or changing this concern.
 
 ## Workspace mapping
 
@@ -15,9 +9,9 @@ Follow the workspace's configured project roots. `apps/`, `packages/`, and `libs
 ### Common roles
 
 - `apps/*` commonly contains deployable runtime entrypoints (delivery + composition):
-  - inbound adapters (HTTP/GraphQL/gRPC, workers, cron, command-line interfaces)
+  - inbound adapters (HTTP/GraphQL/gRPC, workers, cron, CLI)
   - orchestration/workflows/use-cases (thin sequencing)
-  - composition root (dependency injection, configuration and startup wiring)
+  - composition root (DI/config/bootstrap)
 
 - `apps/*` may also contain capability or library projects when that is the repository's established convention.
 - `packages/*` commonly contains workspace packages, including runtime applications, capability boundaries, and shared infrastructure. A package may be internal or publishable.
@@ -41,7 +35,7 @@ Rules:
 - If multiple runtimes exist (`api`, `worker`, `admin`), do not duplicate orchestration logic.
 - Share orchestration in a package, or route both runtimes through common orchestration entrypoints.
 
-### Incremental migration
+### Path-of-correctness migration
 
 - Do not move old code first.
 - Add new behaviour to capability projects under the repository's established workspace roots.
@@ -61,6 +55,7 @@ Typical tooling options:
 - TypeScript: ESLint import rules + TS path mapping.
 - Nx/Turborepo: module boundary rules.
 - Java: package visibility + ArchUnit.
+
 ## Illustrative folder shapes
 
 These are mappings of the same ownership model, not competing architectures or required names.
@@ -128,6 +123,7 @@ src/
   main.ts
 
 ```
+
 ## Evolution model
 
 1. Start capability-local and ship.
