@@ -17,10 +17,18 @@ Keep implementation progress separate from validation. Pair a material evidence 
 Check consistency, accessibility, readability and repeatability. Use sources for claims and real events for progress. Preserve uncertainty that affects a decision without inventing certainty or unnecessary approval gates.
 <!-- shared-baseline:end -->
 
+## Match the form to the reader
+
 Determine whether the reader needs to learn by doing, complete a task, look up an exact contract or understand why the system works this way. Read the current documentation authority and relevant source revision. Use linked sections or pages when distinct purposes need different detail; do not create four documents automatically.
 
 For substantial material, make purpose, main behaviour or decision and consequences easy to find. Explain required specialist terms near first use and provide meaningful links to contracts, examples and decisions. Preserve identifiers, units, defaults and failure behaviour in technical detail.
 
+## Choose the useful detail
+
 Load [documentation patterns](references/technical-documentation.md) when choosing or restructuring a document, writing a procedure/reference or checking mixed-audience navigation. For a narrow factual correction, inspect only the affected contract and existing form. Load [uncertainty guidance](references/uncertainty.md) if an evidence gap changes implementation or validation work.
 
 Check examples and procedures where available and authorised. Separate inspected behaviour from executed checks and planned verification. Deliver the requested documentation and material limitations, without appending an editorial checklist to the document.
+
+## Sources and adaptation
+
+Diátaxis, Good Docs and the arc42 architecture-documentation template inform reader-purpose selection, procedures and architecture navigation. See [the sources and how they are adapted](references/technical-documentation.md#sources-and-local-adaptation); no complete framework template is mandatory.

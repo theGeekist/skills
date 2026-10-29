@@ -1,19 +1,17 @@
 ---
 name: backend-slice-architecture
-description: Use when creating, refactoring, reviewing, or incrementally migrating backend architecture towards a capability-first, package-shaped model with explicit public APIs, clear orchestration, and earned shared infrastructure across apps, packages, libraries, modules, or equivalent project roots.
+description: "Use when creating, refactoring, reviewing, or incrementally migrating backend architecture towards a capability-first, package-shaped model with explicit public APIs, clear orchestration, and earned shared infrastructure across apps, packages, libraries, modules, or equivalent project roots."
 license: MIT
 metadata:
   author: Geekist
   homepage: https://geekist.co
 ---
 
-# Backend Architecture Playbook
+# Backend architecture
 
-Apply this architecture when the user chooses this model or asks for a review against it.
+Keep related backend behaviour together, protect its public interface and make cross-capability coordination explicit. Apply this model when the user chooses it or requests a review against it.
 
-## Preserve the architecture rules
-
-The architecture rules below and in the required references retain the original wording. Organisation and explanatory wording may change only while preserving every rule, exception and intended meaning. Any architectural rule change requires the user's explicit approval. The language baseline governs communication; it does not override or weaken architecture rules.
+Organisation, rephrasing and simplification must preserve every architecture rule, exception and intended meaning. Architectural rule changes require the user's explicit approval; the writing baseline changes how rules are communicated, not what they require.
 
 <!-- shared-baseline:start -->
 Use current project terms and decisions. Explain an unfamiliar term near its first consequential use; distinguish a proposed meaning from an accepted one. Preserve exact identifiers and technical constraints.
@@ -25,67 +23,27 @@ Keep implementation progress separate from validation. Pair a material evidence 
 Check consistency, accessibility, readability and repeatability. Use sources for claims and real events for progress. Preserve uncertainty that affects a decision without inventing certainty or unnecessary approval gates.
 <!-- shared-baseline:end -->
 
-## Authority and adaptation
+## Start with the repository
 
-Inspect the repository's existing conventions and constraints before proposing placement or changes. Treat this playbook as an architecture lens and target direction, not permission to reorganise unrelated code. Preserve established naming where it expresses the same boundaries, and migrate existing systems through the work already in scope.
+Read existing instructions, decisions, project metadata and affected code before recommending placement. Preserve equivalent repository and framework conventions. These are strong defaults, not permission to rename roots or reorganise unrelated code. Depart from a default for a concrete local reason and keep the affected boundary consistent.
 
-## What this architecture is
+A **capability** owns a cohesive area's rules, state and implementation. Its **public surface** is the operations and types other parts may use; a **deep import** bypasses that interface to reach internals. **Package-shaped** means independently testable with an explicit public surface and enforceable dependencies, without requiring a `package.json`, a publishable package or a top-level `packages` directory.
 
-Use a capability-first, package-shaped backend where behaviour starts inside an owned capability boundary and is promoted outward only when it becomes genuinely agnostic.
+These operating rules support legibility, autonomy and predictable change. They do not require strict adherence to domain-driven design (DDD), Hexagonal, Clean or model–view–controller (MVC) architecture.
 
-`Package-shaped` describes an independently testable boundary with an explicit public surface and enforceable dependencies. It does not require a `package.json`, a publishable package, or a top-level directory named `packages`.
+## Keep the decision core
 
-Do not treat this as a strict DDD/Hexagonal/Clean/MVC doctrine. Treat it as operating rules that optimise legibility, autonomy, and predictable change.
-
-## Core mental model
-
-Two homes, one direction of travel:
-
-1. Capability boundary (default)
-- Place capability-specific behaviour in the repository's established package, library, module, or source boundary.
-- In workspaces this commonly means `packages/<capability>` or `libs/<capability>`.
-- In a single-package service this commonly means `src/<capability>` or `src/modules/<capability>`.
-- Let each capability own its internals.
-
-2. Agnostic shared boundary (earned)
-- Keep reusable infrastructure and cross-cutting helpers in the repository's established shared packages, libraries, adapters, or services only when genuinely capability-agnostic.
-
-Direction of travel: capability -> shared through promotion. Avoid reverse movement.
-
-Orchestration is one explicit role:
-- Place cross-capability stories in the repository's application, use-case, workflow, or runtime composition surface.
-- Do not allow capabilities to coordinate other capabilities implicitly.
-
-## Strong defaults
-
-These are decision guides, not filesystem directives. Follow established repository and framework conventions when they express the same ownership and dependency boundaries. Depart from a default when the local context provides a concrete reason, and preserve consistency within the affected boundary.
-
-1. Start in a capability
-- Implement new behaviour inside an owned capability boundary unless it is explicitly agnostic from day one.
-
-2. Isolate capabilities
-- Avoid reaching into another capability's internals.
-- Depend only on another capability's public surface.
-
-3. Keep orchestration explicit
-- Put cross-capability sequencing and coordination in the repository's established orchestration surface.
-- Compose capability behaviour there; do not move capability rules there.
-
-4. Do not hide capability boundaries
-- Do not make an independently owned capability an internal implementation detail of another capability.
-- Organisational grouping directories are fine when they do not create ownership or import boundaries.
-- Keep independently owned capabilities as peers within the relevant grouping and coordinate them explicitly.
-
-5. Earn promotion through repetition
-- Allow early duplication.
-- Promote only when repetition is visible and painful.
-
-6. Make public surfaces explicit
-- Give every capability a front door appropriate to the ecosystem, such as package exports, `index.ts`, `public.ts`, module visibility, or an equivalent public API.
-- Block deep imports.
-
-7. Surface amber/red flags
-- Treat architecture smells as action triggers, not style debates.
+- Start new behaviour inside its owning capability unless it is explicitly independent of capability-specific rules from day one. Keep capability internals owned and private.
+- Keep independently owned capabilities as peers. Domain grouping directories are acceptable when they create no hidden ownership or import boundary. Determine whether an apparently nested capability is truly an internal implementation detail before splitting it.
+- Place cross-capability sequencing and coordination in the established application, use-case or workflow surface. This **orchestration** composes capabilities; their rules remain inside them.
+- Orchestration may depend on capability public surfaces. Capabilities may depend on approved agnostic shared boundaries: shared code independent of capability-specific rules and assumptions. A narrow, natural dependency on a sibling's public surface is allowed when clearer than orchestration; it must not become workflow sequencing or coordination. Investigate a growing sibling-dependency graph rather than automatically rejecting it.
+- Give every capability an ecosystem-appropriate public surface and mechanically block deep imports. Expose a small set of commands, queries, use cases, boundary data types and optional events; keep internal persistence models, internal helper utilities and volatile domain objects private.
+- Allow early duplication. **Promotion** moves repeated reusable behaviour from capability-local code to shared code. Promote when two or more capabilities independently implement the same concept, repeated edits cause friction and the abstraction is clear. Shared code must have no business semantics, remain stable and reusable without leaking assumptions, and prevent correctness, security or consistency harm from duplication. Avoid reversing the local-to-shared direction.
+- Prefer shallow internals and descriptive filenames. Preserve recognised framework forms and local compound-name conventions. Add directories for real boundaries, generated-code isolation, framework requirements, substantial growth or improved navigation; avoid speculative taxonomy and repeated capability prefixes.
+- Treat application programming interfaces (APIs), command-line interfaces and external software development kits (SDKs) as delivery adapters. Requests map to orchestration. An internal SDK exposes capability public surfaces; an external SDK is built from transport contracts.
+- Keep internationalisation and configuration in the design from the start. The originating capability owns string meaning; locale-sensitive presentation stays near delivery; machine identifiers remain language-neutral. Compose locale/configuration in the runtime shell and supply capabilities with required values.
+- Follow configured workspace roots: `apps`, `packages`, `libs` or equivalents can express the same roles. Folder names alone do not determine architecture. Share orchestration across multiple runtimes rather than duplicating it.
+- Migrate through real work: add behaviour in the appropriate existing boundary and move old code only when touched. Treat architecture smells as action triggers. Watch amber signals and act on red signals using the required review reference. Roughly 1,000 source lines in one file is a boundary warning; size is a smoke alarm, not dogma.
 
 ## Load only the relevant detail
 
@@ -97,8 +55,12 @@ Read the indicated reference **before deciding or changing that concern**. A ful
 | Workspace roles, multiple runtimes, migration, enforcement tools or folder examples | [Workspace and migration](references/workspace-and-migration.md) |
 | Architecture review, sizing, dependency smells or refactor completion | [Review signals and checklist](references/review.md) |
 
-Each reference preserves the original detailed rules verbatim; examples illustrate options rather than mandate a stack. Use the smallest relevant section, and avoid loading examples for unrelated ecosystems.
+Each reference preserves the detailed rules; examples illustrate options rather than mandate a stack. Use the smallest relevant section, and avoid loading examples for unrelated ecosystems.
 
 ## Explain the recommendation
 
 Give the affected boundary, evidence and smallest useful change before optional mechanisms. Link to current code, decisions and the relevant detailed rule. Preserve the shared baseline above when explaining proposals, evidence gaps and practical consequences to technical and business readers.
+
+## Sources and inspiration
+
+For the origin of these rules and the writing guidance applied to them, see [sources and local adaptation](references/placement-and-contracts.md#sources-and-local-adaptation). This source note supports attribution; it does not add another required research read.

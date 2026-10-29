@@ -6,69 +6,69 @@
   "skills": [
     {
       "skill": "advance-with-uncertainty",
-      "body_words": 691,
+      "body_words": 728,
       "description_words": 49,
-      "bundled_reference_words": 721
+      "bundled_reference_words": 780
     },
     {
       "skill": "backend-slice-architecture",
-      "body_words": 861,
+      "body_words": 987,
       "description_words": 34,
-      "bundled_reference_words": 1684
+      "bundled_reference_words": 1859
     },
     {
       "skill": "establish-project-language",
-      "body_words": 666,
+      "body_words": 711,
       "description_words": 40,
-      "bundled_reference_words": 1535
+      "bundled_reference_words": 1661
     },
     {
       "skill": "frontend-slice-architecture",
-      "body_words": 939,
+      "body_words": 952,
       "description_words": 28,
-      "bundled_reference_words": 1494
+      "bundled_reference_words": 1634
     },
     {
       "skill": "record-architecture-decisions",
-      "body_words": 326,
+      "body_words": 367,
       "description_words": 40,
-      "bundled_reference_words": 1083
+      "bundled_reference_words": 1193
     },
     {
       "skill": "review-project-language",
-      "body_words": 334,
+      "body_words": 371,
       "description_words": 44,
-      "bundled_reference_words": 1026
+      "bundled_reference_words": 1130
     },
     {
       "skill": "write-implementation-tasks",
-      "body_words": 325,
+      "body_words": 363,
       "description_words": 44,
-      "bundled_reference_words": 1046
+      "bundled_reference_words": 1153
     },
     {
       "skill": "write-interface-content",
-      "body_words": 316,
+      "body_words": 352,
       "description_words": 38,
-      "bundled_reference_words": 338
+      "bundled_reference_words": 389
     },
     {
       "skill": "write-marketing-content",
-      "body_words": 345,
+      "body_words": 388,
       "description_words": 41,
-      "bundled_reference_words": 381
+      "bundled_reference_words": 426
     },
     {
       "skill": "write-project-content",
-      "body_words": 373,
+      "body_words": 413,
       "description_words": 35,
-      "bundled_reference_words": 0
+      "bundled_reference_words": 94
     },
     {
       "skill": "write-technical-documentation",
-      "body_words": 332,
+      "body_words": 377,
       "description_words": 40,
-      "bundled_reference_words": 1087
+      "bundled_reference_words": 1255
     }
   ]
 }

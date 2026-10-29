@@ -17,10 +17,18 @@ Keep implementation progress separate from validation. Pair a material evidence 
 Check consistency, accessibility, readability and repeatability. Use sources for claims and real events for progress. Preserve uncertainty that affects a decision without inventing certainty or unnecessary approval gates.
 <!-- shared-baseline:end -->
 
+## Review meaning and navigation
+
 Read the review scope, current domain references and related decisions. Identify the audience and artefact purpose. Trace consequential claims to the selected sources. Distinguish a conflicting meaning from a style preference; preserve quotations and machine values unless their change is authorised.
 
 Assess whether readers can locate the purpose, main point, consequences and deeper contract. Check term introductions, descriptive headings, meaningful links and essential textual explanations of visuals. Compare repeated concepts across the requested artefacts rather than demanding identical wording.
 
+## Choose the useful detail
+
 Load [review criteria](references/review.md) for a multi-artefact audit or structured editorial review. Load [uncertainty guidance](references/uncertainty.md) only when evidence language affects decisions or continued implementation. For a narrow review, inspect the relevant passages and sources rather than reading every reference.
 
 Report material findings with location, effect and smallest useful correction. Prioritise changed meaning and unsupported claims before cosmetic preferences. For an authorised revision, apply and check the requested changes. For review only, give actionable findings without editing unrelated material. State when no material defect is found.
+
+## Sources and adaptation
+
+The review criteria draw on Microsoft and Google writing guidance and the ISO plain-language public abstract. See [sources and the local four-outcome review](references/review.md#sources-and-local-adaptation).

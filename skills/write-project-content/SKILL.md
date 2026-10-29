@@ -17,6 +17,8 @@ Keep implementation progress separate from validation. Pair a material evidence 
 Check consistency, accessibility, readability and repeatability. Use sources for claims and real events for progress. Preserve uncertainty that affects a decision without inventing certainty or unnecessary approval gates.
 <!-- shared-baseline:end -->
 
+## Match the request to a workflow
+
 | Requested work | Preferred skill |
 | --- | --- |
 | Implementation ticket, acceptance criteria or worker handoff | `write-implementation-tasks` |
@@ -31,3 +33,7 @@ Check consistency, accessibility, readability and repeatability. Use sources for
 Use an available specialist directly. For mixed requests, use only the workflows needed for distinct deliverables and keep their domain meanings aligned. If a named specialist is not installed, preserve this baseline and the existing project format, state the limited fallback and complete the bounded writing task without inventing dependency availability.
 
 Do not require a marketing author to load an architecture skill merely because the subject is technical. Read source contracts when needed to support a claim. A normal conversation uses persistent guidance rather than activating this router for every response.
+
+## Sources and adaptation
+
+This router is a local workflow choice. See [its rationale and Agent Skills packaging source](references/routing.md). It does not introduce another writing framework or require every specialist to load together.

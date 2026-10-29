@@ -1,10 +1,12 @@
 # Architecture skill context split
 
+This records the initial split trial. The current language revision, meaning review and updated context counts are recorded in [architecture language review](architecture-language-review.md) and [context budget](context-budget.json). Counts and verbatim-copy observations below describe that earlier trial, not the current active wording.
+
 The backend and frontend skills now keep the decision rules in a short core and load detailed material according to the concern being decided. Each skill remains independently installable: every linked reference lives inside its skill directory. Existing architecture boundaries and metadata names are retained.
 
 ## Context cost
 
-Counts use whitespace-separated words including frontmatter. The final backend core is 907 words and the frontend core is 979 words, including the same 144-word generated baseline. These counts are an authoring checkpoint, not token measurements.
+Counts use whitespace-separated words including frontmatter. At that checkpoint the backend core was 907 words and the frontend core was 979 words, including the same 144-word generated baseline. These counts are an authoring checkpoint, not token measurements.
 
 | Skill | Original main file | Final core with shared baseline | Detailed references |
 | --- | ---: | ---: | ---: |

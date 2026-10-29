@@ -26,3 +26,7 @@ Keep tone appropriate to the audience and channel. A sales claim, editorial essa
 Use the project's audience labels when available. An internal qualification state may need an explanation of progress and next steps rather than a raw database label. Do not collapse distinct concepts such as confidence, coverage and eligibility into one percentage.
 
 When evidence for a requested claim is missing, draft supported value and record the specific validation or source needed for the stronger claim. Continue useful drafting rather than disqualifying the whole campaign. Keep claim notes separate from finished customer copy unless the user requested an annotated draft.
+
+## Sources and local adaptation
+
+The audience, value and claim patterns here are local guidance rather than an imported marketing framework. [Microsoft's plain-word guidance](https://learn.microsoft.com/en-us/style-guide/word-choice/use-simple-words-concise-sentences) and [Google's audience-aware jargon guidance](https://developers.google.com/style/jargon) inform expression. Neither source establishes product claims or marketing effectiveness; those need the actual product evidence.

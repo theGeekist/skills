@@ -48,3 +48,7 @@ Revisit affected terms when a decision, schema, contract or product meaning chan
 Finish with accepted findings, remaining proposals and source pointers. Report what was actually inspected and checked.
 
 When a meaning remains unresolved and affects the next action, load [the uncertainty conventions](references/uncertainty.md) to record the next investigation or decision. A proposed term or incomplete glossary does not automatically block independent authorised implementation.
+
+## Sources and adaptation
+
+Context-aware terminology draws on domain-driven design (DDD), the Simple Knowledge Organization System (SKOS) for labels and definitions, and the Good Docs terminology guidance. See [sources and local registry adaptations](references/writing.md#sources-and-local-adaptation). These inform meaning and naming; they do not impose a DDD architecture.

@@ -17,7 +17,7 @@ Keep implementation progress separate from validation. Pair a material evidence 
 Check consistency, accessibility, readability and repeatability. Use sources for claims and real events for progress. Preserve uncertainty that affects a decision without inventing certainty or unnecessary approval gates.
 <!-- shared-baseline:end -->
 
-Load [the uncertainty conventions](references/uncertainty.md) for a multi-gap assessment, conflicting evidence or a consequential decision. Use [the task and ADR examples](assets/action-records.md) when a concrete structure helps. A short handoff can use the inline baseline and workflow without loading either.
+Load [the uncertainty conventions](references/uncertainty.md) for a multi-gap assessment, conflicting evidence or a consequential decision. Use [the task and architecture decision record (ADR) examples](assets/action-records.md) when a concrete structure helps. A short handoff can use the inline baseline and workflow without loading either.
 
 ## Identify what the statement establishes
 
@@ -54,3 +54,7 @@ Keep the record proportional to the task. A short task or handoff may express th
 Check whether another worker can identify what they may do now, what they must check and what genuinely requires a decision. Remove unsupported leaps from an evidence label to rejection or a blanket stop. Also check that the rewrite has not implied validation, readiness or permission that does not exist.
 
 Do not ban negative vocabulary or mechanically replace it with positive words. Judge accuracy, usefulness and the action the writing enables. Report unresolved limits alongside the bounded next step.
+
+## Sources and adaptation
+
+This workflow implements Jason's requirement for honest uncertainty that enables bounded next actions. See [its local origin and related decision-record guidance](references/uncertainty.md#sources-and-local-adaptation); it is not presented as an imported uncertainty framework.

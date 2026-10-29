@@ -17,10 +17,18 @@ Keep implementation progress separate from validation. Pair a material evidence 
 Check consistency, accessibility, readability and repeatability. Use sources for claims and real events for progress. Preserve uncertainty that affects a decision without inventing certainty or unnecessary approval gates.
 <!-- shared-baseline:end -->
 
+## Match the wording to actual behaviour
+
 Read the current state contract, accepted terms, audience labels and available actions. Identify what the person needs to understand at this point in the journey. Propose missing states explicitly instead of inventing implemented behaviour.
 
 Keep action names consistent across controls, confirmations and help. Explain a metric's meaning and relevant period. Distinguish a result, confidence, coverage and execution progress where the domain does. Derive movement and celebration from real events; label design examples clearly.
 
+## Choose the useful detail
+
 Load [interface-content patterns](references/interface-content.md) for a set of states, dashboard wording, errors/recovery or accessibility review. A single established label can use the inline baseline and local terminology without loading the full pattern.
 
 Make essential information available in text, with a useful route to detailed definitions. Connect a partial result to actual progress and the next milestone without disguising a consequential constraint. Deliver copy mapped to the requested states and actions; include implementation notes separately only when needed.
+
+## Sources and adaptation
+
+Atlassian's voice-and-tone guidance informs wording for the user's situation; state and progress rules remain local. See [sources and local adaptation](references/interface-content.md#sources-and-local-adaptation).

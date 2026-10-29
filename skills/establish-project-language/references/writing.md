@@ -60,3 +60,7 @@ Use project terminology in conversations as well as files. Explain a proposed co
 | Repeatability | Can another author use the references and pattern to produce an equally navigable result? |
 
 Mechanical checks can detect structural errors and selected vocabulary drift. Human or independent agent review must still assess meaning, navigation, evidence and cadence. Sentence length and reading-age scores are diagnostic signals, not acceptance criteria.
+
+## Sources and local adaptation
+
+These local conventions draw on [Microsoft's simple-word guidance](https://learn.microsoft.com/en-us/style-guide/word-choice/use-simple-words-concise-sentences), [Google's audience-aware jargon guidance](https://developers.google.com/style/jargon) and the [ISO 24495-1 public abstract](https://www.iso.org/standard/78907.html). They support reader-focused expression; they do not replace project meanings or establish ISO conformity. Context-aware terminology also draws on [DDD bounded contexts](https://martinfowler.com/bliki/BoundedContext.html), [SKOS labels and definitions](https://www.w3.org/TR/skos-reference/) and the [Good Docs terminology template](https://gitlab.com/tgdp/templates/-/tree/main/terminology-system). The registry is a local JSON model, not a formal SKOS implementation.

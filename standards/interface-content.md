@@ -24,3 +24,7 @@ Use consistent action names across buttons, confirmations and help. Explain spec
 Keep microcopy short enough for the context without removing the condition that changes a user's choice. Use progressive disclosure for calculation detail and diagnostics. A tooltip should not be the sole route to a critical warning or definition.
 
 Validate proposed wording against the states that actually exist, including interruption, partial completion, stale data and recovery. If a state is missing from the contract, record a proposal rather than inventing product behaviour.
+
+## Sources and local adaptation
+
+[Atlassian's voice and tone guidance](https://atlassian.design/foundations/content/voice-tone/) informs wording that responds to the user's situation. The state distinctions, progress-event requirements and domain-preserving labels here are local rules. Atlassian's public UI guidance is not being presented as its internal marketing framework or as validation of a product's state model.

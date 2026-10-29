@@ -17,10 +17,18 @@ Keep implementation progress separate from validation. Pair a material evidence 
 Check consistency, accessibility, readability and repeatability. Use sources for claims and real events for progress. Preserve uncertainty that affects a decision without inventing certainty or unnecessary approval gates.
 <!-- shared-baseline:end -->
 
+## Establish the outcome and constraints
+
 Read the project's task conventions and the current contracts relevant to the change. Identify the outcome, existing behaviour, constraints and concrete acceptance examples. Use the project's lifecycle states rather than inventing a new status vocabulary.
 
 State what can proceed, how success and failure will be observed, and what evidence to capture. Separate implementation progress from validation; an unrun check can be part of the authorised task. Name a blocker only for the step that genuinely depends on it.
 
+## Choose the useful detail
+
 Load [task and handoff patterns](references/tasks.md) when choosing acceptance detail, splitting work or preparing a worker handoff. Load [uncertainty guidance](references/uncertainty.md) only when an evidence gap or failed check materially affects the next action. Do not load both by default for a straightforward ticket.
 
 Use the existing architecture and task authority. Preserve technical choices already made; propose implementation detail only when needed. Deliver the requested task with source links and a concrete next step, without adding a universal process checklist.
+
+## Sources and adaptation
+
+The task pattern is a local synthesis, informed by the Good Docs goal-oriented how-to guidance. See [the source and limits of that adaptation](references/tasks.md#sources-and-local-adaptation).

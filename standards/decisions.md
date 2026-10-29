@@ -27,3 +27,7 @@ Respect authority recorded by the project or user. State an external publication
 Link sources and related decisions using meaningful text. Preserve historical records. Supersede or amend according to the repository's convention, documenting the changed reasoning rather than quietly rewriting history.
 
 Use links that work at the intended destination: repository-relative links for a checked-in record, or pinned source URLs where the reader lacks that checkout. Avoid temporary evaluation paths. Explain specialist abbreviations such as FIFO (first in, first out) when they affect the reader's understanding, even in a short record. Honour a requested length by removing optional detail before removing a consequential constraint.
+
+## Sources and local adaptation
+
+[MADR](https://adr.github.io/madr/) supplies the context, options, outcome and consequences pattern; its minimal template was downloaded and inspected. This guide adapts that pattern to the existing project's ADR convention. Evidence/reconsideration guidance and continuation of authorised work are local additions, not a claim that MADR validates the chosen architecture.

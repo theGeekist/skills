@@ -1,6 +1,11 @@
 # Review signals and checklist
 
-Read these original rules before deciding or changing this concern.
+Read the relevant sections before deciding or changing this concern. These rules preserve the original architecture; the wording and organisation support navigation.
+
+## Find the relevant rule
+
+- [Amber / red flags](#amber--red-flags)
+- [Review/refactor checklist](#reviewrefactor-checklist)
 
 ## Amber / red flags
 
@@ -15,10 +20,10 @@ Amber (watch):
 Red (act now):
 
 * deep imports across features become normal,
-* a scene becomes a “god file” (route + rules + state + UI),
+* a scene combines routes, rules, state and UI into one file,
 * shared components start carrying feature workflow logic,
 * global hooks become a dumping ground,
-* features exceed size thresholds and become mini-monoliths.
+* features exceed size thresholds and become large, tightly coupled units.
 
 Standard responses:
 

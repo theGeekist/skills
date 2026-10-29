@@ -17,10 +17,18 @@ Keep implementation progress separate from validation. Pair a material evidence 
 Check consistency, accessibility, readability and repeatability. Use sources for claims and real events for progress. Preserve uncertainty that affects a decision without inventing certainty or unnecessary approval gates.
 <!-- shared-baseline:end -->
 
+## Establish the audience and supported value
+
 Use the brief, product sources and established domain meanings to identify the audience, channel, desired action and supported capabilities. Infer available context before asking. Translate necessary technical terms into practical effects without changing the product's meaning or authority boundaries.
 
 Lead with the reader's situation and value. Support consequential claims with actual capabilities, observations or supplied evidence. Separate available behaviour, planned features and illustrative examples. Do not invent measured results, integrations or assurance. When a stronger claim needs validation, draft the supported value and record the specific source or check needed separately.
 
+## Choose the useful detail
+
 Load [marketing patterns](references/marketing.md) for a campaign, product page, positioning exercise or technical-to-commercial translation. For a small wording change, use the existing audience and voice with the inline baseline. Do not load technical-documentation or architecture skills merely because the product is technical; consult the actual source contract when a claim depends on it.
 
 Match cadence to the channel and requested voice. Keep internal claim notes separate from finished customer copy unless annotations are requested. Deliver the requested copy with a clear action where the brief calls for one.
+
+## Sources and adaptation
+
+Microsoft and Google writing guidance informs clear expression. The audience, value and claim patterns are local rather than an imported marketing framework. See [sources and local adaptation](references/marketing.md#sources-and-local-adaptation).

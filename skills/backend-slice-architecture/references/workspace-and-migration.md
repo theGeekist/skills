@@ -1,6 +1,12 @@
-# Workspace and migration
+# Workspace roles and incremental migration
 
-Read these original rules before deciding or changing this concern.
+Use this reference to map the architecture onto existing project roots, share orchestration across runtimes and migrate through work already in scope. Preserve equivalent repository conventions; folder examples illustrate options.
+
+## Find the relevant section
+
+- [Workspace mapping](#workspace-mapping)
+- [Illustrative folder shapes](#illustrative-folder-shapes)
+- [Evolution model](#evolution-model)
 
 ## Workspace mapping
 
@@ -8,10 +14,12 @@ Follow the workspace's configured project roots. `apps/`, `packages/`, and `libs
 
 ### Common roles
 
+A runtime entrypoint starts a deployable application. Its composition root connects dependencies and configuration; its orchestration sequences capabilities.
+
 - `apps/*` commonly contains deployable runtime entrypoints (delivery + composition):
-  - inbound adapters (HTTP/GraphQL/gRPC, workers, cron, CLI)
+  - inbound adapters (HTTP/GraphQL/gRPC, workers, cron, command-line interfaces)
   - orchestration/workflows/use-cases (thin sequencing)
-  - composition root (DI/config/bootstrap)
+  - composition root (dependency injection, configuration and startup wiring)
 
 - `apps/*` may also contain capability or library projects when that is the repository's established convention.
 - `packages/*` commonly contains workspace packages, including runtime applications, capability boundaries, and shared infrastructure. A package may be internal or publishable.
@@ -19,12 +27,12 @@ Follow the workspace's configured project roots. `apps/`, `packages/`, and `libs
 - Use project metadata, public surfaces, and runtime responsibility rather than the root folder name to determine a project's role.
 
 Capability packages or libraries contain:
-  - capability slices (default home for behaviour)
-  - shared agnostic plumbing (earned home for adapters/services/utilities)
+  - capability slices: the owned boundaries where behaviour starts
+  - shared agnostic plumbing: reusable adapters, services and utilities earned through repetition
 
 Rules:
 - New behaviour starts in a capability project under the workspace's established `packages/*`, `libs/*`, or equivalent root.
-- Cross-slice coordination lives in the app’s orchestration surface (or a shared orchestration package if multiple runtimes exist).
+- Coordination across capability slices lives in the app’s orchestration surface (or a shared orchestration package if multiple runtimes exist).
 - Slices expose an ecosystem-appropriate public surface; deep imports into slice internals are disallowed.
 - Promotion to shared packages happens only when repetition is visible and the abstraction is obvious.
 - Do not introduce new naming taxonomies unless the repo already uses them.
@@ -35,7 +43,7 @@ Rules:
 - If multiple runtimes exist (`api`, `worker`, `admin`), do not duplicate orchestration logic.
 - Share orchestration in a package, or route both runtimes through common orchestration entrypoints.
 
-### Path-of-correctness migration
+### Incremental migration
 
 - Do not move old code first.
 - Add new behaviour to capability projects under the repository's established workspace roots.
@@ -44,7 +52,7 @@ Rules:
 
 ### Boundary enforcement
 
-Enforce mechanically (lint/build/architecture tests), not by convention alone.
+Enforce boundaries through lint rules, builds or architecture tests. Naming conventions alone are insufficient.
 
 - Allow runtime applications to depend on capability public surfaces.
 - Allow capability projects to depend on approved agnostic infrastructure projects.
@@ -52,7 +60,7 @@ Enforce mechanically (lint/build/architecture tests), not by convention alone.
 - Require imports through the ecosystem's public-surface mechanism.
 
 Typical tooling options:
-- TypeScript: ESLint import rules + TS path mapping.
+- TypeScript: ESLint import rules and TypeScript path mapping.
 - Nx/Turborepo: module boundary rules.
 - Java: package visibility + ArchUnit.
 

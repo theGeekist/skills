@@ -1,11 +1,17 @@
-# Preserve the user-owned architecture rules
+# Preserve architecture meaning while improving language
 
-The backend and frontend rules are authoritative. Organisation, rephrasing and simplification must preserve every rule, exception and intended meaning. Architectural changes require explicit user approval.
+The backend and frontend rules are authoritative. Apply the shared language baseline, clearer explanations and purpose-sized organisation while preserving every rule, exception and intended meaning. Architectural changes require explicit user approval; editorial improvements within that constraint are authorised.
 
-## Correction after the language refactor
+## What the reviews found
 
-An independent audit of each skill against the pre-language-system source at `fcbd5a9` found conflicting summaries: backend red/action signals had been softened, locale proximity had become ownership, shared boundaries had been narrowed, and frontend summaries added independent testability and an approval qualifier. Detailed references largely retained the original rules, but that did not make conflicting summaries acceptable.
+The first audit against the pre-language-system source at `fcbd5a9` found conflicting summaries: backend red/action signals had been softened, locale proximity had become ownership, shared boundaries had been narrowed, and frontend summaries added independent testability and an approval qualifier. Detailed references largely retained the original rules, but that did not make conflicting summaries acceptable.
 
-The correction removes the rewritten decision cores. The original introductions, authority guidance, mental models and strong defaults are restored in the main skills; every remaining original section is retained verbatim in the three concern-specific references. The writing baseline governs communication and cannot override architectural rules.
+A subsequent exact-wording restoration overcorrected. Verbatim retention protects text, whereas the requested outcome is accessible language with preserved architecture meaning. The revised skills therefore keep the shared baseline, concise decision guidance, first-use explanations and concern-specific references. Rules retain their original force, conditions and exceptions.
 
-`standards/architecture-rules/` stores the exact pre-refactor source. `tests/test_architecture_rule_preservation.py` checks that every original second-level section remains verbatim in the main skill or a bundled reference. This verifies textual preservation; future changes to the authoritative snapshots require explicit approval rather than updating a fixture merely to make a test pass.
+## How to check future edits
+
+Use `standards/architecture-rules/` as the original comparison sources. The source-integrity test protects these historical inputs; it deliberately permits changes to active wording. A passing hash or linter cannot prove semantic equivalence.
+
+Review each original section against the active core and relevant reference. Check prohibitions, permissions, defaults, exceptions, thresholds, dependency direction and prescribed responses. Inspect the core separately for new requirements or conflicting summaries. Then apply the four language outcomes: consistency, accessibility, readability and repeatability. Keep automated findings and independent judgement distinct.
+
+See [the language and meaning review](architecture-language-review.md) for the executed checks and findings for this revision. Existing [architecture split trials](architecture-refactor.md) remain historical evidence rather than results for this revision.

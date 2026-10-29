@@ -22,3 +22,7 @@ When a source is missing, state the exact unresolved claim and how to establish 
 Use configured linters for specific signals; assess context before applying a suggestion. Reading-age and sentence-length scores do not establish comprehension. Keep deterministic findings, independent agent judgement and actual human reading observations separate.
 
 When revisions are authorised, change the requested artefact and verify retained facts. For a review-only request, provide actionable findings without silently modifying unrelated material or historical decisions.
+
+## Sources and local adaptation
+
+[Microsoft's plain-word guidance](https://learn.microsoft.com/en-us/style-guide/word-choice/use-simple-words-concise-sentences), [Google's jargon guidance](https://developers.google.com/style/jargon) and the [ISO 24495-1 public abstract](https://www.iso.org/standard/78907.html) inform reader-focused checks. The repository's four outcomes express Jason's priorities; they are not a quoted ISO checklist. Meaning and reader navigation require contextual review alongside selected automated signals.

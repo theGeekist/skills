@@ -14,7 +14,9 @@
       ]
     },
     "write-project-content": {
-      "references": []
+      "references": [
+        "routing.md"
+      ]
     },
     "advance-with-uncertainty": {
       "references": [

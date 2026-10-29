@@ -52,3 +52,7 @@ These examples are invented. They retain uncertainty and define movement without
 Ask whether another worker can identify what to do next, what they may proceed with, what evidence to collect and what genuinely blocks a dependent action. Check that an evidence label has not silently become a rejection, a blanket stop or an invented success claim.
 
 Avoid global bans on negative words or automatic positive substitutions. The quality criterion is accurate reasoning that supports the next useful action.
+
+## Sources and local adaptation
+
+This is a local workflow rule developed from Jason's explicit requirement: honest evidence language must support bounded next actions rather than silently disqualify authorised work. It is not attributed to an external uncertainty framework. [MADR](https://adr.github.io/madr/) provides a related decision-record structure; it does not prescribe this continuation rule or establish that an untested option works.

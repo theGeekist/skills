@@ -1,6 +1,17 @@
 # Placement and public contracts
 
-Read these original rules before deciding or changing this concern.
+Read the relevant sections before deciding or changing this concern. These rules preserve the original architecture; the wording and organisation support navigation.
+
+## Find the relevant rule
+
+- [File naming and nesting](#file-naming-and-nesting)
+- [Folder guidance](#folder-guidance)
+- [Public import guidance](#public-import-guidance)
+- [Rules for decisions](#rules-for-decisions)
+- [State guidance](#state-guidance)
+- [Multi-platform rule (web/native)](#multi-platform-rule-webnative)
+- [Internationalisation and configuration](#internationalisation-and-configuration)
+- [Feature public surface contract](#feature-public-surface-contract)
 
 ## File naming and nesting
 
@@ -34,11 +45,11 @@ The feature name need not prefix every file. When the directory grows considerab
 
 A feature is a cohesive unit with:
 
-* UI + feature state,
+* user interface (UI) and feature state,
 * local hooks,
 * local components,
-* optional local routing within the feature (but scenes own top-level routing),
-* a public API (`index.*`).
+* optional routing within the feature, while scenes own top-level routing,
+* a public application programming interface (API), exposed through `index.*`.
 
 For a feature large enough to justify internal grouping, one possible shape is:
 
@@ -77,7 +88,7 @@ scenes/
     nav/
 ```
 
-### `components/*` (global agnostic UI)
+### `components/*`: shared UI without feature rules
 
 Shared components are UI primitives/layout only:
 
@@ -85,23 +96,23 @@ Shared components are UI primitives/layout only:
 * should not encode feature workflow rules,
 * one export per file (or a well-scoped component module).
 
-### `hooks/*` (global agnostic hooks)
+### `hooks/*`: hooks shared across features
 
 Only genuinely cross-feature hooks:
 
 * auth/session, platform lifecycle, media queries, analytics wrappers.
 * Default placement is feature-local; global is earned.
 
-### `services/*` (optional global)
+### `services/*`: optional shared clients and wrappers
 
-Use only for cross-cutting front-end services:
+Use only for cross-cutting front-end services, meaning services used across features:
 
 * analytics client wrapper
 * feature flag client wrapper
 * error reporting wrapper
-* i18n wrapper
+* internationalisation (i18n) wrapper
 
-Do not put feature semantics here.
+Keep feature-specific meaning and workflow rules out of this shared location.
 
 ## Public import guidance
 
@@ -128,7 +139,7 @@ Default placement: feature.
 
 Place in global only if all are true:
 
-* no feature semantics,
+* no feature-specific meaning or workflow rules,
 * reusable across features without leaking assumptions,
 * behaviour is stable,
 * duplication would harm correctness/consistency (or create constant rework).
@@ -168,7 +179,7 @@ If Feature A appears to contain a sub-feature:
 
 1. Feature state lives with the feature
 
-* reducers, stores, query keys, state machines belong inside the feature.
+* reducers (state update functions), stores, query keys (identifiers for cached requests) and state machines belong inside the feature.
 
 2. Global state is earned
 
@@ -212,3 +223,9 @@ Do not expose:
 * internal state wiring,
 * internal API mappers,
 * volatile feature implementation types.
+
+## Sources and local adaptation
+
+The architecture rules are Jason's original frontend rules, preserved from the [pre-language-system playbook](https://github.com/theGeekist/skills/blob/fcbd5a9/skills/frontend-slice-architecture/SKILL.md). External writing frameworks inform their explanation and navigation; they do not establish or override these architectural requirements.
+
+[Microsoft's simple-word guidance](https://learn.microsoft.com/en-us/style-guide/word-choice/use-simple-words-concise-sentences) informs concise wording. [Google's jargon guidance](https://developers.google.com/style/jargon) informs explanations near first use. These principles are adapted to British English and the project's existing terms.

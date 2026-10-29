@@ -20,7 +20,7 @@ The full catalogue's descriptions grow from 192 to 433 whitespace-separated word
 
 Active context is more selective. The six writing specialists carry one relevant pattern reference, with uncertainty detail available only where appropriate. A straightforward change can use the inline baseline and actual project sources. The full reference set is available without being mandatory on every invocation.
 
-Architecture core files fall from 2,411 to 907 words for backend and 2,198 to 979 for frontend, including their metadata. Details remain local and rules are loaded before the relevant decision. A complete review can read slightly more total material than before; the gain is smaller initial context and less unrelated detail for a narrow task. See [the mapping and observed trial](architecture-refactor.md).
+Architecture cores keep the decision model and load concern-specific rules before the relevant decision. Their wording can improve while architecture meaning remains fixed. A complete review can read more material than the former monolith; the gain is smaller initial context and less unrelated detail for a narrow task. See [the current language review](architecture-language-review.md), [context counts](context-budget.json) and [initial observed split trial](architecture-refactor.md).
 
 Exact word counts are recorded in [context-budget.json](context-budget.json). Observed staged-file accesses are recorded in [selection evaluation](selection-evaluation.md). A file-access event establishes that bytes were read; it does not establish exact prompt tokens or internal reasoning.
 

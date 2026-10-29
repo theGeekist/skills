@@ -26,3 +26,7 @@ Prefer “Build the authorised adapter and check one local client event before c
 For a membership check, state what a member may do, what a non-member observes and where the authoritative membership decision is made. Authentication alone must not silently become project access. Use the actual project's contract rather than importing this invented example as its design.
 
 For a handoff, include current state, the next executable step, where evidence lives and the exact condition that would require a decision. Do not make another worker reconstruct the task from an activity log.
+
+## Sources and local adaptation
+
+This task and handoff pattern is a local synthesis. The downloaded [Good Docs how-to guidance](https://gitlab.com/tgdp/templates/-/tree/main/how-to) informs goal and completion-oriented structure, but it is not a ticket template or a mandated delivery process. Observable acceptance, precise blockers and continued authorised work are local requirements.

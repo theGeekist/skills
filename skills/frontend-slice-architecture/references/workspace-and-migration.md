@@ -1,15 +1,20 @@
 # Workspace and migration
 
-Read these original rules before deciding or changing this concern.
+Read the relevant sections before deciding or changing this concern. These rules preserve the original architecture; the wording and organisation support navigation.
+
+## Find the relevant rule
+
+- [Existing monorepo adaptation](#existing-monorepo-adaptation)
+- [Illustrative folder shape for a larger feature](#illustrative-folder-shape-for-a-larger-feature)
 
 ## Existing monorepo adaptation
 
-Use this when the repo already has `apps/*` + `packages/*` and cannot be reorganized in one move.
+Use this when the repo already has `apps/*` + `packages/*` and cannot be reorganised in one move.
 
-### Monorepo mapping (naming-agnostic)
+### Map runtime and feature responsibilities
 
-- Treat `apps/*` as runtime shells:
-  - routing/navigation, providers, platform bootstrap,
+- Treat `apps/*` as runtime shells (application startup and composition):
+  - routing/navigation, providers, platform startup,
   - scene composition (page/screen orchestration),
   - environment wiring.
 
@@ -18,9 +23,9 @@ Use this when the repo already has `apps/*` + `packages/*` and cannot be reorgan
   - shared UI primitives/components (only when earned),
   - shared cross-cutting wrappers/services (only when earned).
 
-Prefer adding a new slice under existing conventions and enforcing boundaries via public APIs + import rules.
+Prefer adding a new slice under existing conventions and enforcing boundaries through public APIs and import rules.
 
-### Path-of-correctness migration
+### Incremental migration
 
 * Do not move old code first.
 * Add a new lane for all new behaviour:
@@ -31,7 +36,7 @@ Prefer adding a new slice under existing conventions and enforcing boundaries vi
 
 ### Boundary enforcement
 
-Enforce mechanically (lint/build), not by convention alone:
+Enforce with lint or build checks, rather than relying on convention alone:
 
 * Disallow deep imports into `features/<x>/**` except `features/<x>/index.*`
 * Disallow feature-to-feature internal imports

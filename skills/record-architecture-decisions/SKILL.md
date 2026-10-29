@@ -17,10 +17,18 @@ Keep implementation progress separate from validation. Pair a material evidence 
 Check consistency, accessibility, readability and repeatability. Use sources for claims and real events for progress. Preserve uncertainty that affects a decision without inventing certainty or unnecessary approval gates.
 <!-- shared-baseline:end -->
 
+## Establish the decision and its authority
+
 Read the repository's decision convention, related decisions and the actual source material. Establish whether the task proposes a choice, records one already made, explains an accepted decision or supersedes a previous record. Preserve the existing status vocabulary and decision authority.
 
 Lead with the decision and its status. Explain the problem and drivers, viable alternatives and practical consequences. Retain the constraints that change the choice. Link the exact technical contracts rather than making a business reader begin with signatures or type lists.
 
-Load [decision-record patterns](references/decisions.md) when creating or revising a full ADR, comparing options or handling supersession. Load [uncertainty guidance](references/uncertainty.md) only when incomplete evidence, a failed experiment or an actual blocker affects the decision. A short explanation of a settled choice need not load the full pattern.
+## Choose the useful detail
+
+Load [decision-record patterns](references/decisions.md) when creating or revising a full architecture decision record (ADR), comparing options or handling supersession. Load [uncertainty guidance](references/uncertainty.md) only when incomplete evidence, a failed experiment or an actual blocker affects the decision. A short explanation of a settled choice need not load the full pattern.
 
 Distinguish the decision from its implementation and validation. Record a bounded experiment and reconsideration condition where appropriate. Deliver the requested record; do not reopen accepted choices or fabricate alternatives to fill a template.
+
+## Sources and adaptation
+
+The decision-record pattern draws on Markdown Architectural Decision Records (MADR) while preserving the project's own convention. See [MADR and the local additions](references/decisions.md#sources-and-local-adaptation).
