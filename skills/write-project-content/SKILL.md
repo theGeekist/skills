@@ -1,38 +1,33 @@
 ---
 name: write-project-content
-description: Write or review tasks, decision records, architecture explanations, developer documentation, product content and conversation examples using established project meaning and clear reader navigation. Use when drafting or revising these artefacts for consistency, accessibility, readability and repeatability across technical and business audiences.
+description: "Compatibility router for explicit requests to use write-project-content or to choose a project-writing workflow. Keep ordinary task, ADR, technical-documentation, marketing, interface-copy and language-review requests with their purpose-specific skills; this router is not their default prerequisite."
 ---
 
-# Write project content
+# Choose a project-writing workflow
 
-Help the reader find the main point, understand its implications and continue to the detail they need. Preserve technical precision and established project meanings.
+Retain this entry point for existing callers. When invoked explicitly, select the workflow that matches the requested artefact; avoid loading an umbrella plus every specialist.
 
-Read [writing conventions](references/writing.md). Select a structure from [content patterns](references/content-patterns.md); use [the drafting prompts](assets/drafting-prompts.md) when a starting outline helps.
+<!-- shared-baseline:start -->
+Use current project terms and decisions. Explain an unfamiliar term near its first consequential use; distinguish a proposed meaning from an accepted one. Preserve exact identifiers and technical constraints.
 
-## Establish the task
+Lead with the reader's purpose and main point, then explain the consequences and supporting detail. Make substantial technical material navigable by a reader outside engineering, with descriptive headings and meaningful source links. Match depth to the request; use British English in authored prose.
 
-Identify the reader, their purpose and the requested artefact. Infer these from available context before asking a question. Read repository instructions, current terminology and the source material needed to support the claims. Include declared authority or planning paths that begin with a dot; inspect tracked or hidden files rather than relying on ordinary globs. Identify the authoritative decision when sources disagree; explain unresolved disagreement rather than silently inventing a resolution.
+Keep implementation progress separate from validation. Pair a material evidence gap with a bounded next action and completion evidence. Missing prior proof alone does not reject an option or halt authorised work. Name actual blockers precisely, continue independent authorised work, and preserve existing authorisation.
 
-Use accepted terms consistently within their context. Mark proposed concepts explicitly. Introduce unfamiliar terms near first use. Preserve exact code identifiers, protocol names and quotations.
+Check consistency, accessibility, readability and repeatability. Use sources for claims and real events for progress. Preserve uncertainty that affects a decision without inventing certainty or unnecessary approval gates.
+<!-- shared-baseline:end -->
 
-## Draft a navigable explanation
+| Requested work | Preferred skill |
+| --- | --- |
+| Implementation ticket, acceptance criteria or worker handoff | `write-implementation-tasks` |
+| Architecture decision record or explanation of an ADR | `record-architecture-decisions` |
+| Tutorial, how-to, technical reference or architecture explanation | `write-technical-documentation` |
+| Campaign, product announcement, positioning or landing-page copy | `write-marketing-content` |
+| Labels, dashboard states, progress messages, errors or notifications | `write-interface-content` |
+| Existing text needing terminology, readability or navigation review | `review-project-language` |
+| Discovering or reconciling project meanings | `establish-project-language` |
+| Evidence language causing unsupported rejection or stopped work | `advance-with-uncertainty` |
 
-Lead with purpose and the main finding or decision. Explain consequences before optional mechanisms. Use descriptive headings and meaningful links for longer material. Give an engineer a direct route to contracts, constraints and evidence, while allowing a marketing reader to understand what the document is for and what its main decision changes.
+Use an available specialist directly. For mixed requests, use only the workflows needed for distinct deliverables and keep their domain meanings aligned. If a named specialist is not installed, preserve this baseline and the existing project format, state the limited fallback and complete the bounded writing task without inventing dependency availability.
 
-Choose the documentation purpose: learning by doing, completing a task, looking up a contract, or understanding a concept. Avoid mixing them without a clear reason and route.
-
-For customer-facing content, connect outcomes to value and supporting evidence. Keep results, confidence, coverage and progress separate wherever the domain distinguishes them. Derive movement from real events; label examples and estimates clearly.
-
-For conversation examples, match the depth to the exchange. A direct question may need one sentence. An investigation may need evidence and trade-offs. Report meaningful changes during work.
-
-## Review the result
-
-Check meaning against source material before editing for style. Verify that a reader can find the purpose, main point, consequences and technical detail. Check first-use explanations, heading hierarchy, link text and text alternatives for essential visuals.
-
-Use configured vocabulary and prose checks where available. Treat their findings as specific signals. Review accuracy, coherence, evidence and reader navigation independently.
-
-For consequential documents, ask an independent reader or agent to locate and explain the main decision using only the artefact and its linked references. Test a second request against the same material to assess repeatability. Record whether this was human review, agent review or a deterministic check.
-
-Deliver the requested artefact with material limitations or unresolved decisions. Avoid appending an editorial checklist to ordinary user-facing copy.
-
-For tasks, ADRs and handoffs with evidence gaps, apply [the uncertainty conventions](references/uncertainty.md) or use `advance-with-uncertainty`. Distinguish implementation progress from validation. Pair a consequential gap with the next action and a specific blocker only where it prevents a named step.
+Do not require a marketing author to load an architecture skill merely because the subject is technical. Read source contracts when needed to support a claim. A normal conversation uses persistent guidance rather than activating this router for every response.

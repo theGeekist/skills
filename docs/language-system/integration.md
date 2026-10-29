@@ -4,7 +4,7 @@
 
 Install from the branch or an eventual immutable release using a compatible Agent Skills client. The existing `scripts/link-local.sh --client all --dry-run` shows local destinations without changing them. Review the output before linking a canonical checkout. Installing a skill does not install hooks or persistent instructions.
 
-Each new skill includes its own references. Authors edit the canonical material in `standards/` and run:
+Each skill includes its required references. The short shared baseline is inline, so a specialist does not need an umbrella skill or a full style-guide read. Authors edit `standards/baseline.md` or task-specific references and maintain their mapping in `standards/skill-profiles.json`, then run:
 
 ```sh
 python3 scripts/sync-language-references.py
@@ -13,6 +13,10 @@ python3 -m unittest discover -s tests -v
 ```
 
 The core checks require Python 3 and its standard library. Optional external validators are evaluation/development tools, not dependencies loaded by the skills.
+
+Choose the specialist from the [purpose table](../../README.md#choose-a-language-skill). References are conditional: a small label change can use the inline baseline and local state, while a dashboard-state design can load interface patterns. A complete architecture review loads all relevant rule references; a narrow workspace question can load its mapping alone. Full reviews may use more total context, even though initial and narrow-task loads are smaller.
+
+`write-project-content` remains an explicit compatibility router. Its Codex metadata disables implicit invocation; that field does not configure other clients. If installing a subset, use a specialist directly. No specialist requires the router or another specialist to be installed.
 
 ## Establish project terminology
 
@@ -75,6 +79,8 @@ venv/bin/pip install ./agentskills/skills-ref
 Run `skills-ref validate /path/to/skill` for each skill. The Python Vale wrapper downloads its binary on first use; compare its version with the manifest. From the skills repository, run `vale --output=JSON skills standards docs/language-system/architecture.md` for the selected local rules. No Google or Diataxis package is enabled wholesale.
 
 Set `VALE_BINARY` to the Vale executable when running the test suite to exercise the optional rule integration. The test is reported as skipped when the binary is unavailable. Exact npm versions for the CSpell/textlint experiments and the downloaded template revisions are in the manifest. Recheck false positives and licences before adopting additional rules.
+
+The CI workflow also installs the reference validator from a pinned Agent Skills commit. See [portability](portability.md) for current primary sources and the Google `skill-reach` offline checks. See [selection evaluation](selection-evaluation.md) for ordinary-request catalogue trials and observed resource reads. These are separate from the native-client installation check below.
 
 ## Verify installation separately
 

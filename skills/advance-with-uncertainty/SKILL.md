@@ -1,11 +1,23 @@
 ---
 name: advance-with-uncertainty
-description: Turn evidence gaps and unresolved questions into bounded next actions while preserving honest claims and actual blockers. Use when drafting or reviewing tasks, ADRs, plans, assessments or worker handoffs, especially when labels such as unproven, unqualified or no evidence are being used to reject options or halt authorised implementation.
+description: "Turn evidence gaps and unresolved questions into bounded next actions while preserving honest claims and actual blockers. Use when drafting or reviewing tasks, ADRs, plans, assessments or worker handoffs, especially when labels such as unproven, unqualified or no evidence are being used to reject options or halt authorised implementation."
 ---
 
 # Advance with uncertainty
 
-Keep authorised work moving while making the limits of current knowledge precise. Read [the uncertainty conventions](references/uncertainty.md) and [writing guidance](references/writing.md). Use [the task and ADR examples](assets/action-records.md) when a concrete structure helps.
+Keep authorised work moving while making the limits of current knowledge precise.
+
+<!-- shared-baseline:start -->
+Use current project terms and decisions. Explain an unfamiliar term near its first consequential use; distinguish a proposed meaning from an accepted one. Preserve exact identifiers and technical constraints.
+
+Lead with the reader's purpose and main point, then explain the consequences and supporting detail. Make substantial technical material navigable by a reader outside engineering, with descriptive headings and meaningful source links. Match depth to the request; use British English in authored prose.
+
+Keep implementation progress separate from validation. Pair a material evidence gap with a bounded next action and completion evidence. Missing prior proof alone does not reject an option or halt authorised work. Name actual blockers precisely, continue independent authorised work, and preserve existing authorisation.
+
+Check consistency, accessibility, readability and repeatability. Use sources for claims and real events for progress. Preserve uncertainty that affects a decision without inventing certainty or unnecessary approval gates.
+<!-- shared-baseline:end -->
+
+Load [the uncertainty conventions](references/uncertainty.md) for a multi-gap assessment, conflicting evidence or a consequential decision. Use [the task and ADR examples](assets/action-records.md) when a concrete structure helps. A short handoff can use the inline baseline and workflow without loading either.
 
 ## Identify what the statement establishes
 

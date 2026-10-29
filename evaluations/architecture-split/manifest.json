@@ -1,0 +1,69 @@
+{
+  "kind": "explicit-skill architecture and selective-reference tests",
+  "final_files_at_assessment": [
+    {
+      "path": "evaluations/architecture-split/assessment.md",
+      "sha256": "7115ed6ea7c3fe22532c13e44a174af8dd887a79e7368bf9c35be08dc6ac8e81"
+    },
+    {
+      "path": "evaluations/architecture-split/output.md",
+      "sha256": "d1f56e2348dd6b21ff5f97cdaac998aae4ffad312d0464574ccde616a6554b0a"
+    },
+    {
+      "path": "evaluations/architecture-split/prompt.txt",
+      "sha256": "b41896fe05ff0db37ced0188d20bf9f82058dedde7c2a5cf5421b876dc34fccb"
+    },
+    {
+      "path": "evaluations/architecture-split/read-record.md",
+      "sha256": "d5febcdbabac7cf9171bb9c969e3a76b8364ef86b85eecefff7c6aa04f790715"
+    },
+    {
+      "path": "evaluations/architecture-split/selective-output.md",
+      "sha256": "ec17709e1d20b68e5432a83b01c42591b752ef2343cf473a4b02380dbb806b73"
+    },
+    {
+      "path": "evaluations/architecture-split/selective-prompt.txt",
+      "sha256": "023d7531e5f4cbe080246563740192946c8f62bb1fb00b9066362fbda2e80dce"
+    },
+    {
+      "path": "evaluations/architecture-split/selective-read-record.md",
+      "sha256": "2bdbf99aeba499a43a0a0a106bda5e2d31273bd04d08ad8b96b53fde4da003da"
+    },
+    {
+      "path": "skills/backend-slice-architecture/SKILL.md",
+      "sha256": "95ced0957f0a6427b5eba3a07e917f255986e3bb80c8686e75415c83646685b4"
+    },
+    {
+      "path": "skills/backend-slice-architecture/references/placement-and-contracts.md",
+      "sha256": "10aa0eea9dbd742784d29665fe00b11f28c73107aa417fe804fe15676e69626a"
+    },
+    {
+      "path": "skills/backend-slice-architecture/references/review.md",
+      "sha256": "fd8f991aa4bedebb83c84ad8c0e09d886bd09f667a410f2e8bee6f7549eadbc5"
+    },
+    {
+      "path": "skills/backend-slice-architecture/references/workspace-and-migration.md",
+      "sha256": "95535c002bd1eac1265e8377956927557b9166c7f407f44d887776c84cfe46a0"
+    },
+    {
+      "path": "skills/frontend-slice-architecture/SKILL.md",
+      "sha256": "7f604953745695e04f7fe5a9688c55feee54ab5404515374e9bc961be99c21ad"
+    },
+    {
+      "path": "skills/frontend-slice-architecture/references/placement-and-contracts.md",
+      "sha256": "a43c8ccf879dc3345ee77e8f74cf7b1f0f4b77bde48bd53b12219d441dbefbfb"
+    },
+    {
+      "path": "skills/frontend-slice-architecture/references/review.md",
+      "sha256": "44f20e224485f65fb26f6d204c6e33adff0dbba5ed1bd06de51241382059196e"
+    },
+    {
+      "path": "skills/frontend-slice-architecture/references/workspace-and-migration.md",
+      "sha256": "f8dd4ebc548a95bee966396dca637f32a1fb1b2a3d357bd30328508752afdc22"
+    }
+  ],
+  "limitations": [
+    "Broad provisional run predates generated baseline and has no input-time hashes.",
+    "Read records are agent self-reports; no host-native automatic activation or cross-vendor runtime was tested."
+  ]
+}

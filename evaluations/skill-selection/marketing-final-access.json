@@ -1,0 +1,25 @@
+{
+  "kind": "linux-inotify-file-access",
+  "root": "/workspace/scratch/44d8812e3975/selection-runs/marketing-revised",
+  "started_monotonic": 3714.195205092,
+  "started_unix": 1793261092.9366028,
+  "limitation": "File access does not establish model context consumption or native runtime activation.",
+  "events": [
+    {
+      "path": "catalogue.json",
+      "elapsed_seconds": 21.19
+    },
+    {
+      "path": "source.md",
+      "elapsed_seconds": 21.19
+    },
+    {
+      "path": "skills/write-marketing-content/SKILL.md",
+      "elapsed_seconds": 25.079
+    },
+    {
+      "path": "skills/write-marketing-content/references/marketing.md",
+      "elapsed_seconds": 29.444
+    }
+  ]
+}

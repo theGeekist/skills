@@ -1,4 +1,7 @@
 interface:
-  display_name: "Write Project Content"
-  short_description: "Write clear content using shared project meaning"
-  default_prompt: "Use $write-project-content to write this document so technical and business readers can navigate it."
+  display_name: "Choose a Project Writing Workflow"
+  short_description: "Compatibility router for explicit writing requests"
+  default_prompt: "Use $write-project-content to choose the appropriate project-writing workflow."
+
+policy:
+  allow_implicit_invocation: false

@@ -1,0 +1,106 @@
+{
+  "reviewed_on": "2026-10-29",
+  "scope": "Purpose-specific skill packaging, discovery metadata, conditional resources and the distinction between catalogue tests and native runtime activation.",
+  "sources": [
+    {
+      "id": "agent-skills-format",
+      "url": "https://agentskills.io/specification",
+      "kind": "official specification",
+      "observed": "Required name/description, skill-local resources, whole-body activation and progressive disclosure reviewed.",
+      "evidence": "Page opened and targeted progressive-disclosure section retrieved.",
+      "licence_note": "Reference principles only; full documentation not copied. Existing downloaded repository licence is recorded in sources.json."
+    },
+    {
+      "id": "openai-build-skills",
+      "url": "https://learn.chatgpt.com/docs/build-skills",
+      "kind": "official product documentation",
+      "observed": "Description matching, listing-budget behaviour, local discovery, surface distribution and optional metadata reviewed.",
+      "evidence": "Page opened and targeted activation/loading sections retrieved.",
+      "runtime_tested": false,
+      "licence_note": "Linked and summarised; no full documentation or implementation copied."
+    },
+    {
+      "id": "claude-code-skills",
+      "url": "https://code.claude.com/docs/en/skills",
+      "kind": "official product documentation",
+      "observed": "Description-based selection, conditional supporting files, portable fields versus extensions, listing-budget and session-specific distribution reviewed.",
+      "evidence": "Page opened and relevant sections retrieved.",
+      "runtime_tested": false,
+      "licence_note": "Linked and summarised; vendor extensions not copied into portable skill frontmatter."
+    },
+    {
+      "id": "copilot-cli-skills",
+      "url": "https://docs.github.com/en/copilot/how-tos/copilot-cli/customize-copilot/add-skills",
+      "kind": "official product documentation",
+      "observed": "Project/personal discovery paths, skill info/reload commands, description matching and main-file injection reviewed.",
+      "evidence": "Page opened and use/installation sections retrieved.",
+      "runtime_tested": false,
+      "licence_note": "Linked and summarised; no full documentation copied."
+    },
+    {
+      "id": "copilot-surface-skills",
+      "url": "https://docs.github.com/en/copilot/how-tos/copilot-on-github/customize-copilot/customize-cloud-agent/add-skills",
+      "kind": "official product documentation",
+      "observed": "Documented surfaces include cloud agent, code review, CLI, Copilot app and VS Code agent mode.",
+      "evidence": "Page opened; surface support statement reviewed.",
+      "runtime_tested": false,
+      "licence_note": "Linked and summarised; support statement is documentation evidence, not a compatibility result for this repository."
+    },
+    {
+      "id": "gemini-cli-skills",
+      "url": "https://geminicli.com/docs/cli/skills/",
+      "kind": "official product documentation",
+      "observed": "Discovery tiers, metadata injection, activate_skill, consent and conditional directory access reviewed.",
+      "evidence": "Page opened and discovery/activation sections retrieved.",
+      "runtime_tested": false,
+      "licence_note": "Linked and summarised; no executable or configuration copied."
+    },
+    {
+      "id": "google-skill-reach",
+      "url": "https://github.com/google/skill-reach",
+      "kind": "upstream tool repository",
+      "observed": "Version 0.1.0, Apache-2.0 licence and uv lockfile inspected. Strict lint and overlap returned exit 0; lexical findings recorded separately from activation evidence.",
+      "evidence": "Downloaded, pinned, installed in an isolated virtual environment and executed offline lint/overlap using local keyword driver.",
+      "runtime_tested": false,
+      "licence_note": "Apache-2.0 as declared upstream. Review dependency notices before adoption."
+    }
+  ],
+  "local_observations": {
+    "method": "Python shutil.which, read-only PATH lookup",
+    "executables": {
+      "codex": null,
+      "claude": null,
+      "gemini": null,
+      "copilot": null,
+      "gh": null
+    },
+    "credentials_inspected": false,
+    "client_installations_performed": false,
+    "global_configuration_changed": false
+  },
+  "evidence_types": [
+    "portable format and isolated-file validation",
+    "metadata catalogue selection",
+    "post-selection file reads and output behaviour",
+    "native client discovery, activation and execution"
+  ],
+  "claim_boundary": "The first three evidence types do not substitute for the fourth. CLI, desktop and cloud require distinct observations.",
+  "offline_tool_evaluation": {
+    "repository": "https://github.com/google/skill-reach",
+    "revision": "d86d81fa35c0705a4d92a1fa2a0b08d48ce044ff",
+    "version": "0.1.0",
+    "licence": "Apache-2.0",
+    "installation": "uv sync --frozen --no-dev in isolated checkout; default docs group included",
+    "uv_lock_sha256": "b5e9dd8fa330d4e29429537edebc9e2f448c5b10693b57852a5048d9f63525bb",
+    "results_manifest": "../../evaluations/portability/offline-manifest.json",
+    "skills_checked": 11,
+    "lint_exit_code": 0,
+    "lint_warnings": 0,
+    "lint_errors": 0,
+    "lint_info_findings": 4,
+    "overlap_exit_code": 0,
+    "native_runtime_tested": false,
+    "model_calls": false,
+    "credentials_supplied": false
+  }
+}

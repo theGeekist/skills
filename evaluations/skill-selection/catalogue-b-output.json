@@ -1,0 +1,14 @@
+[
+  {"id":"marketing-launch","primary":"write-marketing-content","companions":[],"reason":"A launch email communicates product value to a defined audience with bounded claims."},
+  {"id":"marketing-technical-source","primary":"write-marketing-content","companions":[],"reason":"The requested output is product-page copy explaining technical value to operations leaders."},
+  {"id":"technical-guide","primary":"write-technical-documentation","companions":[],"reason":"A developer how-to guide explains implementation and verification steps."},
+  {"id":"implementation-task","primary":"write-implementation-tasks","companions":[],"reason":"The request explicitly asks for an actionable engineering task with behaviour and acceptance examples."},
+  {"id":"adr","primary":"record-architecture-decisions","companions":[],"reason":"The requested artefact records a decision, alternatives, trade-offs and reconsideration conditions."},
+  {"id":"interface-progress","primary":"write-interface-content","companions":[],"reason":"Dashboard status and empty-state wording are state-aware in-product copy."},
+  {"id":"domain-conflict","primary":"establish-project-language","companions":[],"reason":"The request reconciles competing domain meanings across code and documents into shared definitions."},
+  {"id":"cross-artefact-review","primary":"review-project-language","companions":[],"reason":"This is a cross-artefact editorial audit of terminology, explanations and reader navigation."},
+  {"id":"uncertainty-handoff","primary":"advance-with-uncertainty","companions":["write-implementation-tasks"],"reason":"The central problem is uncertainty incorrectly blocking authorised implementation; the handoff also needs actionable next steps."},
+  {"id":"backend-boundary","primary":"backend-slice-architecture","companions":[],"reason":"Service ownership, public interfaces and workflow orchestration are backend boundary concerns."},
+  {"id":"frontend-boundary","primary":"frontend-slice-architecture","companions":[],"reason":"The request concerns feature ownership, screen composition and incremental frontend migration."},
+  {"id":"irrelevant","primary":null,"companions":[],"reason":"Basic arithmetic does not require any supplied skill."}
+]

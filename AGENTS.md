@@ -4,7 +4,7 @@ Read CONTRIBUTING.md before changing the skills. Preserve their architecture dec
 
 Use the four outcomes in standards/writing.md: consistency, accessibility, readability and repeatability. Make technical material navigable by a reader outside engineering. Keep shared definitions in project references and explain new specialised terms at first use.
 
-Edit standards/writing.md, standards/content-patterns.md and standards/uncertainty.md as the canonical sources. Run `python3 scripts/sync-language-references.py` after changing them, then `python3 scripts/sync-language-references.py --check` before committing.
+Edit the canonical baseline and task-specific references under standards/. The skill-profiles.json manifest declares which references each skill bundles; every skill has the same generated inline baseline. Run `python3 scripts/sync-language-references.py` after changing them, then `python3 scripts/sync-language-references.py --check` before committing.
 
 Apply standards/uncertainty.md to tasks, decisions and handoffs. Record evidence gaps with their next action and completion evidence. Keep implementation progress and validation separate. Missing prior proof alone does not reject an option or halt authorised work; name actual blockers and their affected steps precisely.
 

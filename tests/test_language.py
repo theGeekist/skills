@@ -233,27 +233,69 @@ class CommandTests(unittest.TestCase):
         self.assertEqual(result.returncode, 2)
         self.assertIn("must be", output["error"])
 
-    def test_reference_sync_detects_drift_and_reproduces_sources(self):
+    def setup_sync_fixture(self):
         (self.root / "scripts").mkdir()
         script = self.root / "scripts/sync-language-references.py"
         shutil.copyfile(ROOT / "scripts/sync-language-references.py", script)
-        (self.root / "standards").mkdir()
-        for name in ("writing.md", "content-patterns.md", "uncertainty.md"):
-            (self.root / "standards" / name).write_text(f"# {name}\nCanonical content.\n", encoding="utf-8")
+        standards = self.root / "standards"
+        standards.mkdir()
+        (standards / "baseline.md").write_text("Canonical shared baseline.\n", encoding="utf-8")
+        (standards / "tasks.md").write_text("# Task patterns\n", encoding="utf-8")
+        (standards / "skill-profiles.json").write_text(json.dumps({
+            "version": 1, "skills": {"fixture-skill": {"references": ["tasks.md"]}}
+        }), encoding="utf-8")
+        skill = self.root / "skills/fixture-skill"
+        skill.mkdir(parents=True)
+        (skill / "SKILL.md").write_text(
+            "---\nname: fixture-skill\ndescription: Fixture\n---\n\n"
+            "<!-- shared-baseline:start -->\nold baseline\n<!-- shared-baseline:end -->\n",
+            encoding="utf-8")
+        return script, standards, skill
+
+    def test_reference_sync_detects_drift_and_reproduces_sources(self):
+        script, standards, skill = self.setup_sync_fixture()
         def sync(*args):
             return subprocess.run([sys.executable, str(script), *args], capture_output=True, text=True)
+        original = (skill / "SKILL.md").read_text()
         result = sync("--check")
         self.assertEqual(result.returncode, 1)
-        self.assertEqual(len(json.loads(result.stdout)["changed"]), 8)
-        self.assertFalse((self.root / "skills").exists())
+        self.assertEqual(len(json.loads(result.stdout)["changed"]), 2)
+        self.assertEqual((skill / "SKILL.md").read_text(), original)
+        self.assertFalse((skill / "references").exists())
         self.assertEqual(sync().returncode, 0)
         self.assertEqual(sync("--check").returncode, 0)
-        for skill in ("establish-project-language", "write-project-content"):
-            for name in ("writing.md", "content-patterns.md"):
-                self.assertEqual((self.root / "standards" / name).read_bytes(),
-                                 (self.root / "skills" / skill / "references" / name).read_bytes())
-        (self.root / "skills/write-project-content/references/writing.md").write_text("drift", encoding="utf-8")
+        self.assertIn("Canonical shared baseline.", (skill / "SKILL.md").read_text())
+        self.assertEqual((standards / "tasks.md").read_bytes(),
+                         (skill / "references/tasks.md").read_bytes())
+        (skill / "references/tasks.md").write_text("drift", encoding="utf-8")
         self.assertEqual(sync("--check").returncode, 1)
+
+    def test_sync_missing_reference_does_not_partially_update_baseline(self):
+        script, standards, skill = self.setup_sync_fixture()
+        original = (skill / "SKILL.md").read_bytes()
+        (standards / "tasks.md").unlink()
+        result = subprocess.run([sys.executable, str(script)], capture_output=True, text=True)
+        self.assertEqual(result.returncode, 2)
+        self.assertEqual((skill / "SKILL.md").read_bytes(), original)
+        self.assertFalse((skill / "references").exists())
+
+    def test_sync_rejects_reference_path_escape(self):
+        script, standards, skill = self.setup_sync_fixture()
+        (standards / "skill-profiles.json").write_text(json.dumps({
+            "version": 1, "skills": {"fixture-skill": {"references": ["../outside.md"]}}
+        }))
+        result = subprocess.run([sys.executable, str(script)], capture_output=True, text=True)
+        self.assertEqual(result.returncode, 2)
+        self.assertIn("reference", json.loads(result.stdout)["error"])
+
+    def test_sync_rejects_missing_or_duplicate_baseline_markers(self):
+        script, _, skill = self.setup_sync_fixture()
+        for text in ("No markers", "<!-- shared-baseline:start -->" * 2 + "<!-- shared-baseline:end -->"):
+            with self.subTest(text=text):
+                (skill / "SKILL.md").write_text(text)
+                result = subprocess.run([sys.executable, str(script)], capture_output=True, text=True)
+                self.assertEqual(result.returncode, 2)
+                self.assertEqual((skill / "SKILL.md").read_text(), text)
 
 
 if __name__ == "__main__":

@@ -1,0 +1,59 @@
+{
+  "version": 1,
+  "skills": {
+    "backend-slice-architecture": {
+      "references": []
+    },
+    "frontend-slice-architecture": {
+      "references": []
+    },
+    "establish-project-language": {
+      "references": [
+        "writing.md",
+        "uncertainty.md"
+      ]
+    },
+    "write-project-content": {
+      "references": []
+    },
+    "advance-with-uncertainty": {
+      "references": [
+        "uncertainty.md"
+      ]
+    },
+    "write-implementation-tasks": {
+      "references": [
+        "tasks.md",
+        "uncertainty.md"
+      ]
+    },
+    "record-architecture-decisions": {
+      "references": [
+        "decisions.md",
+        "uncertainty.md"
+      ]
+    },
+    "write-technical-documentation": {
+      "references": [
+        "technical-documentation.md",
+        "uncertainty.md"
+      ]
+    },
+    "write-marketing-content": {
+      "references": [
+        "marketing.md"
+      ]
+    },
+    "write-interface-content": {
+      "references": [
+        "interface-content.md"
+      ]
+    },
+    "review-project-language": {
+      "references": [
+        "review.md",
+        "uncertainty.md"
+      ]
+    }
+  }
+}

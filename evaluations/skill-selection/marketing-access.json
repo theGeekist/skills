@@ -1,0 +1,23 @@
+{
+  "kind": "linux-inotify-file-access",
+  "root": "/workspace/scratch/44d8812e3975/selection-runs/marketing",
+  "limitation": "File access does not establish model context consumption or native runtime activation.",
+  "events": [
+    {
+      "path": "catalogue.json",
+      "elapsed_seconds": 23.204
+    },
+    {
+      "path": "source.md",
+      "elapsed_seconds": 23.204
+    },
+    {
+      "path": "skills/write-marketing-content/SKILL.md",
+      "elapsed_seconds": 27.896
+    },
+    {
+      "path": "skills/write-marketing-content/references/marketing.md",
+      "elapsed_seconds": 32.245
+    }
+  ]
+}

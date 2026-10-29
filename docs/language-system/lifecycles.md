@@ -32,6 +32,8 @@ Update the canonical reference first, regenerate bundled copies and run drift ch
 
 Record the prompt, source revision, skill revision, output and evaluation. Repeat with fresh context against the same sources. Check retained facts and navigable structure; identical prose is unnecessary. Separate mechanical results, qualitative agent assessment and human reading evidence.
 
+Test selection separately from execution. Use ordinary requests without skill names to assess catalogue discrimination, then observe which files the responder reads. Test natural activation in each actual client/runtime before claiming host support. A portable package can validate even when its description collides with another skill or a host does not expose its metadata.
+
 Promote a check to a blocking gate only after testing meaningful positive and negative cases. Preserve a clear exception path for domain-specific language. Review false positives and regressions with actual examples.
 
 ## Keep uncertainty actionable

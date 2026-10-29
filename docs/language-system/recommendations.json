@@ -161,6 +161,22 @@
       "benefit": "Accurate uncertainty produces bounded action while preserving real blockers.",
       "effort": "medium",
       "validation": "Independent task and ADR cases distinguish missing evidence, actual stop conditions and fabricated success."
+    },
+    {
+      "id": "L12",
+      "priority": "P0",
+      "status": "implemented",
+      "problem": "A broad writer and monolithic architecture instructions compete on purpose and load unrelated context.",
+      "evidence": "skill-design.md, architecture-refactor.md, selection-evaluation.md and portability.md",
+      "change": "Add six purpose-specific writing/review skills, make the router explicit-only, generate one short inline baseline, and load concern-specific detail conditionally.",
+      "dependencies": [
+        "L02",
+        "L03",
+        "L10"
+      ],
+      "benefit": "Marketing and engineering authors get direct entry points with a consistent baseline and bounded reference loading.",
+      "effort": "medium",
+      "validation": "Portable format, exact baseline/copy checks, offline lint/overlap, ordinary catalogue selection and observed staged file reads. Native client activation remains its own next check."
     }
   ]
 }

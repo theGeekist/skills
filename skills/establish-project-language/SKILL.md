@@ -1,13 +1,23 @@
 ---
 name: establish-project-language
-description: Discover, reconcile and maintain project concepts and terminology from code, schemas, tests, decisions and existing content. Use when starting a project, onboarding to an existing domain, resolving competing meanings, proposing new terms, or establishing shared language across agents and artefacts.
+description: "Discover, reconcile and maintain project concepts and terminology from code, schemas, tests, decisions and existing content. Use when starting a project, onboarding to an existing domain, resolving competing meanings, proposing new terms, or establishing shared language across agents and artefacts."
 ---
 
 # Establish project language
 
 Create a small, traceable account of what the project means. Start with the repository's current sources and decisions. Preserve useful established terms and make competing meanings visible.
 
-Read [writing conventions](references/writing.md) for the four outcomes: consistency, accessibility, readability and repeatability. Use [content patterns](references/content-patterns.md) when writing the resulting explanation.
+<!-- shared-baseline:start -->
+Use current project terms and decisions. Explain an unfamiliar term near its first consequential use; distinguish a proposed meaning from an accepted one. Preserve exact identifiers and technical constraints.
+
+Lead with the reader's purpose and main point, then explain the consequences and supporting detail. Make substantial technical material navigable by a reader outside engineering, with descriptive headings and meaningful source links. Match depth to the request; use British English in authored prose.
+
+Keep implementation progress separate from validation. Pair a material evidence gap with a bounded next action and completion evidence. Missing prior proof alone does not reject an option or halt authorised work. Name actual blockers precisely, continue independent authorised work, and preserve existing authorisation.
+
+Check consistency, accessibility, readability and repeatability. Use sources for claims and real events for progress. Preserve uncertainty that affects a decision without inventing certainty or unnecessary approval gates.
+<!-- shared-baseline:end -->
+
+Load [extended writing guidance](references/writing.md) only when drafting a substantial mixed-audience domain explanation or reviewing its navigation; a small terminology correction can use the inline baseline.
 
 ## Discover the concepts
 
@@ -37,4 +47,4 @@ Revisit affected terms when a decision, schema, contract or product meaning chan
 
 Finish with accepted findings, remaining proposals and source pointers. Report what was actually inspected and checked.
 
-When a meaning remains unresolved, use [the uncertainty conventions](references/uncertainty.md) to record the next investigation or decision. A proposed term or incomplete glossary does not automatically block independent authorised implementation.
+When a meaning remains unresolved and affects the next action, load [the uncertainty conventions](references/uncertainty.md) to record the next investigation or decision. A proposed term or incomplete glossary does not automatically block independent authorised implementation.

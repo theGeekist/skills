@@ -16,13 +16,16 @@ Keep shared meaning and writing guidance independent of individual agent clients
 | Verified sources, corrections and tool experiments | [Framework evaluation](framework-evaluation.md) and [source manifest](sources.json) |
 | Writing and reader-navigation conventions | [Writing](../../standards/writing.md) and [content patterns](../../standards/content-patterns.md) |
 | Discover or reconcile project meaning | [Establish project language](../../skills/establish-project-language/SKILL.md) |
-| Draft or review an artefact | [Write project content](../../skills/write-project-content/SKILL.md) |
+| Choose an authoring or review skill | [Purpose-specific skill table](../../README.md#choose-a-language-skill) |
+| Use the legacy entry point explicitly | [Writing workflow router](../../skills/write-project-content/SKILL.md) |
 | Continue work through evidence gaps | [Advance with uncertainty](../../skills/advance-with-uncertainty/SKILL.md) and [shared conventions](../../standards/uncertainty.md) |
 | User goals and scope additions | [Recorded requirements](requirements.md) |
 | Operating and maintaining the system | [Lifecycles](lifecycles.md) |
 | Install, check and experiment | [Integration guide](integration.md) |
 | Remaining work and adoption decisions | [Recommendation pipeline](recommendations.json) |
 | Actual project evidence and limitations | [Project evaluation](project-evaluation.md) and [validation results](validation-results.md) |
+| Portable packaging and host boundaries | [Portability](portability.md) |
+| Selection and reference loading | [Selection evaluation](selection-evaluation.md) and [architecture refactor](architecture-refactor.md) |
 
 ## Boundaries
 
@@ -30,7 +33,11 @@ The four acceptance outcomes are consistency, accessibility, readability and rep
 
 Project owners retain their domain meanings and decision process. The shared system provides a record format and review method, rather than universal definitions for every project's vocabulary. Current repository decisions, schemas and tests inform discovery; contradictions require explicit resolution.
 
-The existing backend and frontend playbooks remain self-contained and retain their architecture rules. The three new skills each bundle their required references so installation of a single skill does not depend on a sibling directory. `standards/` is the authored source; `scripts/sync-language-references.py --check` detects generated-copy drift.
+The backend and frontend playbooks retain their architecture rules, with smaller decision cores and conditionally loaded local references. Six specialist writing/review skills replace the broad authoring scope: tasks, ADRs, technical documentation, marketing, interface content and language review. Terminology discovery and actionable uncertainty remain focused skills. `write-project-content` is retained as an explicit compatibility router.
+
+Every skill embeds the same short baseline generated from `standards/baseline.md`. This deliberate repetition makes the baseline available immediately after activation without requiring another skill or a full style guide. `standards/skill-profiles.json` declares purpose-specific bundled references. The sync checker detects drift in baseline blocks and reference copies. Read detail when the task requires it; bundling a file does not mean loading it on every invocation.
+
+The registry and rules remain independent of agent runtime. The portable name/description identifies purpose; optional `agents/openai.yaml` carries Codex-facing metadata. Disabling the router's implicit invocation there is not a universal cross-agent switch. Other clients still use their own selection and loading semantics.
 
 ## Checks and judgement
 
@@ -38,7 +45,7 @@ The registry checker validates IDs, contexts, relationships and selected term co
 
 Vale supplies optional prose rules. Tool evaluation informs which rules are useful. Individual findings need context; broad commercial style packages can conflict with British English and ordinary conversation.
 
-Independent agent cases test whether guidance transfers to realistic material. Human comprehension remains a separate acceptance step. Hook subprocess tests establish adapter behaviour, not actual host support or replacement of already streamed prose.
+Independent agent cases test whether guidance transfers to realistic material. Catalogue-selection experiments show whether agents can distinguish the descriptions, and observed file reads show which staged resources they accessed. Neither establishes native runtime activation. Human comprehension remains a separate acceptance step. Hook subprocess tests establish adapter behaviour, not actual host support or replacement of already streamed prose.
 
 ## Alternatives considered
 

@@ -20,19 +20,24 @@ The skills use portable Markdown with YAML frontmatter and optional client metad
 
 The language-system changes on this branch are unreleased. See the [architecture and reader route](docs/language-system/architecture.md), [evaluation results](docs/language-system/validation-results.md) and [integration guide](docs/language-system/integration.md).
 
-## Included language skills
+## Choose a language skill
 
-### Establish project language
+Every skill carries the same short writing baseline. Choose by the requested work; a marketing author can use the marketing skill directly without loading architecture guidance.
 
-`establish-project-language` discovers concepts from current code, schemas, tests and decisions. It records context, accepted meanings, proposals and source evidence, so different agents and artefacts can share the same definitions.
+| Requested work | Skill |
+| --- | --- |
+| Discover and reconcile project meanings | `establish-project-language` |
+| Engineering tickets, acceptance criteria and worker handoffs | `write-implementation-tasks` |
+| Architecture decision records (ADRs) | `record-architecture-decisions` |
+| Tutorials, how-to guides, technical references and explanations | `write-technical-documentation` |
+| Marketing copy, announcements and positioning | `write-marketing-content` |
+| Interface labels, dashboard states, progress and errors | `write-interface-content` |
+| Review terminology, reader navigation and consistent meaning | `review-project-language` |
+| Turn evidence gaps into useful next actions | `advance-with-uncertainty` |
 
-### Write project content
+`write-project-content` remains a compatibility entry point for explicit callers who want help choosing a writing workflow. It is no longer the broad default authoring skill. Codex metadata disables its implicit invocation; other clients must apply their own selection rules.
 
-`write-project-content` applies that meaning to tasks, decisions, documentation and product content. It makes purpose, decisions and consequences easy to find, with a direct route to technical detail. The acceptance outcomes are consistency, accessibility, readability and repeatability.
-
-### Advance with uncertainty
-
-`advance-with-uncertainty` turns evidence gaps into bounded next actions in tasks, ADRs and worker handoffs. It keeps implementation progress separate from validation, preserves real blockers and prevents missing prior proof from becoming an unsupported rejection or blanket stop.
+The acceptance outcomes are consistency, accessibility, readability and repeatability. Full reference material is bundled for independent installation, while each skill explains which detail to load for the task.
 
 ## Included architecture skills
 
@@ -117,40 +122,15 @@ The updater refuses dirty or detached checkouts, pulls with `--ff-only`, runs th
 
 ## Repository structure
 
-```text
-.codex-plugin/
-  plugin.json
-.claude-plugin/
-  marketplace.json
-  plugin.json
-skills/
-  backend-slice-architecture/
-    SKILL.md
-    agents/openai.yaml
-  frontend-slice-architecture/
-    SKILL.md
-    agents/openai.yaml
-  establish-project-language/
-    SKILL.md
-    references/
-    assets/
-  write-project-content/
-    SKILL.md
-    references/
-    assets/
-  advance-with-uncertainty/
-    SKILL.md
-    references/
-    assets/
-standards/
-adapters/
-evaluations/
-scripts/
-  link-local.sh
-  update-local.sh
-```
+- `skills/`: independently installable skills with their own required references and optional client metadata.
+- `standards/baseline.md`: the short authored baseline embedded in every skill.
+- `standards/skill-profiles.json`: which canonical references each skill bundles.
+- `standards/`: task-specific writing references and terminology.
+- `scripts/`: baseline/reference generation and checks.
+- `adapters/`: opt-in persistent instruction and runtime examples.
+- `evaluations/`: public prompts, source snapshots, observed results and scope limitations.
 
-The repository root is the plugin and `skills/` is the canonical collection exposed to clients and registries. Each skill keeps its instructions and required references within its own directory. `standards/` holds canonical writing references; a sync check keeps their bundled copies consistent. `adapters/` holds optional agent integration examples, and `evaluations/` holds public test cases. Repository-wide automation stays under `scripts/`.
+Run `python3 scripts/sync-language-references.py` after changing the baseline or canonical references, and `python3 scripts/sync-language-references.py --check` before committing. Generated copies retain one source of truth while allowing each skill to be installed alone. Architecture-specific references are authored within their respective skill.
 
 ## Compatibility
 

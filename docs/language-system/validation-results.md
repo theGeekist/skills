@@ -1,20 +1,23 @@
 # Validation results and next checks
 
-Reviewed 29 October 2026. The foundation is implemented: shared writing conventions, context-aware terminology checks, three portable language skills, improved architecture playbooks, lifecycles and an optional local Codex adapter. The next adoption checks concern real-reader comprehension and client-specific loading.
+Reviewed 29 October 2026. The collection now has eleven portable skill packages: focused writing/review entry points, terminology discovery, actionable uncertainty, two smaller architecture cores and an explicit compatibility chooser. Shared references, lifecycles and the optional local Codex adapter are implemented. The next adoption checks concern real-reader comprehension and client-specific loading.
 
 ## Executed checks
 
 | Check | Observed result | What it establishes |
 | --- | --- | --- |
-| Python suite with optional Vale integration enabled | 47 tests pass | Registry errors, contextual aliases, code exclusions, reference drift, isolated skill references and bounded Stop behaviour |
-| Agent Skills reference validator | All five skills validate | Portable skill shape and frontmatter |
-| Bundled-reference comparison | No drift | Installed copies match authored standards |
+| Python suite with optional Vale integration enabled | 57 tests pass | Registry errors, contextual aliases, code exclusions, baseline/reference drift, isolated skill references, frontmatter fences and bounded Stop behaviour |
+| Agent Skills reference validator | All eleven skills validate | Portable skill shape and frontmatter, paired with explicit fence checks |
+| Baseline and bundled-reference comparison | No drift | Each skill embeds the canonical 144-word baseline and its declared reference copies |
 | Selected Vale rules | No findings in skills, standards and selected system docs | These texts meet the small advisory word rule; semantic clarity needs separate assessment |
 | Architecture forward test | Ownership, public dependencies and explicit coordination retained in a synthetic case | Wording changes preserve the tested architectural distinctions |
 | Project discovery and writing | Initial failures captured; corrected fresh runs find hidden sources and produce valid registries | The revised instructions address two observed workflow defects |
 | Blind navigation reader | Finds purpose, decision and consequences; identifies terms and links to improve | Preliminary agent evidence for reader navigation, with concrete editorial follow-up |
+| Ordinary-request catalogue selection | Three runs of twelve cases select the expected purposes | Agent discrimination of catalogue descriptions, including marketing, mixed requests and no-skill cases; not native client activation |
+| Observed staged authoring reads | Marketing and ADR runs read only their selected skill and relevant references | Selective resource access, measured as files/words rather than model prompt tokens |
+| Google skill-reach offline checks | Strict lint and overlap exit successfully on all eleven skills | No lint warnings/errors; informational overlaps are retained for task testing, without a native activation claim |
 
-The core suite runs without Vale; its optional integration case is then explicitly skipped. CI runs the dependency-free suite and reference/registry checks. Local optional-tool results are not represented as a completed remote CI run.
+The core suite runs without Vale; its optional integration case is then explicitly skipped. CI runs the dependency-free suite, baseline/reference and registry checks, and the portable validator from a pinned Agent Skills commit. Local optional-tool results are not represented as a completed remote CI run.
 
 ## Learning from independent runs
 
@@ -25,6 +28,8 @@ The independent reader could recover the main decisions, while identifying jargo
 Repeat runs retained important facts but varied in how much domain language they explained. The next evaluation should repeat the same authoring task with a reader-navigation check, retaining output and source revisions. Compare consistent meaning and route quality rather than identical wording.
 
 See [project evaluation](project-evaluation.md) for coverage and limitations, and [architecture cases](../../evaluations/architecture/) for the synthetic boundary test. Detailed private source evidence is retained outside this public repository.
+
+The purpose-sized follow-up adds [selection and observed file reads](selection-evaluation.md), [architecture split trials](architecture-refactor.md), [context costs](skill-design.md) and [portable tooling/host evidence](portability.md). These report setup corrections and first-output editorial findings alongside the successful selection cases.
 
 ## Honest uncertainty and continued implementation
 

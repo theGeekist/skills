@@ -23,7 +23,7 @@
   "interface": {
     "displayName": "Geekist Skills",
     "shortDescription": "Architecture and clear, consistent project language",
-    "longDescription": "Portable architecture and writing playbooks for explicit boundaries, shared meanings and content readers can navigate.",
+    "longDescription": "Portable architecture, terminology and purpose-specific writing workflows with a shared baseline and selectively loaded references.",
     "developerName": "Geekist",
     "category": "Developer Tools",
     "capabilities": [

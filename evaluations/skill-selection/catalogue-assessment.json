@@ -1,0 +1,257 @@
+{
+  "kind": "agent catalogue selection, not native activation",
+  "runs": [
+    {
+      "run": "a",
+      "input": "catalogue-input.json",
+      "input_sha256": "f2d6b1698b33dba742bbc10ea131181ad9c93bc5fa4b246cd2ba54b859e89143",
+      "cases": [
+        {
+          "id": "marketing-launch",
+          "passed": true,
+          "primary": "write-marketing-content",
+          "companions": []
+        },
+        {
+          "id": "marketing-technical-source",
+          "passed": true,
+          "primary": "write-marketing-content",
+          "companions": []
+        },
+        {
+          "id": "technical-guide",
+          "passed": true,
+          "primary": "write-technical-documentation",
+          "companions": []
+        },
+        {
+          "id": "implementation-task",
+          "passed": true,
+          "primary": "write-implementation-tasks",
+          "companions": []
+        },
+        {
+          "id": "adr",
+          "passed": true,
+          "primary": "record-architecture-decisions",
+          "companions": []
+        },
+        {
+          "id": "interface-progress",
+          "passed": true,
+          "primary": "write-interface-content",
+          "companions": []
+        },
+        {
+          "id": "domain-conflict",
+          "passed": true,
+          "primary": "establish-project-language",
+          "companions": []
+        },
+        {
+          "id": "cross-artefact-review",
+          "passed": true,
+          "primary": "review-project-language",
+          "companions": []
+        },
+        {
+          "id": "uncertainty-handoff",
+          "passed": true,
+          "primary": "advance-with-uncertainty",
+          "companions": [
+            "write-implementation-tasks"
+          ]
+        },
+        {
+          "id": "backend-boundary",
+          "passed": true,
+          "primary": "backend-slice-architecture",
+          "companions": []
+        },
+        {
+          "id": "frontend-boundary",
+          "passed": true,
+          "primary": "frontend-slice-architecture",
+          "companions": []
+        },
+        {
+          "id": "irrelevant",
+          "passed": true,
+          "primary": null,
+          "companions": []
+        }
+      ],
+      "passed": 12,
+      "total": 12,
+      "output_sha256": "d49fe9998205b160b83a5777445c7bf8a354dd48c5a2a6a8dff46cd8e0d38bed"
+    },
+    {
+      "run": "b",
+      "input": "catalogue-input.json",
+      "input_sha256": "f2d6b1698b33dba742bbc10ea131181ad9c93bc5fa4b246cd2ba54b859e89143",
+      "cases": [
+        {
+          "id": "marketing-launch",
+          "passed": true,
+          "primary": "write-marketing-content",
+          "companions": []
+        },
+        {
+          "id": "marketing-technical-source",
+          "passed": true,
+          "primary": "write-marketing-content",
+          "companions": []
+        },
+        {
+          "id": "technical-guide",
+          "passed": true,
+          "primary": "write-technical-documentation",
+          "companions": []
+        },
+        {
+          "id": "implementation-task",
+          "passed": true,
+          "primary": "write-implementation-tasks",
+          "companions": []
+        },
+        {
+          "id": "adr",
+          "passed": true,
+          "primary": "record-architecture-decisions",
+          "companions": []
+        },
+        {
+          "id": "interface-progress",
+          "passed": true,
+          "primary": "write-interface-content",
+          "companions": []
+        },
+        {
+          "id": "domain-conflict",
+          "passed": true,
+          "primary": "establish-project-language",
+          "companions": []
+        },
+        {
+          "id": "cross-artefact-review",
+          "passed": true,
+          "primary": "review-project-language",
+          "companions": []
+        },
+        {
+          "id": "uncertainty-handoff",
+          "passed": true,
+          "primary": "advance-with-uncertainty",
+          "companions": [
+            "write-implementation-tasks"
+          ]
+        },
+        {
+          "id": "backend-boundary",
+          "passed": true,
+          "primary": "backend-slice-architecture",
+          "companions": []
+        },
+        {
+          "id": "frontend-boundary",
+          "passed": true,
+          "primary": "frontend-slice-architecture",
+          "companions": []
+        },
+        {
+          "id": "irrelevant",
+          "passed": true,
+          "primary": null,
+          "companions": []
+        }
+      ],
+      "passed": 12,
+      "total": 12,
+      "output_sha256": "35799601c8122b79347142e0a2485becd93f4857d49dfc770131ee59e8933775"
+    },
+    {
+      "run": "final",
+      "input": "catalogue-input-final.json",
+      "input_sha256": "96f741e1bcd5339a5807c3a8fa352f98685ebe5e89c7fbcaaa646c516a28e77c",
+      "cases": [
+        {
+          "id": "marketing-launch",
+          "passed": true,
+          "primary": "write-marketing-content",
+          "companions": []
+        },
+        {
+          "id": "marketing-technical-source",
+          "passed": true,
+          "primary": "write-marketing-content",
+          "companions": []
+        },
+        {
+          "id": "technical-guide",
+          "passed": true,
+          "primary": "write-technical-documentation",
+          "companions": []
+        },
+        {
+          "id": "implementation-task",
+          "passed": true,
+          "primary": "write-implementation-tasks",
+          "companions": []
+        },
+        {
+          "id": "adr",
+          "passed": true,
+          "primary": "record-architecture-decisions",
+          "companions": []
+        },
+        {
+          "id": "interface-progress",
+          "passed": true,
+          "primary": "write-interface-content",
+          "companions": []
+        },
+        {
+          "id": "domain-conflict",
+          "passed": true,
+          "primary": "establish-project-language",
+          "companions": []
+        },
+        {
+          "id": "cross-artefact-review",
+          "passed": true,
+          "primary": "review-project-language",
+          "companions": []
+        },
+        {
+          "id": "uncertainty-handoff",
+          "passed": true,
+          "primary": "advance-with-uncertainty",
+          "companions": [
+            "write-implementation-tasks"
+          ]
+        },
+        {
+          "id": "backend-boundary",
+          "passed": true,
+          "primary": "backend-slice-architecture",
+          "companions": []
+        },
+        {
+          "id": "frontend-boundary",
+          "passed": true,
+          "primary": "frontend-slice-architecture",
+          "companions": []
+        },
+        {
+          "id": "irrelevant",
+          "passed": true,
+          "primary": null,
+          "companions": []
+        }
+      ],
+      "passed": 12,
+      "total": 12,
+      "output_sha256": "972570a2c3ebee7db4ca97dc318d8a312e88b1c73e5cde85dae127e62712f00a"
+    }
+  ]
+}

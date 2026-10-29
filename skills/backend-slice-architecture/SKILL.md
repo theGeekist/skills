@@ -1,384 +1,58 @@
 ---
 name: backend-slice-architecture
-description: Use when creating, refactoring, reviewing, or incrementally migrating backend architecture towards a capability-first, package-shaped model with explicit public APIs, clear orchestration, and earned shared infrastructure across apps, packages, libraries, modules, or equivalent project roots.
+description: "Use when creating, refactoring, reviewing, or incrementally migrating backend architecture towards a capability-first, package-shaped model with explicit public APIs, clear orchestration, and earned shared infrastructure across apps, packages, libraries, modules, or equivalent project roots."
 license: MIT
 metadata:
   author: Geekist
   homepage: https://geekist.co
 ---
 
-# Backend Architecture Playbook
+# Backend architecture
 
-Keep related backend behaviour together so changes have a clear owner, other parts use an explicit interface, and coordination stays visible.
+Keep related backend behaviour together, protect its public interface and make cross-capability coordination explicit. Apply this model when the user chooses it or requests a review against it.
 
-Apply this architecture when the user chooses this model or asks for a review against it.
+<!-- shared-baseline:start -->
+Use current project terms and decisions. Explain an unfamiliar term near its first consequential use; distinguish a proposed meaning from an accepted one. Preserve exact identifiers and technical constraints.
 
-## Find what you need
+Lead with the reader's purpose and main point, then explain the consequences and supporting detail. Make substantial technical material navigable by a reader outside engineering, with descriptive headings and meaningful source links. Match depth to the request; use British English in authored prose.
 
-- Start with [What this architecture is](#what-this-architecture-is) for the purpose and terms.
-- Use [Rules for decisions](#rules-for-decisions) to assess ownership, sharing and dependencies.
-- Use [Incremental migration](#incremental-migration) when changing an existing system, then check the [Review/refactor checklist](#reviewrefactor-checklist).
-- Use [Illustrative folder shapes](#illustrative-folder-shapes) for examples; preserve equivalent repository conventions.
+Keep implementation progress separate from validation. Pair a material evidence gap with a bounded next action and completion evidence. Missing prior proof alone does not reject an option or halt authorised work. Name actual blockers precisely, continue independent authorised work, and preserve existing authorisation.
 
-## Authority and adaptation
+Check consistency, accessibility, readability and repeatability. Use sources for claims and real events for progress. Preserve uncertainty that affects a decision without inventing certainty or unnecessary approval gates.
+<!-- shared-baseline:end -->
 
-Inspect the repository's existing conventions and constraints before proposing placement or changes. Treat this playbook as an architecture lens and target direction, not permission to reorganise unrelated code. Preserve established naming where it expresses the same boundaries, and migrate existing systems through the work already in scope.
+## Start with the repository
 
-## Explain recommendations
+Read existing instructions, decisions, project metadata and affected code before recommending placement. Preserve equivalent repository and framework conventions. These are strong defaults, not permission to rename roots or reorganise unrelated code. Depart from a default for a concrete local reason and keep the affected boundary consistent.
 
-Use the repository's accepted terms and link to the code or decision that establishes their meaning. When a term has competing meanings, identify the context before recommending a name. Label new terms and architectural changes as proposals.
+A **capability** owns a cohesive area's rules, state and implementation. Its **public surface** is the operations and types other parts may use; a **deep import** bypasses that interface to reach internals. **Package-shaped** means independently testable with an explicit public surface and enforceable dependencies, whether or not a `package.json` or publishable package exists.
 
-Lead with the purpose and practical effect of a recommendation. Explain the affected boundary, the evidence and the smallest useful change before adding implementation detail. Define unfamiliar terms where they first appear. Give readers a route to the relevant code, rule or example; adjust the detail to the request.
+## Keep the decision core
 
-Describe evidence gaps precisely and state which conclusion they affect. Distinguish implementation state (what exists or is changing) from evidence state (what has been checked). Pair each material gap with the next investigation, implementation or validation action, and explain what would actually prevent progress. Lack of prior proof alone does not disqualify reasonable authorised work or viable alternatives. Preserve genuine constraints and uncertainty without inventing confidence or treating uncertainty as a reason to stop.
+- Start new behaviour inside its owning capability unless it is explicitly independent of capability-specific rules from day one. Keep capability internals owned and private.
+- Keep independently owned capabilities as peers. Domain grouping directories are acceptable when they create no hidden ownership or import boundary. Determine whether an apparently nested capability is truly an internal implementation detail before splitting it.
+- Place cross-capability sequencing and coordination in the established application, use-case or workflow surface. This **orchestration** composes capabilities; their rules remain inside them.
+- Orchestration may depend on capability public surfaces. Capabilities may depend on approved shared infrastructure. A narrow, natural dependency on a sibling's public surface is allowed when clearer than orchestration; it must not become workflow sequencing or coordination. Investigate a growing sibling-dependency graph rather than automatically rejecting it.
+- Give every capability an ecosystem-appropriate public surface and mechanically block deep imports. Expose a small set of commands, queries, use cases, boundary data types and optional events; keep persistence models, helper utilities and volatile domain objects private.
+- Allow early duplication. **Promotion** moves repeated reusable behaviour from capability-local code to shared code. Promote when two or more capabilities repeat the same concept, repeated edits cause friction and the abstraction is clear. Shared code must have no business semantics, remain stable and reusable without leaking assumptions, and prevent meaningful correctness, security or consistency harm from duplication. Avoid reversing the local-to-shared direction.
+- Prefer shallow internals and descriptive filenames. Preserve recognised framework forms and local compound-name conventions. Add directories for real boundaries, generated-code isolation, framework requirements, substantial growth or improved navigation; avoid speculative taxonomy and repeated capability prefixes.
+- Treat APIs, command-line interfaces and external SDKs as delivery adapters. Requests map to orchestration. An internal SDK exposes capability public surfaces; an external SDK is built from transport contracts.
+- Keep internationalisation and configuration in the design from the start. The originating capability owns string meaning; delivery owns locale-sensitive presentation; machine identifiers remain language-neutral. Compose locale/configuration in the runtime shell and supply capabilities with required values.
+- Follow configured workspace roots: `apps`, `packages`, `libs` or equivalents can express the same roles. Folder names alone do not determine architecture. Share orchestration across multiple runtimes rather than duplicating it.
+- Migrate through real work: add behaviour in the appropriate existing boundary and move old code only when touched. Treat size and dependency signals as prompts to investigate; roughly 1,000 source lines in one file is a warning, not a rule to reorganise automatically.
 
-## What this architecture is
+## Load only the relevant detail
 
-Start backend behaviour inside a **capability**: a cohesive area, such as Checkout, that owns its rules, state and implementation. Move behaviour into shared code only when it can serve multiple capabilities without depending on their particular rules. This move is called **promotion**; code independent of those rules is **capability-agnostic**.
+Read the indicated reference **before deciding or changing that concern**. A full architecture review needs all three; a narrow request needs only the relevant reference and this core.
 
-**Package-shaped** describes an independently testable boundary with an explicit **public surface**: the operations and types other parts may use. Its dependencies can be enforced. This does not require a `package.json`, a publishable package, or a top-level directory named `packages`. A **deep import** bypasses the public surface to use internal implementation details.
+| Concern | Required reference |
+| --- | --- |
+| File placement/naming, shared-code promotion, interfaces, delivery, locale or configuration | [Placement and contracts](references/placement-and-contracts.md) |
+| Workspace roles, multiple runtimes, migration, enforcement tools or folder examples | [Workspace and migration](references/workspace-and-migration.md) |
+| Architecture review, sizing, dependency smells or refactor completion | [Review signals and checklist](references/review.md) |
 
-Use these operating rules to improve legibility, autonomy and predictable change. They can coexist with Domain-Driven Design (DDD), Hexagonal Architecture, Clean Architecture or Model–View–Controller (MVC); applying those frameworks is optional.
+Each reference preserves the detailed rules; examples illustrate options rather than mandate a stack. Use the smallest relevant section, and avoid loading examples for unrelated ecosystems.
 
-## Ownership and coordination
+## Explain the recommendation
 
-Two homes, one direction of travel:
-
-1. Capability boundary (default)
-- Place capability-specific behaviour in the repository's established package, library, module, or source boundary.
-- In workspaces this commonly means `packages/<capability>` or `libs/<capability>`.
-- In a single-package service this commonly means `src/<capability>` or `src/modules/<capability>`.
-- Let each capability own its internals.
-
-2. Agnostic shared boundary (earned)
-- Keep reusable infrastructure and cross-cutting helpers in the repository's established shared packages, libraries, adapters, or services only when genuinely capability-agnostic.
-
-Direction of travel: capability -> shared through promotion. Avoid reverse movement.
-
-**Orchestration** means sequencing and coordinating capabilities to complete a workflow. Keep it in one explicit role:
-- Place cross-capability stories in the repository's application, use-case, workflow, or runtime composition surface.
-- Do not allow capabilities to coordinate other capabilities implicitly.
-
-## Strong defaults
-
-These are decision guides, not filesystem directives. Follow established repository and framework conventions when they express the same ownership and dependency boundaries. Depart from a default when the local context provides a concrete reason, and preserve consistency within the affected boundary.
-
-1. Start in a capability
-- Implement new behaviour inside an owned capability boundary unless it is explicitly agnostic from day one.
-
-2. Isolate capabilities
-- Avoid reaching into another capability's internals.
-- Depend only on another capability's public surface.
-
-3. Keep orchestration explicit
-- Put cross-capability sequencing and coordination in the repository's established orchestration surface.
-- Compose capability behaviour there; do not move capability rules there.
-
-4. Do not hide capability boundaries
-- Do not make an independently owned capability an internal implementation detail of another capability.
-- Organisational grouping directories are fine when they do not create ownership or import boundaries.
-- Keep independently owned capabilities as peers within the relevant grouping and coordinate them explicitly.
-
-5. Earn promotion through repetition
-- Allow early duplication.
-- Promote only when repetition is visible and painful.
-
-6. Make public surfaces explicit
-- Give every capability a front door appropriate to the ecosystem, such as package exports, `index.ts`, `public.ts`, module visibility, or an equivalent public API.
-- Block deep imports.
-
-7. Surface amber/red flags
-- Treat architecture smells as action triggers, not style debates.
-
-## File naming and nesting
-
-Prefer shallow capability internals. Add meaning to filenames before adding directories.
-
-- Name a file for its primary operation, subject, boundary, or responsibility.
-- Do not repeat the enclosing capability name merely to make a filename globally unique.
-- Choose the repository's established ordering for compound names, whether modifier-subject (`<modifier>-<subject>`) or subject-modifier (`<subject>-<modifier>`), and use it consistently when combining comparable name parts.
-- Do not force unlike names into artificial grammar: operations, subjects, roles, platform suffixes, and framework suffixes may have different established forms.
-- Preserve framework-required and tool-recognised forms such as `.controller`, `.module`, `.route`, `.test`, `.spec`, `.schema`, platform suffixes, and generated filenames.
-- Prefer additional descriptive filenames over type-based directories such as `services/`, `handlers/`, or `utils/` while the capability remains easy to scan.
-- Strongly discourage nesting introduced only for taxonomy, anticipated growth, or file count aesthetics.
-- Add a directory only when substantial growth, a genuine internal boundary, generated-code isolation, framework requirements, or materially improved navigation justifies it.
-
-For example, prefer a shallow capability such as:
-
-```text
-packages/checkout/src/
-  create-order.ts
-  calculate-total.ts
-  order-repository.ts
-  routes.ts
-  public.ts
-```
-
-over repeating `checkout` in every filename or creating speculative `services/`, `repositories/`, and `handlers/` layers.
-
-## Key concepts
-
-### Capability
-
-Treat a capability as a cohesive unit with:
-- its own rules/state,
-- internal implementation ownership,
-- a clear public surface,
-- future extractability.
-
-Capabilities can include business capabilities (Checkout), decision surfaces (Pricing), technical capabilities (Auth), and UI-adjacent backend capabilities (Template renderer).
-
-### Orchestration surface
-
-Use the repository's application, use-case, workflow, or composition boundary to:
-- sequence capabilities,
-- handle cross-capability flow concerns: retries, idempotency (keeping repeated requests from duplicating effects), and sagas (multi-step workflows with compensating actions),
-- map success/failure story paths.
-
-Do not encode capability rules here.
-
-### Global agnostic layer
-
-Keep this layer intentionally small:
-- adapter boundaries, which may be named `adapters/`, `infrastructure/`, `platform/`, or according to local convention: DB/HTTP/queue/cache/bus wrappers,
-- cross-cutting service boundaries, which may be folders or workspace projects: logging, telemetry, idempotency, generic auth helpers,
-- generic utilities with no business semantics.
-
-## Rules for decisions
-
-### Placement rules
-
-Default placement: capability.
-
-Place in global only if all are true:
-- no business semantics,
-- reusable across capabilities without leaking assumptions,
-- behaviour is stable,
-- duplication would harm correctness/security/consistency.
-
-### Promotion rules
-
-Promote when:
-- 2+ capabilities independently implement the same concept,
-- repeated edits create friction,
-- abstraction is obvious (not speculative).
-
-Promotion targets:
-- the repository's cross-cutting service boundary for agnostic helpers,
-- its adapter, infrastructure, or platform boundary for implementation wrappers,
-- standalone capability only when clearly warranted.
-
-### Dependency rules
-
-- Orchestration may depend on capability public surfaces.
-- Capabilities may depend on approved agnostic shared boundaries.
-- Capabilities must not depend on other capabilities' internals.
-- A capability may take a narrow, natural dependency on another capability's public surface when that is clearer than orchestration.
-- Do not use sibling dependencies for sequencing or coordination; keep those in the established orchestration surface.
-- Treat a growing sibling-dependency graph as a boundary signal to investigate, not as an automatic violation.
-
-### Capability grouping rule
-
-If Capability A appears to own Capability B, determine whether B is genuinely an internal implementation detail or an independently owned boundary. Keep independent capabilities as peers, which may sit beneath a shared domain grouping such as `packages/commerce/*` or `libs/commerce/*`. Move their coordination into the established orchestration surface.
-
-## Amber / red flags
-
-Amber (watch):
-- simple changes repeatedly touch multiple capabilities,
-- cross-capability imports begin appearing,
-- orchestration files grow rapidly,
-- duplicate logic appears across capabilities,
-- onboarding feedback says "hard to know where to start".
-
-Red (act now):
-- deep imports across capabilities become normal,
-- a single capability, orchestration, service, or adapter file exceeds roughly 1,000 source lines of code (SLOC),
-- orchestration becomes a rule monolith,
-- CI slows and teams compensate with long-lived branches.
-
-Standard responses:
-- duplication -> promote once abstraction is obvious,
-- oversized capability -> split into sibling capabilities,
-- oversized orchestration -> split workflows and push rules back into capabilities,
-- cross-imports -> enforce public surfaces and refactor immediately.
-
-## Sizing rules
-
-Use size as a smoke alarm, not dogma.
-
-- Rough threshold: ~1K SLOC in one adapter/service/orchestration/capability file is a boundary warning.
-- If one behaviour lifecycle requires hunting across many folders, boundary placement is wrong.
-
-## Delivery channels
-
-Treat application programming interfaces (APIs), command-line interfaces (CLIs) and software development kits (SDKs) as delivery adapters, not capabilities.
-
-- HTTP/GraphQL/gRPC endpoints map requests to orchestration.
-- CLI commands map to orchestration.
-- Internal SDK is capability public surfaces.
-- External SDK is a separate artefact built from transport contracts, not capability internals.
-
-## Internationalisation and configuration
-
-Treat internationalisation and configuration as normal architecture concerns from the start, even when the application initially has one language and one runtime configuration.
-
-- Keep user-facing strings identifiable and owned by the capability that introduces them.
-- This establishes where strings are managed before translation becomes necessary.
-- Let the application or runtime shell compose locale behaviour and configuration sources.
-- Add configuration requirements as capabilities are introduced or touched.
-- Prefer cross-runtime primitives where practical. UnJS packages can be useful options without becoming required choices.
-- Keep locale-sensitive presentation near delivery while the originating capability owns the meaning.
-- Keep machine-facing identifiers, error codes and protocol values language-neutral.
-- Resolve configuration during application composition and provide capabilities with the values they require.
-
-## Workspace mapping
-
-Follow the workspace's configured project roots. `apps/`, `packages/`, and `libs/` are equally sound project-root conventions when their actual roles and dependency boundaries are explicit. Folder names do not determine the architecture.
-
-### Common roles
-
-- `apps/*` commonly contains deployable runtime entrypoints (delivery + composition):
-  - inbound adapters (HTTP/GraphQL/gRPC, workers, cron, command-line interfaces)
-  - orchestration/workflows/use-cases (thin sequencing)
-  - composition root (dependency injection, configuration and startup wiring)
-
-- `apps/*` may also contain capability or library projects when that is the repository's established convention.
-- `packages/*` commonly contains workspace packages, including runtime applications, capability boundaries, and shared infrastructure. A package may be internal or publishable.
-- `libs/*` serves the same architectural role in repositories and toolchains that use library-oriented vocabulary.
-- Use project metadata, public surfaces, and runtime responsibility rather than the root folder name to determine a project's role.
-
-Capability packages or libraries contain:
-  - capability slices (default home for behaviour)
-  - shared agnostic plumbing (earned home for adapters/services/utilities)
-
-Rules:
-- New behaviour starts in a capability project under the workspace's established `packages/*`, `libs/*`, or equivalent root.
-- Cross-slice coordination lives in the app’s orchestration surface (or a shared orchestration package if multiple runtimes exist).
-- Slices expose an ecosystem-appropriate public surface; deep imports into slice internals are disallowed.
-- Promotion to shared packages happens only when repetition is visible and the abstraction is obvious.
-- Do not introduce new naming taxonomies unless the repo already uses them.
-
-### Multiple apps rule
-
-- If only one backend runtime exists, orchestration can live in that app.
-- If multiple runtimes exist (`api`, `worker`, `admin`), do not duplicate orchestration logic.
-- Share orchestration in a package, or route both runtimes through common orchestration entrypoints.
-
-### Incremental migration
-
-- Do not move old code first.
-- Add new behaviour to capability projects under the repository's established workspace roots.
-- Keep runtime composition in the relevant application project, whether that lives under `apps/*`, `packages/*`, or another configured root.
-- Migrate old areas only when touched by real work.
-
-### Boundary enforcement
-
-Enforce mechanically (lint/build/architecture tests), not by convention alone.
-
-- Allow runtime applications to depend on capability public surfaces.
-- Allow capability projects to depend on approved agnostic infrastructure projects.
-- Disallow deep imports between capability internals.
-- Require imports through the ecosystem's public-surface mechanism.
-
-Typical tooling options:
-- TypeScript: ESLint import rules + TS path mapping.
-- Nx/Turborepo: module boundary rules.
-- Java: package visibility + ArchUnit.
-
-## Illustrative folder shapes
-
-These are mappings of the same ownership model, not competing architectures or required names.
-
-### JavaScript/TypeScript workspace with `apps` and `packages`
-
-```text
-apps/
-  api/
-    src/
-      composition/
-      workflows/
-
-packages/
-  checkout/
-    src/
-    package.json
-  inventory/
-    src/
-    package.json
-  observability/
-    src/
-    package.json
-```
-
-### Workspace with `apps` and `libs`
-
-```text
-apps/
-  api/
-
-libs/
-  commerce/
-    checkout/
-    inventory/
-  shared/
-    observability/
-```
-
-### Workspace using `packages` for every project
-
-```text
-packages/
-  api/
-    src/
-      composition/
-  checkout/
-    src/
-  inventory/
-    src/
-  observability/
-    src/
-```
-
-### Single-package service
-
-```text
-src/
-  modules/
-    checkout/
-    inventory/
-  application/
-    workflows/
-  infrastructure/
-  main.ts
-
-```
-
-## Capability public surface contract
-
-Expose:
-- small set of commands/queries/use-cases,
-- boundary data types, such as data transfer objects (DTOs),
-- optionally emitted events.
-
-Do not expose:
-- internal persistence models,
-- internal helper utilities,
-- volatile domain objects.
-
-## Evolution model
-
-1. Start capability-local and ship.
-2. Promote agnostic patterns once repetition is clear.
-3. Split large capabilities into sibling capabilities.
-4. Let orchestration grow as thin workflow maps, not rule dumps.
-5. Let package/service extraction emerge naturally.
-
-## Review/refactor checklist
-
-1. Start every new behaviour inside an owned capability boundary.
-2. Verify each capability exposes a clear public surface appropriate to the ecosystem.
-3. Remove deep imports and replace with public-surface imports.
-4. Keep cross-capability sequencing in the established orchestration surface.
-5. Track repeated logic and promote only when abstraction is obvious.
-6. Split oversized capabilities/workflows before they become team bottlenecks.
-7. In workspaces, follow the configured `apps/*`, `packages/*`, `libs/*`, or equivalent project roots and remove direct internal cross-boundary imports.
+Give the affected boundary, evidence and smallest useful change before optional mechanisms. Link to current code, decisions and the relevant detailed rule. Preserve the shared baseline above when explaining proposals, evidence gaps and practical consequences to technical and business readers.

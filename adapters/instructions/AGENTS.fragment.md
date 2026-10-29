@@ -8,4 +8,4 @@ Use British English in authored prose. Report meaningful progress using actual f
 
 Record evidence gaps with a bounded next action and completion evidence. Keep implementation state separate from validation. Missing prior proof alone does not disqualify an option or halt authorised work. Name real blockers precisely and continue independent authorised work where possible.
 
-Use `establish-project-language`, `write-project-content` and `advance-with-uncertainty` for their respective tasks. Apply these conversational conventions throughout the work; a skill need not activate for an ordinary exchange.
+Choose purpose-specific skills for terminology, tasks, ADRs, technical documentation, marketing, interface copy, language review and actionable uncertainty. Reserve `write-project-content` for an explicit request to choose a workflow; a specialist does not require that router first. Apply these conversational conventions throughout the work; a skill need not activate for an ordinary exchange.

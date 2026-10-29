@@ -1,0 +1,25 @@
+{
+  "kind": "linux-inotify-file-access",
+  "root": "/workspace/scratch/44d8812e3975/selection-runs/adr-revised",
+  "started_monotonic": 3714.194267329,
+  "started_unix": 1793261092.9356651,
+  "limitation": "File access does not establish model context consumption or native runtime activation.",
+  "events": [
+    {
+      "path": "catalogue.json",
+      "elapsed_seconds": 29.727
+    },
+    {
+      "path": "skills/record-architecture-decisions/SKILL.md",
+      "elapsed_seconds": 33.986
+    },
+    {
+      "path": "skills/record-architecture-decisions/references/uncertainty.md",
+      "elapsed_seconds": 39.976
+    },
+    {
+      "path": "skills/record-architecture-decisions/references/decisions.md",
+      "elapsed_seconds": 39.977
+    }
+  ]
+}
