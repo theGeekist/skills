@@ -1,0 +1,132 @@
+name: Release skills
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - .codex-plugin/plugin.json
+      - .claude-plugin/plugin.json
+      - .github/workflows/release.yml
+  workflow_dispatch:
+    inputs:
+      version:
+        description: 'Release tag, for example v1.5.0; leave empty to use plugin metadata'
+        required: false
+        type: string
+
+permissions:
+  contents: write
+
+concurrency:
+  group: skills-release
+  cancel-in-progress: false
+
+jobs:
+  release:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Select and verify version
+        id: version
+        env:
+          REQUESTED_VERSION: ${{ inputs.version }}
+        run: |
+          python3 - <<'PY'
+          import json, os, re
+          from pathlib import Path
+          versions = [json.loads(Path(name).read_text())['version'] for name in
+                      ('.codex-plugin/plugin.json', '.claude-plugin/plugin.json')]
+          if len(set(versions)) != 1:
+              raise SystemExit('Plugin versions disagree')
+          version = os.environ.get('REQUESTED_VERSION') or 'v' + versions[0]
+          if not re.fullmatch(r'v[0-9]+\.[0-9]+\.[0-9]+', version):
+              raise SystemExit('Expected a stable semantic tag such as v1.5.0')
+          if version != 'v' + versions[0]:
+              raise SystemExit('Requested tag does not match both plugin versions')
+          notes = Path('release-notes') / (version + '.md')
+          if not notes.is_file():
+              raise SystemExit('Versioned release notes are missing')
+          with open(os.environ['GITHUB_OUTPUT'], 'a') as output:
+              output.write('tag=' + version + '\n')
+          PY
+      - name: Inspect existing tag and release
+        id: existing
+        env:
+          GH_TOKEN: ${{ github.token }}
+          GH_REPO: ${{ github.repository }}
+          RELEASE_TAG: ${{ steps.version.outputs.tag }}
+        run: |
+          if gh release view "$RELEASE_TAG" --json tagName >/dev/null 2>&1; then
+            git rev-parse --verify "refs/tags/$RELEASE_TAG" >/dev/null
+            printf 'skip=true\n' >> "$GITHUB_OUTPUT"
+            printf 'Release %s already exists; preserving its tag and assets.\n' "$RELEASE_TAG"
+            exit 0
+          fi
+          printf 'skip=false\n' >> "$GITHUB_OUTPUT"
+          if git rev-parse --verify "refs/tags/$RELEASE_TAG" >/dev/null 2>&1; then
+            tag_commit=$(git rev-list -n 1 "$RELEASE_TAG")
+            if [ "$tag_commit" != "$GITHUB_SHA" ]; then
+              printf 'Tag %s belongs to another commit; rerun on that tag to recover its missing release.\n' "$RELEASE_TAG" >&2
+              exit 1
+            fi
+          fi
+      - name: Check shared sources, terminology and behaviour
+        if: steps.existing.outputs.skip != 'true'
+        run: |
+          python3 scripts/sync-language-references.py --check
+          python3 scripts/check-language.py registry standards/terminology.json
+          python3 scripts/check-language.py registry skills/establish-project-language/assets/terminology.example.json
+          python3 -m unittest discover -s tests -v
+      - name: Fetch pinned Agent Skills validator
+        if: steps.existing.outputs.skip != 'true'
+        uses: actions/checkout@v4
+        with:
+          repository: agentskills/agentskills
+          ref: 69ef37e9424c0a7ea9dd2293b559e43ec8176379
+          path: .validation/agentskills
+      - name: Validate all portable skill packages
+        if: steps.existing.outputs.skip != 'true'
+        run: |
+          python3 -m pip install ./.validation/agentskills/skills-ref
+          for skill_path in skills/*; do skills-ref validate "$skill_path" || exit; done
+      - name: Build reproducible source archives
+        if: steps.existing.outputs.skip != 'true'
+        env:
+          RELEASE_TAG: ${{ steps.version.outputs.tag }}
+        run: |
+          mkdir -p dist
+          archive_name="geekist-skills-$RELEASE_TAG"
+          git archive --format=tar --prefix="$archive_name/" "$GITHUB_SHA" | gzip -n > "dist/$archive_name.tar.gz"
+          git archive --format=zip --prefix="$archive_name/" --output="dist/$archive_name.zip" "$GITHUB_SHA"
+          python3 - <<'PY'
+          import json, os, subprocess
+          from pathlib import Path
+          manifest = {
+              'repository': os.environ['GITHUB_REPOSITORY'],
+              'tag': os.environ['RELEASE_TAG'],
+              'commit': os.environ['GITHUB_SHA'],
+              'tree': subprocess.check_output(['git', 'show', '-s', '--format=%T', 'HEAD'], text=True).strip(),
+              'skills': sorted(p.parent.name for p in Path('skills').glob('*/SKILL.md')),
+              'license': 'MIT; see included source and branding notices'
+          }
+          Path('dist/release-manifest.json').write_text(json.dumps(manifest, indent=2) + '\n')
+          PY
+          (cd dist && sha256sum *.tar.gz *.zip release-manifest.json > SHA256SUMS)
+      - name: Publish immutable tag and GitHub release
+        if: steps.existing.outputs.skip != 'true'
+        env:
+          GH_TOKEN: ${{ github.token }}
+          GH_REPO: ${{ github.repository }}
+          RELEASE_TAG: ${{ steps.version.outputs.tag }}
+        run: |
+          if ! git rev-parse --verify "refs/tags/$RELEASE_TAG" >/dev/null 2>&1; then
+            git tag "$RELEASE_TAG" "$GITHUB_SHA"
+            git push origin "refs/tags/$RELEASE_TAG"
+          fi
+          gh release create "$RELEASE_TAG" dist/*.tar.gz dist/*.zip dist/SHA256SUMS dist/release-manifest.json \
+            --verify-tag --title "Geekist Skills $RELEASE_TAG" --notes-file "release-notes/$RELEASE_TAG.md" --latest

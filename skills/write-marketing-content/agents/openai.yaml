@@ -1,4 +1,6 @@
 interface:
+  icon_small: "./assets/geekist-small.svg"
+  icon_large: "./assets/geekist.svg"
   display_name: "Write Marketing Content"
   short_description: "Explain customer value with accurate project claims"
   default_prompt: "Use $write-marketing-content for this project artefact."

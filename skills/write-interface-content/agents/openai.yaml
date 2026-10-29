@@ -1,4 +1,6 @@
 interface:
+  icon_small: "./assets/geekist-small.svg"
+  icon_large: "./assets/geekist.svg"
   display_name: "Write Interface Content"
   short_description: "Write clear labels, progress, errors and next actions"
   default_prompt: "Use $write-interface-content for this project artefact."

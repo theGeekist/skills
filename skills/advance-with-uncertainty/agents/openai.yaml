@@ -1,4 +1,6 @@
 interface:
+  icon_small: "./assets/geekist-small.svg"
+  icon_large: "./assets/geekist.svg"
   display_name: "Advance With Uncertainty"
   short_description: "Turn evidence gaps into bounded next steps"
   default_prompt: "Use $advance-with-uncertainty to record this evidence gap and continue the authorised work with clear validation and blocker criteria."

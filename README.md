@@ -10,15 +10,15 @@ Published by [Geekist](https://geekist.co).
 
 ## Install
 
-Install the collection from the public repository:
+Install the versioned collection from the public repository:
 
 ```sh
-npx skills add theGeekist/skills
+npx skills add https://github.com/theGeekist/skills/tree/v1.5.0
 ```
 
 The skills use portable Markdown with YAML frontmatter and optional client metadata. They require no MCP server or runtime dependency. Optional repository checks and a Codex hook example are separate from skill installation.
 
-The language-system changes on this branch are unreleased. See the [architecture and reader route](docs/language-system/architecture.md), [evaluation results](docs/language-system/validation-results.md) and [integration guide](docs/language-system/integration.md).
+Version **v1.5.0** introduces the shared language system and focused writing workflows. See the [architecture and reader route](docs/language-system/architecture.md), [evaluation results](docs/language-system/validation-results.md) and [integration guide](docs/language-system/integration.md).
 
 ## Choose a language skill
 
