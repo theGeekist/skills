@@ -1,0 +1,10 @@
+extends: substitution
+message: "Consider '%s' instead of '%s' if it preserves the meaning."
+level: warning
+ignorecase: true
+swap:
+  aforementioned: previously mentioned
+  in order to: to
+  prior to: before
+  subsequent to: after
+  utilise: use

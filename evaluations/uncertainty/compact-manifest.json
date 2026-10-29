@@ -1,0 +1,23 @@
+{
+  "date": "2026-10-29",
+  "phase": "post-refinement",
+  "method": "One fresh-context worker, same synthetic adapter input with an explicit 150-word output limit. No expected answer supplied. Skill refined to carry forward existing authorisation and scale uncertainty detail to the task.",
+  "skill_snapshot": {
+    "AGENTS.md": "0d14e199c587ba702406dfa51014b0b56afaee0033e54652cc02bb210fd5e250",
+    "skills/advance-with-uncertainty/SKILL.md": "cd3489cab04dca4058b937f1d4a15a44d1976e48f7015d87be7e200c081a3054",
+    "skills/advance-with-uncertainty/agents/openai.yaml": "66632af4dcb7521101a1b636c05a9694ec53604369b7ea375cb3aae9e90b3840",
+    "skills/advance-with-uncertainty/assets/action-records.md": "1b577fbffc6887cc77a2038815b2b55ed2a4bd0129f37c65af7042879373cb08",
+    "skills/advance-with-uncertainty/references/uncertainty.md": "052afaf726b95de9900a4dbfb6231b730a2451a8be6a3869185ee749c25ec2c3",
+    "skills/advance-with-uncertainty/references/writing.md": "3e7be9ad5091bb9d0848a6de986f24e43e929f6b61a480459db0298da0d24388"
+  },
+  "case": {
+    "id": "adapter-compact",
+    "prompt": "adapter-compact-prompt.txt",
+    "input": "adapter-task.md",
+    "output": "adapter-compact-output.md",
+    "max_words": 150,
+    "output_words": 144,
+    "output_sha256": "29f7f701b43d3f9ecaf829996c5be57b3a0f3c6a8aa3ce81961db7f8a3382395",
+    "status": "completed"
+  }
+}

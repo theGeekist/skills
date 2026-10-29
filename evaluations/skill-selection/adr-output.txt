@@ -1,0 +1,25 @@
+# Per-project queues for the report-export prototype
+
+**Status: Chosen for the reversible prototype.** Use a separate worker queue for each project so that a large project's report exports can be scheduled independently of smaller projects. Production scheduling limits remain undecided.
+
+## Context and alternatives
+
+The current shared queue lets a large project delay smaller projects. The decision prioritises independent scheduling while accepting additional coordination between queues.
+
+The viable alternatives were:
+
+- **Shared FIFO queue:** least setup, but project contention remains.
+- **Per-project queues:** independent scheduling, with additional coordination; chosen for the prototype.
+- **Priority queue:** retains one queue, but requires an agreed priority policy.
+
+## Implementation and validation
+
+This record captures the choice; it does not establish implementation or performance success. Load tests have not run.
+
+Next, implement the authorised reversible prototype and exercise two concurrent projects in the local harness. Record each project's waiting and completion times to assess whether a large export delays the smaller project's work. Local implementation and tests are already authorised.
+
+Agree a numerical latency budget and measure the representative load case before choosing production limits. Revisit the queue decision if the expected workload cannot meet that budget. The missing budget prevents a pass/fail latency judgement, but does not block the prototype or local measurements.
+
+Publication, deployment and external account changes are outside scope.
+
+Supporting evidence: [queue discussion notes](../../../selection-runs/adr/source.md).

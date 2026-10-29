@@ -1,0 +1,567 @@
+{
+  "project": "@geekist/llm-core",
+  "source_revision": "4f9e37ac92bcd055a836806ea463510ed32a8bcc",
+  "scope": "Current public source; terminology discovery, no project decision or execution",
+  "status_note": "Concept status describes adoption of this registry entry, not confidence in observed source meaning. Entries are proposed registry formulations; the researched source already establishes the recorded meanings. No project approval is claimed.",
+  "contexts": [
+    {
+      "id": "adoption",
+      "name": "Adoption",
+      "definition": "Package responsibilities and integration choices."
+    },
+    {
+      "id": "portability",
+      "name": "Portability",
+      "definition": "Data contracts and storage-neutral references."
+    },
+    {
+      "id": "action-control",
+      "name": "Action control",
+      "definition": "Authorisation, execution records and effect recovery."
+    }
+  ],
+  "concepts": [
+    {
+      "id": "llm-core.kernel",
+      "context": "adoption",
+      "preferred_term": "kernel",
+      "definition": "The portable contract, conformance, authority and evidence layer; the host selects an integration that owns execution.",
+      "status": "proposed",
+      "aliases": [],
+      "relationships": [
+        {
+          "type": "related",
+          "target": "llm-core.runtime-integration"
+        }
+      ],
+      "sources": [
+        {
+          "revision": "4f9e37ac92bcd055a836806ea463510ed32a8bcc",
+          "path": "README.md",
+          "url": "https://github.com/theGeekist/llm-core/blob/4f9e37ac92bcd055a836806ea463510ed32a8bcc/README.md"
+        },
+        {
+          "revision": "4f9e37ac92bcd055a836806ea463510ed32a8bcc",
+          "path": "packages/llm-core/README.md",
+          "url": "https://github.com/theGeekist/llm-core/blob/4f9e37ac92bcd055a836806ea463510ed32a8bcc/packages/llm-core/README.md"
+        },
+        {
+          "revision": "4f9e37ac92bcd055a836806ea463510ed32a8bcc",
+          "path": "packages/llm-core/docs/final-architecture/decisions/ADR-016-integration-owned-execution.md",
+          "url": "https://github.com/theGeekist/llm-core/blob/4f9e37ac92bcd055a836806ea463510ed32a8bcc/packages/llm-core/docs/final-architecture/decisions/ADR-016-integration-owned-execution.md"
+        }
+      ],
+      "labels": {
+        "technical": "kernel",
+        "business": "kernel"
+      },
+      "distinct_from": [],
+      "observation": {
+        "status": "established-source-meaning",
+        "basis": "Current cited public contracts, accepted architecture decisions and/or representative tests.",
+        "adoption_note": "This formulation has not been adopted as a project terminology registry entry."
+      }
+    },
+    {
+      "id": "llm-core.runtime-integration",
+      "context": "adoption",
+      "preferred_term": "runtime integration",
+      "definition": "A host-selected implementation of runtime contracts such as AgentRunner which owns native execution and sessions.",
+      "status": "proposed",
+      "aliases": [
+        "runner integration"
+      ],
+      "relationships": [
+        {
+          "type": "related",
+          "target": "llm-core.kernel"
+        }
+      ],
+      "sources": [
+        {
+          "revision": "4f9e37ac92bcd055a836806ea463510ed32a8bcc",
+          "path": "packages/llm-core/docs/final-architecture/decisions/ADR-016-integration-owned-execution.md",
+          "url": "https://github.com/theGeekist/llm-core/blob/4f9e37ac92bcd055a836806ea463510ed32a8bcc/packages/llm-core/docs/final-architecture/decisions/ADR-016-integration-owned-execution.md"
+        }
+      ],
+      "labels": {
+        "technical": "runtime integration",
+        "business": "runtime integration"
+      },
+      "distinct_from": [],
+      "observation": {
+        "status": "established-source-meaning",
+        "basis": "Current cited public contracts, accepted architecture decisions and/or representative tests.",
+        "adoption_note": "This formulation has not been adopted as a project terminology registry entry."
+      }
+    },
+    {
+      "id": "llm-core.portable-contract",
+      "context": "portability",
+      "preferred_term": "portable contract",
+      "definition": "A constrained JSON-compatible contract authored in TypeScript and projected to deterministic Draft 7 JSON Schema, excluding live objects and secrets.",
+      "status": "proposed",
+      "aliases": [],
+      "relationships": [
+        {
+          "type": "related",
+          "target": "llm-core.schema-reference"
+        }
+      ],
+      "sources": [
+        {
+          "revision": "4f9e37ac92bcd055a836806ea463510ed32a8bcc",
+          "path": "packages/llm-core/docs/final-architecture/decisions/ADR-003-schema-identity.md",
+          "url": "https://github.com/theGeekist/llm-core/blob/4f9e37ac92bcd055a836806ea463510ed32a8bcc/packages/llm-core/docs/final-architecture/decisions/ADR-003-schema-identity.md"
+        }
+      ],
+      "labels": {
+        "technical": "portable contract",
+        "business": "portable contract"
+      },
+      "distinct_from": [],
+      "observation": {
+        "status": "established-source-meaning",
+        "basis": "Current cited public contracts, accepted architecture decisions and/or representative tests.",
+        "adoption_note": "This formulation has not been adopted as a project terminology registry entry."
+      }
+    },
+    {
+      "id": "llm-core.schema-reference",
+      "context": "portability",
+      "preferred_term": "schema reference",
+      "definition": "SchemaRef identifies a schema by absolute schemaId, SemVer version and SHA-256 digest of exact published schema bytes.",
+      "status": "proposed",
+      "aliases": [
+        "SchemaRef"
+      ],
+      "relationships": [
+        {
+          "type": "related",
+          "target": "llm-core.portable-contract"
+        }
+      ],
+      "sources": [
+        {
+          "revision": "4f9e37ac92bcd055a836806ea463510ed32a8bcc",
+          "path": "packages/llm-core/docs/final-architecture/decisions/ADR-003-schema-identity.md",
+          "url": "https://github.com/theGeekist/llm-core/blob/4f9e37ac92bcd055a836806ea463510ed32a8bcc/packages/llm-core/docs/final-architecture/decisions/ADR-003-schema-identity.md"
+        },
+        {
+          "revision": "4f9e37ac92bcd055a836806ea463510ed32a8bcc",
+          "path": "packages/llm-core/tests/contracts/schema.test.ts",
+          "url": "https://github.com/theGeekist/llm-core/blob/4f9e37ac92bcd055a836806ea463510ed32a8bcc/packages/llm-core/tests/contracts/schema.test.ts"
+        }
+      ],
+      "labels": {
+        "technical": "schema reference",
+        "business": "schema reference"
+      },
+      "distinct_from": [],
+      "observation": {
+        "status": "established-source-meaning",
+        "basis": "Current cited public contracts, accepted architecture decisions and/or representative tests.",
+        "adoption_note": "This formulation has not been adopted as a project terminology registry entry."
+      }
+    },
+    {
+      "id": "llm-core.action-digest",
+      "context": "action-control",
+      "preferred_term": "action digest",
+      "definition": "A security-domain HMAC binding policy and approval to the canonical execution-affecting action, including exact validated arguments and schema digest.",
+      "status": "proposed",
+      "aliases": [
+        "ActionDigest"
+      ],
+      "relationships": [
+        {
+          "type": "related",
+          "target": "llm-core.policy-decision"
+        },
+        {
+          "type": "related",
+          "target": "llm-core.approval"
+        }
+      ],
+      "sources": [
+        {
+          "revision": "4f9e37ac92bcd055a836806ea463510ed32a8bcc",
+          "path": "packages/llm-core/docs/final-architecture/decisions/ADR-005-tool-control-events.md",
+          "url": "https://github.com/theGeekist/llm-core/blob/4f9e37ac92bcd055a836806ea463510ed32a8bcc/packages/llm-core/docs/final-architecture/decisions/ADR-005-tool-control-events.md"
+        },
+        {
+          "revision": "4f9e37ac92bcd055a836806ea463510ed32a8bcc",
+          "path": "packages/llm-core/tests/control/approval.test.ts",
+          "url": "https://github.com/theGeekist/llm-core/blob/4f9e37ac92bcd055a836806ea463510ed32a8bcc/packages/llm-core/tests/control/approval.test.ts"
+        }
+      ],
+      "labels": {
+        "technical": "action digest",
+        "business": "action digest"
+      },
+      "distinct_from": [],
+      "observation": {
+        "status": "established-source-meaning",
+        "basis": "Current cited public contracts, accepted architecture decisions and/or representative tests.",
+        "adoption_note": "This formulation has not been adopted as a project terminology registry entry."
+      }
+    },
+    {
+      "id": "llm-core.effect-class",
+      "context": "action-control",
+      "preferred_term": "effect class",
+      "definition": "Classification of a tool effect as read-only, reversible, external-write, destructive or privileged; non-read-only effects require durable control prerequisites.",
+      "status": "proposed",
+      "aliases": [],
+      "relationships": [
+        {
+          "type": "related",
+          "target": "llm-core.execution-receipt"
+        }
+      ],
+      "sources": [
+        {
+          "revision": "4f9e37ac92bcd055a836806ea463510ed32a8bcc",
+          "path": "packages/llm-core/docs/final-architecture/decisions/ADR-005-tool-control-events.md",
+          "url": "https://github.com/theGeekist/llm-core/blob/4f9e37ac92bcd055a836806ea463510ed32a8bcc/packages/llm-core/docs/final-architecture/decisions/ADR-005-tool-control-events.md"
+        }
+      ],
+      "labels": {
+        "technical": "effect class",
+        "business": "effect class"
+      },
+      "distinct_from": [],
+      "observation": {
+        "status": "established-source-meaning",
+        "basis": "Current cited public contracts, accepted architecture decisions and/or representative tests.",
+        "adoption_note": "This formulation has not been adopted as a project terminology registry entry."
+      }
+    },
+    {
+      "id": "llm-core.policy-decision",
+      "context": "action-control",
+      "preferred_term": "policy decision",
+      "definition": "A provenance-bearing allow, deny or require-approval result for one identified action evaluation; approval-required remains distinct from allowed.",
+      "status": "proposed",
+      "aliases": [
+        "PolicyDecision"
+      ],
+      "relationships": [
+        {
+          "type": "related",
+          "target": "llm-core.action-digest"
+        },
+        {
+          "type": "related",
+          "target": "llm-core.approval"
+        }
+      ],
+      "sources": [
+        {
+          "revision": "4f9e37ac92bcd055a836806ea463510ed32a8bcc",
+          "path": "packages/llm-core/src/features/control/policy.ts",
+          "url": "https://github.com/theGeekist/llm-core/blob/4f9e37ac92bcd055a836806ea463510ed32a8bcc/packages/llm-core/src/features/control/policy.ts"
+        },
+        {
+          "revision": "4f9e37ac92bcd055a836806ea463510ed32a8bcc",
+          "path": "packages/llm-core/tests/control/policy.test.ts",
+          "url": "https://github.com/theGeekist/llm-core/blob/4f9e37ac92bcd055a836806ea463510ed32a8bcc/packages/llm-core/tests/control/policy.test.ts"
+        }
+      ],
+      "labels": {
+        "technical": "policy decision",
+        "business": "policy decision"
+      },
+      "distinct_from": [],
+      "observation": {
+        "status": "established-source-meaning",
+        "basis": "Current cited public contracts, accepted architecture decisions and/or representative tests.",
+        "adoption_note": "This formulation has not been adopted as a project terminology registry entry."
+      }
+    },
+    {
+      "id": "llm-core.approval",
+      "context": "action-control",
+      "preferred_term": "approval",
+      "definition": "An authenticated actor decision for an exact action and identified request within its approval window; a changed digest, wrong identity or expired window invalidates it.",
+      "status": "proposed",
+      "aliases": [],
+      "relationships": [
+        {
+          "type": "related",
+          "target": "llm-core.action-digest"
+        },
+        {
+          "type": "related",
+          "target": "llm-core.policy-decision"
+        }
+      ],
+      "sources": [
+        {
+          "revision": "4f9e37ac92bcd055a836806ea463510ed32a8bcc",
+          "path": "packages/llm-core/src/features/control/approval.ts",
+          "url": "https://github.com/theGeekist/llm-core/blob/4f9e37ac92bcd055a836806ea463510ed32a8bcc/packages/llm-core/src/features/control/approval.ts"
+        },
+        {
+          "revision": "4f9e37ac92bcd055a836806ea463510ed32a8bcc",
+          "path": "packages/llm-core/tests/control/approval.test.ts",
+          "url": "https://github.com/theGeekist/llm-core/blob/4f9e37ac92bcd055a836806ea463510ed32a8bcc/packages/llm-core/tests/control/approval.test.ts"
+        }
+      ],
+      "labels": {
+        "technical": "approval",
+        "business": "approval"
+      },
+      "distinct_from": [],
+      "observation": {
+        "status": "established-source-meaning",
+        "basis": "Current cited public contracts, accepted architecture decisions and/or representative tests.",
+        "adoption_note": "This formulation has not been adopted as a project terminology registry entry."
+      }
+    },
+    {
+      "id": "llm-core.execution-receipt",
+      "context": "action-control",
+      "preferred_term": "tool execution receipt",
+      "definition": "An append-derived durable record of a tool execution lifecycle, with effect disposition recorded separately from lifecycle state.",
+      "status": "proposed",
+      "aliases": [
+        "ToolExecutionReceipt"
+      ],
+      "relationships": [
+        {
+          "type": "related",
+          "target": "llm-core.effect-disposition"
+        },
+        {
+          "type": "related",
+          "target": "llm-core.receipt-journal"
+        },
+        {
+          "type": "related",
+          "target": "llm-core.reconciliation"
+        }
+      ],
+      "sources": [
+        {
+          "revision": "4f9e37ac92bcd055a836806ea463510ed32a8bcc",
+          "path": "packages/llm-core/src/features/evidence/receipt.ts",
+          "url": "https://github.com/theGeekist/llm-core/blob/4f9e37ac92bcd055a836806ea463510ed32a8bcc/packages/llm-core/src/features/evidence/receipt.ts"
+        }
+      ],
+      "labels": {
+        "technical": "tool execution receipt",
+        "business": "tool execution receipt"
+      },
+      "distinct_from": [],
+      "observation": {
+        "status": "established-source-meaning",
+        "basis": "Current cited public contracts, accepted architecture decisions and/or representative tests.",
+        "adoption_note": "This formulation has not been adopted as a project terminology registry entry."
+      }
+    },
+    {
+      "id": "llm-core.effect-disposition",
+      "context": "action-control",
+      "preferred_term": "effect disposition",
+      "definition": "Recorded knowledge of an effect: not-started, none, applied, partial, unknown or compensated; a thrown error after start does not establish none.",
+      "status": "proposed",
+      "aliases": [
+        "EffectDisposition"
+      ],
+      "relationships": [
+        {
+          "type": "related",
+          "target": "llm-core.execution-receipt"
+        }
+      ],
+      "sources": [
+        {
+          "revision": "4f9e37ac92bcd055a836806ea463510ed32a8bcc",
+          "path": "packages/llm-core/src/features/evidence/receipt.ts",
+          "url": "https://github.com/theGeekist/llm-core/blob/4f9e37ac92bcd055a836806ea463510ed32a8bcc/packages/llm-core/src/features/evidence/receipt.ts"
+        },
+        {
+          "revision": "4f9e37ac92bcd055a836806ea463510ed32a8bcc",
+          "path": "packages/llm-core/docs/final-architecture/decisions/ADR-005-tool-control-events.md",
+          "url": "https://github.com/theGeekist/llm-core/blob/4f9e37ac92bcd055a836806ea463510ed32a8bcc/packages/llm-core/docs/final-architecture/decisions/ADR-005-tool-control-events.md"
+        }
+      ],
+      "labels": {
+        "technical": "effect disposition",
+        "business": "effect disposition"
+      },
+      "distinct_from": [],
+      "observation": {
+        "status": "established-source-meaning",
+        "basis": "Current cited public contracts, accepted architecture decisions and/or representative tests.",
+        "adoption_note": "This formulation has not been adopted as a project terminology registry entry."
+      }
+    },
+    {
+      "id": "llm-core.receipt-journal",
+      "context": "action-control",
+      "preferred_term": "receipt journal",
+      "definition": "The authoritative storage-neutral write-ahead port for atomic reservation, durable transitions, idempotency lookup and fenced execution ownership; event delivery is separate.",
+      "status": "proposed",
+      "aliases": [
+        "ToolReceiptJournal"
+      ],
+      "relationships": [
+        {
+          "type": "related",
+          "target": "llm-core.execution-receipt"
+        },
+        {
+          "type": "related",
+          "target": "llm-core.reconciliation"
+        }
+      ],
+      "sources": [
+        {
+          "revision": "4f9e37ac92bcd055a836806ea463510ed32a8bcc",
+          "path": "packages/llm-core/src/features/evidence/receipt.ts",
+          "url": "https://github.com/theGeekist/llm-core/blob/4f9e37ac92bcd055a836806ea463510ed32a8bcc/packages/llm-core/src/features/evidence/receipt.ts"
+        }
+      ],
+      "labels": {
+        "technical": "receipt journal",
+        "business": "receipt journal"
+      },
+      "distinct_from": [],
+      "observation": {
+        "status": "established-source-meaning",
+        "basis": "Current cited public contracts, accepted architecture decisions and/or representative tests.",
+        "adoption_note": "This formulation has not been adopted as a project terminology registry entry."
+      }
+    },
+    {
+      "id": "llm-core.reconciliation",
+      "context": "action-control",
+      "preferred_term": "receipt reconciliation",
+      "definition": "Recovery that observes an ambiguous external outcome using attributable evidence, without blindly re-executing the action.",
+      "status": "proposed",
+      "aliases": [],
+      "relationships": [
+        {
+          "type": "related",
+          "target": "llm-core.execution-receipt"
+        },
+        {
+          "type": "related",
+          "target": "llm-core.effect-disposition"
+        },
+        {
+          "type": "related",
+          "target": "llm-core.evidence-reference"
+        }
+      ],
+      "sources": [
+        {
+          "revision": "4f9e37ac92bcd055a836806ea463510ed32a8bcc",
+          "path": "packages/llm-core/src/features/evidence/receipt.ts",
+          "url": "https://github.com/theGeekist/llm-core/blob/4f9e37ac92bcd055a836806ea463510ed32a8bcc/packages/llm-core/src/features/evidence/receipt.ts"
+        },
+        {
+          "revision": "4f9e37ac92bcd055a836806ea463510ed32a8bcc",
+          "path": "packages/llm-core/tests/application/tool-execution/receipt-reconciliation.test.ts",
+          "url": "https://github.com/theGeekist/llm-core/blob/4f9e37ac92bcd055a836806ea463510ed32a8bcc/packages/llm-core/tests/application/tool-execution/receipt-reconciliation.test.ts"
+        }
+      ],
+      "labels": {
+        "technical": "receipt reconciliation",
+        "business": "receipt reconciliation"
+      },
+      "distinct_from": [],
+      "observation": {
+        "status": "established-source-meaning",
+        "basis": "Current cited public contracts, accepted architecture decisions and/or representative tests.",
+        "adoption_note": "This formulation has not been adopted as a project terminology registry entry."
+      }
+    },
+    {
+      "id": "llm-core.evidence-reference",
+      "context": "portability",
+      "preferred_term": "evidence reference",
+      "definition": "Storage-neutral evidence identity and content-integrity metadata, optionally schema-qualified; possession of the reference does not grant disclosure permission.",
+      "status": "proposed",
+      "aliases": [
+        "EvidenceRef"
+      ],
+      "relationships": [
+        {
+          "type": "related",
+          "target": "llm-core.schema-reference"
+        }
+      ],
+      "sources": [
+        {
+          "revision": "4f9e37ac92bcd055a836806ea463510ed32a8bcc",
+          "path": "packages/llm-core/src/contracts/schema.ts",
+          "url": "https://github.com/theGeekist/llm-core/blob/4f9e37ac92bcd055a836806ea463510ed32a8bcc/packages/llm-core/src/contracts/schema.ts"
+        },
+        {
+          "revision": "4f9e37ac92bcd055a836806ea463510ed32a8bcc",
+          "path": "packages/llm-core/docs/final-architecture/decisions/ADR-003-schema-identity.md",
+          "url": "https://github.com/theGeekist/llm-core/blob/4f9e37ac92bcd055a836806ea463510ed32a8bcc/packages/llm-core/docs/final-architecture/decisions/ADR-003-schema-identity.md"
+        }
+      ],
+      "labels": {
+        "technical": "evidence reference",
+        "business": "evidence reference"
+      },
+      "distinct_from": [],
+      "observation": {
+        "status": "established-source-meaning",
+        "basis": "Current cited public contracts, accepted architecture decisions and/or representative tests.",
+        "adoption_note": "This formulation has not been adopted as a project terminology registry entry."
+      }
+    }
+  ],
+  "proposals": [],
+  "clarifications": [
+    {
+      "topic": "reservation uniqueness",
+      "finding": "ADR-005 lists tenant + tool + version + idempotency key; current ToolReceiptReservationKey additionally includes securityDomain. Use the current complete tuple in integration explanations.",
+      "sources": [
+        "packages/llm-core/docs/final-architecture/decisions/ADR-005-tool-control-events.md",
+        "packages/llm-core/src/features/evidence/receipt.ts"
+      ]
+    }
+  ],
+  "version": 1,
+  "validation": {
+    "bundle": "Complete bundled writing, content-patterns and terminology example read; no reference remains missing.",
+    "checks": [
+      "JSON parse",
+      "Unique concept IDs",
+      "Context membership",
+      "Relationship targets",
+      "Source paths exist"
+    ],
+    "semantic_review": "Compared definitions against cited current contracts and representative tests; no tests executed.",
+    "project_checker": {
+      "command": "python skills/scripts/check-language.py registry forward-results/llm-core-terminology.json",
+      "initial_result": {
+        "exit_code": 2,
+        "valid": false,
+        "reason": "All 13 concepts used unsupported status established-source-meaning; allowed values are proposed, accepted, deprecated."
+      },
+      "response": "Changed registry adoption status to proposed and retained established-source-meaning as separate observational evidence; no approval inferred.",
+      "final_result": {
+        "exit_code": 0,
+        "valid": true,
+        "findings": []
+      }
+    },
+    "publication_check_command": "python scripts/check-language.py registry evaluations/pilots/llm-core/llm-core-terminology.json"
+  },
+  "pilot": {
+    "kind": "source-derived proposed registry",
+    "source_repository": "theGeekist/llm-core",
+    "source_revision": "4f9e37ac92bcd055a836806ea463510ed32a8bcc",
+    "adoption": "All formulations remain proposed; this pilot does not establish source-project terminology approval.",
+    "revision": "Evaluation-coordinator publication copy with pinned source links; original agent output retained outside this repository.",
+    "reader_retest": "No new blind-reader or human comprehension test of the publication revision."
+  }
+}

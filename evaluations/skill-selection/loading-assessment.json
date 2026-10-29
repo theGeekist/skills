@@ -1,0 +1,105 @@
+{
+  "kind": "observed isolated file access, not model token accounting",
+  "initial_runs": {
+    "marketing": {
+      "accessed_skill_files": [
+        "skills/write-marketing-content/SKILL.md",
+        "skills/write-marketing-content/references/marketing.md"
+      ],
+      "skill_words": 724,
+      "output_words": 111
+    },
+    "adr": {
+      "accessed_skill_files": [
+        "skills/record-architecture-decisions/SKILL.md",
+        "skills/record-architecture-decisions/references/decisions.md",
+        "skills/record-architecture-decisions/references/uncertainty.md"
+      ],
+      "skill_words": 1392,
+      "output_words": 224
+    }
+  },
+  "revised_monitoring": {
+    "status": "setup-contaminated; raw logs preserved without responder attribution",
+    "reason": "An early batch accessed all copied files before responders were dispatched, but those runs did not record a launch marker. No inferred cutoff is used."
+  },
+  "final_runs": {
+    "marketing": {
+      "accessed_skill_files": [
+        "skills/write-marketing-content/SKILL.md",
+        "skills/write-marketing-content/references/marketing.md"
+      ],
+      "skill_words": 772,
+      "output_words": 111,
+      "setup_events_before_marker": [],
+      "events_after_marker": [
+        {
+          "path": "catalogue.json",
+          "elapsed_seconds": 21.19
+        },
+        {
+          "path": "source.md",
+          "elapsed_seconds": 21.19
+        },
+        {
+          "path": "skills/write-marketing-content/SKILL.md",
+          "elapsed_seconds": 25.079
+        },
+        {
+          "path": "skills/write-marketing-content/references/marketing.md",
+          "elapsed_seconds": 29.444
+        }
+      ],
+      "assessment": {
+        "factual_limits_preserved": true,
+        "requested_length_met": true,
+        "purpose_and_next_action_findable": true,
+        "native_activation_tested": false,
+        "unpromised_team_feature_inventory_omitted": true,
+        "material_trial_security_limit_retained": true
+      }
+    },
+    "adr": {
+      "accessed_skill_files": [
+        "skills/record-architecture-decisions/SKILL.md",
+        "skills/record-architecture-decisions/references/decisions.md",
+        "skills/record-architecture-decisions/references/uncertainty.md"
+      ],
+      "skill_words": 1454,
+      "output_words": 218,
+      "setup_events_before_marker": [],
+      "events_after_marker": [
+        {
+          "path": "catalogue.json",
+          "elapsed_seconds": 29.727
+        },
+        {
+          "path": "skills/record-architecture-decisions/SKILL.md",
+          "elapsed_seconds": 33.986
+        },
+        {
+          "path": "skills/record-architecture-decisions/references/uncertainty.md",
+          "elapsed_seconds": 39.976
+        },
+        {
+          "path": "skills/record-architecture-decisions/references/decisions.md",
+          "elapsed_seconds": 39.977
+        }
+      ],
+      "assessment": {
+        "factual_limits_preserved": true,
+        "requested_length_met": true,
+        "purpose_and_next_action_findable": true,
+        "native_activation_tested": false,
+        "FIFO_explained": true,
+        "supporting_link_resolves_in_deliverable_directory": true,
+        "authorised_work_continues_despite_open_measurement": true
+      }
+    }
+  },
+  "final_launch_window": {
+    "recorded_before_worker_dispatch_monotonic": 3721.041110201,
+    "recorded_before_worker_dispatch_unix": 1793261099.7825093,
+    "meaning": "Both final monitors are running. Worker dispatch occurs after this marker. Events before the marker are setup, not responder activity."
+  }
+}

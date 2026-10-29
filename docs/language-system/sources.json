@@ -1,0 +1,428 @@
+{
+  "reviewed_on": "2026-10-29",
+  "sources": [
+    {
+      "id": "ddd",
+      "title": "Bounded Context",
+      "url": "https://martinfowler.com/bliki/BoundedContext.html",
+      "reviewed_on": "2026-10-29",
+      "evidence": "article reviewed",
+      "licence_or_limit": "Reference concepts; retain contextual distinctions."
+    },
+    {
+      "id": "iso-704",
+      "title": "ISO 704:2022",
+      "url": "https://www.iso.org/standard/79077.html",
+      "reviewed_on": "2026-10-29",
+      "evidence": "official abstract reviewed; full standard not acquired",
+      "licence_or_limit": "Copyrighted paid standard; no normative text redistributed."
+    },
+    {
+      "id": "iso-24495",
+      "title": "ISO 24495-1:2023",
+      "url": "https://www.iso.org/standard/78907.html",
+      "reviewed_on": "2026-10-29",
+      "evidence": "official abstract reviewed; full standard not acquired",
+      "licence_or_limit": "Copyrighted paid standard; no conformity claim."
+    },
+    {
+      "id": "skos",
+      "title": "SKOS Reference",
+      "url": "https://www.w3.org/TR/skos-reference/",
+      "reviewed_on": "2026-10-29",
+      "evidence": "W3C Recommendation reviewed",
+      "licence_or_limit": "2009-08-18; W3C document-use terms."
+    },
+    {
+      "id": "diataxis",
+      "title": "Di\u00e1taxis",
+      "url": "https://diataxis.fr/start-here/",
+      "reviewed_on": "2026-10-29",
+      "evidence": "official guidance reviewed",
+      "licence_or_limit": "Link to source; framework material uses CC BY-SA 4.0."
+    },
+    {
+      "id": "good-docs",
+      "title": "Good Docs templates",
+      "url": "https://gitlab.com/tgdp/templates",
+      "reviewed_on": "2026-10-29",
+      "evidence": "downloaded; selected templates inspected",
+      "licence_or_limit": "MIT-0; checked local LICENSE."
+    },
+    {
+      "id": "madr",
+      "title": "MADR",
+      "url": "https://github.com/adr/madr",
+      "reviewed_on": "2026-10-29",
+      "evidence": "downloaded; minimal template inspected",
+      "licence_or_limit": "MIT OR CC0-1.0; checked local LICENSE."
+    },
+    {
+      "id": "arc42",
+      "title": "arc42 template",
+      "url": "https://github.com/arc42/arc42-template",
+      "reviewed_on": "2026-10-29",
+      "evidence": "downloaded; overview and licence inspected",
+      "licence_or_limit": "CC BY-SA 4.0; preserve attribution/share-alike for template adaptations."
+    },
+    {
+      "id": "dita",
+      "title": "DITA specifications",
+      "url": "https://dita-lang.org/specifications",
+      "reviewed_on": "2026-10-29",
+      "evidence": "official specification index reviewed",
+      "licence_or_limit": "Index lists DITA 1.3 as specification and DITA 2.0 under drafts."
+    },
+    {
+      "id": "information-mapping",
+      "title": "Information Mapping Types",
+      "url": "https://support.informationmapping.com/hc/en-us/articles/213446789-Present-your-information-in-a-clear-and-consistent-way",
+      "reviewed_on": "2026-10-29",
+      "evidence": "official help article reviewed",
+      "licence_or_limit": "Public reference only; proprietary training/tooling not acquired."
+    },
+    {
+      "id": "ste",
+      "title": "ASD-STE100",
+      "url": "https://asd-ste100.org/",
+      "reviewed_on": "2026-10-29",
+      "evidence": "fetch blocked by 403",
+      "licence_or_limit": "Issue/rule-count claims not independently verified in this evaluation."
+    },
+    {
+      "id": "microsoft",
+      "title": "Microsoft simple words and concise sentences",
+      "url": "https://learn.microsoft.com/en-us/style-guide/word-choice/use-simple-words-concise-sentences",
+      "reviewed_on": "2026-10-29",
+      "evidence": "official guidance reviewed",
+      "licence_or_limit": "Adopt principles selectively; avoid copying full guide."
+    },
+    {
+      "id": "google",
+      "title": "Google jargon guidance",
+      "url": "https://developers.google.com/style/jargon",
+      "reviewed_on": "2026-10-29",
+      "evidence": "official guidance reviewed",
+      "licence_or_limit": "CC BY 4.0 prose; Apache-2.0 code samples; page says updated 2025-06-25."
+    },
+    {
+      "id": "govuk",
+      "title": "GOV.UK writing guidance",
+      "url": "https://www.gov.uk/guidance/content-design/writing-for-gov-uk",
+      "reviewed_on": "2026-10-29",
+      "evidence": "redirect encountered; substantive replacement page not retrieved",
+      "licence_or_limit": "Prior recommendation remains a candidate; not an evaluated source in this pass."
+    },
+    {
+      "id": "atlassian",
+      "title": "Atlassian voice and tone",
+      "url": "https://atlassian.design/foundations/content/voice-tone/",
+      "reviewed_on": "2026-10-29",
+      "evidence": "official UI guidance reviewed",
+      "licence_or_limit": "Public page separates UI/app tone from internal marketing guidance."
+    },
+    {
+      "id": "agent-skills",
+      "title": "Agent Skills specification and reference library",
+      "url": "https://github.com/agentskills/agentskills",
+      "reviewed_on": "2026-10-29",
+      "evidence": "downloaded; reference validator installed and run",
+      "licence_or_limit": "Apache-2.0; checked local LICENSE."
+    },
+    {
+      "id": "vale",
+      "title": "Vale installation",
+      "url": "https://docs.vale.sh/topics/installation",
+      "reviewed_on": "2026-10-29",
+      "evidence": "binary installed and executed",
+      "licence_or_limit": "Engine MIT; Python wrapper 3.25.1.0, binary 3.25.1."
+    },
+    {
+      "id": "vale-packages",
+      "title": "Vale package registry",
+      "url": "https://github.com/vale-cli/packages",
+      "reviewed_on": "2026-10-29",
+      "evidence": "downloaded; registry entries inspected",
+      "licence_or_limit": "Registry checkout pinned; rule packages have individual licences."
+    },
+    {
+      "id": "vale-diataxis",
+      "title": "Diataxis Vale rules",
+      "url": "https://github.com/jdkato/diataxis",
+      "reviewed_on": "2026-10-29",
+      "evidence": "downloaded v0.1.0; tests run",
+      "licence_or_limit": "MIT rules with NOTICE acknowledging Di\u00e1taxis CC BY-SA 4.0."
+    },
+    {
+      "id": "vale-google",
+      "title": "Google Vale rules",
+      "url": "https://github.com/vale-cli/Google",
+      "reviewed_on": "2026-10-29",
+      "evidence": "downloaded; rules executed",
+      "licence_or_limit": "MIT; checked local LICENSE."
+    },
+    {
+      "id": "textlint",
+      "title": "textlint",
+      "url": "https://textlint.org/",
+      "reviewed_on": "2026-10-29",
+      "evidence": "installed and smoke-tested",
+      "licence_or_limit": "Package licence MIT; pluggable rules require individual review."
+    },
+    {
+      "id": "cspell",
+      "title": "CSpell",
+      "url": "https://cspell.org/",
+      "reviewed_on": "2026-10-29",
+      "evidence": "installed and en-GB smoke-tested",
+      "licence_or_limit": "Package licence MIT; dictionaries may have their own notices."
+    },
+    {
+      "id": "codex-hooks",
+      "title": "Codex hooks",
+      "url": "https://learn.chatgpt.com/docs/hooks",
+      "reviewed_on": "2026-10-29",
+      "evidence": "official documentation reviewed; actual host runtime not exercised",
+      "licence_or_limit": "Stop payload and cloud-orchestration limits verified from docs."
+    },
+    {
+      "id": "codex-instructions",
+      "title": "AGENTS.md",
+      "url": "https://learn.chatgpt.com/docs/agent-configuration/agents-md",
+      "reviewed_on": "2026-10-29",
+      "evidence": "official documentation reviewed; runtime loading not tested",
+      "licence_or_limit": "Persistent instructions distinct from task-selected skills."
+    },
+    {
+      "id": "claude-hooks",
+      "title": "Claude Code hooks",
+      "url": "https://code.claude.com/docs/en/hooks",
+      "reviewed_on": "2026-10-29",
+      "evidence": "official documentation reviewed; runtime not tested",
+      "licence_or_limit": "Handler/event support must be qualified by actual client tests."
+    },
+    {
+      "id": "copilot-instructions",
+      "title": "Copilot instructions",
+      "url": "https://docs.github.com/en/copilot/how-tos/copilot-on-github/customize-copilot/add-custom-instructions/add-repository-instructions",
+      "reviewed_on": "2026-10-29",
+      "evidence": "official documentation reviewed; runtime not tested",
+      "licence_or_limit": "Repository-wide, path-specific and agent-instruction routes documented."
+    }
+  ],
+  "downloaded_checkouts": {
+    "agentskills": "69ef37e9424c0a7ea9dd2293b559e43ec8176379",
+    "vale-packages": "35e3980ab7f6781416a678bee0dd9fd03ed1c426",
+    "diataxis-vale": "748174dbe8e0224cf7bfa7c368b2855841765464",
+    "google-vale": "9e2483e2f09e7f623bacbbc154adb9627bed563b",
+    "good-docs": "41645d9cc4b7d80db06d03cd7b862c16ece849b8",
+    "madr": "ba75bb1b20d42af5746b246ad348c202419ae681",
+    "arc42-template": "9057fe1f32ce543e546f76971515c537f0dd3f63"
+  },
+  "installed_tools": {
+    "vale_python_wrapper": "3.25.1.0",
+    "vale_binary": "3.25.1",
+    "vale_binary_sha256": "9ea28f2c9e6f06a76ad187116d46a9568fc15d310808480e4e60ec0f7568390c",
+    "skills-ref": "0.1.0",
+    "textlint": "15.8.0",
+    "textlint-rule-no-todo": "2.0.1",
+    "cspell": "10.4.0"
+  },
+  "experiments": {
+    "diataxis_upstream": {
+      "rule_cases_passed": 40,
+      "rule_cases_failed": 0,
+      "bad_fixture_alerts": {
+        "tutorial": 7,
+        "howto": 6,
+        "reference": 6,
+        "explanation": 4
+      },
+      "clean_fixtures_passed": 4
+    },
+    "custom_results": {
+      "google-results.json": {
+        "cases/google.md": [
+          {
+            "Action": {
+              "Name": "replace",
+              "Params": [
+                "command-line tool"
+              ]
+            },
+            "Suggestions": [
+              "command-line tool"
+            ],
+            "Span": [
+              11,
+              13
+            ],
+            "Check": "Google.WordList",
+            "Description": "",
+            "Link": "https://developers.google.com/style/word-list",
+            "Message": "Use 'command-line tool' instead of 'CLI'.",
+            "Severity": "warning",
+            "Match": "CLI",
+            "Line": 1
+          },
+          {
+            "Action": {
+              "Name": "",
+              "Params": null
+            },
+            "Suggestions": [],
+            "Span": [
+              1,
+              1
+            ],
+            "Check": "Google.FirstPerson",
+            "Description": "",
+            "Link": "https://developers.google.com/style/pronouns#personal-pronouns",
+            "Message": "Avoid first-person pronouns such as 'I'.",
+            "Severity": "warning",
+            "Match": "I",
+            "Line": 3
+          },
+          {
+            "Action": {
+              "Name": "",
+              "Params": null
+            },
+            "Suggestions": [],
+            "Span": [
+              3,
+              6
+            ],
+            "Check": "Google.Will",
+            "Description": "",
+            "Link": "https://developers.google.com/style/tense",
+            "Message": "Avoid using 'will'.",
+            "Severity": "warning",
+            "Match": "will",
+            "Line": 3
+          },
+          {
+            "Action": {
+              "Name": "replace",
+              "Params": [
+                "Google Cloud Platform",
+                "GCP"
+              ]
+            },
+            "Suggestions": [
+              "Google Cloud Platform",
+              "GCP"
+            ],
+            "Span": [
+              24,
+              28
+            ],
+            "Check": "Google.WordList",
+            "Description": "",
+            "Link": "https://developers.google.com/style/word-list",
+            "Message": "Use 'Google Cloud Platform' or 'GCP' instead of 'Cloud'.",
+            "Severity": "warning",
+            "Match": "Cloud",
+            "Line": 3
+          },
+          {
+            "Action": {
+              "Name": "",
+              "Params": null
+            },
+            "Suggestions": [],
+            "Span": [
+              25,
+              30
+            ],
+            "Check": "Google.Spelling",
+            "Description": "",
+            "Link": "https://developers.google.com/style/spelling",
+            "Message": "In general, use American spelling instead of 'colour'.",
+            "Severity": "warning",
+            "Match": "colour",
+            "Line": 5
+          }
+        ]
+      },
+      "diataxis-results.json": {
+        "cases/explanation.md": [
+          {
+            "Action": {
+              "Name": "",
+              "Params": null
+            },
+            "Suggestions": [],
+            "Span": [
+              1,
+              1
+            ],
+            "Check": "Explanation.Why",
+            "Description": "",
+            "Link": "https://diataxis.fr/explanation/#the-language-of-explanation",
+            "Message": "Explanation answers why. Nothing here says because, the reason, or in order to.",
+            "Severity": "suggestion",
+            "Match": "A",
+            "Line": 3
+          }
+        ],
+        "cases/reference.md": [
+          {
+            "Action": {
+              "Name": "",
+              "Params": null
+            },
+            "Suggestions": [],
+            "Span": [
+              1,
+              1
+            ],
+            "Check": "Reference.Examples",
+            "Description": "",
+            "Link": "https://diataxis.fr/reference/#provide-examples",
+            "Message": "Reference provides examples. There is no code block on this page.",
+            "Severity": "suggestion",
+            "Match": "#",
+            "Line": 1
+          }
+        ]
+      },
+      "textlint-results.json": [
+        {
+          "messages": [
+            {
+              "type": "lint",
+              "ruleId": "no-todo",
+              "message": "Found TODO: 'TODO: explain the task.'",
+              "index": 16,
+              "line": 3,
+              "column": 1,
+              "range": [
+                16,
+                17
+              ],
+              "loc": {
+                "start": {
+                  "line": 3,
+                  "column": 1
+                },
+                "end": {
+                  "line": 3,
+                  "column": 2
+                }
+              },
+              "severity": 2
+            }
+          ],
+          "filePath": "/workspace/scratch/44d8812e3975/evaluation/cases/sample.md"
+        }
+      ]
+    },
+    "cspell_output": "cases/sample.md:5:47 - Unknown word (qzxfoobar)\n"
+  },
+  "runtime_tested": {
+    "codex_hooks": false,
+    "claude_hooks": false,
+    "copilot_instruction_loading": false
+  }
+}

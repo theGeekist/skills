@@ -1,0 +1,76 @@
+[
+  {
+    "id": "marketing-launch",
+    "primary": "write-marketing-content",
+    "companions": [],
+    "reason": "A launch email connects a defined audience with supported product value and claims."
+  },
+  {
+    "id": "marketing-technical-source",
+    "primary": "write-marketing-content",
+    "companions": [],
+    "reason": "The requested product-page paragraph is customer-facing marketing despite its technical source."
+  },
+  {
+    "id": "technical-guide",
+    "primary": "write-technical-documentation",
+    "companions": [],
+    "reason": "A developer how-to guide covers extension steps and conformance validation."
+  },
+  {
+    "id": "implementation-task",
+    "primary": "write-implementation-tasks",
+    "companions": [],
+    "reason": "An engineering task needs concrete behaviour, failure cases and acceptance examples."
+  },
+  {
+    "id": "adr",
+    "primary": "record-architecture-decisions",
+    "companions": [],
+    "reason": "The requested decision record needs alternatives, trade-offs and reconsideration conditions."
+  },
+  {
+    "id": "interface-progress",
+    "primary": "write-interface-content",
+    "companions": [],
+    "reason": "Dashboard status and empty-state wording must reflect actual product state."
+  },
+  {
+    "id": "domain-conflict",
+    "primary": "establish-project-language",
+    "companions": [],
+    "reason": "The work reconciles competing domain meanings from source evidence and proposes shared definitions."
+  },
+  {
+    "id": "cross-artefact-review",
+    "primary": "review-project-language",
+    "companions": [],
+    "reason": "This is an editorial audit of terminology, explanations and navigation across existing artefacts."
+  },
+  {
+    "id": "uncertainty-handoff",
+    "primary": "advance-with-uncertainty",
+    "companions": [
+      "write-implementation-tasks"
+    ],
+    "reason": "The central problem is an evidence gap wrongly blocking authorised work; the handoff companion makes next actions and checks actionable."
+  },
+  {
+    "id": "backend-boundary",
+    "primary": "backend-slice-architecture",
+    "companions": [],
+    "reason": "The request concerns backend capability ownership, public interfaces, orchestration and incremental migration."
+  },
+  {
+    "id": "frontend-boundary",
+    "primary": "frontend-slice-architecture",
+    "companions": [],
+    "reason": "The request concerns frontend feature ownership, scene composition and incremental migration."
+  },
+  {
+    "id": "irrelevant",
+    "primary": null,
+    "companions": [],
+    "reason": "Simple arithmetic needs no catalogue skill."
+  }
+]

@@ -1,0 +1,30 @@
+{
+  "version": 1,
+  "contexts": [
+    {"id": "assessment", "name": "Assessment", "definition": "An invented example of assessing a result and its supporting evidence."}
+  ],
+  "concepts": [
+    {
+      "id": "assessment.confidence",
+      "context": "assessment",
+      "preferred_term": "confidence",
+      "definition": "The strength of evidence supporting an assessment, using the project's explicitly defined calculation.",
+      "status": "proposed",
+      "aliases": [],
+      "distinct_from": ["assessment.coverage"],
+      "labels": {"dashboard": "Confidence"},
+      "sources": []
+    },
+    {
+      "id": "assessment.coverage",
+      "context": "assessment",
+      "preferred_term": "coverage",
+      "definition": "The proportion of required checks completed, using the project's explicitly defined denominator.",
+      "status": "proposed",
+      "aliases": [],
+      "distinct_from": ["assessment.confidence"],
+      "labels": {"dashboard": "Checks complete"},
+      "sources": []
+    }
+  ]
+}

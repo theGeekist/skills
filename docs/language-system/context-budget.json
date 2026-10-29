@@ -1,0 +1,74 @@
+{
+  "measurement": "Whitespace-separated words, not model tokens; body excludes frontmatter. Bundled references are available resources, not assumed loaded.",
+  "baseline_words": 144,
+  "before_catalogue_description_words": 192,
+  "after_catalogue_description_words": 433,
+  "skills": [
+    {
+      "skill": "advance-with-uncertainty",
+      "body_words": 691,
+      "description_words": 49,
+      "bundled_reference_words": 721
+    },
+    {
+      "skill": "backend-slice-architecture",
+      "body_words": 861,
+      "description_words": 34,
+      "bundled_reference_words": 1684
+    },
+    {
+      "skill": "establish-project-language",
+      "body_words": 666,
+      "description_words": 40,
+      "bundled_reference_words": 1535
+    },
+    {
+      "skill": "frontend-slice-architecture",
+      "body_words": 939,
+      "description_words": 28,
+      "bundled_reference_words": 1494
+    },
+    {
+      "skill": "record-architecture-decisions",
+      "body_words": 326,
+      "description_words": 40,
+      "bundled_reference_words": 1083
+    },
+    {
+      "skill": "review-project-language",
+      "body_words": 334,
+      "description_words": 44,
+      "bundled_reference_words": 1026
+    },
+    {
+      "skill": "write-implementation-tasks",
+      "body_words": 325,
+      "description_words": 44,
+      "bundled_reference_words": 1046
+    },
+    {
+      "skill": "write-interface-content",
+      "body_words": 316,
+      "description_words": 38,
+      "bundled_reference_words": 338
+    },
+    {
+      "skill": "write-marketing-content",
+      "body_words": 345,
+      "description_words": 41,
+      "bundled_reference_words": 381
+    },
+    {
+      "skill": "write-project-content",
+      "body_words": 373,
+      "description_words": 35,
+      "bundled_reference_words": 0
+    },
+    {
+      "skill": "write-technical-documentation",
+      "body_words": 332,
+      "description_words": 40,
+      "bundled_reference_words": 1087
+    }
+  ]
+}

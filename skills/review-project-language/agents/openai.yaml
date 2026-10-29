@@ -1,0 +1,4 @@
+interface:
+  display_name: "Review Project Language"
+  short_description: "Review meaning, reader routes and consistent terms"
+  default_prompt: "Use $review-project-language for this project artefact."

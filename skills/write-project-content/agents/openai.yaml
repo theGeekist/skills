@@ -1,0 +1,7 @@
+interface:
+  display_name: "Choose a Project Writing Workflow"
+  short_description: "Compatibility router for explicit writing requests"
+  default_prompt: "Use $write-project-content to choose the appropriate project-writing workflow."
+
+policy:
+  allow_implicit_invocation: false

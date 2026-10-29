@@ -1,8 +1,8 @@
-# Geekist Architecture Skills
+# Geekist Skills
 
 [![Licence: MIT](https://img.shields.io/badge/Licence-MIT-blue.svg)](LICENSE)
 
-Portable agent skills for reviewing, designing and incrementally migrating backend and frontend codebases towards feature-first, package-shaped architecture.
+Portable agent skills for architecture and shared project language. Review and evolve feature-first systems, establish domain meanings, and write material that technical and business readers can navigate.
 
 The playbooks help coding agents make architecture decisions about ownership, public APIs, orchestration, dependencies and shared infrastructure. They are framework-neutral and adapt to the repository in front of them rather than imposing a fixed folder taxonomy.
 
@@ -10,13 +10,34 @@ Published by [Geekist](https://geekist.co).
 
 ## Install
 
-Install both architecture skills from the public repository:
+Install the collection from the public repository:
 
 ```sh
 npx skills add theGeekist/skills
 ```
 
-The repository contains no MCP server, executable runtime or network dependency. Each skill is portable Markdown with YAML frontmatter, plus optional client metadata.
+The skills use portable Markdown with YAML frontmatter and optional client metadata. They require no MCP server or runtime dependency. Optional repository checks and a Codex hook example are separate from skill installation.
+
+The language-system changes on this branch are unreleased. See the [architecture and reader route](docs/language-system/architecture.md), [evaluation results](docs/language-system/validation-results.md) and [integration guide](docs/language-system/integration.md).
+
+## Choose a language skill
+
+Every skill carries the same short writing baseline. Choose by the requested work; a marketing author can use the marketing skill directly without loading architecture guidance.
+
+| Requested work | Skill |
+| --- | --- |
+| Discover and reconcile project meanings | `establish-project-language` |
+| Engineering tickets, acceptance criteria and worker handoffs | `write-implementation-tasks` |
+| Architecture decision records (ADRs) | `record-architecture-decisions` |
+| Tutorials, how-to guides, technical references and explanations | `write-technical-documentation` |
+| Marketing copy, announcements and positioning | `write-marketing-content` |
+| Interface labels, dashboard states, progress and errors | `write-interface-content` |
+| Review terminology, reader navigation and consistent meaning | `review-project-language` |
+| Turn evidence gaps into useful next actions | `advance-with-uncertainty` |
+
+`write-project-content` remains a compatibility entry point for explicit callers who want help choosing a writing workflow. It is no longer the broad default authoring skill. Codex metadata disables its implicit invocation; other clients must apply their own selection rules.
+
+The acceptance outcomes are consistency, accessibility, readability and repeatability. Full reference material is bundled for independent installation, while each skill explains which detail to load for the task.
 
 ## Included architecture skills
 
@@ -101,25 +122,15 @@ The updater refuses dirty or detached checkouts, pulls with `--ff-only`, runs th
 
 ## Repository structure
 
-```text
-.codex-plugin/
-  plugin.json
-.claude-plugin/
-  marketplace.json
-  plugin.json
-skills/
-  backend-slice-architecture/
-    SKILL.md
-    agents/openai.yaml
-  frontend-slice-architecture/
-    SKILL.md
-    agents/openai.yaml
-scripts/
-  link-local.sh
-  update-local.sh
-```
+- `skills/`: independently installable skills with their own required references and optional client metadata.
+- `standards/baseline.md`: the short authored baseline embedded in every skill.
+- `standards/skill-profiles.json`: which canonical references each skill bundles.
+- `standards/`: task-specific writing references and terminology.
+- `scripts/`: baseline/reference generation and checks.
+- `adapters/`: opt-in persistent instruction and runtime examples.
+- `evaluations/`: public prompts, source snapshots, observed results and scope limitations.
 
-The repository root is the plugin and `skills/` is the canonical collection exposed to clients and registries. Each skill keeps its instructions at its own root. Repository-wide automation stays under `scripts/` because it operates across both skills.
+Run `python3 scripts/sync-language-references.py` after changing the baseline or canonical references, and `python3 scripts/sync-language-references.py --check` before committing. Generated copies retain one source of truth while allowing each skill to be installed alone. Architecture-specific references are authored within their respective skill.
 
 ## Compatibility
 

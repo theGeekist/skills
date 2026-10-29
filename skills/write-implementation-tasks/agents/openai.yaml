@@ -1,0 +1,4 @@
+interface:
+  display_name: "Write Implementation Tasks"
+  short_description: "Turn outcomes into executable tasks and acceptance"
+  default_prompt: "Use $write-implementation-tasks for this project artefact."

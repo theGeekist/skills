@@ -1,0 +1,4 @@
+interface:
+  display_name: "Write Technical Documentation"
+  short_description: "Match technical documents to reader purpose"
+  default_prompt: "Use $write-technical-documentation for this project artefact."

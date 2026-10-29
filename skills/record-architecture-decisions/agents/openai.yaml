@@ -1,0 +1,4 @@
+interface:
+  display_name: "Record Architecture Decisions"
+  short_description: "Record decisions, options, consequences and evidence"
+  default_prompt: "Use $record-architecture-decisions for this project artefact."

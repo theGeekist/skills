@@ -1,0 +1,30 @@
+{
+  "version": 1,
+  "contexts": [
+    {
+      "id": "content",
+      "name": "Project content",
+      "definition": "The shared writing, reference and review conventions in this repository."
+    }
+  ],
+  "concepts": [
+    {
+      "id": "content.incremental-migration",
+      "context": "content",
+      "preferred_term": "incremental migration",
+      "definition": "Adapting existing work through changes already in scope rather than reorganising unrelated material.",
+      "status": "accepted",
+      "aliases": [
+        "path-of-correctness migration"
+      ],
+      "distinct_from": [],
+      "labels": {},
+      "sources": [
+        {
+          "path": "skills/backend-slice-architecture/SKILL.md",
+          "revision": "language-system"
+        }
+      ]
+    }
+  ]
+}

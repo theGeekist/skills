@@ -1,0 +1,14 @@
+[
+  {"id":"marketing-launch","primary":"write-marketing-content","companions":[],"reason":"A launch email connects a defined audience with supported product value and claims."},
+  {"id":"marketing-technical-source","primary":"write-marketing-content","companions":[],"reason":"The requested output is customer-facing product-page copy, even though its source is a technical decision."},
+  {"id":"technical-guide","primary":"write-technical-documentation","companions":[],"reason":"A developer guide teaches an implementation workflow and its verification steps."},
+  {"id":"implementation-task","primary":"write-implementation-tasks","companions":[],"reason":"An engineering handoff needs concrete behaviour, failure cases and acceptance examples."},
+  {"id":"adr","primary":"record-architecture-decisions","companions":[],"reason":"The requested artefact records a decision, alternatives, trade-offs and reconsideration conditions."},
+  {"id":"interface-progress","primary":"write-interface-content","companions":[],"reason":"Dashboard status and empty states are in-product copy grounded in distinct progress and confidence measures."},
+  {"id":"domain-conflict","primary":"establish-project-language","companions":[],"reason":"Reconciling competing domain meanings from code and documents establishes shared project definitions."},
+  {"id":"cross-artefact-review","primary":"review-project-language","companions":[],"reason":"This is a cross-artefact editorial audit of terminology, explanations and reader navigation."},
+  {"id":"uncertainty-handoff","primary":"advance-with-uncertainty","companions":["write-implementation-tasks"],"reason":"The central issue is an unsupported uncertainty-based halt; the task-writing companion structures the actionable worker handoff."},
+  {"id":"backend-boundary","primary":"backend-slice-architecture","companions":[],"reason":"Service ownership, public interfaces, orchestration and incremental migration are backend architecture concerns."},
+  {"id":"frontend-boundary","primary":"frontend-slice-architecture","companions":[],"reason":"React feature ownership, scene composition and shared state require frontend boundary and migration guidance."},
+  {"id":"irrelevant","primary":null,"companions":[],"reason":"Simple arithmetic does not require any skill in the supplied catalogue."}
+]

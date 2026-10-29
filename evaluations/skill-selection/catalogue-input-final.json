@@ -1,0 +1,98 @@
+{
+  "catalogue": [
+    {
+      "name": "advance-with-uncertainty",
+      "description": "Turn evidence gaps and unresolved questions into bounded next actions while preserving honest claims and actual blockers. Use when drafting or reviewing tasks, ADRs, plans, assessments or worker handoffs, especially when labels such as unproven, unqualified or no evidence are being used to reject options or halt authorised implementation."
+    },
+    {
+      "name": "backend-slice-architecture",
+      "description": "Use when creating, refactoring, reviewing, or incrementally migrating backend architecture towards a capability-first, package-shaped model with explicit public APIs, clear orchestration, and earned shared infrastructure across apps, packages, libraries, modules, or equivalent project roots."
+    },
+    {
+      "name": "establish-project-language",
+      "description": "Discover, reconcile and maintain project concepts and terminology from code, schemas, tests, decisions and existing content. Use when starting a project, onboarding to an existing domain, resolving competing meanings, proposing new terms, or establishing shared language across agents and artefacts."
+    },
+    {
+      "name": "frontend-slice-architecture",
+      "description": "Use when creating, refactoring, reviewing, or incrementally migrating frontend architecture towards a feature-first, package-shaped model with explicit public APIs, thin scene-level composition, and earned shared UI and hooks."
+    },
+    {
+      "name": "record-architecture-decisions",
+      "description": "Write, explain or update architecture decision records (ADRs), including context, viable options, decision drivers, consequences, status and reconsideration conditions. Use when the requested artefact is a decision record; use architecture skills for designing boundaries and technical documentation for general explanations."
+    },
+    {
+      "name": "review-project-language",
+      "description": "Review existing project text for inconsistent terminology, changed meanings, dense explanations, weak reader navigation and evidence language that stalls work. Use for editorial or cross-artefact language audits and requested revisions; use specialist writing skills when the primary request is to author a new artefact."
+    },
+    {
+      "name": "write-implementation-tasks",
+      "description": "Write implementation tasks and worker handoffs. Use for engineering tickets, implementation plans and acceptance criteria that need an observable outcome, concrete behaviour, validation and actionable dependencies. Use the ADR skill when the requested artefact is a decision record; use architecture skills for designing boundaries."
+    },
+    {
+      "name": "write-interface-content",
+      "description": "Write in-product interface copy: action labels, forms, dashboard metrics, progress messages, errors, empty states, tooltips and notifications. Use for state-aware wording and useful next actions grounded in actual product behaviour. Use marketing-content guidance for campaigns and landing pages."
+    },
+    {
+      "name": "write-marketing-content",
+      "description": "Write marketing copy, landing-page text, product announcements, positioning briefs and customer-facing explanations of technical capabilities. Use to connect audience needs with product value, substantiated claims and an appropriate call to action. Use interface-content guidance for in-product labels, errors and dashboard states."
+    },
+    {
+      "name": "write-project-content",
+      "description": "Compatibility router for explicit requests to use write-project-content or to choose a project-writing workflow. Keep ordinary task, ADR, technical-documentation, marketing, interface-copy and language-review requests with their purpose-specific skills; this router is not their default prerequisite."
+    },
+    {
+      "name": "write-technical-documentation",
+      "description": "Write technical documentation: tutorials, how-to guides, API or configuration references, architecture explanations and developer guides. Use for learning, task completion, contract lookup or conceptual understanding, including technical documents that business readers must navigate. Use the ADR skill for decision records."
+    }
+  ],
+  "requests": [
+    {
+      "id": "marketing-launch",
+      "request": "Write a launch email for our local-first notes app. The audience is independent consultants. It keeps notes on their own device and can export Markdown. Do not imply team collaboration or cloud backup."
+    },
+    {
+      "id": "marketing-technical-source",
+      "request": "Turn this technical account-isolation decision into a product-page paragraph for operations leaders. Keep its limits and explain why the choice matters."
+    },
+    {
+      "id": "technical-guide",
+      "request": "Write a developer guide showing how to add a new import format and verify it with the existing conformance tests."
+    },
+    {
+      "id": "implementation-task",
+      "request": "Create an engineering task for retrying failed exports. Include expected behaviour, failure cases and acceptance examples so a worker can implement it."
+    },
+    {
+      "id": "adr",
+      "request": "Record our decision to use a per-project queue instead of a shared queue. Explain the alternatives, trade-offs and conditions for revisiting it."
+    },
+    {
+      "id": "interface-progress",
+      "request": "Write the dashboard status and empty-state copy for an import that has completed 12 of 15 checks. A confidence score is calculated separately."
+    },
+    {
+      "id": "domain-conflict",
+      "request": "In this repo lead, prospect and opportunity seem to mean different things in code and sales docs. Inspect the sources and propose a consistent set of definitions without silently renaming accepted concepts."
+    },
+    {
+      "id": "cross-artefact-review",
+      "request": "Review the README, ADR, task and landing page for inconsistent meanings, unexplained terms and a confusing reading route. Give source-backed corrections."
+    },
+    {
+      "id": "uncertainty-handoff",
+      "request": "This task says the adapter is unproven and therefore all implementation is disqualified. The user authorised a reversible prototype and local tests. Rewrite the handoff so the next worker knows what can proceed and what still needs checking."
+    },
+    {
+      "id": "backend-boundary",
+      "request": "Review our service boundaries against feature ownership and public interfaces. Should payment sequencing live inside inventory or in the application workflow? Propose the smallest migration."
+    },
+    {
+      "id": "frontend-boundary",
+      "request": "Review a React screen that contains upload rules, page navigation and state shared with two features. Recommend ownership and a small incremental migration."
+    },
+    {
+      "id": "irrelevant",
+      "request": "What is 18 multiplied by 7?"
+    }
+  ]
+}

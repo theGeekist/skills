@@ -1,0 +1,5 @@
+{
+  "recorded_before_worker_dispatch_monotonic": 3721.041110201,
+  "recorded_before_worker_dispatch_unix": 1793261099.7825093,
+  "meaning": "Both final monitors are running. Worker dispatch occurs after this marker. Events before the marker are setup, not responder activity."
+}

@@ -1,0 +1,207 @@
+{
+  "kind": "linux-inotify-file-access",
+  "root": "/workspace/scratch/44d8812e3975/selection-runs/marketing-revised",
+  "limitation": "File access does not establish model context consumption or native runtime activation.",
+  "events": [
+    {
+      "path": "catalogue.json",
+      "elapsed_seconds": 1.944
+    },
+    {
+      "path": "source.md",
+      "elapsed_seconds": 1.944
+    },
+    {
+      "path": "skills/advance-with-uncertainty/SKILL.md",
+      "elapsed_seconds": 1.944
+    },
+    {
+      "path": "skills/advance-with-uncertainty/agents/openai.yaml",
+      "elapsed_seconds": 1.944
+    },
+    {
+      "path": "skills/advance-with-uncertainty/assets/action-records.md",
+      "elapsed_seconds": 1.944
+    },
+    {
+      "path": "skills/advance-with-uncertainty/references/uncertainty.md",
+      "elapsed_seconds": 1.944
+    },
+    {
+      "path": "skills/backend-slice-architecture/SKILL.md",
+      "elapsed_seconds": 1.944
+    },
+    {
+      "path": "skills/backend-slice-architecture/agents/openai.yaml",
+      "elapsed_seconds": 1.944
+    },
+    {
+      "path": "skills/backend-slice-architecture/references/placement-and-contracts.md",
+      "elapsed_seconds": 1.944
+    },
+    {
+      "path": "skills/backend-slice-architecture/references/review.md",
+      "elapsed_seconds": 1.944
+    },
+    {
+      "path": "skills/backend-slice-architecture/references/workspace-and-migration.md",
+      "elapsed_seconds": 1.944
+    },
+    {
+      "path": "skills/establish-project-language/SKILL.md",
+      "elapsed_seconds": 1.944
+    },
+    {
+      "path": "skills/establish-project-language/agents/openai.yaml",
+      "elapsed_seconds": 1.944
+    },
+    {
+      "path": "skills/establish-project-language/assets/terminology.example.json",
+      "elapsed_seconds": 1.944
+    },
+    {
+      "path": "skills/establish-project-language/references/uncertainty.md",
+      "elapsed_seconds": 1.944
+    },
+    {
+      "path": "skills/establish-project-language/references/writing.md",
+      "elapsed_seconds": 1.944
+    },
+    {
+      "path": "skills/frontend-slice-architecture/SKILL.md",
+      "elapsed_seconds": 1.944
+    },
+    {
+      "path": "skills/frontend-slice-architecture/agents/openai.yaml",
+      "elapsed_seconds": 1.944
+    },
+    {
+      "path": "skills/frontend-slice-architecture/references/placement-and-contracts.md",
+      "elapsed_seconds": 1.944
+    },
+    {
+      "path": "skills/frontend-slice-architecture/references/review.md",
+      "elapsed_seconds": 1.944
+    },
+    {
+      "path": "skills/frontend-slice-architecture/references/workspace-and-migration.md",
+      "elapsed_seconds": 1.944
+    },
+    {
+      "path": "skills/record-architecture-decisions/SKILL.md",
+      "elapsed_seconds": 1.944
+    },
+    {
+      "path": "skills/record-architecture-decisions/agents/openai.yaml",
+      "elapsed_seconds": 1.944
+    },
+    {
+      "path": "skills/record-architecture-decisions/references/decisions.md",
+      "elapsed_seconds": 1.944
+    },
+    {
+      "path": "skills/record-architecture-decisions/references/uncertainty.md",
+      "elapsed_seconds": 1.944
+    },
+    {
+      "path": "skills/review-project-language/SKILL.md",
+      "elapsed_seconds": 1.944
+    },
+    {
+      "path": "skills/review-project-language/agents/openai.yaml",
+      "elapsed_seconds": 1.944
+    },
+    {
+      "path": "skills/review-project-language/references/review.md",
+      "elapsed_seconds": 1.944
+    },
+    {
+      "path": "skills/review-project-language/references/uncertainty.md",
+      "elapsed_seconds": 1.944
+    },
+    {
+      "path": "skills/write-implementation-tasks/SKILL.md",
+      "elapsed_seconds": 1.944
+    },
+    {
+      "path": "skills/write-implementation-tasks/agents/openai.yaml",
+      "elapsed_seconds": 1.944
+    },
+    {
+      "path": "skills/write-implementation-tasks/references/tasks.md",
+      "elapsed_seconds": 1.944
+    },
+    {
+      "path": "skills/write-implementation-tasks/references/uncertainty.md",
+      "elapsed_seconds": 1.944
+    },
+    {
+      "path": "skills/write-interface-content/SKILL.md",
+      "elapsed_seconds": 1.944
+    },
+    {
+      "path": "skills/write-interface-content/agents/openai.yaml",
+      "elapsed_seconds": 1.944
+    },
+    {
+      "path": "skills/write-interface-content/references/interface-content.md",
+      "elapsed_seconds": 1.944
+    },
+    {
+      "path": "skills/write-marketing-content/SKILL.md",
+      "elapsed_seconds": 1.944
+    },
+    {
+      "path": "skills/write-marketing-content/agents/openai.yaml",
+      "elapsed_seconds": 1.944
+    },
+    {
+      "path": "skills/write-marketing-content/references/marketing.md",
+      "elapsed_seconds": 1.944
+    },
+    {
+      "path": "skills/write-project-content/SKILL.md",
+      "elapsed_seconds": 1.944
+    },
+    {
+      "path": "skills/write-project-content/agents/openai.yaml",
+      "elapsed_seconds": 1.944
+    },
+    {
+      "path": "skills/write-project-content/assets/drafting-prompts.md",
+      "elapsed_seconds": 1.944
+    },
+    {
+      "path": "skills/write-technical-documentation/SKILL.md",
+      "elapsed_seconds": 1.944
+    },
+    {
+      "path": "skills/write-technical-documentation/agents/openai.yaml",
+      "elapsed_seconds": 1.944
+    },
+    {
+      "path": "skills/write-technical-documentation/references/technical-documentation.md",
+      "elapsed_seconds": 1.944
+    },
+    {
+      "path": "skills/write-technical-documentation/references/uncertainty.md",
+      "elapsed_seconds": 1.944
+    },
+    {
+      "path": "catalogue.json",
+      "elapsed_seconds": 15.357
+    },
+    {
+      "path": "source.md",
+      "elapsed_seconds": 15.966
+    },
+    {
+      "path": "skills/write-marketing-content/SKILL.md",
+      "elapsed_seconds": 20.712
+    },
+    {
+      "path": "skills/write-marketing-content/references/marketing.md",
+      "elapsed_seconds": 28.145
+    }
+  ]
+}

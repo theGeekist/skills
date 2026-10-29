@@ -1,0 +1,120 @@
+{
+  "caveat": [
+    "Description overlap reflects lexical similarity, not agent routing behavior.",
+    "Static overlap does not predict which skills misroute; use `reach eval` for empirical testing.",
+    "Static analysis only: no probe was issued."
+  ],
+  "corpus_size": 11,
+  "skills": [
+    {
+      "nearest_rival": "backend-slice-architecture",
+      "outranked_by": 0,
+      "quadrant": null,
+      "rival_ratio": 0.5551427958032106,
+      "self_score": 21.785385638714686,
+      "semantic_similarity": null,
+      "skill": "frontend-slice-architecture",
+      "standings": []
+    },
+    {
+      "nearest_rival": "frontend-slice-architecture",
+      "outranked_by": 0,
+      "quadrant": null,
+      "rival_ratio": 0.5217181605617017,
+      "self_score": 24.61832203094243,
+      "semantic_similarity": null,
+      "skill": "backend-slice-architecture",
+      "standings": []
+    },
+    {
+      "nearest_rival": "write-interface-content",
+      "outranked_by": 0,
+      "quadrant": null,
+      "rival_ratio": 0.44439236621956785,
+      "self_score": 27.629635186178277,
+      "semantic_similarity": null,
+      "skill": "write-marketing-content",
+      "standings": []
+    },
+    {
+      "nearest_rival": "write-marketing-content",
+      "outranked_by": 0,
+      "quadrant": null,
+      "rival_ratio": 0.435441981924683,
+      "self_score": 26.952761719906405,
+      "semantic_similarity": null,
+      "skill": "write-interface-content",
+      "standings": []
+    },
+    {
+      "nearest_rival": "write-implementation-tasks",
+      "outranked_by": 0,
+      "quadrant": null,
+      "rival_ratio": 0.3559143395724777,
+      "self_score": 23.634418554928853,
+      "semantic_similarity": null,
+      "skill": "record-architecture-decisions",
+      "standings": []
+    },
+    {
+      "nearest_rival": "record-architecture-decisions",
+      "outranked_by": 0,
+      "quadrant": null,
+      "rival_ratio": 0.30218093396754425,
+      "self_score": 25.42550751472498,
+      "semantic_similarity": null,
+      "skill": "write-implementation-tasks",
+      "standings": []
+    },
+    {
+      "nearest_rival": "review-project-language",
+      "outranked_by": 0,
+      "quadrant": null,
+      "rival_ratio": 0.2665894628440545,
+      "self_score": 26.702832361209182,
+      "semantic_similarity": null,
+      "skill": "establish-project-language",
+      "standings": []
+    },
+    {
+      "nearest_rival": "record-architecture-decisions",
+      "outranked_by": 0,
+      "quadrant": null,
+      "rival_ratio": 0.2594564129837514,
+      "self_score": 26.98250071563124,
+      "semantic_similarity": null,
+      "skill": "write-technical-documentation",
+      "standings": []
+    },
+    {
+      "nearest_rival": "establish-project-language",
+      "outranked_by": 0,
+      "quadrant": null,
+      "rival_ratio": 0.2592805313338972,
+      "self_score": 27.486835463840745,
+      "semantic_similarity": null,
+      "skill": "review-project-language",
+      "standings": []
+    },
+    {
+      "nearest_rival": "review-project-language",
+      "outranked_by": 0,
+      "quadrant": null,
+      "rival_ratio": 0.20643564376813942,
+      "self_score": 27.952497549288076,
+      "semantic_similarity": null,
+      "skill": "write-project-content",
+      "standings": []
+    },
+    {
+      "nearest_rival": "write-implementation-tasks",
+      "outranked_by": 0,
+      "quadrant": null,
+      "rival_ratio": 0.13465248877940617,
+      "self_score": 31.117787678538146,
+      "semantic_similarity": null,
+      "skill": "advance-with-uncertainty",
+      "standings": []
+    }
+  ]
+}

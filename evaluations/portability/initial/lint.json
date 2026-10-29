@@ -1,0 +1,24 @@
+{
+  "skill_name": null,
+  "skills_checked": 11,
+  "issues": [
+    {
+      "rule": "missing-mutual-handoff",
+      "severity": "info",
+      "skill": "backend-slice-architecture",
+      "path": "/workspace/scratch/44d8812e3975/evaluation/skill-reach/catalogue-offline/backend-slice-architecture/SKILL.md",
+      "message": "Skill 'backend-slice-architecture' overlaps with 'frontend-slice-architecture' (shared triggers: 'apis', 'creating', 'earned') but does not include a mutual routing handoff (e.g. \"Don't use for ... (use frontend-slice-architecture)\").",
+      "remedy": "Add reciprocal 'Don't use for X (use <neighbor-skill>)' handoff clauses to both overlapping skills so each carves out the other's territory.",
+      "line": null
+    },
+    {
+      "rule": "missing-mutual-handoff",
+      "severity": "info",
+      "skill": "frontend-slice-architecture",
+      "path": "/workspace/scratch/44d8812e3975/evaluation/skill-reach/catalogue-offline/frontend-slice-architecture/SKILL.md",
+      "message": "Skill 'frontend-slice-architecture' overlaps with 'backend-slice-architecture' (shared triggers: 'apis', 'creating', 'earned') but does not include a mutual routing handoff (e.g. \"Don't use for ... (use backend-slice-architecture)\").",
+      "remedy": "Add reciprocal 'Don't use for X (use <neighbor-skill>)' handoff clauses to both overlapping skills so each carves out the other's territory.",
+      "line": null
+    }
+  ]
+}

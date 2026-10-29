@@ -1,0 +1,33 @@
+name: Language checks
+
+on: [push, pull_request]
+
+permissions:
+  contents: read
+
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Check bundled reference drift
+        run: python3 scripts/sync-language-references.py --check
+      - name: Validate terminology records
+        run: |
+          python3 scripts/check-language.py registry standards/terminology.json
+          python3 scripts/check-language.py registry skills/establish-project-language/assets/terminology.example.json
+      - name: Run deterministic checks
+        run: python3 -m unittest discover -s tests -v
+      - name: Fetch pinned Agent Skills validator
+        uses: actions/checkout@v4
+        with:
+          repository: agentskills/agentskills
+          ref: 69ef37e9424c0a7ea9dd2293b559e43ec8176379
+          path: .validation/agentskills
+      - name: Validate portable skill packages
+        run: |
+          python3 -m pip install ./.validation/agentskills/skills-ref
+          for skill_path in skills/*; do skills-ref validate "$skill_path" || exit; done

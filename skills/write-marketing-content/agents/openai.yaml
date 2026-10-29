@@ -1,0 +1,4 @@
+interface:
+  display_name: "Write Marketing Content"
+  short_description: "Explain customer value with accurate project claims"
+  default_prompt: "Use $write-marketing-content for this project artefact."
