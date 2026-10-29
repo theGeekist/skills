@@ -9,21 +9,38 @@ metadata:
 
 # Backend Architecture Playbook
 
+Keep related backend behaviour together so changes have a clear owner, other parts use an explicit interface, and coordination stays visible.
+
 Apply this architecture when the user chooses this model or asks for a review against it.
+
+## Find what you need
+
+- Start with [What this architecture is](#what-this-architecture-is) for the purpose and terms.
+- Use [Rules for decisions](#rules-for-decisions) to assess ownership, sharing and dependencies.
+- Use [Incremental migration](#incremental-migration) when changing an existing system, then check the [Review/refactor checklist](#reviewrefactor-checklist).
+- Use [Illustrative folder shapes](#illustrative-folder-shapes) for examples; preserve equivalent repository conventions.
 
 ## Authority and adaptation
 
 Inspect the repository's existing conventions and constraints before proposing placement or changes. Treat this playbook as an architecture lens and target direction, not permission to reorganise unrelated code. Preserve established naming where it expresses the same boundaries, and migrate existing systems through the work already in scope.
 
+## Explain recommendations
+
+Use the repository's accepted terms and link to the code or decision that establishes their meaning. When a term has competing meanings, identify the context before recommending a name. Label new terms and architectural changes as proposals.
+
+Lead with the purpose and practical effect of a recommendation. Explain the affected boundary, the evidence and the smallest useful change before adding implementation detail. Define unfamiliar terms where they first appear. Give readers a route to the relevant code, rule or example; adjust the detail to the request.
+
+Describe evidence gaps precisely and state which conclusion they affect. Distinguish implementation state (what exists or is changing) from evidence state (what has been checked). Pair each material gap with the next investigation, implementation or validation action, and explain what would actually prevent progress. Lack of prior proof alone does not disqualify reasonable authorised work or viable alternatives. Preserve genuine constraints and uncertainty without inventing confidence or treating uncertainty as a reason to stop.
+
 ## What this architecture is
 
-Use a capability-first, package-shaped backend where behaviour starts inside an owned capability boundary and is promoted outward only when it becomes genuinely agnostic.
+Start backend behaviour inside a **capability**: a cohesive area, such as Checkout, that owns its rules, state and implementation. Move behaviour into shared code only when it can serve multiple capabilities without depending on their particular rules. This move is called **promotion**; code independent of those rules is **capability-agnostic**.
 
-`Package-shaped` describes an independently testable boundary with an explicit public surface and enforceable dependencies. It does not require a `package.json`, a publishable package, or a top-level directory named `packages`.
+**Package-shaped** describes an independently testable boundary with an explicit **public surface**: the operations and types other parts may use. Its dependencies can be enforced. This does not require a `package.json`, a publishable package, or a top-level directory named `packages`. A **deep import** bypasses the public surface to use internal implementation details.
 
-Do not treat this as a strict DDD/Hexagonal/Clean/MVC doctrine. Treat it as operating rules that optimise legibility, autonomy, and predictable change.
+Use these operating rules to improve legibility, autonomy and predictable change. They can coexist with Domain-Driven Design (DDD), Hexagonal Architecture, Clean Architecture or Model–View–Controller (MVC); applying those frameworks is optional.
 
-## Core mental model
+## Ownership and coordination
 
 Two homes, one direction of travel:
 
@@ -38,7 +55,7 @@ Two homes, one direction of travel:
 
 Direction of travel: capability -> shared through promotion. Avoid reverse movement.
 
-Orchestration is one explicit role:
+**Orchestration** means sequencing and coordinating capabilities to complete a workflow. Keep it in one explicit role:
 - Place cross-capability stories in the repository's application, use-case, workflow, or runtime composition surface.
 - Do not allow capabilities to coordinate other capabilities implicitly.
 
@@ -115,7 +132,7 @@ Capabilities can include business capabilities (Checkout), decision surfaces (Pr
 
 Use the repository's application, use-case, workflow, or composition boundary to:
 - sequence capabilities,
-- handle cross-capability flow concerns (idempotency, retries, sagas/workflows),
+- handle cross-capability flow concerns: retries, idempotency (keeping repeated requests from duplicating effects), and sagas (multi-step workflows with compensating actions),
 - map success/failure story paths.
 
 Do not encode capability rules here.
@@ -175,7 +192,7 @@ Amber (watch):
 
 Red (act now):
 - deep imports across capabilities become normal,
-- a single capability, orchestration, service, or adapter file exceeds roughly 1K SLOC,
+- a single capability, orchestration, service, or adapter file exceeds roughly 1,000 source lines of code (SLOC),
 - orchestration becomes a rule monolith,
 - CI slows and teams compensate with long-lived branches.
 
@@ -194,12 +211,12 @@ Use size as a smoke alarm, not dogma.
 
 ## Delivery channels
 
-Treat API/CLI/SDK as delivery adapters, not capabilities.
+Treat application programming interfaces (APIs), command-line interfaces (CLIs) and software development kits (SDKs) as delivery adapters, not capabilities.
 
 - HTTP/GraphQL/gRPC endpoints map requests to orchestration.
 - CLI commands map to orchestration.
 - Internal SDK is capability public surfaces.
-- External SDK is a separate artifact built from transport contracts, not capability internals.
+- External SDK is a separate artefact built from transport contracts, not capability internals.
 
 ## Internationalisation and configuration
 
@@ -221,9 +238,9 @@ Follow the workspace's configured project roots. `apps/`, `packages/`, and `libs
 ### Common roles
 
 - `apps/*` commonly contains deployable runtime entrypoints (delivery + composition):
-  - inbound adapters (HTTP/GraphQL/gRPC, workers, cron, CLI)
+  - inbound adapters (HTTP/GraphQL/gRPC, workers, cron, command-line interfaces)
   - orchestration/workflows/use-cases (thin sequencing)
-  - composition root (DI/config/bootstrap)
+  - composition root (dependency injection, configuration and startup wiring)
 
 - `apps/*` may also contain capability or library projects when that is the repository's established convention.
 - `packages/*` commonly contains workspace packages, including runtime applications, capability boundaries, and shared infrastructure. A package may be internal or publishable.
@@ -247,7 +264,7 @@ Rules:
 - If multiple runtimes exist (`api`, `worker`, `admin`), do not duplicate orchestration logic.
 - Share orchestration in a package, or route both runtimes through common orchestration entrypoints.
 
-### Path-of-correctness migration
+### Incremental migration
 
 - Do not move old code first.
 - Add new behaviour to capability projects under the repository's established workspace roots.
@@ -340,7 +357,7 @@ src/
 
 Expose:
 - small set of commands/queries/use-cases,
-- boundary DTO-like types,
+- boundary data types, such as data transfer objects (DTOs),
 - optionally emitted events.
 
 Do not expose:

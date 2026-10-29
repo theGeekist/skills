@@ -1,0 +1,209 @@
+{
+  "schemaVersion": 1,
+  "id": "llm-core",
+  "repository": "theGeekist/llm-core",
+  "revision": "4f9e37ac92bcd055a836806ea463510ed32a8bcc",
+  "inspection": {
+    "kind": "read-only-source-inspection",
+    "runtimeTestsRun": false,
+    "scope": "llm-core package contracts and control vocabulary; no implementation changes or package qualification",
+    "snapshot": "Cloud clone inspected as research context, not the user's canonical WSL checkout."
+  },
+  "sources": [
+    {
+      "path": "AGENTS.md",
+      "blobSha": "838b147b41998d335399f99db4fc3561bbfea343",
+      "url": "https://github.com/theGeekist/llm-core/blob/4f9e37ac92bcd055a836806ea463510ed32a8bcc/AGENTS.md"
+    },
+    {
+      "path": "README.md",
+      "blobSha": "0999ef686ee31557b8efc7d14115c6a5a471f51b",
+      "url": "https://github.com/theGeekist/llm-core/blob/4f9e37ac92bcd055a836806ea463510ed32a8bcc/README.md"
+    },
+    {
+      "path": "packages/llm-core/README.md",
+      "blobSha": "c1b401c2bd9c61e2e18c1f1b113e9e59e4d2c746",
+      "url": "https://github.com/theGeekist/llm-core/blob/4f9e37ac92bcd055a836806ea463510ed32a8bcc/packages/llm-core/README.md"
+    },
+    {
+      "path": "packages/llm-core/docs/final-architecture/decisions/ADR-003-schema-identity.md",
+      "blobSha": "f4f68767d3e6ec15a0055600afe71933be20d020",
+      "url": "https://github.com/theGeekist/llm-core/blob/4f9e37ac92bcd055a836806ea463510ed32a8bcc/packages/llm-core/docs/final-architecture/decisions/ADR-003-schema-identity.md"
+    },
+    {
+      "path": "packages/llm-core/src/features/control/approval.ts",
+      "blobSha": "c91857c75879907e0e6d637a0092891731e4efde",
+      "url": "https://github.com/theGeekist/llm-core/blob/4f9e37ac92bcd055a836806ea463510ed32a8bcc/packages/llm-core/src/features/control/approval.ts"
+    },
+    {
+      "path": "packages/llm-core/src/features/control/policy.ts",
+      "blobSha": "1f1fd6a989a5dd9fd4e4a8c05c93dae0b492d6bb",
+      "url": "https://github.com/theGeekist/llm-core/blob/4f9e37ac92bcd055a836806ea463510ed32a8bcc/packages/llm-core/src/features/control/policy.ts"
+    },
+    {
+      "path": "packages/llm-core/tests/control/approval.test.ts",
+      "blobSha": "0ba0d58eb2ccbb430c6386b47b9cf081f8718333",
+      "url": "https://github.com/theGeekist/llm-core/blob/4f9e37ac92bcd055a836806ea463510ed32a8bcc/packages/llm-core/tests/control/approval.test.ts"
+    },
+    {
+      "path": "packages/llm-core/tests/control/policy.test.ts",
+      "blobSha": "d76f8bba69c2509c50cf13e219da85dd9908b693",
+      "url": "https://github.com/theGeekist/llm-core/blob/4f9e37ac92bcd055a836806ea463510ed32a8bcc/packages/llm-core/tests/control/policy.test.ts"
+    }
+  ],
+  "terms": [
+    {
+      "id": "llm-core.kernel",
+      "context": "llm-core package architecture",
+      "preferredTerm": "kernel",
+      "definition": "The portable contracts, conformance, authority and evidence boundary; the host selects and runs runtime integrations.",
+      "distinctFrom": [
+        "runtime integration",
+        "host application"
+      ],
+      "sourcePaths": [
+        "packages/llm-core/README.md"
+      ]
+    },
+    {
+      "id": "llm-core.policy-decision",
+      "context": "controlled tool execution",
+      "preferredTerm": "policy decision",
+      "definition": "A versioned rule result for the exact proposed action: allow, deny or require approval.",
+      "distinctFrom": [
+        "approval decision"
+      ],
+      "sourcePaths": [
+        "packages/llm-core/src/features/control/policy.ts",
+        "packages/llm-core/tests/control/policy.test.ts"
+      ]
+    },
+    {
+      "id": "llm-core.approval-decision",
+      "context": "controlled tool execution",
+      "preferredTerm": "approval decision",
+      "definition": "An authenticated actor's approval or denial bound to the requested action identity and valid time window.",
+      "distinctFrom": [
+        "policy decision",
+        "execution receipt"
+      ],
+      "sourcePaths": [
+        "packages/llm-core/src/features/control/approval.ts",
+        "packages/llm-core/tests/control/approval.test.ts"
+      ]
+    },
+    {
+      "id": "llm-core.evidence-reference",
+      "context": "portable contracts",
+      "preferredTerm": "evidence reference",
+      "definition": "An identifier and content reference resolved through an authorised storage-neutral port; its presence alone does not permit disclosure.",
+      "distinctFrom": [
+        "physical storage locator",
+        "disclosure permission"
+      ],
+      "sourcePaths": [
+        "packages/llm-core/docs/final-architecture/decisions/ADR-003-schema-identity.md"
+      ]
+    }
+  ],
+  "cases": [
+    {
+      "id": "llm-core-marketing-route",
+      "audience": "marketing practitioner reading technical material",
+      "prompt": "Explain what llm-core contributes to an AI application, what a host must supply, and where to read the exact contract. Keep the technical distinctions intact.",
+      "requiredFacts": [
+        "The kernel supplies portable contracts, conformance, authority and evidence.",
+        "Hosts explicitly select runtime integrations.",
+        "The package has no default agent loop, workflow engine or conversation executor.",
+        "Version 2.0.0 is a candidate in this snapshot, not an established npm release."
+      ],
+      "forbiddenClaims": [
+        "llm-core runs every agent automatically",
+        "The package is a hosted service",
+        "The version 2 candidate is already published"
+      ],
+      "readerRoute": {
+        "purpose": "What llm-core contributes to an application",
+        "decision": "Keep runtime selection and execution explicit",
+        "implication": "A product team must choose and integrate a runner",
+        "termsToExplain": [
+          "kernel",
+          "runtime integration",
+          "conformance"
+        ],
+        "technicalDetail": [
+          "packages/llm-core/README.md",
+          "packages/llm-core/docs/final-architecture/decisions/ADR-003-schema-identity.md"
+        ]
+      },
+      "expectedChecks": [
+        "Purpose and implication appear before implementation detail.",
+        "An unfamiliar term is explained when first needed.",
+        "The exact runtime and release boundary survives simplification."
+      ]
+    },
+    {
+      "id": "llm-core-approval-explainer",
+      "audience": "experienced engineer",
+      "prompt": "Does a policy result that requires approval mean the action is already approved? Explain the distinction and give the exact source and test paths.",
+      "requiredFacts": [
+        "require-approval remains approval-required.",
+        "Approval verification checks the exact action identity, actor authentication and time window.",
+        "A changed action digest invalidates an approval."
+      ],
+      "forbiddenClaims": [
+        "require-approval is permission to execute",
+        "Approval remains valid for a changed action"
+      ],
+      "readerRoute": {
+        "purpose": "Understand permission for one proposed action",
+        "decision": "Separate policy evaluation from authenticated approval",
+        "implication": "A required approval must still be obtained and verified",
+        "termsToExplain": [
+          "action digest"
+        ],
+        "technicalDetail": [
+          "packages/llm-core/src/features/control/policy.ts",
+          "packages/llm-core/src/features/control/approval.ts",
+          "packages/llm-core/tests/control/approval.test.ts"
+        ]
+      },
+      "expectedChecks": [
+        "Answer leads with the distinction.",
+        "Machine values remain exact.",
+        "Source inspection is not described as a passed runtime test."
+      ]
+    },
+    {
+      "id": "llm-core-schema-adr",
+      "audience": "mixed engineering and product readers",
+      "prompt": "Draft a short explanation of ADR-003's schema authority and evidence reference decision. Preserve its reasons and restrictions.",
+      "requiredFacts": [
+        "Constrained TypeScript is the authoring authority.",
+        "Pinned generation creates checked-in JSON Schema Draft 7 bundles.",
+        "Portable references exclude physical locators and secrets.",
+        "An evidence reference does not imply permission to disclose its content."
+      ],
+      "forbiddenClaims": [
+        "Hand-written JSON Schema is the authoring authority",
+        "An evidence reference grants access"
+      ],
+      "readerRoute": {
+        "purpose": "Understand portable cross-language contracts",
+        "decision": "Generate wire schemas from constrained TypeScript",
+        "implication": "Consumers exchange portable references without storage locations or secrets",
+        "termsToExplain": [
+          "schema authority",
+          "wire contract"
+        ],
+        "technicalDetail": [
+          "packages/llm-core/docs/final-architecture/decisions/ADR-003-schema-identity.md"
+        ]
+      },
+      "expectedChecks": [
+        "Decision and consequence are findable without reading the full wire-type list.",
+        "Restriction wording remains precise."
+      ]
+    }
+  ]
+}

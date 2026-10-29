@@ -1,6 +1,6 @@
 {
   "name": "geekist",
-  "description": "Portable Geekist architecture skills for backend and frontend development.",
+  "description": "Portable Geekist architecture and shared project-language skills.",
   "owner": {
     "name": "Geekist",
     "url": "https://geekist.co"
@@ -8,7 +8,7 @@
   "plugins": [
     {
       "name": "geekist-architecture-skills",
-      "description": "Feature-first backend and frontend architecture skills from Geekist.",
+      "description": "Architecture, terminology and navigable documentation skills from Geekist.",
       "source": "."
     }
   ]

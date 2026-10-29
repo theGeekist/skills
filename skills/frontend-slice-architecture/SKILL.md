@@ -9,19 +9,40 @@ metadata:
 
 # Frontend Slice Architecture Playbook
 
+Keep related interface behaviour together so changes have a clear owner, reusable parts remain independent, and page-level coordination stays visible.
+
 Apply this architecture when the user chooses this model or asks for a review against it.
+
+## Find what you need
+
+- Start with [What this architecture is](#what-this-architecture-is) for the purpose and terms.
+- Use [Rules for decisions](#rules-for-decisions) to assess ownership, sharing and dependencies.
+- Use [Incremental migration](#incremental-migration) when changing an existing system, then check the [Review/refactor checklist](#reviewrefactor-checklist).
+- Use the [Illustrative folder shape](#illustrative-folder-shape-for-a-larger-feature) for an example; preserve equivalent repository conventions.
 
 ## Authority and adaptation
 
 Inspect the repository's framework, platform conventions and existing boundaries before proposing placement or changes. Treat this playbook as a set of strong defaults and an architecture lens, not filesystem directives or permission to reorganise unrelated code. Preserve established naming where it expresses the same boundaries, and migrate existing systems through the work already in scope.
 
+## Explain recommendations
+
+Use the repository's accepted terms and link to the code or decision that establishes their meaning. When a term has competing meanings, identify the context before recommending a name. Label new terms and architectural changes as proposals.
+
+Lead with the purpose and practical effect of a recommendation. Explain the affected boundary, the evidence and the smallest useful change before adding implementation detail. Define unfamiliar terms where they first appear. Give readers a route to the relevant code, rule or example; adjust the detail to the request.
+
+Describe evidence gaps precisely and state which conclusion they affect. Distinguish implementation state (what exists or is changing) from evidence state (what has been checked). Pair each material gap with the next investigation, implementation or validation action, and explain what would actually prevent progress. Lack of prior proof alone does not disqualify reasonable authorised work or viable alternatives. Preserve genuine constraints and uncertainty without inventing confidence or treating uncertainty as a reason to stop.
+
 ## What this architecture is
 
-Use a feature-first, package-shaped frontend where work starts local inside a feature and is promoted outward only when it becomes genuinely agnostic.
+Start interface behaviour inside a **feature**: a cohesive area that owns its user interface (UI), state and implementation. Move behaviour into shared code only when it can serve multiple features without depending on their particular rules. This move is called **promotion**; code independent of those rules is **feature-agnostic**.
 
-Do not treat this as a strict React doctrine. Treat it as operating rules that optimize legibility, autonomy, predictable change, and packaging readiness.
+**Package-shaped** means a feature is independently testable and exposes an explicit **public surface**: the components, functions and types other parts may use. Dependencies stay enforceable, whether or not the feature has a `package.json`. A **deep import** bypasses that public surface to use internal implementation details.
 
-## Core mental model
+A **scene** is a page or screen shell that brings features together. **Orchestration** means coordinating those features into a workflow. A frontend **hook** is a reusable function that connects components to state or framework behaviour; it is separate from an agent lifecycle hook.
+
+Use these operating rules to improve legibility, autonomy, predictable change and packaging readiness. React is optional.
+
+## Ownership and coordination
 
 Two homes, one direction of travel:
 
@@ -307,7 +328,7 @@ Standard responses:
 
 ## Existing monorepo adaptation
 
-Use this when the repo already has `apps/*` + `packages/*` and cannot be reorganized in one move.
+Use this when the repo already has `apps/*` + `packages/*` and cannot be reorganised in one move.
 
 ### Monorepo mapping (naming-agnostic)
 
@@ -323,7 +344,7 @@ Use this when the repo already has `apps/*` + `packages/*` and cannot be reorgan
 
 Prefer adding a new slice under existing conventions and enforcing boundaries via public APIs + import rules.
 
-### Path-of-correctness migration
+### Incremental migration
 
 * Do not move old code first.
 * Add a new lane for all new behaviour:

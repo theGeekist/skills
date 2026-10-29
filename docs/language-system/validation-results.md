@@ -1,0 +1,45 @@
+# Validation results and next checks
+
+Reviewed 29 October 2026. The foundation is implemented: shared writing conventions, context-aware terminology checks, three portable language skills, improved architecture playbooks, lifecycles and an optional local Codex adapter. The next adoption checks concern real-reader comprehension and client-specific loading.
+
+## Executed checks
+
+| Check | Observed result | What it establishes |
+| --- | --- | --- |
+| Python suite with optional Vale integration enabled | 47 tests pass | Registry errors, contextual aliases, code exclusions, reference drift, isolated skill references and bounded Stop behaviour |
+| Agent Skills reference validator | All five skills validate | Portable skill shape and frontmatter |
+| Bundled-reference comparison | No drift | Installed copies match authored standards |
+| Selected Vale rules | No findings in skills, standards and selected system docs | These texts meet the small advisory word rule; semantic clarity needs separate assessment |
+| Architecture forward test | Ownership, public dependencies and explicit coordination retained in a synthetic case | Wording changes preserve the tested architectural distinctions |
+| Project discovery and writing | Initial failures captured; corrected fresh runs find hidden sources and produce valid registries | The revised instructions address two observed workflow defects |
+| Blind navigation reader | Finds purpose, decision and consequences; identifies terms and links to improve | Preliminary agent evidence for reader navigation, with concrete editorial follow-up |
+
+The core suite runs without Vale; its optional integration case is then explicitly skipped. CI runs the dependency-free suite and reference/registry checks. Local optional-tool results are not represented as a completed remote CI run.
+
+## Learning from independent runs
+
+Initial domain discovery produced a status outside the registry's three lifecycle values. Initial writing runs missed terminology in a hidden planning directory. Both original outputs were preserved. Instructions now enumerate allowed statuses and require discovery of declared authority paths, including hidden paths. Fresh-context retests exercise those corrections.
+
+The independent reader could recover the main decisions, while identifying jargon and source-navigation gaps. The pilot artefacts are revised to explain necessary terms near first use and provide clickable source routes. These edits are author revisions; they are not relabelled as a fresh human-comprehension pass.
+
+Repeat runs retained important facts but varied in how much domain language they explained. The next evaluation should repeat the same authoring task with a reader-navigation check, retaining output and source revisions. Compare consistent meaning and route quality rather than identical wording.
+
+See [project evaluation](project-evaluation.md) for coverage and limitations, and [architecture cases](../../evaluations/architecture/) for the synthetic boundary test. Detailed private source evidence is retained outside this public repository.
+
+## Honest uncertainty and continued implementation
+
+The standalone skill has dedicated task/ADR cases in [uncertainty evaluation](uncertainty-evaluation.md). It distinguishes an open evidence question from a real blocker, preserves implementation progress and requires a bounded next action. The cases also check that optimism does not invent permission or successful validation.
+
+## What can proceed now
+
+Review and use the portable skills and shared references on bounded project work. Run the supplied checks when updating terminology or guidance. Use the documented registry format and preserve each project's current authority.
+
+For a selected local client, test one instruction-loading case and one Stop correction case using the version and mode recorded in the result. The optional adapter already has subprocess coverage; host compatibility can be recorded after this observation. No client configuration was installed automatically.
+
+Ask an engineering reader and a marketing reader to locate the pilot's purpose, decision, consequences and technical contract. Record their answers and navigation difficulties without coaching, then revise the artefact. This supplies direct comprehension evidence alongside the existing agent tests.
+
+## Scope of the evidence
+
+No source repository implementation was changed, no deployment or release was performed, and project runtime suites were not run for a documentation-only source inspection. Not every prepared lifecycle/dashboard case was exercised. The public and private evaluations record the executed cases separately.
+
+There is no before/after control study or universal readability claim. The change provides a working implementation and concrete regression cases. Additional runtime and human-reader checks have named next actions in the [recommendation pipeline](recommendations.json).

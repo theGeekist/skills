@@ -1,0 +1,4 @@
+interface:
+  display_name: "Establish Project Language"
+  short_description: "Discover and maintain shared project terminology"
+  default_prompt: "Use $establish-project-language to establish the concepts and vocabulary in this repository."

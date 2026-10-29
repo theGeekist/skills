@@ -1,0 +1,14 @@
+{
+  "hooks": {
+    "Stop": [
+      {
+        "hooks": [
+          {
+            "type": "command",
+            "command": "python3 '/ABSOLUTE/PATH/skills/adapters/codex/stop-language.py' --registry '/ABSOLUTE/PATH/skills/standards/terminology.json' --context content"
+          }
+        ]
+      }
+    ]
+  }
+}

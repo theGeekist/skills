@@ -1,0 +1,4 @@
+interface:
+  display_name: "Write Project Content"
+  short_description: "Write clear content using shared project meaning"
+  default_prompt: "Use $write-project-content to write this document so technical and business readers can navigate it."

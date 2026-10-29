@@ -1,8 +1,8 @@
-# Geekist Architecture Skills
+# Geekist Skills
 
 [![Licence: MIT](https://img.shields.io/badge/Licence-MIT-blue.svg)](LICENSE)
 
-Portable agent skills for reviewing, designing and incrementally migrating backend and frontend codebases towards feature-first, package-shaped architecture.
+Portable agent skills for architecture and shared project language. Review and evolve feature-first systems, establish domain meanings, and write material that technical and business readers can navigate.
 
 The playbooks help coding agents make architecture decisions about ownership, public APIs, orchestration, dependencies and shared infrastructure. They are framework-neutral and adapt to the repository in front of them rather than imposing a fixed folder taxonomy.
 
@@ -10,13 +10,29 @@ Published by [Geekist](https://geekist.co).
 
 ## Install
 
-Install both architecture skills from the public repository:
+Install the collection from the public repository:
 
 ```sh
 npx skills add theGeekist/skills
 ```
 
-The repository contains no MCP server, executable runtime or network dependency. Each skill is portable Markdown with YAML frontmatter, plus optional client metadata.
+The skills use portable Markdown with YAML frontmatter and optional client metadata. They require no MCP server or runtime dependency. Optional repository checks and a Codex hook example are separate from skill installation.
+
+The language-system changes on this branch are unreleased. See the [architecture and reader route](docs/language-system/architecture.md), [evaluation results](docs/language-system/validation-results.md) and [integration guide](docs/language-system/integration.md).
+
+## Included language skills
+
+### Establish project language
+
+`establish-project-language` discovers concepts from current code, schemas, tests and decisions. It records context, accepted meanings, proposals and source evidence, so different agents and artefacts can share the same definitions.
+
+### Write project content
+
+`write-project-content` applies that meaning to tasks, decisions, documentation and product content. It makes purpose, decisions and consequences easy to find, with a direct route to technical detail. The acceptance outcomes are consistency, accessibility, readability and repeatability.
+
+### Advance with uncertainty
+
+`advance-with-uncertainty` turns evidence gaps into bounded next actions in tasks, ADRs and worker handoffs. It keeps implementation progress separate from validation, preserves real blockers and prevents missing prior proof from becoming an unsupported rejection or blanket stop.
 
 ## Included architecture skills
 
@@ -114,12 +130,27 @@ skills/
   frontend-slice-architecture/
     SKILL.md
     agents/openai.yaml
+  establish-project-language/
+    SKILL.md
+    references/
+    assets/
+  write-project-content/
+    SKILL.md
+    references/
+    assets/
+  advance-with-uncertainty/
+    SKILL.md
+    references/
+    assets/
+standards/
+adapters/
+evaluations/
 scripts/
   link-local.sh
   update-local.sh
 ```
 
-The repository root is the plugin and `skills/` is the canonical collection exposed to clients and registries. Each skill keeps its instructions at its own root. Repository-wide automation stays under `scripts/` because it operates across both skills.
+The repository root is the plugin and `skills/` is the canonical collection exposed to clients and registries. Each skill keeps its instructions and required references within its own directory. `standards/` holds canonical writing references; a sync check keeps their bundled copies consistent. `adapters/` holds optional agent integration examples, and `evaluations/` holds public test cases. Repository-wide automation stays under `scripts/`.
 
 ## Compatibility
 
