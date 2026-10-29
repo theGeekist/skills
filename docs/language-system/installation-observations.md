@@ -25,3 +25,9 @@ Verify the distribution route for the intended surface before diagnosing a cache
 ## v1.5.1 update verification
 
 All eleven personal skills were updated after the language and attribution revisions. The saved remote main bodies and every bundled reference were compared with the v1.5.1 source and matched. This verifies saved personal-skill content, not mobile plugin installation or native implicit activation. Both GitHub workflows passed, and the published release manifest matches commit `3ef8ff5689871472dc4b5f8b600d057573a7593a`, tree `1ccb5aa3ea04f08f6d450d8e008ae7de130ac4a5` and all eleven skill names.
+
+## v1.6.0 update verification
+
+All eleven personal skills were updated after the editorial examples and presentation-catalogue changes. Saved remote main bodies, every bundled reference, display names, short descriptions and default prompts match the v1.6.0 source. The compatibility router remains explicit. Normalised display-icon behaviour is unchanged. This verifies saved personal content, not mobile plugin installation or native implicit selection.
+
+The published v1.6.0 release manifest matches commit `8bc52c98bb1c79db223f087d819a5a4aca360730`, tree `091e7a0423505fa0df79f2a11cc5f42857212fa4` and all eleven skills. The release validation includes the new catalogue checks. GitHub About settings remain prepared rather than applied, as recorded in [discoverability](discoverability.md).
