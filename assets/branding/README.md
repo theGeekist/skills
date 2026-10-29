@@ -19,3 +19,7 @@ The source wordmark and both adaptations were rendered and visually checked, inc
 ## Attribution
 
 Geekist branding belongs to Geekist. The adaptation was requested by its owner for this skill collection. This note records provenance; it does not assert a separate open trademark or brand licence. The repository's software licence remains unchanged.
+
+## README presentation
+
+`readme-banner.svg` retains the complete original wordmark path unchanged and places it on a charcoal background for contrast on GitHub's light and dark themes. The banner's caption describes the collection. It does not replace the intended Gk icon or establish the earlier extracted G as the accepted brand mark.

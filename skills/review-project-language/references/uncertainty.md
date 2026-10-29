@@ -47,6 +47,12 @@ Carry forward existing authorisation. Do not add a new permission gate for routi
 
 These examples are invented. They retain uncertainty and define movement without declaring an untested result successful.
 
+## Improve the sentence without changing the evidence
+
+Invented task conclusion: “No evidence of desktop compatibility. Disqualify the adapter.” If no desktop trial has run, write “Desktop behaviour remains unchecked. Capture one client event and compare it with the local payload tests before claiming compatibility.” Keep any observed failing behaviour in the record and link its actual scope.
+
+A concise negative statement can be accurate and useful. “The client rejected this payload” should remain a failure when observed; explain the bounded fix or reconsideration rather than replacing it with optimistic wording.
+
 ## Review for implementation impact
 
 Ask whether another worker can identify what to do next, what they may proceed with, what evidence to collect and what genuinely blocks a dependent action. Check that an evidence label has not silently become a rejection, a blanket stop or an invented success claim.

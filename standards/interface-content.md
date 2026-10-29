@@ -17,6 +17,12 @@ For dashboards, separate result, confidence in the result, check coverage and ex
 
 Celebrate observable progress where appropriate. Keep unresolved checks connected to the work still moving. A raw “unqualified” state may be honest internally while an audience explanation can describe what has been completed and what remains. Preserve consequential limitations in an accessible detail route.
 
+## Explain movement without changing the result
+
+Invented state: one of three checks has finished, and eligibility has not been decided. “33% qualified” changes progress into an assessment. “1 of 3 checks complete” reports the event; add the next check or available action when known. Keep the eligibility result separate.
+
+The best label is sometimes the established specialist term, especially in an expert tool. Retain it with a useful explanation rather than forcing an everyday synonym that merges distinct states.
+
 ## Accessibility and coherence
 
 Use consistent action names across buttons, confirmations and help. Explain specialised labels at the point of use. Make essential information available in text; colour, motion and a chart alone cannot carry the result. Prefer meaningful link text and a clear reading order.

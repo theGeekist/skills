@@ -2,5 +2,5 @@ interface:
   icon_small: "./assets/geekist-small.svg"
   icon_large: "./assets/geekist.svg"
   display_name: "Write Technical Documentation"
-  short_description: "Match technical documents to reader purpose"
+  short_description: "Write guides for technical and business readers"
   default_prompt: "Use $write-technical-documentation for this project artefact."

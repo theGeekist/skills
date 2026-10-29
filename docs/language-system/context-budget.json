@@ -8,7 +8,7 @@
       "skill": "advance-with-uncertainty",
       "body_words": 728,
       "description_words": 49,
-      "bundled_reference_words": 780
+      "bundled_reference_words": 871
     },
     {
       "skill": "backend-slice-architecture",
@@ -20,7 +20,7 @@
       "skill": "establish-project-language",
       "body_words": 711,
       "description_words": 40,
-      "bundled_reference_words": 1661
+      "bundled_reference_words": 1909
     },
     {
       "skill": "frontend-slice-architecture",
@@ -32,31 +32,31 @@
       "skill": "record-architecture-decisions",
       "body_words": 367,
       "description_words": 40,
-      "bundled_reference_words": 1193
+      "bundled_reference_words": 1354
     },
     {
       "skill": "review-project-language",
       "body_words": 371,
       "description_words": 44,
-      "bundled_reference_words": 1130
+      "bundled_reference_words": 1525
     },
     {
       "skill": "write-implementation-tasks",
       "body_words": 363,
       "description_words": 44,
-      "bundled_reference_words": 1153
+      "bundled_reference_words": 1338
     },
     {
       "skill": "write-interface-content",
       "body_words": 352,
       "description_words": 38,
-      "bundled_reference_words": 389
+      "bundled_reference_words": 469
     },
     {
       "skill": "write-marketing-content",
       "body_words": 388,
       "description_words": 41,
-      "bundled_reference_words": 426
+      "bundled_reference_words": 524
     },
     {
       "skill": "write-project-content",
@@ -68,7 +68,7 @@
       "skill": "write-technical-documentation",
       "body_words": 377,
       "description_words": 40,
-      "bundled_reference_words": 1255
+      "bundled_reference_words": 1453
     }
   ]
 }

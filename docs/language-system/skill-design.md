@@ -4,7 +4,7 @@
 
 Give each authoring purpose a direct entry point. Keep a short, canonical baseline inline in every independently installable skill, and load supporting detail only when the task needs it. Retain `write-project-content` as an explicit compatibility chooser rather than an authoring prerequisite.
 
-A marketing agent can select `write-marketing-content` from a customer-copy request. An ADR author can select `record-architecture-decisions` without loading the architecture playbooks; actual boundary design still belongs to those playbooks. The [skill table](../../README.md#choose-a-language-skill) maps the complete collection.
+A marketing agent can select `write-marketing-content` from a customer-copy request. An ADR author can select `record-architecture-decisions` without loading the architecture playbooks; actual boundary design still belongs to those playbooks. The [skill table](../../README.md#choose-a-skill) maps the complete collection.
 
 ## Why this split
 

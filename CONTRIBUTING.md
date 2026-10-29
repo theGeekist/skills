@@ -25,9 +25,12 @@ Also test the changed skill against a realistic request. A wording check alone d
 For language-system changes, run:
 
 ```sh
+python3 scripts/sync-skill-catalogue.py --check
 python3 scripts/sync-language-references.py --check
 python3 scripts/check-language.py registry standards/terminology.json
 python3 -m unittest discover -s tests -v
 ```
 
 Change canonical references under `standards/`, then regenerate with `python3 scripts/sync-language-references.py`. Keep private project evidence out of this public repository. Record separate results for deterministic checks, independent agent review, human comprehension and actual runtime integration.
+
+Human overview pages and client presentation metadata are generated from `standards/skill-catalogue.json`. Run `python3 scripts/sync-skill-catalogue.py` after changing presentation copy. Skill activation descriptions remain authored in `SKILL.md`; review their intent explicitly before changing the catalogue's comparison value. Preserve the stable plugin identity, architecture rules and explicit compatibility-router policy. Catalogue generation does not certify native client compatibility.

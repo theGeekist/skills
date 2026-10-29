@@ -36,3 +36,7 @@ All skills carry the shared language baseline. [Microsoft](https://learn.microso
 - **Google/Diátaxis Vale packages:** executed experiments exposed false positives. Selected local advisory rules are active; the complete upstream styles are not enforced.
 
 This map makes the lineage inspectable. The next check is whether the active wording faithfully applies the selected principle to its reader and task; a citation alone does not establish that.
+
+## Editorial skills considered alongside the frameworks
+
+The [competing-skills review](../docs/language-system/competing-writing-skills.md) compares Humanizer, Plain Writing and its revision-view fork, Writing Clearly and Concisely and a related selective-reference variant, and Plain Language Editor. The adopted lessons are concrete examples with explicit source facts, contextual exceptions, optional inspectable revisions and consistent generated presentation metadata. Source notes in the relevant guidance identify the influence; no competing HTML template or wholesale house style is imported. The [design record](../docs/language-system/design-and-differences.md) explains how these practices support the collection's project-meaning and evidence workflows.

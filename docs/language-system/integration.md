@@ -14,7 +14,7 @@ python3 -m unittest discover -s tests -v
 
 The core checks require Python 3 and its standard library. Optional external validators are evaluation/development tools, not dependencies loaded by the skills.
 
-Choose the specialist from the [purpose table](../../README.md#choose-a-language-skill). References are conditional: a small label change can use the inline baseline and local state, while a dashboard-state design can load interface patterns. A complete architecture review loads all relevant rule references; a narrow workspace question can load its mapping alone. Full reviews may use more total context, even though initial and narrow-task loads are smaller.
+Choose the specialist from the [purpose table](../../README.md#choose-a-skill). References are conditional: a small label change can use the inline baseline and local state, while a dashboard-state design can load interface patterns. A complete architecture review loads all relevant rule references; a narrow workspace question can load its mapping alone. Full reviews may use more total context, even though initial and narrow-task loads are smaller.
 
 `write-project-content` remains an explicit compatibility router. Its Codex metadata disables implicit invocation; that field does not configure other clients. If installing a subset, use a specialist directly. No specialist requires the router or another specialist to be installed.
 

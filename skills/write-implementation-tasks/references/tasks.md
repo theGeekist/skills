@@ -27,6 +27,12 @@ For a membership check, state what a member may do, what a non-member observes a
 
 For a handoff, include current state, the next executable step, where evidence lives and the exact condition that would require a decision. Do not make another worker reconstruct the task from an activity log.
 
+## Preserve the condition in the task
+
+Invented source contract: workspace members may export the last 30 days as CSV. “Add report exports” hides the membership, period and format conditions. A useful task names the permitted action and includes acceptance checks for a member request and a request outside the permitted membership, period or format. Link the actual contract; this example does not establish access rules for another project.
+
+An open performance measurement can become a validation step. It should not silently remove an authorised implementation outcome or be rewritten as a successful measurement.
+
 ## Sources and local adaptation
 
 This task and handoff pattern is a local synthesis. The downloaded [Good Docs how-to guidance](https://gitlab.com/tgdp/templates/-/tree/main/how-to) informs goal and completion-oriented structure, but it is not a ticket template or a mandated delivery process. Observable acceptance, precise blockers and continued authorised work are local requirements.

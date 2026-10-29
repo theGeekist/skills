@@ -27,6 +27,12 @@ Use the project's audience labels when available. An internal qualification stat
 
 When evidence for a requested claim is missing, draft supported value and record the specific validation or source needed for the stronger claim. Continue useful drafting rather than disqualifying the whole campaign. Keep claim notes separate from finished customer copy unless the user requested an annotated draft.
 
+## Show useful value within the supported scope
+
+Invented source: workspace members can export the last 30 days as CSV; no time-saving study has been run. “Cut reporting time in half with unlimited exports” invents a result and scope. “Download the last 30 days as CSV for your reporting” expresses supported value. Keep the membership condition near the action when it affects who can use it.
+
+An expressive headline can suit the channel. Preserve the author's deliberate imagery or humour while checking its factual implication; plain language does not require every campaign to share a literal technical register.
+
 ## Sources and local adaptation
 
 The audience, value and claim patterns here are local guidance rather than an imported marketing framework. [Microsoft's plain-word guidance](https://learn.microsoft.com/en-us/style-guide/word-choice/use-simple-words-concise-sentences) and [Google's audience-aware jargon guidance](https://developers.google.com/style/jargon) inform expression. Neither source establishes product claims or marketing effectiveness; those need the actual product evidence.

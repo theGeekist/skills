@@ -1,0 +1,17 @@
+{
+  "review": {
+    "skill": "review-project-language",
+    "instruction_files": {
+      "review-project-language/SKILL.md": "b8bd251ddda8c0553bd74c89be4b8c89e6adaa9b57e647a68c2d24d479fd754a",
+      "review-project-language/references/review.md": "efdcbd381347eda13874e20694ac7619401cd502633aa12b1bd45d41d2d85e98",
+      "review-project-language/references/uncertainty.md": "c13c47f90328b9d65c64858ddfb76766b46a7e84cc40c11f2c2a30dabc4ec947"
+    }
+  },
+  "marketing": {
+    "skill": "write-marketing-content",
+    "instruction_files": {
+      "write-marketing-content/SKILL.md": "6403ba2210fea3d71b4c3392a8b7e7b387b412218d917b804f87db64c35f2aa6",
+      "write-marketing-content/references/marketing.md": "9d60e45ae73fae8b679db7bc97a1070a51fe64f708fc1adf776b95964f8bd781"
+    }
+  }
+}

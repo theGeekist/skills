@@ -22,6 +22,10 @@ Separate design choice, implementation state and validation. A prototype choice 
 
 Respect authority recorded by the project or user. State an external publication constraint precisely, while allowing authorised implementation and preparation to continue.
 
+## Keep the choice and its evidence distinct
+
+Invented example: “Per-project queues are proven to scale” overstates a prototype choice when load has not been measured. “Use a per-project queue for the prototype; measure the representative load before setting production limits” keeps the choice while preserving the evidence gap. Record the actual reason for isolation and the agreed reconsideration threshold. Do not invent either to make the decision look complete.
+
 ## Maintenance
 
 Link sources and related decisions using meaningful text. Preserve historical records. Supersede or amend according to the repository's convention, documenting the changed reasoning rather than quietly rewriting history.

@@ -78,6 +78,7 @@ jobs:
       - name: Check shared sources, terminology and behaviour
         if: steps.existing.outputs.skip != 'true'
         run: |
+          python3 scripts/sync-skill-catalogue.py --check
           python3 scripts/sync-language-references.py --check
           python3 scripts/check-language.py registry standards/terminology.json
           python3 scripts/check-language.py registry skills/establish-project-language/assets/terminology.example.json

@@ -2,5 +2,5 @@ interface:
   icon_small: "./assets/geekist-small.svg"
   icon_large: "./assets/geekist.svg"
   display_name: "Write Implementation Tasks"
-  short_description: "Turn outcomes into executable tasks and acceptance"
+  short_description: "Write tasks with observable outcomes"
   default_prompt: "Use $write-implementation-tasks for this project artefact."

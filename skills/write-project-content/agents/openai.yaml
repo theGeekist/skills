@@ -2,7 +2,7 @@ interface:
   icon_small: "./assets/geekist-small.svg"
   icon_large: "./assets/geekist.svg"
   display_name: "Choose a Project Writing Workflow"
-  short_description: "Compatibility router for explicit writing requests"
+  short_description: "Choose the relevant writing workflow"
   default_prompt: "Use $write-project-content to choose the appropriate project-writing workflow."
 
 policy:

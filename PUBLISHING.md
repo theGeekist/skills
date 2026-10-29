@@ -2,18 +2,18 @@
 
 GitHub is the canonical source for the collection. A versioned release binds the plugin metadata, portable skills, references, branding and evaluation record to one commit.
 
-## Release v1.5.1
+## Release v1.6.0
 
 - Repository: <https://github.com/theGeekist/skills>
-- Release: <https://github.com/theGeekist/skills/releases/tag/v1.5.1>
-- Both plugin manifests use version `1.5.1`.
-- Release notes: [v1.5.1](release-notes/v1.5.1.md).
+- Release: <https://github.com/theGeekist/skills/releases/tag/v1.6.0>
+- Both plugin manifests use version `1.6.0`.
+- Release notes: [v1.6.0](release-notes/v1.6.0.md).
 - The distribution retains the existing `geekist-architecture-skills` plugin identifier for compatibility; its displayed name is Geekist Skills.
 
 Install the pinned collection:
 
 ```sh
-npx skills add https://github.com/theGeekist/skills/tree/v1.5.1
+npx skills add https://github.com/theGeekist/skills/tree/v1.6.0
 ```
 
 The skills CLI prompts for skills and target agents. Its default scope is the current project; add `-g` for a user-wide installation. Review the selected destinations rather than assuming every installed client has the same discovery path. ChatGPT personal-skill installation uses its own supported installation mechanism, separately from this CLI.
@@ -21,7 +21,7 @@ The skills CLI prompts for skills and target agents. Its default scope is the cu
 For a canonical checkout shared by local clients:
 
 ```sh
-git clone --branch v1.5.1 https://github.com/theGeekist/skills.git
+git clone --branch v1.6.0 https://github.com/theGeekist/skills.git
 cd skills
 ./scripts/link-local.sh --client all --dry-run
 ./scripts/link-local.sh --client all
@@ -45,7 +45,7 @@ An existing tag is never moved. If a tag exists but its release is missing, a ru
 
 ## Prepare the next release
 
-Update `.codex-plugin/plugin.json` and `.claude-plugin/plugin.json` to the same next version. Write `release-notes/vX.Y.Z.md`, update the install reference in this file and README, and run the checks documented in CONTRIBUTING. Review brand/source notices with the release contents. Merge the prepared change or manually run the workflow on its intended commit, then verify the published tag, manifest and checksums.
+Update `.codex-plugin/plugin.json` and `.claude-plugin/plugin.json` to the same next version. Set the same tag in `standards/skill-catalogue.json` and regenerate with `python3 scripts/sync-skill-catalogue.py`. Write `release-notes/vX.Y.Z.md`, update the install reference in this file and README, and run the checks documented in CONTRIBUTING. Review brand/source notices with the release contents. Merge the prepared change or manually run the workflow on its intended commit, then verify the published tag, manifest and checksums.
 
 Tag protection and additional repository security settings can strengthen immutability. They are maintenance tasks, not substitutes for the release checks or a reason to abandon an authorised release. Do not overwrite a published tag to repair a release; use a new version where content changes.
 

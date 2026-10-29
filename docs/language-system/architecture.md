@@ -16,7 +16,7 @@ Keep shared meaning and writing guidance independent of individual agent clients
 | Verified sources, corrections and tool experiments | [Framework evaluation](framework-evaluation.md) and [source manifest](sources.json) |
 | Writing and reader-navigation conventions | [Writing](../../standards/writing.md) and [content patterns](../../standards/content-patterns.md) |
 | Discover or reconcile project meaning | [Establish project language](../../skills/establish-project-language/SKILL.md) |
-| Choose an authoring or review skill | [Purpose-specific skill table](../../README.md#choose-a-language-skill) |
+| Choose an authoring or review skill | [Purpose-specific skill table](../../README.md#choose-a-skill) |
 | Use the legacy entry point explicitly | [Writing workflow router](../../skills/write-project-content/SKILL.md) |
 | Continue work through evidence gaps | [Advance with uncertainty](../../skills/advance-with-uncertainty/SKILL.md) and [shared conventions](../../standards/uncertainty.md) |
 | User goals and scope additions | [Recorded requirements](requirements.md) |

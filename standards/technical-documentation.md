@@ -19,6 +19,12 @@ Keep meaningful constraints visible in the main explanation. Put detailed signat
 
 An explanation of signed approvals might describe a signature as a check that the approval came from an authorised source and was not changed, then link to the exact cryptographic contract. Do not call signing encryption or imply that a valid identity automatically grants permission.
 
+## Simplify the explanation, preserve the contract
+
+Invented source facts: only workspace members may export, the format is CSV, and the period is the last 30 days. With those facts established, “The export subsystem exposes a constrained temporal retrieval capability” can become “Workspace members can export the last 30 days as CSV”. Link the exact period calculation and permission checks for engineers. A shorter summary such as “Export your data” loses conditions that may affect a business reader's decision.
+
+Preserve exact protocol values, schema names and accepted specialist terms in reference material. Explain them in the reader's route rather than replacing identifiers with friendlier but inaccurate names.
+
 ## Choose useful architecture views
 
 For an architecture explanation, use [arc42's overview](https://arc42.org/overview/) as a coverage prompt. Show the relevant system context and boundaries, runtime interactions, deployment responsibilities, quality concerns and terminology. Choose only views that answer the reader's question; this is a documentation check, not permission to change the architecture or require twelve sections.

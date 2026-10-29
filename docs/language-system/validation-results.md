@@ -1,5 +1,7 @@
 # Validation results and next checks
 
+For v1.6.0 presentation generation, preserved architecture rules and isolated editorial task trials, see [the adoption record](competitive-adoption.md).
+
 The initial evaluation below is retained as a checkpoint. The later all-eleven language/source review, current checks and preserved-meaning audit are in [architecture language review](architecture-language-review.md), with source lineage in [the framework map](../../standards/framework-evidence.md).
 
 Reviewed 29 October 2026. The collection now has eleven portable skill packages: focused writing/review entry points, terminology discovery, actionable uncertainty, two smaller architecture cores and an explicit compatibility chooser. Shared references, lifecycles and the optional local Codex adapter are implemented. The next adoption checks concern real-reader comprehension and client-specific loading.

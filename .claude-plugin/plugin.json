@@ -1,7 +1,7 @@
 {
   "name": "geekist-architecture-skills",
-  "version": "1.5.1",
-  "description": "Architecture and shared project-language skills from Geekist.",
+  "version": "1.6.0",
+  "description": "Clear agent prose, shared project terminology and practical architecture workflows from Geekist.",
   "author": {
     "name": "Geekist",
     "url": "https://geekist.co"
@@ -10,13 +10,15 @@
   "repository": "https://github.com/theGeekist/skills",
   "license": "MIT",
   "keywords": [
-    "architecture",
     "agent-skills",
-    "backend",
-    "frontend",
-    "feature-first",
-    "terminology",
+    "plain-language",
+    "technical-writing",
     "documentation",
-    "plain-language"
+    "terminology",
+    "architecture",
+    "copywriting",
+    "adr",
+    "claude-code",
+    "codex"
   ]
 }

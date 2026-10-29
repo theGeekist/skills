@@ -1,0 +1,390 @@
+{
+  "version": 1,
+  "release": "v1.6.0",
+  "repository": "https://github.com/theGeekist/skills",
+  "plugin": {
+    "description": "Clear agent prose, shared project terminology and practical architecture workflows from Geekist.",
+    "display_name": "Geekist Skills",
+    "short_description": "Clear agent prose and consistent project meanings",
+    "long_description": "Purpose-specific skills connect project terminology, evidence and reader needs across implementation tasks, decisions, documentation, marketing, interfaces and Jason’s architecture playbooks.",
+    "keywords": [
+      "agent-skills",
+      "plain-language",
+      "technical-writing",
+      "documentation",
+      "terminology",
+      "architecture",
+      "copywriting",
+      "adr",
+      "claude-code",
+      "codex"
+    ],
+    "default_prompts": [
+      "Establish the concepts and vocabulary in this repository.",
+      "Review this project explanation for clear prose and consistent meanings.",
+      "Write this technical explanation for engineering and business readers.",
+      "Turn this evidence gap into bounded next actions."
+    ]
+  },
+  "skills": {
+    "advance-with-uncertainty": {
+      "title": "Advance through evidence gaps",
+      "purpose": "Keep honest evidence gaps actionable in tasks, decisions and handoffs.",
+      "when_to_use": "Use when an unrun check or uncertain claim is preventing independent authorised work.",
+      "example_request": "Turn this untested adapter decision into bounded next actions and clear completion evidence.",
+      "expected_result": "A precise gap, the next check, the dependent step and the work that can continue.",
+      "example": {
+        "before": "Compatibility is unproven. Stop implementation.",
+        "after": "Implement the authorised adapter. Check one local client event before claiming compatibility; the check is still pending.",
+        "source_facts": "The adapter implementation is authorised. Compatibility has not been checked. One local client-event check is required before claiming compatibility."
+      },
+      "source_basis": "Jason’s continuation requirement is the authority. Related decision structure draws on MADR; this workflow is a local synthesis.",
+      "reference": "uncertainty.md",
+      "sources": [
+        {
+          "label": "MADR",
+          "url": "https://adr.github.io/madr/"
+        }
+      ],
+      "activation_description": "Turn evidence gaps and unresolved questions into bounded next actions while preserving honest claims and actual blockers. Use when drafting or reviewing tasks, ADRs, plans, assessments or worker handoffs, especially when labels such as unproven, unqualified or no evidence are being used to reject options or halt authorised implementation.",
+      "interface": {
+        "icon_small": "./assets/geekist-small.svg",
+        "icon_large": "./assets/geekist.svg",
+        "display_name": "Advance With Uncertainty",
+        "short_description": "Turn evidence gaps into bounded next actions",
+        "default_prompt": "Use $advance-with-uncertainty to record this evidence gap and continue the authorised work with clear validation and blocker criteria."
+      },
+      "allow_implicit_invocation": null
+    },
+    "backend-slice-architecture": {
+      "title": "Review backend ownership and boundaries",
+      "purpose": "Apply Jason’s capability-first backend rules while keeping coordination explicit.",
+      "when_to_use": "Use when designing or reviewing a backend against this chosen model.",
+      "example_request": "Review this service boundary using the existing backend rules; preserve local naming and propose the smallest migration.",
+      "expected_result": "A boundary recommendation tied to the existing rules, code and concrete consequences.",
+      "example": {
+        "before": "Put the checkout and stock workflows into a shared helper.",
+        "after": "Keep checkout and stock rules inside their capabilities. Coordinate the cross-capability workflow in the existing application surface.",
+        "source_facts": "Checkout and stock are separate owned capabilities. A workflow coordinates both through the existing application surface."
+      },
+      "source_basis": "Jason’s original backend rules govern architecture. Microsoft and Google writing guidance improves their explanation; it does not add architectural requirements.",
+      "reference": "placement-and-contracts.md",
+      "sources": [
+        {
+          "label": "Microsoft plain-word guidance",
+          "url": "https://learn.microsoft.com/en-us/style-guide/word-choice/use-simple-words-concise-sentences"
+        },
+        {
+          "label": "Google jargon guidance",
+          "url": "https://developers.google.com/style/jargon"
+        }
+      ],
+      "activation_description": "Use when creating, refactoring, reviewing, or incrementally migrating backend architecture towards a capability-first, package-shaped model with explicit public APIs, clear orchestration, and earned shared infrastructure across apps, packages, libraries, modules, or equivalent project roots.",
+      "interface": {
+        "icon_small": "./assets/geekist-small.svg",
+        "icon_large": "./assets/geekist.svg",
+        "display_name": "Backend Slice Architecture",
+        "short_description": "Review backend ownership and orchestration",
+        "default_prompt": "Use $backend-slice-architecture to review backend placement, public boundaries, orchestration, and incremental migration."
+      },
+      "allow_implicit_invocation": null
+    },
+    "establish-project-language": {
+      "title": "Establish shared project terminology",
+      "purpose": "Discover and maintain the meanings that code, decisions and documents share.",
+      "when_to_use": "Use when onboarding to a domain, reconciling competing terms or introducing a consequential concept.",
+      "example_request": "Find what eligible means in this project and reconcile the code, decisions and interface wording.",
+      "expected_result": "A sourced terminology record with context, accepted meanings, aliases and unresolved differences.",
+      "example": {
+        "before": "Ready, approved and eligible all mean the account can proceed.",
+        "after": "Keep the three labels distinct until sources establish their meanings. Record which condition permits the account to proceed.",
+        "source_facts": "The sources use ready, approved and eligible. Their equivalence has not been established, and each may express a different condition."
+      },
+      "source_basis": "DDD informs context-specific meaning; SKOS informs concepts and labels; Good Docs informs terminology records. The local JSON registry is not a formal SKOS or ISO implementation.",
+      "reference": "writing.md",
+      "sources": [
+        {
+          "label": "DDD bounded contexts",
+          "url": "https://martinfowler.com/bliki/BoundedContext.html"
+        },
+        {
+          "label": "W3C SKOS",
+          "url": "https://www.w3.org/TR/skos-reference/"
+        },
+        {
+          "label": "Good Docs terminology",
+          "url": "https://gitlab.com/tgdp/templates/-/tree/main/terminology-system"
+        }
+      ],
+      "activation_description": "Discover, reconcile and maintain project concepts and terminology from code, schemas, tests, decisions and existing content. Use when starting a project, onboarding to an existing domain, resolving competing meanings, proposing new terms, or establishing shared language across agents and artefacts.",
+      "interface": {
+        "icon_small": "./assets/geekist-small.svg",
+        "icon_large": "./assets/geekist.svg",
+        "display_name": "Establish Project Language",
+        "short_description": "Establish shared project terms and meanings",
+        "default_prompt": "Use $establish-project-language to establish the concepts and vocabulary in this repository."
+      },
+      "allow_implicit_invocation": null
+    },
+    "frontend-slice-architecture": {
+      "title": "Review frontend features and scenes",
+      "purpose": "Apply Jason’s feature-first frontend rules with explicit composition and earned sharing.",
+      "when_to_use": "Use when designing or reviewing a frontend against this chosen model.",
+      "example_request": "Review these feature and scene boundaries without changing the framework or underlying frontend rules.",
+      "expected_result": "A targeted recommendation preserving feature ownership, public surfaces and scene composition.",
+      "example": {
+        "before": "The shared button should own the checkout workflow state.",
+        "after": "Keep checkout workflow state in its feature. Let the scene compose the feature with shared UI primitives.",
+        "source_facts": "Checkout owns its workflow state. The shared button is a UI primitive, and scenes compose features."
+      },
+      "source_basis": "Jason’s original frontend rules govern architecture. Plain-language sources improve navigation and explanation; they do not introduce new frontend requirements.",
+      "reference": "placement-and-contracts.md",
+      "sources": [
+        {
+          "label": "Microsoft plain-word guidance",
+          "url": "https://learn.microsoft.com/en-us/style-guide/word-choice/use-simple-words-concise-sentences"
+        },
+        {
+          "label": "Google jargon guidance",
+          "url": "https://developers.google.com/style/jargon"
+        }
+      ],
+      "activation_description": "Use when creating, refactoring, reviewing, or incrementally migrating frontend architecture towards a feature-first, package-shaped model with explicit public APIs, thin scene-level composition, and earned shared UI and hooks.",
+      "interface": {
+        "icon_small": "./assets/geekist-small.svg",
+        "icon_large": "./assets/geekist.svg",
+        "display_name": "Frontend Slice Architecture",
+        "short_description": "Review feature ownership and scene composition",
+        "default_prompt": "Use $frontend-slice-architecture to review frontend placement, public boundaries, scene composition, and incremental migration."
+      },
+      "allow_implicit_invocation": null
+    },
+    "record-architecture-decisions": {
+      "title": "Record clear architecture decisions",
+      "purpose": "Explain one consequential decision, its viable options and its consequences.",
+      "when_to_use": "Use when authoring or updating an architecture decision record, using the project’s format and authority.",
+      "example_request": "Record why we chose a shared queue, including alternatives, the pending latency check and when to reconsider.",
+      "expected_result": "A decision record with context, options, outcome, consequences and explicit evidence status.",
+      "example": {
+        "before": "The shared queue is the best option and will meet the latency target.",
+        "after": "Choose the shared queue for this prototype. Measure latency before claiming the target is met; record what result would trigger reconsideration.",
+        "source_facts": "The shared queue is chosen for a prototype. Latency has not been measured, so meeting the target is still a pending claim."
+      },
+      "source_basis": "MADR informs context, options, outcome and consequences. Evidence status and reconsideration guidance are local adaptations.",
+      "reference": "decisions.md",
+      "sources": [
+        {
+          "label": "MADR",
+          "url": "https://adr.github.io/madr/"
+        }
+      ],
+      "activation_description": "Write, explain or update architecture decision records (ADRs), including context, viable options, decision drivers, consequences, status and reconsideration conditions. Use when the requested artefact is a decision record; use architecture skills for designing boundaries and technical documentation for general explanations.",
+      "interface": {
+        "icon_small": "./assets/geekist-small.svg",
+        "icon_large": "./assets/geekist.svg",
+        "display_name": "Record Architecture Decisions",
+        "short_description": "Explain decisions, options and consequences",
+        "default_prompt": "Use $record-architecture-decisions for this project artefact."
+      },
+      "allow_implicit_invocation": null
+    },
+    "review-project-language": {
+      "title": "Review clarity and consistent meaning",
+      "purpose": "Review terminology, reader navigation and consequential claims across project material.",
+      "when_to_use": "Use when auditing existing writing or requesting a revision across related artefacts.",
+      "example_request": "Review this task, decision and announcement for consistent meanings and explain every consequential edit.",
+      "expected_result": "Located findings or an authorised revision that preserves meanings, constraints and source claims.",
+      "example": {
+        "before": "Improve the eligibility coverage signal across the activation surface.",
+        "after": "Explain what eligibility and coverage mean here, then name the behaviour that should change. Keep eligibility and coverage distinct.",
+        "source_facts": "Eligibility and coverage are distinct project concepts. Their definitions and the intended behaviour need to be established before rewriting the requirement."
+      },
+      "source_basis": "Microsoft, Google and the ISO plain-language public abstract inform reader-focused review. The four repository outcomes are Jason’s priorities, not an ISO certification claim.",
+      "reference": "review.md",
+      "sources": [
+        {
+          "label": "Microsoft plain-word guidance",
+          "url": "https://learn.microsoft.com/en-us/style-guide/word-choice/use-simple-words-concise-sentences"
+        },
+        {
+          "label": "Google jargon guidance",
+          "url": "https://developers.google.com/style/jargon"
+        },
+        {
+          "label": "ISO plain-language abstract",
+          "url": "https://www.iso.org/standard/78907.html"
+        }
+      ],
+      "activation_description": "Review existing project text for inconsistent terminology, changed meanings, dense explanations, weak reader navigation and evidence language that stalls work. Use for editorial or cross-artefact language audits and requested revisions; use specialist writing skills when the primary request is to author a new artefact.",
+      "interface": {
+        "icon_small": "./assets/geekist-small.svg",
+        "icon_large": "./assets/geekist.svg",
+        "display_name": "Review Project Language",
+        "short_description": "Review clarity, claims and consistent meaning",
+        "default_prompt": "Use $review-project-language for this project artefact."
+      },
+      "allow_implicit_invocation": null
+    },
+    "write-implementation-tasks": {
+      "title": "Write actionable implementation tasks",
+      "purpose": "Give the next worker an observable outcome, constraints and useful validation.",
+      "when_to_use": "Use for tickets, acceptance criteria and handoffs that another worker should be able to execute.",
+      "example_request": "Write a task for members to export their own bookings; keep the access restriction and include failure cases.",
+      "expected_result": "A task with observable behaviour, acceptance criteria, validation and precise dependencies.",
+      "example": {
+        "before": "Improve export support and validate permissions.",
+        "after": "Let members export their own bookings. Reject exports of another member’s bookings and verify both outcomes.",
+        "source_facts": "Members may export their own bookings. They may not export another member’s bookings."
+      },
+      "source_basis": "The task and handoff pattern is local guidance. Good Docs how-to material informs goal and completion-oriented structure without imposing a template or Scrum process.",
+      "reference": "tasks.md",
+      "sources": [
+        {
+          "label": "Good Docs how-to guidance",
+          "url": "https://gitlab.com/tgdp/templates/-/tree/main/how-to"
+        }
+      ],
+      "activation_description": "Write implementation tasks and worker handoffs. Use for engineering tickets, implementation plans and acceptance criteria that need an observable outcome, concrete behaviour, validation and actionable dependencies. Use the ADR skill when the requested artefact is a decision record; use architecture skills for designing boundaries.",
+      "interface": {
+        "icon_small": "./assets/geekist-small.svg",
+        "icon_large": "./assets/geekist.svg",
+        "display_name": "Write Implementation Tasks",
+        "short_description": "Write tasks with observable outcomes",
+        "default_prompt": "Use $write-implementation-tasks for this project artefact."
+      },
+      "allow_implicit_invocation": null
+    },
+    "write-interface-content": {
+      "title": "Write interface copy for real states",
+      "purpose": "Explain what happened, what it means and what the user can do next.",
+      "when_to_use": "Use for labels, errors, empty states, progress messages and dashboard wording.",
+      "example_request": "Write the interrupted-export message using the actual state contract; do not imply the download completed.",
+      "expected_result": "State-accurate interface wording, consistent action names and useful recovery.",
+      "example": {
+        "before": "Export success: processing incomplete.",
+        "after": "Your export stopped before completion. Try again.",
+        "source_facts": "The export stopped before completion. The product supports trying again."
+      },
+      "source_basis": "Atlassian informs situational voice and tone. State distinctions, event-based progress and domain-preserving labels are local rules.",
+      "reference": "interface-content.md",
+      "sources": [
+        {
+          "label": "Atlassian voice and tone",
+          "url": "https://atlassian.design/foundations/content/voice-tone/"
+        }
+      ],
+      "activation_description": "Write in-product interface copy: action labels, forms, dashboard metrics, progress messages, errors, empty states, tooltips and notifications. Use for state-aware wording and useful next actions grounded in actual product behaviour. Use marketing-content guidance for campaigns and landing pages.",
+      "interface": {
+        "icon_small": "./assets/geekist-small.svg",
+        "icon_large": "./assets/geekist.svg",
+        "display_name": "Write Interface Content",
+        "short_description": "Write clear copy for actual product states",
+        "default_prompt": "Use $write-interface-content for this project artefact."
+      },
+      "allow_implicit_invocation": null
+    },
+    "write-marketing-content": {
+      "title": "Explain supported product value",
+      "purpose": "Connect audience needs with product capabilities and substantiated claims.",
+      "when_to_use": "Use for announcements, landing-page copy, positioning and customer explanations.",
+      "example_request": "Announce booking exports for members; preserve that background scheduling has not shipped.",
+      "expected_result": "Customer-facing value grounded in actual behaviour, with stronger claims separated for validation.",
+      "example": {
+        "before": "Automatically export all your bookings every day.",
+        "after": "Download your bookings when you need them.",
+        "source_facts": "Members can download bookings on demand. Automatic daily scheduling has not shipped."
+      },
+      "source_basis": "Audience, value and claim patterns are a local synthesis. Microsoft and Google inform clear expression; they do not validate product claims or conversion performance.",
+      "reference": "marketing.md",
+      "sources": [
+        {
+          "label": "Microsoft plain-word guidance",
+          "url": "https://learn.microsoft.com/en-us/style-guide/word-choice/use-simple-words-concise-sentences"
+        },
+        {
+          "label": "Google jargon guidance",
+          "url": "https://developers.google.com/style/jargon"
+        }
+      ],
+      "activation_description": "Write marketing copy, landing-page text, product announcements, positioning briefs and customer-facing explanations of technical capabilities. Use to connect audience needs with product value, substantiated claims and an appropriate call to action. Use interface-content guidance for in-product labels, errors and dashboard states.",
+      "interface": {
+        "icon_small": "./assets/geekist-small.svg",
+        "icon_large": "./assets/geekist.svg",
+        "display_name": "Write Marketing Content",
+        "short_description": "Explain product value with supported claims",
+        "default_prompt": "Use $write-marketing-content for this project artefact."
+      },
+      "allow_implicit_invocation": null
+    },
+    "write-project-content": {
+      "title": "Choose a project writing workflow",
+      "purpose": "Select the relevant specialist when you explicitly want help choosing.",
+      "when_to_use": "Use on explicit request to choose a writing workflow; ordinary writing can select its specialist directly.",
+      "example_request": "Choose the right workflow for explaining a decision and announcing the resulting feature.",
+      "expected_result": "A purpose-specific route, with separate artefacts where readers have different needs.",
+      "example": {
+        "before": "Load every writing and architecture guide before drafting the announcement.",
+        "after": "Use marketing guidance for the announcement. Consult the decision record for the accepted choice and its constraints.",
+        "source_facts": "The requested artefact is an announcement. An accepted decision record supplies the governing choice and constraints."
+      },
+      "source_basis": "The routing table is a local compatibility aid. Agent Skills informs packaging and selective loading; Diátaxis distinguishes reader needs within technical documentation.",
+      "reference": "routing.md",
+      "sources": [
+        {
+          "label": "Agent Skills specification",
+          "url": "https://agentskills.io/specification"
+        },
+        {
+          "label": "Diátaxis",
+          "url": "https://diataxis.fr/start-here/"
+        }
+      ],
+      "activation_description": "Compatibility router for explicit requests to use write-project-content or to choose a project-writing workflow. Keep ordinary task, ADR, technical-documentation, marketing, interface-copy and language-review requests with their purpose-specific skills; this router is not their default prerequisite.",
+      "interface": {
+        "icon_small": "./assets/geekist-small.svg",
+        "icon_large": "./assets/geekist.svg",
+        "display_name": "Choose a Project Writing Workflow",
+        "short_description": "Choose the relevant writing workflow",
+        "default_prompt": "Use $write-project-content to choose the appropriate project-writing workflow."
+      },
+      "allow_implicit_invocation": false
+    },
+    "write-technical-documentation": {
+      "title": "Write navigable technical documentation",
+      "purpose": "Help readers learn, complete a task, look up a contract or understand a concept.",
+      "when_to_use": "Use for tutorials, how-to guides, references, architecture explanations and developer guides.",
+      "example_request": "Explain the export flow so a marketing reader can find its purpose and an engineer can find the access contract.",
+      "expected_result": "A purpose-led document with explained terms, visible constraints and routes to exact technical detail.",
+      "example": {
+        "before": "The export orchestration materialises capability DTOs through the adapter.",
+        "after": "The export prepares a file of the member’s bookings. Link the access rules and data contract where engineers need the exact details.",
+        "source_facts": "The export prepares a file of the member’s bookings. Access rules and an exact data contract are available to link."
+      },
+      "source_basis": "Diátaxis supplies four reader purposes. Good Docs informs procedures and explanations; selected arc42 views support architecture coverage without imposing a system design.",
+      "reference": "technical-documentation.md",
+      "sources": [
+        {
+          "label": "Diátaxis",
+          "url": "https://diataxis.fr/start-here/"
+        },
+        {
+          "label": "Good Docs templates",
+          "url": "https://gitlab.com/tgdp/templates"
+        },
+        {
+          "label": "arc42 overview",
+          "url": "https://arc42.org/overview/"
+        }
+      ],
+      "activation_description": "Write technical documentation: tutorials, how-to guides, API or configuration references, architecture explanations and developer guides. Use for learning, task completion, contract lookup or conceptual understanding, including technical documents that business readers must navigate. Use the ADR skill for decision records.",
+      "interface": {
+        "icon_small": "./assets/geekist-small.svg",
+        "icon_large": "./assets/geekist.svg",
+        "display_name": "Write Technical Documentation",
+        "short_description": "Write guides for technical and business readers",
+        "default_prompt": "Use $write-technical-documentation for this project artefact."
+      },
+      "allow_implicit_invocation": null
+    }
+  }
+}

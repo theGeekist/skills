@@ -44,6 +44,12 @@ Keep implementation state separate from evidence state. Pair material uncertaint
 
 For customer-facing writing, connect the result to its value and evidence. Never invent movement, success, causation or assurance to make the language sound positive.
 
+## Edit without flattening the writer's voice
+
+Identify the draft's main point, then remove repeated staging, abstract wording and unexplained terms that obstruct it. Keep deliberate humour, imagery, rhythm and precise technical language when they serve this reader. A punctuation habit or long sentence is a signal to inspect, not proof of poor writing or AI authorship.
+
+Invented example: “The provenance qualification surface remains unproven” might mean “We have not yet checked which source each result came from.” Use that revision only when it matches the source. If “provenance” is an accepted specialist term for this reader, retain it and explain the missing check. Add the next bounded action where the gap affects ongoing work.
+
 ## Keep conversations useful
 
 Answer a direct question directly. Treat exploration as exploration. Report meaningful findings, decisions, changes and remaining uncertainties during work. A progress update should help the reader understand movement rather than list tool activity.
@@ -64,3 +70,5 @@ Mechanical checks can detect structural errors and selected vocabulary drift. Hu
 ## Sources and local adaptation
 
 These local conventions draw on [Microsoft's simple-word guidance](https://learn.microsoft.com/en-us/style-guide/word-choice/use-simple-words-concise-sentences), [Google's audience-aware jargon guidance](https://developers.google.com/style/jargon) and the [ISO 24495-1 public abstract](https://www.iso.org/standard/78907.html). They support reader-focused expression; they do not replace project meanings or establish ISO conformity. Context-aware terminology also draws on [DDD bounded contexts](https://martinfowler.com/bliki/BoundedContext.html), [SKOS labels and definitions](https://www.w3.org/TR/skos-reference/) and the [Good Docs terminology template](https://gitlab.com/tgdp/templates/-/tree/main/terminology-system). The registry is a local JSON model, not a formal SKOS implementation.
+
+The editing examples also learn from [Humanizer's contextual pattern guidance](https://github.com/blader/humanizer/blob/0ef9fe5bc3572734fd3ae6c448fe00a30cd5dcf0/SKILL.md) and [Plain Language Editor's focus on meaning, claims and writer voice](https://github.com/marketingskills/plain-language-editor/blob/df7b314509eb47a722aa620f11784fab76a595e6/SKILL.md). The examples and cross-artefact workflow here are local adaptations; these sources do not mandate punctuation bans or changes to project rules.
