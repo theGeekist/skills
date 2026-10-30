@@ -87,7 +87,7 @@ The [design and differences](docs/language-system/design-and-differences.md) exp
 | --- | --- |
 | How the pieces connect | [Reader route and design](docs/language-system/architecture.md) · [Lifecycles](docs/language-system/lifecycles.md) |
 | What has been checked | [Validation results](docs/language-system/validation-results.md) · [Context costs](docs/language-system/context-budget.json) |
-| How to maintain it | [Contributing](CONTRIBUTING.md) · [Publishing](PUBLISHING.md) · [Recommendation pipeline](docs/language-system/recommendations.json) |
+| How to maintain it | [Contributing](CONTRIBUTING.md) · [Publishing](PUBLISHING.md) · [Implementation map](docs/language-system/implementation-status.json) |
 
 Checks cover package structure, reference consistency, selected language signals and recorded agent cases. Native client activation and human comprehension need their own observations. Human search discovery and agent skill selection are separate concerns.
 

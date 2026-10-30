@@ -25,6 +25,10 @@ When an annotated revision is requested, or a substantial edit needs explanation
 
 For example, changing “Exports are available” to “Workspace members can export the last 30 days as CSV” is justified only if those conditions are in the source. Name that source in the note. If the conditions are unknown, keep the supported wording and record the question rather than inventing specificity. Revision notes explain authorised work; they do not add a new approval gate.
 
+## Use concrete patterns for a detailed edit
+
+For sentence-level or cross-artefact editing, consult the relevant [editorial patterns](editorial-patterns.md). The reference provides stable identifiers, source facts, revisions and exceptions for changed meanings, lost conditions, unsupported claims and other consequential problems. Read only the patterns relevant to the finding; a small correction does not require the full catalogue. Use the identifier to make a finding easy to locate, not to assign an AI-authorship or writing-quality score.
+
 ## Findings that enable revision
 
 For each material finding, give the location, observed wording, effect on understanding and smallest useful correction. Prioritise changed meaning and false claims before vocabulary drift, weak navigation and cosmetic preferences. If no material defect is found, say so without inventing findings.

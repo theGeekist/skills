@@ -65,19 +65,6 @@
       "licence_note": "Apache-2.0 as declared upstream. Review dependency notices before adoption."
     }
   ],
-  "local_observations": {
-    "method": "Python shutil.which, read-only PATH lookup",
-    "executables": {
-      "codex": null,
-      "claude": null,
-      "gemini": null,
-      "copilot": null,
-      "gh": null
-    },
-    "credentials_inspected": false,
-    "client_installations_performed": false,
-    "global_configuration_changed": false
-  },
   "evidence_types": [
     "portable format and isolated-file validation",
     "metadata catalogue selection",

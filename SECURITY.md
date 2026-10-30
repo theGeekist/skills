@@ -1,7 +1,9 @@
 # Security
 
-The installed skills contain instructions, local references, metadata and brand assets. Using them requires no credentials, executable runtime or MCP server. Repository validators and the optional Codex adapter are separate opt-in scripts. The release workflow uses GitHub's scoped Actions token to publish versioned archives; it is not installed with a skill.
+The installable skills contain instructions, local references, metadata and brand assets. They require no credentials, executable runtime or MCP server. Repository validators and the optional Codex adapter are separate opt-in scripts. The release workflow is not installed with a skill.
 
-Please report prompt-injection concerns, unsafe instructions, misleading dependency declarations or supply-chain issues privately through Geekist's published security contact. Do not include secrets or exploit details in a public issue before a private reporting route is confirmed.
+## Report a concern
 
-Registry mirrors should reference the canonical repository and release commit so users can verify provenance.
+Use the [Geekist contact form](https://geekist.co/contact-us/) to contact the maintainers about prompt injection, unsafe instructions, misleading dependencies or supply-chain concerns. Include the affected skill, source revision and a brief description. Arrange an appropriate private channel before sharing secrets or sensitive reproduction details.
+
+For reproducibility, identify the canonical repository and release commit rather than only a directory mirror. Review executable repository scripts separately from the Markdown instruction package.

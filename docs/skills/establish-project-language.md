@@ -17,11 +17,9 @@ Expected result: A sourced terminology record with context, accepted meanings, a
 
 ## A concrete example
 
-This invented example illustrates the guidance. It is not an observed product result or a benchmark.
+This illustrative example starts from the source facts below.
 
 **Source facts and constraints:** The sources use ready, approved and eligible. Their equivalence has not been established, and each may express a different condition.
-
-The before text may obscure or overstate those facts. The revision must follow the supplied facts and constraints.
 
 **Before**
 
@@ -30,8 +28,6 @@ The before text may obscure or overstate those facts. The revision must follow t
 **After**
 
 > Keep the three labels distinct until sources establish their meanings. Record which condition permits the account to proceed.
-
-Preserve the source facts, governing meanings and consequential constraints when applying the example to real work.
 
 ## Install and use
 
@@ -53,11 +49,11 @@ DDD informs context-specific meaning; SKOS informs concepts and labels; Good Doc
 - [W3C SKOS](https://www.w3.org/TR/skos-reference/)
 - [Good Docs terminology](https://gitlab.com/tgdp/templates/-/tree/main/terminology-system)
 
-These sources inform selected practices; they do not certify this skill or establish better prose quality. The [source-to-guidance map](../../standards/framework-evidence.md) records what was applied, adapted or deferred.
+The [source-to-guidance map](../../standards/framework-evidence.md) explains how these sources inform the skill and which decisions are local.
 
 ## Follow the work
 
 - [Walk through all eleven skills](../language-system/skill-walkthrough.md)
 - [Original research](../language-system/research-baseline.md) and [framework evaluation](../language-system/framework-evaluation.md)
 - [Compare existing writing skills](../language-system/competing-writing-skills.md)
-- [Validation scope and next checks](../language-system/validation-results.md)
+- [Validation and evidence](../language-system/validation-results.md)

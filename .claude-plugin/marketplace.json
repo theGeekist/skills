@@ -1,6 +1,6 @@
 {
   "name": "geekist",
-  "description": "Portable Geekist architecture and shared project-language skills.",
+  "description": "Clear agent prose, shared project terminology and practical architecture workflows from Geekist.",
   "owner": {
     "name": "Geekist",
     "url": "https://geekist.co"
@@ -8,7 +8,7 @@
   "plugins": [
     {
       "name": "geekist-architecture-skills",
-      "description": "Architecture, terminology and navigable documentation skills from Geekist.",
+      "description": "Clear agent prose, shared project terminology and practical architecture workflows from Geekist.",
       "source": "."
     }
   ]

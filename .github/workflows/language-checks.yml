@@ -13,6 +13,8 @@ jobs:
       - uses: actions/setup-python@v5
         with:
           python-version: '3.12'
+      - name: Check editorial reference drift
+        run: python3 scripts/sync-editorial-patterns.py --check
       - name: Check presentation catalogue drift
         run: python3 scripts/sync-skill-catalogue.py --check
       - name: Check bundled reference drift

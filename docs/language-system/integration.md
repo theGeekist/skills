@@ -2,7 +2,7 @@
 
 ## Use the skills
 
-Install from the branch or an eventual immutable release using a compatible Agent Skills client. The existing `scripts/link-local.sh --client all --dry-run` shows local destinations without changing them. Review the output before linking a canonical checkout. Installing a skill does not install hooks or persistent instructions.
+Install the [versioned collection](../../README.md#install) using a compatible Agent Skills client. The existing `scripts/link-local.sh --client all --dry-run` shows local destinations without changing them. Review the output before linking a canonical checkout. Installing a skill does not install hooks or persistent instructions.
 
 Each skill includes its required references. The short shared baseline is inline, so a specialist does not need an umbrella skill or a full style-guide read. Authors edit `standards/baseline.md` or task-specific references and maintain their mapping in `standards/skill-profiles.json`, then run:
 
@@ -37,14 +37,14 @@ The lint command checks explicit aliases in one context. It ignores code and lin
 
 Review `adapters/instructions/AGENTS.fragment.md` and merge its small policy into the instruction surface the runtime actually loads. Point at the project's chosen terminology and relevant decisions. Preserve existing instructions and resolve conflicts explicitly.
 
-| Runtime | Integration route | Evidence in this change |
+| Runtime | Integration route | Integration boundary |
 | --- | --- | --- |
-| Codex local CLI | Project/global AGENTS.md; optional local Stop adapter | Documentation reviewed; adapter subprocess tested; live loading untested |
-| Codex desktop or IDE | Verify instruction and hook loading in the selected execution mode | No live desktop or IDE test |
-| ChatGPT Work Cloud | Use supported instructions and skills; local command hooks do not transfer automatically | This work uses skills; no hook registration or cloud instruction-loading test |
-| Claude Code | Adapt the same policy to its persistent instructions; use portable skills | Documentation route reviewed; no host test or Claude hook adapter |
-| Copilot | Adapt to supported repository or path instructions | Documentation route reviewed; no live loading test |
-| Gemini / Antigravity | Existing linker provides skill destinations; verify client behaviour separately | Linker mechanics tested; current client discovery and hooks untested |
+| Codex local CLI | Project/global AGENTS.md; optional local Stop adapter | Subprocess coverage checks the adapter; native loading is a separate client test |
+| Codex desktop or IDE | Use the instruction and hook configuration supported by the selected execution mode | Desktop and IDE support are surface-specific |
+| ChatGPT Work Cloud | Use supported instructions and skills | Local command hooks do not transfer automatically |
+| Claude Code | Adapt the same policy to its persistent instructions; use portable skills | Hook protocols require a client-specific adapter |
+| Copilot | Adapt to supported repository or path instructions | Use the instruction surface supported by the selected product |
+| Gemini / Antigravity | The local linker provides skill destinations | Link placement does not establish client discovery or hook support |
 
 Shared Markdown is reusable; loading semantics and hook protocols are runtime-specific. A frontend framework hook and an agent lifecycle hook have different meanings even though both are called hooks.
 

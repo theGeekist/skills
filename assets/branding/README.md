@@ -1,25 +1,23 @@
-# Geekist Skills identity
+# Branding assets
 
-The skill icon uses the exact handwritten **G** from Geekist.co's yellow wordmark, centred on the site's charcoal background. It keeps the existing brand rather than introducing an unrelated symbol.
+The collection uses the yellow handwritten wordmark from [Geekist](https://geekist.co), with a charcoal background where contrast is needed.
 
-## Source and adaptation
+## Source provenance
 
-- Site: <https://geekist.co/>, inspected 29 October 2026.
-- The site's exported homepage references `/wp-content/uploads/Geekist.co_.svg` as its logo, with the alternative text “Geekist.co logo in yellow handwritten-style text”.
-- Pinned source: [Geekist wordmark](https://github.com/theGeekist/geekiststatic/blob/ce75a57ab41ab37a8b3de4b8948501381c1b8de5/wp-content/uploads/Geekist.co_.svg).
+- [Pinned original wordmark](https://github.com/theGeekist/geekiststatic/blob/ce75a57ab41ab37a8b3de4b8948501381c1b8de5/wp-content/uploads/Geekist.co_.svg).
 - Original Git blob: `753611043c69f9bfa802af2ada0f505280ca7df7`.
-- Preserved source copy: `geekist-wordmark-source.svg`; SHA-256 `b1ce8b3b39c9d6fdf8ed40a16f03e28559c859e46c0b7f3125ef99afa9460236`.
+- Local source: `geekist-wordmark-source.svg`.
+- Source SHA-256: `b1ce8b3b39c9d6fdf8ed40a16f03e28559c859e46c0b7f3125ef99afa9460236`.
+- Colours: yellow `#ffde59` and charcoal `#161616`.
 
-The original wordmark is one compound path. The icon retains its first closed subpath (the G) without redrawing its geometry. It applies `translate(43 16) scale(1.02)` inside a `256 × 256` view box, with a rounded charcoal tile. Yellow `#ffde59` comes from the wordmark; charcoal `#161616` comes from the site's base colour.
+## Asset variants
 
-`geekist.svg` is the 512-pixel nominal version; `geekist-small.svg` uses identical geometry with a 128-pixel nominal size. Both remain resolution-independent SVGs. Each skill bundles its own copies and references them through `interface.icon_small` and `interface.icon_large` in `agents/openai.yaml`.
+`readme-banner.svg` retains the complete wordmark path and places it on charcoal for contrast on light and dark pages. Its caption describes the collection in ordinary text.
 
-The source wordmark and both adaptations were rendered and visually checked, including the small icon. No text, font dependency, external image, script or network reference is embedded in the adapted SVGs.
+`geekist.svg` and `geekist-small.svg` are single-letter G tile variants extracted from the first subpath of the source wordmark. They are not the Gk monogram. The nominal sizes are 512 and 128 pixels; the SVG geometry is resolution-independent. Each skill bundles copies referenced by its presentation metadata. A client's actual icon display depends on that client's metadata support.
+
+The SVG assets contain no scripts, external images or network references. The README banner was rendered for visual inspection, and its wordmark path was compared with the source.
 
 ## Attribution
 
-Geekist branding belongs to Geekist. The adaptation was requested by its owner for this skill collection. This note records provenance; it does not assert a separate open trademark or brand licence. The repository's software licence remains unchanged.
-
-## README presentation
-
-`readme-banner.svg` retains the complete original wordmark path unchanged and places it on a charcoal background for contrast on GitHub's light and dark themes. The banner's caption describes the collection. It does not replace the intended Gk icon or establish the earlier extracted G as the accepted brand mark.
+The branding belongs to [Geekist](https://geekist.co). This record describes asset provenance and does not grant a separate trademark licence. The repository's software licence is unchanged.

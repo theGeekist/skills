@@ -54,7 +54,8 @@
     "review-project-language": {
       "references": [
         "review.md",
-        "uncertainty.md"
+        "uncertainty.md",
+        "editorial-patterns.md"
       ]
     }
   }

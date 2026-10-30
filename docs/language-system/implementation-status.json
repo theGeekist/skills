@@ -1,0 +1,57 @@
+{
+  "version": 1,
+  "updated_on": "2026-10-30",
+  "purpose": "Implemented capabilities and their public source routes. Evaluation coverage is separate from implementation status.",
+  "capabilities": [
+    {
+      "id": "shared-language",
+      "implementation": "Canonical baseline and terminology records shared across independently installable skills.",
+      "source": "../../standards/baseline.md",
+      "guide": "architecture.md"
+    },
+    {
+      "id": "focused-workflows",
+      "implementation": "Eleven purpose-specific skills with concern-specific local references and an explicit compatibility chooser.",
+      "source": "../../standards/skill-profiles.json",
+      "guide": "../skills/index.md"
+    },
+    {
+      "id": "actionable-uncertainty",
+      "implementation": "Evidence gaps, actual blockers and authorised work are distinguished in tasks, decisions and handoffs.",
+      "source": "../../skills/advance-with-uncertainty/SKILL.md",
+      "guide": "uncertainty-evaluation.md"
+    },
+    {
+      "id": "inspectable-editing",
+      "implementation": "Optional revision records expose consequential edits, their reasons and retained source constraints.",
+      "source": "../../standards/review.md",
+      "guide": "competitive-adoption.md"
+    },
+    {
+      "id": "editorial-patterns",
+      "implementation": "Attributed local patterns have stable IDs, source-constrained examples and contextual exceptions. A generator checks the readable reference for drift.",
+      "source": "../../standards/editorial-patterns.json",
+      "guide": "../../standards/editorial-patterns.md"
+    },
+    {
+      "id": "consistent-presentation",
+      "implementation": "A canonical catalogue generates overview pages and presentation metadata without rewriting activation descriptions.",
+      "source": "../../standards/skill-catalogue.json",
+      "guide": "discoverability.md"
+    },
+    {
+      "id": "optional-integration",
+      "implementation": "Persistent instruction examples and a bounded Codex Stop adapter are separate from skill installation.",
+      "source": "../../adapters/instructions/AGENTS.fragment.md",
+      "guide": "integration.md"
+    }
+  ],
+  "evaluation_coverage": {
+    "deterministic_checks": "Package structure, canonical-reference consistency, catalogue generation, registry validation and bounded adapter behaviour.",
+    "agent_cases": "Recorded selection, source-discovery, writing, architecture and uncertainty cases; see validation-results.md for inputs and scope.",
+    "human_readers": "No human-comprehension result is included in the published evaluation.",
+    "native_clients": "Documented integration routes are distinguished from observed native activation.",
+    "comparison": "The competing-writing-skills source review is not a comparative prose-quality benchmark."
+  },
+  "results": "validation-results.md"
+}

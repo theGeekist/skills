@@ -17,11 +17,9 @@ Expected result: A targeted recommendation preserving feature ownership, public 
 
 ## A concrete example
 
-This invented example illustrates the guidance. It is not an observed product result or a benchmark.
+This illustrative example starts from the source facts below.
 
 **Source facts and constraints:** Checkout owns its workflow state. The shared button is a UI primitive, and scenes compose features.
-
-The before text may obscure or overstate those facts. The revision must follow the supplied facts and constraints.
 
 **Before**
 
@@ -30,8 +28,6 @@ The before text may obscure or overstate those facts. The revision must follow t
 **After**
 
 > Keep checkout workflow state in its feature. Let the scene compose the feature with shared UI primitives.
-
-Preserve the source facts, governing meanings and consequential constraints when applying the example to real work.
 
 ## Install and use
 
@@ -52,11 +48,11 @@ Jason’s original frontend rules govern architecture. Plain-language sources im
 - [Microsoft plain-word guidance](https://learn.microsoft.com/en-us/style-guide/word-choice/use-simple-words-concise-sentences)
 - [Google jargon guidance](https://developers.google.com/style/jargon)
 
-These sources inform selected practices; they do not certify this skill or establish better prose quality. The [source-to-guidance map](../../standards/framework-evidence.md) records what was applied, adapted or deferred.
+The [source-to-guidance map](../../standards/framework-evidence.md) explains how these sources inform the skill and which decisions are local.
 
 ## Follow the work
 
 - [Walk through all eleven skills](../language-system/skill-walkthrough.md)
 - [Original research](../language-system/research-baseline.md) and [framework evaluation](../language-system/framework-evaluation.md)
 - [Compare existing writing skills](../language-system/competing-writing-skills.md)
-- [Validation scope and next checks](../language-system/validation-results.md)
+- [Validation and evidence](../language-system/validation-results.md)

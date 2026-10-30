@@ -4,14 +4,14 @@ Reviewed 29 October 2026. The active backend and frontend skills use shorter cor
 
 ## Independent comparison
 
-One editor revised each architecture skill. Separate reviewers compared each revised core and all three references against the original sources retained in `standards/architecture-rules/`, from the pre-language-system revision `fcbd5a9`.
+The review compared each architecture core and all three references against the governing sources retained in `standards/architecture-rules/`, from the pre-language-system revision `fcbd5a9`.
 
 | Skill | Review coverage and correction |
 | --- | --- |
 | Backend | Checked all original sections: ownership, placement/promotion conditions, dependency permissions, naming exceptions, delivery, locale/configuration, workspace options, migration, public contracts and amber/red responses. Restored the original force of shallow nesting as a preference and the restriction on internal helper utilities. Removed earlier summary drift involving review urgency, shared boundaries, locale ownership and duplication harm. |
 | Frontend | Checked all original sections: local placement and day-one exceptions, feature/scene boundaries, sibling public dependencies, public surfaces, sharing/state conditions, platform helpers, naming, locale/configuration, migration and review responses. Removed the added independent-testability requirement and approval qualifier. |
 
-The reviewers found no further material changes in architectural meaning. This is independent agent review, not a mechanical proof or a human comprehension study. The source-integrity test protects the original comparison inputs; active wording may improve. The shared baseline governs communication, while changes to architectural requirements need explicit user approval.
+The reviewers found no further material changes in architectural meaning. This is independent agent review, not a mechanical proof or a human comprehension study. The source-integrity test protects the original comparison inputs; active wording may improve. The shared baseline governs communication, while changes to architectural requirements require a distinct architecture proposal.
 
 ## Language and source review across all eleven skills
 

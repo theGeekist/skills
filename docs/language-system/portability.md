@@ -19,18 +19,20 @@ Use the common format in the core. Keep client-specific UI metadata, invocation 
 
 A fresh agent choosing from a supplied metadata catalogue is useful selection evidence. It is not a native loader test. An explicitly named skill tests execution after selection. Keep those result types separate in reports.
 
-## Documented host routes and current evidence
+## Documented installation routes
 
-| Host surface | Documented route | Evidence available here and next check |
+The following routes were reviewed on 29 October 2026. Refer to the linked client documentation when selecting a supported surface.
+
+| Host surface | Route | Integration boundary |
 | --- | --- | --- |
-| Codex CLI / IDE | Local `.agents/skills`, explicit mention or description matching; optional OpenAI metadata | Format and repository cases can run. No local CLI executable; test native discovery and implicit activation in a selected installed client. |
-| ChatGPT desktop / Work / web | Standalone or plugin distribution depends on the surface | This Work session can read supplied skill packages. It does not demonstrate discovery of these new repository skills. Test the actual installed distribution and task. |
-| Claude Code CLI | `.claude/skills` or plugin; relevance-based or explicit invocation | Documentation reviewed; no executable found. Test the full catalogue and observed `Skill` invocation. |
-| Claude desktop / Cowork / cloud | Account-enabled skills and repository support vary by session type; a local directory is not sufficient | Documentation reviewed. Install through the intended surface and record whether that session exposes the skill. |
-| Copilot CLI | Project `.github/skills`, `.claude/skills` or `.agents/skills`; personal `.copilot/skills` or `.agents/skills` | Documentation reviewed; no executable found. Use skill listing/info and an ordinary request, retaining activation evidence. |
-| Copilot app / VS Code / cloud | Agent Skills documented on these surfaces; deployment and settings remain surface-specific | No native app or cloud-agent run. Verify each intended surface rather than inheriting the CLI result. |
-| Gemini CLI | `.gemini/skills` or `.agents/skills`; metadata matching followed by `activate_skill` and client consent | Documentation reviewed; no executable found. Record list, activation and resource reads in an installed CLI. |
-| Antigravity desktop / CLI | Existing repository linker supplies paths | No current first-party loader inspection or host run in this review. Retain as a separate compatibility check. |
+| Codex CLI / IDE | Local `.agents/skills`, explicit mention or description matching; optional OpenAI metadata | Native discovery and implicit activation depend on the installed client |
+| ChatGPT desktop / Work / web / mobile | Supported standalone-skill or plugin distribution | Repository publication is separate from account installation; availability varies by surface |
+| Claude Code CLI | `.claude/skills` or a plugin; relevance-based or explicit invocation | Claude-specific extensions are separate from the portable core |
+| Claude desktop / Cowork / cloud | Supported account skill or plugin installation | A local skill directory alone does not install an account plugin |
+| Copilot CLI | Project `.github/skills`, `.claude/skills` or `.agents/skills`; personal `.copilot/skills` or `.agents/skills` | Skill listing, selection and resource loading are client behaviours |
+| Copilot app / VS Code / cloud | Skill and instruction features supported by the selected product | Deployment settings and execution modes remain surface-specific |
+| Gemini CLI | `.gemini/skills` or `.agents/skills`; metadata matching followed by activation | Client invocation controls are separate from package structure |
+| Antigravity desktop / CLI | Destinations supplied by the local repository linker | A linked path is not native activation evidence |
 
 Primary references: [OpenAI skill authoring](https://learn.chatgpt.com/docs/build-skills), [Claude Code skills](https://code.claude.com/docs/en/skills), [Copilot CLI](https://docs.github.com/en/copilot/how-tos/copilot-cli/customize-copilot/add-skills), [Copilot surfaces](https://docs.github.com/en/copilot/how-tos/copilot-on-github/customize-copilot/customize-cloud-agent/add-skills), [Gemini CLI](https://geminicli.com/docs/cli/skills/). Retrieval details are in [the source manifest](portability-sources.json).
 
@@ -40,7 +42,7 @@ OpenAI's documentation says the initial list can shorten descriptions and, at su
 
 More skills trade a larger metadata catalogue for smaller activated bodies. Measure both. Avoid an umbrella skill that repeats specialist workflows or requires a second activation for every ordinary task. A marketing agent is a role, not a different file format: its request should match marketing-specific terms without requiring architecture vocabulary. Test competitor descriptions and unrelated requests so improved recall does not become excessive activation.
 
-## Reuse a selection evaluator where useful
+## Offline selection analysis
 
 [Google's skill-reach](https://github.com/google/skill-reach) is a relevant existing Apache-2.0 evaluation tool. Its README describes offline frontmatter linting and lexical overlap analysis, plus empirical probes through supported agent runtimes. The tool was installed and its offline lint/overlap commands were executed against the final 11-skill catalogue, using the local keyword driver. Strict lint returned success with no warnings or errors and four informational handoff suggestions. A lexical score is a collision signal rather than native activation evidence.
 
@@ -59,10 +61,10 @@ Both commands returned exit code `0`. The lint suggestions identify backend/fron
 
 The nearest lexical pairs are backend/frontend (rival ratios 0.52/0.56), marketing/interface (0.44/0.44) and decisions/tasks (0.36/0.30). No skill was outranked by another for its own vocabulary in this analysis. These figures help choose collision cases; they are not precision, recall or native-trigger success rates.
 
-[Raw results and source hashes](../../evaluations/portability/offline-manifest.json) identify the exact skill files analysed. The first snapshot is retained separately under `evaluations/portability/initial/`; the final run follows the task-description boundary refinement. No model call or native client probe was run. The next useful evidence is observed task selection in the intended client, using the same ordinary-request cases.
+[Raw results and source hashes](../../evaluations/portability/offline-manifest.json) identify the exact skill files analysed. The first snapshot is retained separately under `evaluations/portability/initial/`; the final run follows the task-description boundary refinement. This offline analysis made no model calls or native client probes. Native activation is outside the recorded result.
 
-## What this environment establishes
+## Evidence boundary
 
-A read-only `shutil.which` check found no `codex`, `claude`, `gemini`, `copilot` or `gh` executable on PATH. No credentials were inspected, no clients installed and no global configuration changed. The work can continue through portable validation, catalogue selection and file-read tests now; native client checks remain explicit adoption tasks.
+Published checks cover portable packaging, metadata selection and observed staged resource access. They do not establish native activation across the listed clients. The [selection evaluation](selection-evaluation.md) identifies the exact cases, prompts and observed results.
 
-The full earlier research remains unchanged in [the baseline](research-baseline.md). This review summarises primary-source concepts without redistributing their full documentation. Tool licences apply to their own code and resources; adopting a file layout does not transfer a vendor's runtime features into other agents.
+The [original research](research-baseline.md) is retained separately. Tool licences apply to their own code and resources; adopting a shared file layout does not transfer a vendor's runtime features into other agents.

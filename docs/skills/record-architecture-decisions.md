@@ -17,11 +17,9 @@ Expected result: A decision record with context, options, outcome, consequences 
 
 ## A concrete example
 
-This invented example illustrates the guidance. It is not an observed product result or a benchmark.
+This illustrative example starts from the source facts below.
 
 **Source facts and constraints:** The shared queue is chosen for a prototype. Latency has not been measured, so meeting the target is still a pending claim.
-
-The before text may obscure or overstate those facts. The revision must follow the supplied facts and constraints.
 
 **Before**
 
@@ -30,8 +28,6 @@ The before text may obscure or overstate those facts. The revision must follow t
 **After**
 
 > Choose the shared queue for this prototype. Measure latency before claiming the target is met; record what result would trigger reconsideration.
-
-Preserve the source facts, governing meanings and consequential constraints when applying the example to real work.
 
 ## Install and use
 
@@ -51,11 +47,11 @@ MADR informs context, options, outcome and consequences. Evidence status and rec
 
 - [MADR](https://adr.github.io/madr/)
 
-These sources inform selected practices; they do not certify this skill or establish better prose quality. The [source-to-guidance map](../../standards/framework-evidence.md) records what was applied, adapted or deferred.
+The [source-to-guidance map](../../standards/framework-evidence.md) explains how these sources inform the skill and which decisions are local.
 
 ## Follow the work
 
 - [Walk through all eleven skills](../language-system/skill-walkthrough.md)
 - [Original research](../language-system/research-baseline.md) and [framework evaluation](../language-system/framework-evaluation.md)
 - [Compare existing writing skills](../language-system/competing-writing-skills.md)
-- [Validation scope and next checks](../language-system/validation-results.md)
+- [Validation and evidence](../language-system/validation-results.md)

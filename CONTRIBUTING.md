@@ -34,3 +34,9 @@ python3 -m unittest discover -s tests -v
 Change canonical references under `standards/`, then regenerate with `python3 scripts/sync-language-references.py`. Keep private project evidence out of this public repository. Record separate results for deterministic checks, independent agent review, human comprehension and actual runtime integration.
 
 Human overview pages and client presentation metadata are generated from `standards/skill-catalogue.json`. Run `python3 scripts/sync-skill-catalogue.py` after changing presentation copy. Skill activation descriptions remain authored in `SKILL.md`; review their intent explicitly before changing the catalogue's comparison value. Preserve the stable plugin identity, architecture rules and explicit compatibility-router policy. Catalogue generation does not certify native client compatibility.
+
+## Review public documentation
+
+Write for the page's reader: a user choosing or applying a skill, a contributor maintaining it, or a reader inspecting published evidence. Replace implementation recommendations with the completed behaviour once implemented. Keep private planning, account operations and authoring-session limitations out of product pages. Describe relevant evidence boundaries precisely in evaluation records. Preserve original test fixtures and raw results as labelled evidence.
+
+For editorial pattern changes, edit `standards/editorial-patterns.json`, run `python3 scripts/sync-editorial-patterns.py`, then regenerate bundled references. Run the generator's `--check` mode and the test suite before committing. These pattern records guide contextual review; automated generation does not verify the truth of a rewrite.

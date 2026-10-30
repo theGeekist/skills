@@ -1,37 +1,38 @@
-# Make the collection easier to find and choose
+# Find and install the right skill
 
-The collection has two audiences: people looking for useful writing skills and agents choosing a workflow. Search visibility, directory listings and native skill activation need separate observations.
+Start with the [skill selector](../skills/index.md). Each overview explains the purpose, gives an example request and expected result, links the underlying sources and provides a versioned installation command.
 
-## Implemented presentation changes
+## Three ways to find guidance
 
-- The README leads with the writing problem, a source-constrained before/after example, installation and a route to all eleven skills.
-- Each skill has a generated [human overview](../skills/index.md) with an example request, expected result, sources and a pinned installation command.
-- `standards/skill-catalogue.json` supplies presentation copy, plugin keywords, prompts and source routes. `scripts/sync-skill-catalogue.py --check` detects drift in generated pages and presentation metadata.
-- Skill activation descriptions remain authored in `SKILL.md` and are checked against the catalogue. Presentation generation cannot silently broaden activation intent.
-- The stable plugin identifier and explicit compatibility-router policy are retained.
-
-The human pages are repository documentation rather than extra context bundled into every skill. No automatic session-start injection or new always-on skill was introduced.
-
-## Repository About settings to apply
-
-The GitHub connection available in this session can write repository files but does not expose a repository-settings update operation. These settings are prepared for the supported settings UI; they are not claimed as applied.
-
-| Setting | Intended value |
+| Reader need | Route |
 | --- | --- |
-| Description | Clear agent prose, shared project terminology and practical architecture workflows from Geekist. |
-| Website | https://geekist.co |
-| Topics | agent-skills, plain-language, technical-writing, documentation, terminology, architecture, copywriting, adr, claude-code, codex, backend, frontend |
+| Complete a specific task | Choose the matching skill from the [overview pages](../skills/index.md) |
+| Understand how the workflows connect | Follow the [worked example](skill-walkthrough.md) |
+| Inspect the underlying reasoning | Read the [source map](../../standards/framework-evidence.md) and [alternative-skills comparison](competing-writing-skills.md) |
 
-The description and first ten topics match the canonical presentation catalogue. Existing backend/frontend topics remain relevant to the original playbooks. The website identifies the publisher; it does not imply that a new skill landing page has been published there.
+The overview pages are human-facing documentation. Installable `SKILL.md` files contain the instructions an agent selects, with local references for more detail. Reading the entire collection is unnecessary for a focused task.
 
-## Directory coverage and web pages
+## Installation and client discovery
 
-The source review retrieved a SkillsCat snapshot containing the original two architecture skills. Current coverage of all eleven needs direct verification. Retrieval of the Geekist skills.sh route failed, so no absence or indexing failure is inferred. Use the directory's supported submission or refresh route after checking its actual coverage.
+Follow the versioned command on the chosen overview page or the [collection installation instructions](../../README.md#install). Choose the target agent and installation scope when prompted.
 
-A future Geekist article can link directly to the human overview for each skill. If separate website landing pages are useful, give each a clear reader purpose, one useful example, installation steps and source links. Keep the repository as the versioned instruction source. A machine-readable catalogue can assist discovery, but no untested claim of automatic agent discovery follows from exposing JSON.
+The portable Agent Skills format describes how a skill is packaged. Individual clients control discovery, selection and reference loading. The CLI installation route is separate from importing and installing a ChatGPT plugin bundle; publishing a GitHub release does not register a plugin in ChatGPT or establish mobile availability. See [client integration](integration.md) and [release and distribution](../../PUBLISHING.md).
 
-## Measure the effects
+## How presentation stays consistent
 
-Record whether readers can identify the appropriate skill and complete installation. Test ordinary requests for native skill selection in the client that matters. For website discovery, inspect indexing and actual query/impression/visit changes over time using available analytics.
+[skill-catalogue.json](../../standards/skill-catalogue.json) supplies overview copy, prompts and plugin presentation. Regenerate those files after editing the catalogue:
 
-These presentation changes provide clearer routes. Improved ranking, traffic, native activation and installation on mobile require their own evidence. See the [competitive review](competing-writing-skills.md) for the observed alternatives and the [Google Search Central guide](https://developers.google.com/search/docs/fundamentals/seo-starter-guide) for the website-discovery principles considered.
+```sh
+python3 scripts/sync-skill-catalogue.py
+python3 scripts/sync-skill-catalogue.py --check
+```
+
+Activation descriptions remain authored in each `SKILL.md`. The generator checks their agreement with the catalogue rather than rewriting their scope. It also preserves the stable plugin identity and the explicit compatibility-router policy.
+
+Directory mirrors may publish different revisions or variants. Check the linked repository and commit before comparing instructions or relying on a package's description.
+
+## Search visibility
+
+Descriptive page titles, useful examples and meaningful links help people and search engines understand the collection. They are not ranking guarantees. The [Google Search Central guide](https://developers.google.com/search/docs/fundamentals/seo-starter-guide) explains crawling, indexing and search presentation.
+
+Search visibility and native agent selection are separate from prose quality. The [validation record](validation-results.md) identifies which checks and task trials have been executed.

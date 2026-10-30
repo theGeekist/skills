@@ -1,6 +1,6 @@
 # Shared language across agents and artefacts
 
-Status: implemented foundation; selected runtime integrations remain experimental. Date: 29 October 2026.
+The collection separates shared project meaning, purpose-specific writing guidance and optional client adapters.
 
 ## Purpose and decision
 
@@ -19,10 +19,9 @@ Keep shared meaning and writing guidance independent of individual agent clients
 | Choose an authoring or review skill | [Purpose-specific skill table](../../README.md#choose-a-skill) |
 | Use the legacy entry point explicitly | [Writing workflow router](../../skills/write-project-content/SKILL.md) |
 | Continue work through evidence gaps | [Advance with uncertainty](../../skills/advance-with-uncertainty/SKILL.md) and [shared conventions](../../standards/uncertainty.md) |
-| User goals and scope additions | [Recorded requirements](requirements.md) |
+| Design goals and scope | [Requirements](requirements.md) |
 | Operating and maintaining the system | [Lifecycles](lifecycles.md) |
 | Install, check and experiment | [Integration guide](integration.md) |
-| Remaining work and adoption decisions | [Recommendation pipeline](recommendations.json) |
 | Actual project evidence and limitations | [Project evaluation](project-evaluation.md) and [validation results](validation-results.md) |
 | Portable packaging and host boundaries | [Portability](portability.md) |
 | Selection and reference loading | [Selection evaluation](selection-evaluation.md) and [architecture refactor](architecture-refactor.md) |
@@ -45,7 +44,7 @@ The registry checker validates IDs, contexts, relationships and selected term co
 
 Vale supplies optional prose rules. Tool evaluation informs which rules are useful. Individual findings need context; broad commercial style packages can conflict with British English and ordinary conversation.
 
-Independent agent cases test whether guidance transfers to realistic material. Catalogue-selection experiments show whether agents can distinguish the descriptions, and observed file reads show which staged resources they accessed. Neither establishes native runtime activation. Human comprehension remains a separate acceptance step. Hook subprocess tests establish adapter behaviour, not actual host support or replacement of already streamed prose.
+Independent agent cases test whether guidance transfers to realistic material. Catalogue-selection experiments show whether agents can distinguish the descriptions, and observed file reads show which staged resources they accessed. Neither establishes native runtime activation. The published evaluations distinguish agent assessment from human comprehension. Hook subprocess tests establish adapter behaviour, not actual host support or replacement of already streamed prose.
 
 ## Alternatives considered
 
@@ -55,8 +54,8 @@ The initial JSON registry borrows context-aware labels and relationships from te
 
 ## Consequences
 
-The repository now includes optional local validation code and hook examples. This records the design discussion requested by CONTRIBUTING: the user explicitly approved tooling, evaluation, agent adapters and lifecycle checks. Skills remain usable as Markdown without installing validators, making network calls or enabling hooks.
+Optional local validators and hook examples are separate from the portable skills. The Markdown guidance remains usable without installing validators, making network calls or enabling hooks.
 
-Generated bundled references require a sync check. Runtime adapters require their own tests and version evidence. The public repo holds public sources and invented fixtures; private project material stays in a separate private evaluation record.
+Generated bundled references require a sync check. Runtime adapters require their own tests and version evidence. Public evaluation records contain public sources and invented fixtures.
 
-No global user configuration is overwritten. No project glossary is automatically approved. Publication remains a branch and reviewable pull request until merged.
+Installation preserves existing client configuration. Proposed glossary meanings remain proposals until the project adopts them.

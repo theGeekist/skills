@@ -35,7 +35,7 @@ class SkillCatalogueTests(unittest.TestCase):
                 self.assertIn(skill['example']['source_facts'], page)
                 self.assertIn(skill['example']['before'], page)
                 self.assertIn(skill['example']['after'], page)
-                self.assertIn('invented example', page)
+                self.assertIn('illustrative example', page)
                 self.assertIn('ChatGPT plugin registration', page)
                 for target in re.findall(r'\]\(([^)]+)\)', page):
                     if re.match(r'[a-z]+:', target):
@@ -60,6 +60,15 @@ class SkillCatalogueTests(unittest.TestCase):
             for field in ('name', 'version', 'author', 'license'):
                 self.assertEqual(after[field], before[field])
             self.assertEqual(after['name'], 'geekist-architecture-skills')
+
+    def test_marketplace_copy_matches_the_canonical_presentation(self):
+        catalogue = SYNC.load_catalogue(ROOT)
+        generated = SYNC.render(ROOT, catalogue)
+        marketplace = json.loads(generated[ROOT / '.claude-plugin/marketplace.json'])
+        self.assertEqual(marketplace['description'], catalogue['plugin']['description'])
+        entry = next(p for p in marketplace['plugins'] if p['name'] == 'geekist-architecture-skills')
+        self.assertEqual(entry['description'], catalogue['plugin']['description'])
+        self.assertEqual(entry['source'], '.')
 
     def test_changed_activation_intent_requires_review(self):
         with tempfile.TemporaryDirectory() as directory:

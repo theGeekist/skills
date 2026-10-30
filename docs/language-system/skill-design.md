@@ -10,13 +10,13 @@ A marketing agent can select `write-marketing-content` from a customer-copy requ
 
 The previous broad writer covered tasks, decisions, developer documentation, marketing, interfaces and reviews. Its main file was small, but its scope competed with specialist purposes and it directed authors to broad shared material. The architecture playbooks loaded their full examples, mappings and checklists on every activation.
 
-The revised collection has eleven skills: two architecture playbooks, terminology discovery, actionable uncertainty, six writing/review specialists and one compatibility chooser. The common baseline is 144 words. The six specialist bodies are roughly 316–345 words including that baseline, excluding discovery metadata.
+The revised collection has eleven skills: two architecture playbooks, terminology discovery, actionable uncertainty, six writing/review specialists and one compatibility chooser. The common baseline is 144 words. The specialist cores keep purpose, authority and reference-loading guidance together; current word counts are in the context budget.
 
 The authored baseline is `standards/baseline.md`. The synchroniser embeds the same text in each skill and copies the references declared in `standards/skill-profiles.json`. Independent installation therefore preserves meaning without sibling dependencies. Authors should change the canonical file and regenerate, not edit generated copies separately.
 
 ## Context costs
 
-The full catalogue's descriptions grow from 192 to 433 whitespace-separated words. More precise entry points have an upfront discovery cost. Hosts may shorten descriptions, so each begins with the concrete purpose. These counts are not model-token measurements.
+The expanded catalogue has a larger discovery description set than the original two playbooks. More precise entry points have an upfront discovery cost. Hosts may shorten descriptions, so each begins with the concrete purpose. These counts are not model-token measurements.
 
 Active context is more selective. The six writing specialists carry one relevant pattern reference, with uncertainty detail available only where appropriate. A straightforward change can use the inline baseline and actual project sources. The full reference set is available without being mandatory on every invocation.
 

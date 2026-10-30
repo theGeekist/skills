@@ -76,11 +76,9 @@ Expected result: {skill['expected_result']}
 
 ## A concrete example
 
-This invented example illustrates the guidance. It is not an observed product result or a benchmark.
+This illustrative example starts from the source facts below.
 
 **Source facts and constraints:** {skill['example']['source_facts']}
-
-The before text may obscure or overstate those facts. The revision must follow the supplied facts and constraints.
 
 **Before**
 
@@ -89,8 +87,6 @@ The before text may obscure or overstate those facts. The revision must follow t
 **After**
 
 > {skill['example']['after']}
-
-Preserve the source facts, governing meanings and consequential constraints when applying the example to real work.
 
 ## Install and use
 
@@ -110,14 +106,14 @@ Read the [complete skill instructions](../../skills/{name}/SKILL.md) and [bundle
 
 {source_list}
 
-These sources inform selected practices; they do not certify this skill or establish better prose quality. The [source-to-guidance map](../../standards/framework-evidence.md) records what was applied, adapted or deferred.
+The [source-to-guidance map](../../standards/framework-evidence.md) explains how these sources inform the skill and which decisions are local.
 
 ## Follow the work
 
 - [Walk through all eleven skills](../language-system/skill-walkthrough.md)
 - [Original research](../language-system/research-baseline.md) and [framework evaluation](../language-system/framework-evaluation.md)
 - [Compare existing writing skills](../language-system/competing-writing-skills.md)
-- [Validation scope and next checks](../language-system/validation-results.md)
+- [Validation and evidence](../language-system/validation-results.md)
 '''
 
 
@@ -155,6 +151,13 @@ See the [connected walkthrough](../language-system/skill-walkthrough.md), [sourc
                 'defaultPrompt': data['plugin']['default_prompts'],
             })
         planned[path] = json.dumps(document, indent=2, ensure_ascii=False) + '\n'
+    marketplace_path = root / '.claude-plugin/marketplace.json'
+    marketplace = json.loads(marketplace_path.read_text())
+    marketplace['description'] = data['plugin']['description']
+    for entry in marketplace['plugins']:
+        if entry['name'] == 'geekist-architecture-skills':
+            entry['description'] = data['plugin']['description']
+    planned[marketplace_path] = json.dumps(marketplace, indent=2, ensure_ascii=False) + '\n'
     return planned
 
 

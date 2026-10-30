@@ -47,7 +47,7 @@ An existing tag is never moved. If a tag exists but its release is missing, a ru
 
 Update `.codex-plugin/plugin.json` and `.claude-plugin/plugin.json` to the same next version. Set the same tag in `standards/skill-catalogue.json` and regenerate with `python3 scripts/sync-skill-catalogue.py`. Write `release-notes/vX.Y.Z.md`, update the install reference in this file and README, and run the checks documented in CONTRIBUTING. Review brand/source notices with the release contents. Merge the prepared change or manually run the workflow on its intended commit, then verify the published tag, manifest and checksums.
 
-Tag protection and additional repository security settings can strengthen immutability. They are maintenance tasks, not substitutes for the release checks or a reason to abandon an authorised release. Do not overwrite a published tag to repair a release; use a new version where content changes.
+Published tags and release assets are immutable. Use a new version when released contents change.
 
 ## Other distribution channels
 
@@ -55,4 +55,4 @@ The public release makes the collection available to compatible Agent Skills cli
 
 The repository also carries Geekist-owned Codex and Claude marketplace metadata. Test the actual selected client and version before publishing command-level installation claims for that surface. The portable format does not establish native activation across CLI, desktop and cloud automatically.
 
-External catalogue submissions, OCI packaging and self-hosted registries are optional follow-up work. Their account credentials, review processes and licensing terms are separate from the GitHub release. Keep registry records pointed at the canonical immutable release rather than maintaining independently edited copies. Do not accept a different licence, such as MIT-0, for a third-party catalogue without the owner's explicit choice.
+Directory mirrors should identify the canonical repository and source revision. A directory listing, a local installation and a ChatGPT plugin installation are separate distribution states. Verify the selected client's documented installation route before publishing client-specific instructions.

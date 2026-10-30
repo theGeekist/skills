@@ -111,7 +111,7 @@
       "url": "https://www.gov.uk/guidance/content-design/writing-for-gov-uk",
       "reviewed_on": "2026-10-29",
       "evidence": "redirect encountered; substantive replacement page not retrieved",
-      "licence_or_limit": "Prior recommendation remains a candidate; not an evaluated source in this pass."
+      "licence_or_limit": "Candidate source; substantive replacement guidance was not retrieved in the recorded evaluation."
     },
     {
       "id": "atlassian",
@@ -414,7 +414,7 @@
               "severity": 2
             }
           ],
-          "filePath": "/workspace/scratch/44d8812e3975/evaluation/cases/sample.md"
+          "filePath": "cases/sample.md"
         }
       ]
     },

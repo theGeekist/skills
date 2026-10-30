@@ -14,7 +14,7 @@ Geekist Skills connects project meanings, source authority and evidence state ac
 | Architecture | Jason's existing backend and frontend rules | Independently packaged playbooks with protected rule authority; editorial improvements preserve the original conditions and exceptions |
 | Inspectable revisions | Related review-output practices, including the Plain Writing fork | Optional compact revision records show consequential edits, reasons and retained constraints without requiring HTML output for every edit |
 
-This is a description of the implementation and its scope, not a claim to be the first project with any individual practice. The [competitive review](competing-writing-skills.md) identifies real overlaps and useful alternatives. Novelty should be demonstrated through a working example and its constraints, rather than asserted through a new name or a longer catalogue.
+This is a description of the implementation and its scope, not a claim to be the first project with any individual practice. The [competitive review](competing-writing-skills.md) identifies real overlaps and useful alternatives. The contribution is inspectable in the connected workflow below and the source-linked implementations above.
 
 ## Follow one meaning into several artefacts
 

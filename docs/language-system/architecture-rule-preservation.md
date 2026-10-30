@@ -1,17 +1,23 @@
 # Preserve architecture meaning while improving language
 
-The backend and frontend rules are authoritative. Apply the shared language baseline, clearer explanations and purpose-sized organisation while preserving every rule, exception and intended meaning. Architectural changes require explicit user approval; editorial improvements within that constraint are authorised.
+The backend and frontend playbooks define architecture rules, including defaults, permissions, exceptions and prescribed responses. Editorial changes can improve their organisation and wording while preserving those meanings. Changes to architectural requirements belong in an explicit architecture proposal rather than an unmarked copyedit.
 
-## What the reviews found
+## Compare against the governing source
 
-The first audit against the pre-language-system source at `fcbd5a9` found conflicting summaries: backend red/action signals had been softened, locale proximity had become ownership, shared boundaries had been narrowed, and frontend summaries added independent testability and an approval qualifier. Detailed references largely retained the original rules, but that did not make conflicting summaries acceptable.
+The original comparison sources are retained in `standards/architecture-rules/` at the pre-language-system revision `fcbd5a9`. The source-integrity test protects those historical inputs; it deliberately permits improvements to active wording.
 
-A subsequent exact-wording restoration overcorrected. Verbatim retention protects text, whereas the requested outcome is accessible language with preserved architecture meaning. The revised skills therefore keep the shared baseline, concise decision guidance, first-use explanations and concern-specific references. Rules retain their original force, conditions and exceptions.
+For each edited section, check:
 
-## How to check future edits
+- the force of the rule: requirement, prohibition, permission or preference;
+- its conditions and exceptions;
+- dependency direction and ownership;
+- thresholds, signals and the response they require;
+- whether a summary introduces a requirement absent from the detailed rule.
 
-Use `standards/architecture-rules/` as the original comparison sources. The source-integrity test protects these historical inputs; it deliberately permits changes to active wording. A passing hash or linter cannot prove semantic equivalence.
+A passing hash or prose linter cannot establish semantic equivalence. Review the main instructions and their references together, then assess consistency, accessibility, readability and repeatability.
 
-Review each original section against the active core and relevant reference. Check prohibitions, permissions, defaults, exceptions, thresholds, dependency direction and prescribed responses. Inspect the core separately for new requirements or conflicting summaries. Then apply the four language outcomes: consistency, accessibility, readability and repeatability. Keep automated findings and independent judgement distinct.
+## Recorded review
 
-See [the language and meaning review](architecture-language-review.md) for the executed checks and findings for this revision. Existing [architecture split trials](architecture-refactor.md) remain historical evidence rather than results for this revision.
+The [language and meaning review](architecture-language-review.md) records the comparison coverage and checks. It corrected summary drift involving review urgency, locale presentation, shared boundaries and added frontend requirements. The active guidance preserves the original architectural distinctions while using clearer terms and concern-specific navigation.
+
+The [initial architecture split](architecture-refactor.md) separately records the reference organisation and its bounded loading trials.

@@ -30,7 +30,7 @@ The useful result is a small account of the concepts, contexts, aliases and sour
 
 ## Advance with uncertainty
 
-[`advance-with-uncertainty`](../../skills/advance-with-uncertainty/SKILL.md) implements Jason's requirement that honest evidence language should enable the next useful action. It is a local workflow, rather than an imported uncertainty framework.
+[`advance-with-uncertainty`](../../skills/advance-with-uncertainty/SKILL.md) implements [@pipewrk](https://github.com/pipewrk)'s requirement that honest evidence language should enable the next useful action. It is a local workflow, rather than an imported uncertainty framework.
 
 **Example request:** “The ticket says mobile compatibility is unproven. Rewrite it so a worker knows what to build and check.”
 
@@ -78,7 +78,7 @@ The result maps copy to the supplied states and actions. Essential conditions re
 
 ## Review project language
 
-[`review-project-language`](../../skills/review-project-language/SKILL.md) checks existing material across its reader journey. Microsoft and Google writing guidance inform expression; the ISO plain-language public abstract informed the research. Consistency, accessibility, readability and repeatability are Jason's four priorities, rather than a quoted ISO checklist or certification.
+[`review-project-language`](../../skills/review-project-language/SKILL.md) checks existing material across its reader journey. Microsoft and Google writing guidance inform expression; the ISO plain-language public abstract informed the research. Consistency, accessibility, readability and repeatability are [@pipewrk](https://github.com/pipewrk)'s four priorities, rather than a quoted ISO checklist or certification.
 
 **Example request:** “Review the booking task, ADR, help page and confirmation screen for changed meanings and difficult navigation.”
 
@@ -86,7 +86,7 @@ The result identifies material findings with their location, effect and smallest
 
 ## Backend slice architecture
 
-[`backend-slice-architecture`](../../skills/backend-slice-architecture/SKILL.md) applies Jason's original backend rules when that model is chosen or requested for review. The rules govern owned capabilities, public interfaces, coordination and earned sharing. External writing guides improve how the rules are explained; they do not authorise architectural changes.
+[`backend-slice-architecture`](../../skills/backend-slice-architecture/SKILL.md) applies [@pipewrk](https://github.com/pipewrk)'s original backend rules when that model is chosen or requested for review. The rules govern owned capabilities, public interfaces, coordination and earned sharing. External writing guides improve how the rules are explained; they do not authorise architectural changes.
 
 **Example request:** “Review where booking cancellation and refund coordination belong under our backend rules.”
 
@@ -94,11 +94,11 @@ The result should identify the affected boundary and relevant rule, using the ac
 
 ## Frontend slice architecture
 
-[`frontend-slice-architecture`](../../skills/frontend-slice-architecture/SKILL.md) applies Jason's original frontend rules. Features own their behaviour; scenes compose pages and screens; sharing is earned through repetition. Microsoft and Google writing principles inform explanation, while the architectural authority stays with the original rules.
+[`frontend-slice-architecture`](../../skills/frontend-slice-architecture/SKILL.md) applies [@pipewrk](https://github.com/pipewrk)'s original frontend rules. Features own their behaviour; scenes compose pages and screens; sharing is earned through repetition. Microsoft and Google writing principles inform explanation, while the architectural authority stays with the original rules.
 
 **Example request:** “Review the cancellation feature and its web and mobile scenes without changing our framework.”
 
-The result explains ownership, public interfaces and composition through the repository's existing platform conventions. It preserves the rules' exceptions and package-safe boundaries, without introducing independent testability as a new frontend requirement. Follow [placement rules and sources](../../skills/frontend-slice-architecture/references/placement-and-contracts.md); platform detail is loaded when relevant.
+The result explains ownership, public interfaces and composition through the repository's existing platform conventions. It preserves the rules' exceptions and package-safe boundaries, using the public interfaces and dependency boundaries defined by the playbook. Follow [placement rules and sources](../../skills/frontend-slice-architecture/references/placement-and-contracts.md); platform detail is loaded when relevant.
 
 ## Choose a project-writing workflow
 

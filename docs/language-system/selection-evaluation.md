@@ -5,7 +5,7 @@ technical documentation, implementation tasks, decisions, interface copy and
 language review. In three catalogue-only trials, each responder selected the
 expected primary skill for all twelve ordinary requests, including one request
 requiring no skill. Natural authoring trials also selected relevant instructions
-without the prompt naming a skill. These results support the proposed split;
+without the prompt naming a skill. These results support the purpose-specific split;
 they do not certify automatic activation in every client.
 
 ## What was tested
@@ -13,7 +13,7 @@ they do not certify automatic activation in every client.
 The [method](../../evaluations/skill-selection/method.md) separates package
 structure, catalogue selection, resource loading and native runtime activation.
 The first three were exercised locally. See [portability](portability.md) for
-client-specific evidence and the next host checks.
+client-specific evidence.
 
 Two fresh-context responders received only names, descriptions and twelve
 ordinary requests. Expected choices were retained separately and scored after
@@ -90,7 +90,7 @@ cost across agents or runs. The [loading assessment](../../evaluations/skill-sel
 records initial, setup-contaminated and clean final observations separately.
 
 
-## Structural checks and next adoption step
+## Structural checks and native-client scope
 
 Seven deterministic checks cover the declared collection, one canonical inline
 baseline per skill, direct bundled references, specialist reference separation,
@@ -98,10 +98,4 @@ explicit-only Codex chooser metadata, ordinary request fixtures and standalone
 frontmatter fences. They pass. These checks establish packaging and shared-source
 consistency; they cannot decide whether prose is useful.
 
-The next client check is to install the collection in a selected native runtime,
-submit these ordinary requests without an explicit skill name and capture its
-actual discovery, activation and reference-loading behaviour. Repeat CLI, desktop
-and cloud separately. Include competing installed skills and less obvious
-requests before generalising selection reliability. The local trials are agent
-experiments with recorded inputs and outputs, not human marketing-comprehension
-results or a claim of universal cross-agent support.
+Native runtime activation is outside these catalogue and staged-authoring results. The evidence establishes agent selection from supplied metadata and resource access in the recorded cases. It does not establish human-reader comprehension or universal cross-agent support.

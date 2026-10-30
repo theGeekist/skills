@@ -17,11 +17,9 @@ Expected result: A task with observable behaviour, acceptance criteria, validati
 
 ## A concrete example
 
-This invented example illustrates the guidance. It is not an observed product result or a benchmark.
+This illustrative example starts from the source facts below.
 
 **Source facts and constraints:** Members may export their own bookings. They may not export another member’s bookings.
-
-The before text may obscure or overstate those facts. The revision must follow the supplied facts and constraints.
 
 **Before**
 
@@ -30,8 +28,6 @@ The before text may obscure or overstate those facts. The revision must follow t
 **After**
 
 > Let members export their own bookings. Reject exports of another member’s bookings and verify both outcomes.
-
-Preserve the source facts, governing meanings and consequential constraints when applying the example to real work.
 
 ## Install and use
 
@@ -51,11 +47,11 @@ The task and handoff pattern is local guidance. Good Docs how-to material inform
 
 - [Good Docs how-to guidance](https://gitlab.com/tgdp/templates/-/tree/main/how-to)
 
-These sources inform selected practices; they do not certify this skill or establish better prose quality. The [source-to-guidance map](../../standards/framework-evidence.md) records what was applied, adapted or deferred.
+The [source-to-guidance map](../../standards/framework-evidence.md) explains how these sources inform the skill and which decisions are local.
 
 ## Follow the work
 
 - [Walk through all eleven skills](../language-system/skill-walkthrough.md)
 - [Original research](../language-system/research-baseline.md) and [framework evaluation](../language-system/framework-evaluation.md)
 - [Compare existing writing skills](../language-system/competing-writing-skills.md)
-- [Validation scope and next checks](../language-system/validation-results.md)
+- [Validation and evidence](../language-system/validation-results.md)

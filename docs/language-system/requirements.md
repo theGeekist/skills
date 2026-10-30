@@ -1,27 +1,32 @@
-# Recorded goals and scope
+# Design requirements
 
-Source: the user's authorised work request and follow-up requirements on 29 October 2026. These requirements guide the proposed branch; they do not claim that every runtime has already been tested.
+The collection supports consistent project meaning and readable material across engineering and business audiences. The same concept, permission or constraint should remain recognisable as it moves from code and decisions into tasks, documentation, marketing and interfaces.
 
-## Shared language and repeatable work
+## Four outcomes
 
-Preserve the supplied research verbatim, verify its claims and explore `theGeekist/skills`. Evaluate existing frameworks and tools before adopting or extending them. Establish lifecycles, portable skills, references, persistent instructions, agent-specific adapters and validation. Apply the resulting conventions to the existing skills and test representative work against `llm-core`, TaskGraph and Simple Assembly.
+| Outcome | Requirement |
+| --- | --- |
+| Consistency | Shared concepts retain their accepted meanings across artefacts and audiences |
+| Accessibility | Readers can find purpose, decisions, consequences, definitions and detailed sources |
+| Readability | Terms, sentences and paragraphs explain the subject at the required depth |
+| Repeatability | Another author can follow the references and preserve meaning and navigation |
 
-Use appropriately sized independent workers where work can be separated. Preserve a concrete recommendation pipeline, evaluation results and reviewable changes. Do not merge automatically.
+Technical precision remains necessary. A marketing reader should be able to navigate a technical document without implementing its contracts; an engineer should be able to reach those contracts directly.
 
-## Readers across disciplines
+## Evidence and implementation
 
-The primary outcomes are consistency, accessibility, readability and repeatability. A marketing reader should be able to navigate a highly technical document: find its purpose, principal decision, consequences and definitions, and follow the route to detailed contracts and evidence. Preserve the engineering precision required by specialist readers.
+Evidence state and implementation state are separate. Labels such as “unproven”, “unqualified” and “no evidence” can be accurate without rejecting an option or halting independent authorised work. A material gap needs a bounded next action and completion evidence.
 
-## Honest uncertainty that enables implementation
+The [uncertainty skill](../../skills/advance-with-uncertainty/SKILL.md) implements this requirement. It also preserves genuine failed requirements, authority boundaries and dependent stop conditions. A blanket ban on negative vocabulary would defeat that purpose.
 
-The user identified an implementation failure caused by pessimistic evidence language. Labels such as “unproven”, “unqualified” and “no evidence” may be important and honest, yet workers can interpret them as reasons to disqualify options or abandon further work.
+## Focused entry points
 
-Provide a standalone skill for this problem, backed by shared reference material, task/ADR examples and independent cases. Retain the actual evidence state, distinguish it from implementation progress, and pair material gaps with next actions and completion evidence. Missing prior proof is not automatically a blocker. Genuine authority constraints, failed requirements and dependent stop conditions must remain precise.
+Each of the eleven skills has a concrete purpose. Task, ADR, technical-documentation, marketing, interface and review requests can select their specialist directly. The compatibility router remains optional and explicit.
 
-Record the requirement in persistent guidance, content workflows and architecture recommendations so it is not isolated inside a skill that may never activate during a handoff. Avoid a blanket ban on negative words or false optimistic substitutions.
+Every independently installed skill carries the same canonical baseline and its own required references. Supporting material is loaded by concern rather than by a compulsory full-research read. Architecture playbooks preserve their governing rules and exceptions while using the same reader-focused communication baseline.
 
-## Purpose-sized skills and bounded context loading
+## Inspectable sources and checks
 
-The user approved extending the open PR with specialist workflows for tasks, ADRs, technical documentation, marketing, interface content and language review. Keep one canonical baseline even when it is repeated inside independently installed skills. Reduce the architecture cores and load supporting detail when relevant. Retain the broad writing name only as a compatibility chooser rather than a prerequisite.
+The repository links the [original research](research-baseline.md), [verified sources](sources.json), [framework adaptations](../../standards/framework-evidence.md), [competing skills](competing-writing-skills.md) and [recorded evaluations](validation-results.md). Source inspection, executed checks, qualitative agent assessment and human comprehension are distinct forms of evidence.
 
-Evaluate ordinary-request selection, reference loading and resulting behaviour separately. A marketing task should have a direct entry point without needing an architecture skill. Verify the portable package shape and document actual host-specific limits; catalogue simulation must not be described as native activation across every agent.
+Optional validators and adapters remain separate from the portable Markdown instructions. Installing a skill must not silently install hooks or replace global conversation instructions. Client-specific activation and loading semantics are documented separately from the shared format.

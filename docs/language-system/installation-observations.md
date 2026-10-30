@@ -1,33 +1,41 @@
-# Installation observations: v1.5.0
+# Installation and distribution
 
-Recorded 29 October 2026. This is the initial v1.5.0 checkpoint; current language and source changes are recorded in [the v1.5.1 review](architecture-language-review.md).
+The collection contains eleven independently installable skills. Each package includes its main instructions, presentation metadata and required local references. A source archive, a local skill installation and a registered ChatGPT plugin are separate distribution steps.
 
-## Completed
+## Install the versioned collection
 
-GitHub release `v1.5.0` is published from commit `d81fcb974ef24e0e8a80998d1a4a46bab1428516`, with source archives, checksums and a release manifest. The release workflow and language checks passed.
+```sh
+npx skills add https://github.com/theGeekist/skills/tree/v1.6.0
+```
 
-All eleven collection skills were installed in the owner's ChatGPT account through the supported personal-skill import/save workflow. The saved main files, references and packaged brand assets match the released source. Display names and prompts are preserved. The compatibility chooser retains `allow_implicit_invocation: false`.
+Use `--skill <name>` to select one workflow. Each [skill overview](../skills/index.md) provides its exact command, example request and source links. Choose the target client and installation scope supported by that client.
 
-## Brand assets and this import path
+For a canonical checkout shared by local clients, follow [the local installation guide](integration.md) and inspect `scripts/link-local.sh --client all --dry-run` before linking files.
 
-The initial portable packages include a G extracted from the site's handwritten wordmark. Jason subsequently clarified that the intended brand mark is Gk. The released G asset is therefore an incomplete brand adaptation; the Gk correction remains outstanding. Its `agents/openai.yaml` declares local small/large icon paths. See [brand provenance](../../assets/branding/README.md).
+## Current source and tagged releases
 
-During this ChatGPT import, the service normalised metadata and assigned generated icons under `assets/icon.svg`, instead of using the declared Geekist icon paths. A single bounded attempt to replace that normalised display asset was restored to the service's default during saving. The original Geekist SVG assets remain saved with each skill.
+The E001–E008 editorial-pattern reference is included in the current `main` source. The immutable v1.6.0 package predates that reference. To use the current review skill, install it from `main`:
 
-This establishes a limitation of the exercised import path, not that every ChatGPT icon-customisation route is unavailable. No alternative account UI or native client icon route was tested. Further display-icon work should use a documented supported route rather than repeatedly editing a generated asset.
+```sh
+npx skills add https://github.com/theGeekist/skills/tree/main --skill review-project-language
+```
 
-The personal skills were saved successfully. This does not establish ChatGPT plugin registration or mobile availability; the GitHub release and standalone personal-skill installation are separate from installing a plugin bundle. Clients consuming the portable icon metadata can use the packaged assets; verify their actual display when testing each client.
+Use a versioned tag for a fixed released package, or pin a commit when evaluating newer instructions. Documentation and source changes do not move an existing release tag.
 
-## Remaining adoption checks
+## Verify the installed package
 
-Verify the distribution route for the intended surface before diagnosing a cache problem. Run the recorded ordinary-request selection cases in the intended client and capture native activation and reference loading. Installation and saved content are separate evidence from native implicit selection or displayed-icon support.
+Check that the client exposes the intended skill and can read its bundled reference. Use a representative task and record the client version and execution mode when reporting an installation issue. A successful portable-format check establishes package structure; it does not establish that every client discovers the same directory or loads the same instructions.
 
-## v1.5.1 update verification
+Presentation metadata declares icon paths within each skill. Clients may render or normalise those assets differently. See [brand provenance](../../assets/branding/README.md) for the packaged wordmark and assets.
 
-All eleven personal skills were updated after the language and attribution revisions. The saved remote main bodies and every bundled reference were compared with the v1.5.1 source and matched. This verifies saved personal-skill content, not mobile plugin installation or native implicit activation. Both GitHub workflows passed, and the published release manifest matches commit `3ef8ff5689871472dc4b5f8b600d057573a7593a`, tree `1ccb5aa3ea04f08f6d450d8e008ae7de130ac4a5` and all eleven skill names.
+## ChatGPT and mobile
 
-## v1.6.0 update verification
+Publishing a GitHub release does not register or install a ChatGPT plugin. The skills CLI installs into supported agent environments; ChatGPT distribution uses its supported skill or plugin installation route. Mobile availability depends on an installed plugin bundle and the account's supported surfaces, rather than the presence of repository files alone.
 
-All eleven personal skills were updated after the editorial examples and presentation-catalogue changes. Saved remote main bodies, every bundled reference, display names, short descriptions and default prompts match the v1.6.0 source. The compatibility router remains explicit. Normalised display-icon behaviour is unchanged. This verifies saved personal content, not mobile plugin installation or native implicit selection.
+Consult the [official plugin guide](https://learn.chatgpt.com/docs/plugins) and [skill authoring guide](https://learn.chatgpt.com/docs/build-skills) for the current surface-specific routes. The [portability guide](portability.md) distinguishes package support from native activation evidence.
 
-The published v1.6.0 release manifest matches commit `8bc52c98bb1c79db223f087d819a5a4aca360730`, tree `091e7a0423505fa0df79f2a11cc5f42857212fa4` and all eleven skills. The release validation includes the new catalogue checks. GitHub About settings remain prepared rather than applied, as recorded in [discoverability](discoverability.md).
+## Release verification
+
+Published archives include a release manifest with the commit, Git tree and skill list, plus checksums. The v1.6.0 manifest identifies commit `8bc52c98bb1c79db223f087d819a5a4aca360730`, tree `091e7a0423505fa0df79f2a11cc5f42857212fa4` and all eleven skills. See [release and distribution](../../PUBLISHING.md) for archive verification and versioning.
+
+Documentation updates can be published without creating a new skill release. Versioned install commands continue to identify the instructions in that release.

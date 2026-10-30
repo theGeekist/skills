@@ -29,6 +29,8 @@ Load [review criteria](references/review.md) for a multi-artefact audit or struc
 
 Report material findings with location, effect and smallest useful correction. Prioritise changed meaning and unsupported claims before cosmetic preferences. For an authorised revision, apply and check the requested changes. For review only, give actionable findings without editing unrelated material. State when no material defect is found.
 
+For a detailed editing pass, use the relevant [editorial patterns and exceptions](references/editorial-patterns.md). They support judgement about the text and its sources; they are not an AI-authorship score.
+
 ## Sources and adaptation
 
 The review criteria draw on Microsoft and Google writing guidance and the ISO plain-language public abstract. See [sources and the local four-outcome review](references/review.md#sources-and-local-adaptation).

@@ -1,0 +1,119 @@
+{
+  "version": 1,
+  "purpose": "Original examples for contextual editorial review. These patterns support judgement; they are not automatic truth checks or AI-authorship signals.",
+  "sources": {
+    "local": {
+      "title": "Geekist project-language review",
+      "url": "https://github.com/theGeekist/skills/blob/main/standards/review.md",
+      "application": "Project meanings, source constraints and bounded next actions govern each revision."
+    },
+    "humanizer": {
+      "title": "Humanizer v3.1.0",
+      "url": "https://github.com/blader/humanizer/blob/0ef9fe5bc3572734fd3ae6c448fe00a30cd5dcf0/SKILL.md",
+      "application": "Concrete editing examples, factual checks and contextual exceptions inform the presentation."
+    },
+    "plain-language-editor": {
+      "title": "Plain Language Editor",
+      "url": "https://github.com/marketingskills/plain-language-editor/blob/df7b314509eb47a722aa620f11784fab76a595e6/SKILL.md",
+      "application": "Stable pattern identifiers and checks for meaning, claims and sentence relationships inform the organisation. No upstream catalogue is copied."
+    }
+  },
+  "patterns": [
+    {
+      "id": "E001",
+      "name": "Changed project meaning",
+      "concern": "Consistency",
+      "severity": "material",
+      "source_facts": "Reviewed means all document checks are complete. Approval is a separate decision that has not been made.",
+      "before": "Your application is approved.",
+      "after": "All document checks are complete. An approval decision is still pending.",
+      "reason": "Restore the distinction between completed checks and approval rather than polishing the wrong state.",
+      "exception": "Keep an approved label when the governing source records an approval decision. Different audience labels are acceptable when their meanings agree.",
+      "sources": ["local"]
+    },
+    {
+      "id": "E002",
+      "name": "Lost condition",
+      "concern": "Accuracy",
+      "severity": "material",
+      "source_facts": "Only workspace owners can export selected notes. The supported format is Markdown.",
+      "before": "Anyone can export all notes in any format.",
+      "after": "Workspace owners can export selected notes as Markdown.",
+      "reason": "Retain the actor, selection boundary and supported format that change what the reader may do.",
+      "exception": "A short label may omit detail when the adjacent explanation makes the relevant conditions clear. Do not remove a condition that changes a user's decision.",
+      "sources": ["local", "humanizer"]
+    },
+    {
+      "id": "E003",
+      "name": "Invented result",
+      "concern": "Evidence",
+      "severity": "material",
+      "source_facts": "Six internal participants gave feedback on the export flow. The trial did not measure time savings.",
+      "before": "Our trial proved that export cuts reporting time in half.",
+      "after": "Six internal participants gave feedback on the export flow.",
+      "reason": "Describe the observed result and leave the unsupported time-saving claim out. Record the measurement needed if that stronger claim matters.",
+      "exception": "Retain a quantified benefit when a relevant measurement supports it, including the population and conditions needed to interpret the figure.",
+      "sources": ["humanizer", "plain-language-editor"]
+    },
+    {
+      "id": "E004",
+      "name": "Evidence gap becomes a blanket stop",
+      "concern": "Actionability",
+      "severity": "material",
+      "source_facts": "A reversible local adapter prototype and local tests are authorised. Real-client behaviour has not been checked. No external deployment is authorised.",
+      "before": "Compatibility is unproven, so stop all implementation.",
+      "after": "Build the authorised local prototype and run local tests. Check real-client behaviour before claiming compatibility. Keep external deployment outside this work.",
+      "reason": "Separate the missing compatibility evidence from the work already authorised and preserve the actual external-action boundary.",
+      "exception": "Keep a stop instruction when a demonstrated incompatibility, required input, permission boundary or explicit user instruction blocks that named action.",
+      "sources": ["local"]
+    },
+    {
+      "id": "E005",
+      "name": "Data structure becomes prose",
+      "concern": "Readability",
+      "severity": "contextual",
+      "source_facts": "An invited reviewer can view a report until 14 November. The reviewer cannot edit it.",
+      "before": "The report object has a reviewer-scoped read-only access grant with a 14 November expiry attribute.",
+      "after": "The invited reviewer can view this report until 14 November, but cannot edit it.",
+      "reason": "Explain the actor, action and limit rather than making the reader reconstruct a permission record.",
+      "exception": "Keep exact field names and values in API or schema reference material. Explain their consequences alongside the contract instead of renaming identifiers.",
+      "sources": ["plain-language-editor", "local"]
+    },
+    {
+      "id": "E006",
+      "name": "Commentary hides the finding",
+      "concern": "Navigation",
+      "severity": "contextual",
+      "source_facts": "The import stopped because the supplied file has no header row. The user must add the row before retrying.",
+      "before": "It is important to note the following key finding: the import failed due to an issue with the header.",
+      "after": "The import stopped because the file has no header row. Add the header row and retry.",
+      "reason": "Lead with the observed failure and useful next action, replacing vague commentary with the actual cause.",
+      "exception": "Keep navigation instructions when they help the reader use a long guide or choose a relevant section. Not every sentence about the document is redundant.",
+      "sources": ["plain-language-editor", "humanizer"]
+    },
+    {
+      "id": "E007",
+      "name": "Necessary context is missing",
+      "concern": "Accessibility",
+      "severity": "contextual",
+      "source_facts": "A queue for each project keeps its scheduling separate. The intended audience includes readers unfamiliar with queues.",
+      "before": "The per-project queue resolves the scheduling issue.",
+      "after": "Each project has its own waiting list of jobs, called a queue, so its scheduling stays separate from other projects.",
+      "reason": "Introduce the necessary term and explain the consequence without promising an unmeasured performance improvement.",
+      "exception": "Use the accepted specialist term directly when the intended reader already knows it or can reach its definition. Do not expand every familiar abbreviation on every page.",
+      "sources": ["local", "plain-language-editor"]
+    },
+    {
+      "id": "E008",
+      "name": "Editing flattens the author's voice",
+      "concern": "Voice",
+      "severity": "contextual",
+      "source_facts": "The author is writing a lightly witty personal essay about repeatedly losing draft notes. No product performance claim is being made.",
+      "before": "The author experienced repeated difficulties with draft-note retention.",
+      "after": "I kept losing my draft notes. Apparently, I was running a disappearing-ink experiment.",
+      "reason": "Use the author's stated register while preserving the event. The second sentence is an obvious humorous aside, not a technical claim.",
+      "exception": "Keep neutral wording in a technical reference or when humour would obscure a consequential condition. Preserve uncertainty and personal detail when they carry meaning.",
+      "sources": ["humanizer", "local"]
+    }
+  ]
+}

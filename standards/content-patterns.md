@@ -15,7 +15,7 @@ Use these patterns as starting points. Preserve the project's existing format wh
 | Dashboard | Where are we, and what is changing? | Result → movement → supporting evidence → next milestone or action |
 | Conversation | What do I need from this exchange? | Answer or finding → supporting reasoning → implication, as needed |
 
-The four documentation purposes above draw on Diátaxis. The decision pattern draws on ADR practice. These proposed routes combine those ideas with Geekist's editorial conventions; they are not quotations or mandatory framework sequences.
+The four documentation purposes above draw on Diátaxis. The decision pattern draws on ADR practice. These routes combine those ideas with Geekist's editorial conventions; they are not quotations or mandatory framework sequences.
 
 For tasks and decisions, record open evidence questions alongside the next action, expected observation and any specific blocker. Keep implementation status separate from validation status. An untested proposal can justify a bounded prototype; it is not automatically a rejected option. Use `advance-with-uncertainty` when evidence language is causing work to halt or options to be discarded without a concrete constraint.
 

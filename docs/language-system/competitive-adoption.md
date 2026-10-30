@@ -1,37 +1,33 @@
-# Apply the comparison while preserving the project workflows
+# Editorial practices in the collection
 
-The v1.6.0 update applies selected organisation and editorial practices from the [competitive review](competing-writing-skills.md). The implementation remains focused on shared meanings, source constraints and evidence state across connected project artefacts. Its [design record](design-and-differences.md) identifies inherited foundations and local implementation without a first-ever or prose-superiority claim.
+The collection combines established writing practices with project terminology, source authority and evidence-aware delivery workflows. The [comparison with other writing skills](competing-writing-skills.md) explains their overlapping scopes and different editorial choices.
 
-## What changed
+## Concrete examples
 
-| Comparison lesson | Implemented change |
-| --- | --- |
-| Show the result early | A README before/after example starts from explicit source facts and retains its access, queue and pending-check constraints |
-| Direct reader routes | All eleven skills have generated overview pages with purpose, request, result, example, sources and versioned installation |
-| Inspect consequential revisions | The review reference offers compact original/revised/reason/retained-constraint notes when requested or useful for a substantial edit |
-| Concrete rules and contextual exceptions | Purpose references add local examples that preserve facts, accepted terms, authorisation and author voice |
-| Keep presentation consistent | One catalogue generates overview pages, prompts, OpenAI presentation and plugin descriptions/keywords, with drift checks in CI and release validation |
-| Preserve purpose-specific context | Human overview pages remain outside installable skills; references are still bundled and selected by concern |
-| Make authority visible | The research, sources, alternative skills and local adaptations stay linked from the README and overview pages |
+Every [skill overview](../skills/index.md) includes an example request, expected result and before/after text. The source facts are stated separately so a shorter revision can be checked for retained permissions, conditions and limitations.
 
-No active architecture rule text or activation description changed. All eight backend/frontend main/reference files were compared byte-for-byte with the preceding revision. The stable plugin identifier and explicit compatibility-router policy remain intact.
+Examples illustrate the writing guidance. They do not establish product behaviour or substitute for the source facts of a real project.
 
-## README and attribution
+## Inspectable revisions
 
-The README was reduced from 2,017 to 863 whitespace words, with a full-wordmark banner on charcoal, status badges, compact navigation and a collapsible local-setup section. The banner retains the original wordmark path unchanged. Architecture attribution links to [@pipewrk](https://github.com/pipewrk), and publisher branding links to [Geekist](https://geekist.co). The separate intended Gk icon correction remains outside this presentation update.
+The [review reference](../../standards/review.md) provides a compact record for requested or consequential edits: original wording, revision, reason, retained constraints and governing source. Small edits do not require a separate report or HTML artefact.
 
-## Verification
+This preserves the useful idea of visible editing without importing another skill's template or forcing every author into one register.
 
-- 66 Python tests pass with the optional Vale integration enabled.
-- Catalogue generation and canonical reference checks report no drift.
-- All eleven packages pass the portable Agent Skills validator.
-- Contextual terminology checks and the configured Vale rule report no findings in active skills and presentation pages.
-- The generator rejects activation-description drift, hidden router-policy changes and icon paths that escape an independently installable skill.
-- A read-only independent review checked source-constrained examples, preserved authority, links, catalogue structure and implementation claims. It identified a path-validation gap, which was corrected with regression coverage.
-- [Two isolated task trials](../../evaluations/editorial-v1.6.0/README.md) exercise cross-artefact meaning review, inspectable edits and source-grounded marketing. Prompts, facts, raw outputs and staged instruction hashes are retained.
+## Editorial patterns and exceptions
 
-These checks establish the recorded structural and example-task behaviour. They do not establish human comprehension, superior competitor performance, native client activation, mobile plugin installation or SEO traffic gains.
+The [editorial pattern reference](../../standards/editorial-patterns.md) makes recurring defects concrete: changed meanings, omitted conditions, unsupported claims, evidence labels that halt independent work and prose that exposes internal data structures instead of explaining the user's situation.
 
-## Remaining external discovery work
+Each pattern has a stable identifier, source facts, a local example and an exception. These are contextual review prompts, not an AI-authorship detector or a universal punctuation ban. The structured source generates the readable reference, and automated checks detect catalogue drift.
 
-Repository presentation files and plugin metadata are updated. The GitHub About description, homepage and topics are prepared but require a settings-capable route; the available GitHub connection does not expose that operation. Directory coverage also needs direct verification. See [discoverability](discoverability.md) for the exact proposed values and distinction between file publication and external settings.
+## Consistent presentation and selective context
+
+One [presentation catalogue](../../standards/skill-catalogue.json) generates human overviews and client-facing metadata. [Loading profiles](../../standards/skill-profiles.json) control which canonical references are bundled with each skill. Human overview pages remain outside the installable instruction packages.
+
+The backend and frontend architecture rules retain their original authority, conditions and exceptions. Editorial changes do not broaden skill activation descriptions or change the explicit compatibility-router policy.
+
+## Attribution and verification
+
+The [source map](../../standards/framework-evidence.md) identifies external frameworks, locally authored workflows and the practices informed by competing skills. Those sources support specific implementation choices rather than a claim to have invented clear writing.
+
+[Validation results](validation-results.md) separate package and generation checks, task trials, native client observations and human-reader evidence. The [two isolated editorial trials](../../evaluations/editorial-v1.6.0/README.md) retain their prompts, source facts and outputs for inspection.
