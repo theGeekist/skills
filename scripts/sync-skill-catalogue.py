@@ -52,6 +52,14 @@ def load_catalogue(root):
             raise ValueError(f'{name}: unexpected implicit invocation policy')
         if not skill['sources'] or any(not source['url'].startswith('https://') for source in skill['sources']):
             raise ValueError(f'{name}: expected primary source links')
+    groupings = data.get('directory', {}).get('groupings', [])
+    grouped = []
+    for group in groupings:
+        if not group.get('title') or not group.get('description') or not group.get('skills'):
+            raise ValueError('directory groups require a title, description and skills')
+        grouped.extend(group['skills'])
+    if len(grouped) != len(set(grouped)) or set(grouped) != names:
+        raise ValueError('directory groups must cover every skill exactly once')
     return data
 
 
@@ -100,7 +108,7 @@ Select the intended agent and installation scope when prompted. This CLI install
 
 Read the [complete skill instructions](../../skills/{name}/SKILL.md) and [bundled purpose reference](../../skills/{name}/references/{skill['reference']}) for the full conditions and exceptions.
 
-## Inspiration and local decisions
+## Practices behind this skill
 
 {skill['source_basis']}
 
@@ -138,13 +146,20 @@ Choose by the work you need to do. Each page shows an example request, expected 
 
 See the [connected walkthrough](../language-system/skill-walkthrough.md), [source map](../../standards/framework-evidence.md) and [comparison with existing writing skills](../language-system/competing-writing-skills.md) for the reasoning behind the collection.
 '''
+    planned[root / 'skills.sh.json'] = json.dumps({
+        '$schema': 'https://skills.sh/schemas/skills.sh.schema.json',
+        'notGrouped': 'bottom',
+        'groupings': data['directory']['groupings'],
+    }, indent=2, ensure_ascii=False) + '\n'
     for manifest in ('.codex-plugin/plugin.json', '.claude-plugin/plugin.json'):
         path = root / manifest
         document = json.loads(path.read_text())
+        document['homepage'] = data['plugin']['homepage']
         document['description'] = data['plugin']['description']
         document['keywords'] = data['plugin']['keywords']
         if 'interface' in document:
             document['interface'].update({
+                'websiteURL': data['plugin']['homepage'],
                 'displayName': data['plugin']['display_name'],
                 'shortDescription': data['plugin']['short_description'],
                 'longDescription': data['plugin']['long_description'],
