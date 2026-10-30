@@ -13,7 +13,11 @@
       "id": "focused-workflows",
       "implementation": "Eleven purpose-specific skills with concern-specific local references and an explicit compatibility chooser.",
       "source": "../../standards/skill-profiles.json",
-      "guide": "../skills/index.md"
+      "guide": "../skills/index.md",
+      "inspiration": [
+        "Strunk-based variants",
+        "Agent Skills guidance"
+      ]
     },
     {
       "id": "actionable-uncertainty",
@@ -22,16 +26,53 @@
       "guide": "uncertainty-evaluation.md"
     },
     {
+      "id": "source-integrity-editing",
+      "implementation": "The review workflow compares finished revisions with the original and its sources. Five drafting skills include a final check for added claims, omitted conditions and changed authority or status.",
+      "source": "../../skills/review-project-language/SKILL.md",
+      "guide": "competitive-adoption.md#compare-the-finished-draft-with-its-sources",
+      "inspiration": [
+        "Humanizer",
+        "Plain Writing"
+      ]
+    },
+    {
+      "id": "document-first-editing",
+      "implementation": "The review workflow establishes reader purpose and supplied voice, then repairs document structure before paragraphs and sentences.",
+      "source": "../../standards/review.md",
+      "guide": "competitive-adoption.md#repair-the-structure-before-polishing-sentences",
+      "inspiration": [
+        "Plain Language Editor",
+        "Plain Writing"
+      ]
+    },
+    {
+      "id": "voice-preservation",
+      "implementation": "Writing conventions retain deliberate authorial voice and necessary terminology while correcting factual or structural problems.",
+      "source": "../../standards/writing.md",
+      "guide": "competitive-adoption.md#repair-the-structure-before-polishing-sentences",
+      "inspiration": [
+        "Humanizer",
+        "Plain Language Editor"
+      ]
+    },
+    {
       "id": "inspectable-editing",
       "implementation": "Optional revision records expose consequential edits, their reasons and retained source constraints.",
       "source": "../../standards/review.md",
-      "guide": "competitive-adoption.md"
+      "guide": "competitive-adoption.md",
+      "inspiration": [
+        "Hamel's Plain Writing variant"
+      ]
     },
     {
       "id": "editorial-patterns",
       "implementation": "Attributed local patterns have stable IDs, source-constrained examples and contextual exceptions. A generator checks the readable reference for drift.",
       "source": "../../standards/editorial-patterns.json",
-      "guide": "../../standards/editorial-patterns.md"
+      "guide": "../../standards/editorial-patterns.md",
+      "inspiration": [
+        "Humanizer",
+        "Plain Language Editor"
+      ]
     },
     {
       "id": "consistent-presentation",

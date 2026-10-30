@@ -70,6 +70,28 @@ class SkillCatalogueTests(unittest.TestCase):
         self.assertEqual(entry['description'], catalogue['plugin']['description'])
         self.assertEqual(entry['source'], '.')
 
+    def test_directory_groups_cover_all_skills_once(self):
+        catalogue = SYNC.load_catalogue(ROOT)
+        generated = json.loads(SYNC.render(ROOT, catalogue)[ROOT / 'skills.sh.json'])
+        names = [name for group in generated['groupings'] for name in group['skills']]
+        self.assertEqual(len(names), len(set(names)))
+        self.assertEqual(set(names), set(catalogue['skills']))
+        self.assertEqual(generated['notGrouped'], 'bottom')
+
+    def test_directory_rejects_unknown_or_duplicate_skills(self):
+        with tempfile.TemporaryDirectory() as directory:
+            temporary = Path(directory)
+            shutil.copytree(ROOT / 'standards', temporary / 'standards')
+            shutil.copytree(ROOT / 'skills', temporary / 'skills')
+            path = temporary / 'standards/skill-catalogue.json'
+            original = json.loads(path.read_text())
+            for name in ('nonexistent-skill', original['directory']['groupings'][0]['skills'][0]):
+                catalogue = json.loads(json.dumps(original))
+                catalogue['directory']['groupings'][1]['skills'].append(name)
+                path.write_text(json.dumps(catalogue))
+                with self.assertRaisesRegex(ValueError, 'cover every skill exactly once'):
+                    SYNC.load_catalogue(temporary)
+
     def test_changed_activation_intent_requires_review(self):
         with tempfile.TemporaryDirectory() as directory:
             temporary = Path(directory)

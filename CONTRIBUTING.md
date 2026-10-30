@@ -40,3 +40,5 @@ Human overview pages and client presentation metadata are generated from `standa
 Write for the page's reader: a user choosing or applying a skill, a contributor maintaining it, or a reader inspecting published evidence. Replace implementation recommendations with the completed behaviour once implemented. Keep private planning, account operations and authoring-session limitations out of product pages. Describe relevant evidence boundaries precisely in evaluation records. Preserve original test fixtures and raw results as labelled evidence.
 
 For editorial pattern changes, edit `standards/editorial-patterns.json`, run `python3 scripts/sync-editorial-patterns.py`, then regenerate bundled references. Run the generator's `--check` mode and the test suite before committing. These pattern records guide contextual review; automated generation does not verify the truth of a rewrite.
+
+Directory groupings in `skills.sh.json` are generated from the presentation catalogue. Cover each skill once, and keep homepage URLs and public descriptions in that same source. Validate generation before changing release metadata.

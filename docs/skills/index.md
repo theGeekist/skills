@@ -5,16 +5,16 @@ Choose by the work you need to do. Each page shows an example request, expected 
 
 | Skill overview | Purpose |
 | --- | --- |
-| [Advance through evidence gaps](advance-with-uncertainty.md) | Keep honest evidence gaps actionable in tasks, decisions and handoffs. |
-| [Review backend ownership and boundaries](backend-slice-architecture.md) | Apply Jason’s capability-first backend rules while keeping coordination explicit. |
-| [Establish shared project terminology](establish-project-language.md) | Discover and maintain the meanings that code, decisions and documents share. |
-| [Review frontend features and scenes](frontend-slice-architecture.md) | Apply Jason’s feature-first frontend rules with explicit composition and earned sharing. |
-| [Record clear architecture decisions](record-architecture-decisions.md) | Explain one consequential decision, its viable options and its consequences. |
-| [Review clarity and consistent meaning](review-project-language.md) | Review terminology, reader navigation and consequential claims across project material. |
-| [Write actionable implementation tasks](write-implementation-tasks.md) | Give the next worker an observable outcome, constraints and useful validation. |
-| [Write interface copy for real states](write-interface-content.md) | Explain what happened, what it means and what the user can do next. |
-| [Explain supported product value](write-marketing-content.md) | Connect audience needs with product capabilities and substantiated claims. |
-| [Choose a project writing workflow](write-project-content.md) | Select the relevant specialist when you explicitly want help choosing. |
-| [Write navigable technical documentation](write-technical-documentation.md) | Help readers learn, complete a task, look up a contract or understand a concept. |
+| [Advance through evidence gaps](advance-with-uncertainty.md) | Describe evidence gaps accurately and connect them to useful next actions. |
+| [Review backend ownership and boundaries](backend-slice-architecture.md) | Apply capability-first organisation with explicit orchestration and protected public boundaries. |
+| [Establish shared project terminology](establish-project-language.md) | Establish agreed meanings for project concepts before contributing agents develop incompatible vocabularies. |
+| [Review frontend features and scenes](frontend-slice-architecture.md) | Organise frontend features around clear ownership and appropriate shared components. |
+| [Record clear architecture decisions](record-architecture-decisions.md) | Document the reasoning behind technical decisions while that reasoning is still available to the people who made them. |
+| [Review clarity and consistent meaning](review-project-language.md) | Improve writing while checking its consistency with established terminology and source material. |
+| [Write actionable implementation tasks](write-implementation-tasks.md) | Express implementation work through clear objectives and acceptance criteria, with the relevant constraints preserved. |
+| [Write interface copy for real states](write-interface-content.md) | Explain application behaviour so users understand what happened and how to proceed. |
+| [Explain supported product value](write-marketing-content.md) | Communicate product value through credible claims and an appropriate editorial voice. |
+| [Choose a project writing workflow](write-project-content.md) | Select the appropriate writing workflow without requiring callers to understand the entire collection. |
+| [Write navigable technical documentation](write-technical-documentation.md) | Explain systems according to reader needs while retaining their technical contracts. |
 
 See the [connected walkthrough](../language-system/skill-walkthrough.md), [source map](../../standards/framework-evidence.md) and [comparison with existing writing skills](../language-system/competing-writing-skills.md) for the reasoning behind the collection.
