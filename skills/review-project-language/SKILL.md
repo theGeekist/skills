@@ -31,6 +31,10 @@ Report material findings with location, effect and smallest useful correction. P
 
 For a detailed editing pass, use the relevant [editorial patterns and exceptions](references/editorial-patterns.md). They support judgement about the text and its sources; they are not an AI-authorship score.
 
+## Check the finished revision
+
+Establish the supplied voice and reader purpose. Edit document structure before paragraphs and sentences. Compare the finished revision with the original and its sources for additions, omissions, changed numbers, qualifiers, causality, permissions and status. Preserve deliberate voice and report material source conflicts separately from finished prose.
+
 ## Sources and adaptation
 
 The review criteria draw on Microsoft and Google writing guidance and the ISO plain-language public abstract. See [sources and the local four-outcome review](references/review.md#sources-and-local-adaptation).

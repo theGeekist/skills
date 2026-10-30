@@ -29,6 +29,10 @@ Load [documentation patterns](references/technical-documentation.md) when choosi
 
 Check examples and procedures where available and authorised. Separate inspected behaviour from executed checks and planned verification. Deliver the requested documentation and material limitations, without appending an editorial checklist to the document.
 
+## Edit before delivery
+
+Compare the draft with its sources for added claims, omitted conditions and changed authority or status. Then remove repeated staging and explain the reader's situation instead of narrating internal fields or the writing process. Prefer concrete subjects and verbs; retain precise terms and deliberate voice. Recheck facts after cutting or restructuring. Deliver finished prose, with material source questions kept separately when needed.
+
 ## Sources and adaptation
 
 Diátaxis, Good Docs and the arc42 architecture-documentation template inform reader-purpose selection, procedures and architecture navigation. See [the sources and how they are adapted](references/technical-documentation.md#sources-and-local-adaptation); no complete framework template is mandatory.

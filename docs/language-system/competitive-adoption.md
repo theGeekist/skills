@@ -20,6 +20,10 @@ The [editorial pattern reference](../../standards/editorial-patterns.md) makes r
 
 Each pattern has a stable identifier, source facts, a local example and an exception. These are contextual review prompts, not an AI-authorship detector or a universal punctuation ban. The structured source generates the readable reference, and automated checks detect catalogue drift.
 
+## Editing before delivery
+
+The task, decision-record, technical-documentation, marketing and interface-content skills include a final source comparison and prose edit. The pass checks additions, omissions and changed authority before cutting repeated staging or translating internal fields. It rechecks facts after restructuring and keeps material drafting questions separate from finished public copy. This adapts Humanizer’s factual checks, Plain Writing’s concrete expression and Plain Language Editor’s structural editing without imposing a single voice.
+
 ## Consistent presentation and selective context
 
 One [presentation catalogue](../../standards/skill-catalogue.json) generates human overviews and client-facing metadata. [Loading profiles](../../standards/skill-profiles.json) control which canonical references are bundled with each skill. Human overview pages remain outside the installable instruction packages.

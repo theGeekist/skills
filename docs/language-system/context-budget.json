@@ -30,31 +30,31 @@
     },
     {
       "skill": "record-architecture-decisions",
-      "body_words": 367,
+      "body_words": 433,
       "description_words": 40,
       "bundled_reference_words": 1354
     },
     {
       "skill": "review-project-language",
-      "body_words": 398,
+      "body_words": 449,
       "description_words": 44,
-      "bundled_reference_words": 2830
+      "bundled_reference_words": 2931
     },
     {
       "skill": "write-implementation-tasks",
-      "body_words": 363,
+      "body_words": 429,
       "description_words": 44,
       "bundled_reference_words": 1338
     },
     {
       "skill": "write-interface-content",
-      "body_words": 352,
+      "body_words": 418,
       "description_words": 38,
       "bundled_reference_words": 469
     },
     {
       "skill": "write-marketing-content",
-      "body_words": 388,
+      "body_words": 454,
       "description_words": 41,
       "bundled_reference_words": 524
     },
@@ -66,7 +66,7 @@
     },
     {
       "skill": "write-technical-documentation",
-      "body_words": 377,
+      "body_words": 443,
       "description_words": 40,
       "bundled_reference_words": 1453
     }

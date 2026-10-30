@@ -29,6 +29,10 @@ Load [decision-record patterns](references/decisions.md) when creating or revisi
 
 Distinguish the decision from its implementation and validation. Record a bounded experiment and reconsideration condition where appropriate. Deliver the requested record; do not reopen accepted choices or fabricate alternatives to fill a template.
 
+## Edit before delivery
+
+Compare the draft with its sources for added claims, omitted conditions and changed authority or status. Then remove repeated staging and explain the reader's situation instead of narrating internal fields or the writing process. Prefer concrete subjects and verbs; retain precise terms and deliberate voice. Recheck facts after cutting or restructuring. Deliver finished prose, with material source questions kept separately when needed.
+
 ## Sources and adaptation
 
 The decision-record pattern draws on Markdown Architectural Decision Records (MADR) while preserving the project's own convention. See [MADR and the local additions](references/decisions.md#sources-and-local-adaptation).

@@ -29,6 +29,10 @@ Load [task and handoff patterns](references/tasks.md) when choosing acceptance d
 
 Use the existing architecture and task authority. Preserve technical choices already made; propose implementation detail only when needed. Deliver the requested task with source links and a concrete next step, without adding a universal process checklist.
 
+## Edit before delivery
+
+Compare the draft with its sources for added claims, omitted conditions and changed authority or status. Then remove repeated staging and explain the reader's situation instead of narrating internal fields or the writing process. Prefer concrete subjects and verbs; retain precise terms and deliberate voice. Recheck facts after cutting or restructuring. Deliver finished prose, with material source questions kept separately when needed.
+
 ## Sources and adaptation
 
 The task pattern is a local synthesis, informed by the Good Docs goal-oriented how-to guidance. See [the source and limits of that adaptation](references/tasks.md#sources-and-local-adaptation).

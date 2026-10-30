@@ -29,6 +29,10 @@ Load [marketing patterns](references/marketing.md) for a campaign, product page,
 
 Match cadence to the channel and requested voice. Keep internal claim notes separate from finished customer copy unless annotations are requested. Deliver the requested copy with a clear action where the brief calls for one.
 
+## Edit before delivery
+
+Compare the draft with its sources for added claims, omitted conditions and changed authority or status. Then remove repeated staging and explain the reader's situation instead of narrating internal fields or the writing process. Prefer concrete subjects and verbs; retain precise terms and deliberate voice. Recheck facts after cutting or restructuring. Deliver finished prose, with material source questions kept separately when needed.
+
 ## Sources and adaptation
 
 Microsoft and Google writing guidance informs clear expression. The audience, value and claim patterns are local rather than an imported marketing framework. See [sources and local adaptation](references/marketing.md#sources-and-local-adaptation).

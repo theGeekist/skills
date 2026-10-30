@@ -29,6 +29,10 @@ Load [interface-content patterns](references/interface-content.md) for a set of 
 
 Make essential information available in text, with a useful route to detailed definitions. Connect a partial result to actual progress and the next milestone without disguising a consequential constraint. Deliver copy mapped to the requested states and actions; include implementation notes separately only when needed.
 
+## Edit before delivery
+
+Compare the draft with its sources for added claims, omitted conditions and changed authority or status. Then remove repeated staging and explain the reader's situation instead of narrating internal fields or the writing process. Prefer concrete subjects and verbs; retain precise terms and deliberate voice. Recheck facts after cutting or restructuring. Deliver finished prose, with material source questions kept separately when needed.
+
 ## Sources and adaptation
 
 Atlassian's voice-and-tone guidance informs wording for the user's situation; state and progress rules remain local. See [sources and local adaptation](references/interface-content.md#sources-and-local-adaptation).

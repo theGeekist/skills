@@ -19,6 +19,12 @@ For a review spanning several artefacts, choose the consequential concept and fo
 
 Invented example: the project defines **reviewed** as “all required checks completed”, while eligibility is a separate decision. “Your report is approved” changes that meaning. “All checks are complete. View the eligibility decision” preserves the distinction if that decision exists. Keep the exact internal value in contracts and translate its consequence where users need it.
 
+## Edit structure, then expression
+
+Identify the supplied author's voice and the reader's purpose before revising. First repair the main point, order and missing connections; then edit paragraphs and sentences. Preserve deliberate rhythm, humour and precise terminology where they serve the reader. Avoid polishing sentences that belong in a different section or should be removed.
+
+Before delivery, compare the revision with both the original and its governing sources. Check added and omitted claims, numbers, qualifiers, causal statements, permissions and status. Recheck this comparison after cutting or restructuring. Report a material source conflict separately rather than smoothing it into a confident claim.
+
 ## Make consequential edits inspectable
 
 When an annotated revision is requested, or a substantial edit needs explanation, use a compact note or table with these fields: original wording, revised wording, reason, retained facts and conditions, and governing source or open question. Show representative or consequential edits rather than an exhaustive diff by default. Plain text is enough; a visual comparison is optional.
