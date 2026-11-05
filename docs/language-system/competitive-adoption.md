@@ -1,37 +1,41 @@
 # Editorial practices in the collection
 
-The collection combines established writing practices with project terminology, source authority and evidence-aware delivery workflows. The [comparison with other writing skills](competing-writing-skills.md) explains their overlapping scopes and different editorial choices.
+Geekist's [comparison of writing skills](competing-writing-skills.md) examines how existing implementations improve prose and preserve meaning. Useful practices from that research operate in the collection's writing instructions, with locally authored examples that show how to apply them.
 
-## Concrete examples
+## Compare the finished draft with its sources
 
-Every [skill overview](../skills/index.md) includes an example request, expected result and before/after text. The source facts are stated separately so a shorter revision can be checked for retained permissions, conditions and limitations.
+The [review skill](../../skills/review-project-language/SKILL.md#check-the-finished-revision) compares a revision with the original and its governing sources. It checks for changed claims, paying particular attention to numbers and consequential qualifications. Permissions and status also need to survive editing, since a smoother sentence can otherwise give the reader authority that the source never granted.
 
-Examples illustrate the writing guidance. They do not establish product behaviour or substitute for the source facts of a real project.
+The task and decision-record skills carry a final editing pass, as do technical documentation and the two product-content skills. These checks adapt Humanizer's attention to factual integrity and Plain Writing's concrete expression. They recheck facts after restructuring, with material drafting questions kept separately from finished public copy.
 
-## Inspectable revisions
+## Repair the structure before polishing sentences
 
-The [review reference](../../standards/review.md) provides a compact record for requested or consequential edits: original wording, revision, reason, retained constraints and governing source. Small edits do not require a separate report or HTML artefact.
+The [review reference](../../standards/review.md#edit-structure-then-expression) begins with the reader's purpose and the supplied author's voice. It then addresses the document's main point and order before moving to paragraph-level editing. Sentence improvements become useful once the explanation itself has a workable structure.
 
-This preserves the useful idea of visible editing without importing another skill's template or forcing every author into one register.
+This sequence learns from Plain Language Editor and Plain Writing. Deliberate voice is retained where it serves the reader, so an engaging announcement does not emerge from review sounding like the minutes of a particularly cautious committee.
 
-## Editorial patterns and exceptions
+## Make consequential edits inspectable
 
-The [editorial pattern reference](../../standards/editorial-patterns.md) makes recurring defects concrete: changed meanings, omitted conditions, unsupported claims, evidence labels that halt independent work and prose that exposes internal data structures instead of explaining the user's situation.
+The [revision record](../../standards/review.md#make-consequential-edits-inspectable) makes a substantial edit easier to understand by showing the original wording beside its revision. A reason explains the change, with the retained constraints and governing source recorded alongside it.
 
-Each pattern has a stable identifier, source facts, a local example and an exception. These are contextual review prompts, not an AI-authorship detector or a universal punctuation ban. The structured source generates the readable reference, and automated checks detect catalogue drift.
+Hamel's Plain Writing variant informed this approach. The record is optional and proportional to the work; a small correction does not require an HTML comparison or a separate report. The format is locally authored rather than copied from the upstream template.
 
-## Editing before delivery
+## Use examples with contextual exceptions
 
-The task, decision-record, technical-documentation, marketing and interface-content skills include a final source comparison and prose edit. The pass checks additions, omissions and changed authority before cutting repeated staging or translating internal fields. It rechecks facts after restructuring and keeps material drafting questions separate from finished public copy. This adapts Humanizer’s factual checks, Plain Writing’s concrete expression and Plain Language Editor’s structural editing without imposing a single voice.
+The [editorial pattern reference](../../standards/editorial-patterns.md) describes eight recurring problems through source-constrained examples. Stable identifiers make individual findings easy to locate, while contextual exceptions keep the guidance useful for different readers.
 
-## Consistent presentation and selective context
+Humanizer and Plain Language Editor informed this use of explicit patterns. Geekist's records cover meaning drift and omitted conditions, including cases where evidence labels accidentally stop independent authorised work. They guide contextual review without assigning an AI-authorship score or imposing a universal punctuation rule.
 
-One [presentation catalogue](../../standards/skill-catalogue.json) generates human overviews and client-facing metadata. [Loading profiles](../../standards/skill-profiles.json) control which canonical references are bundled with each skill. Human overview pages remain outside the installable instruction packages.
+Every [skill overview](../skills/index.md) also includes an example request and expected result. Its before-and-after demonstration states the source facts separately, allowing readers to check whether the revision preserved the conditions that matter.
 
-The backend and frontend architecture rules retain their original authority, conditions and exceptions. Editorial changes do not broaden skill activation descriptions or change the explicit compatibility-router policy.
+## Keep the entry point focused
 
-## Attribution and verification
+Strunk-based writing skills demonstrate how a compact entry point can lead to more detailed guidance. Geekist uses [loading profiles](../../standards/skill-profiles.json) to bundle references appropriate to each purpose, while the common baseline keeps the collection coherent. Human overview pages remain outside the installable instruction packages.
 
-The [source map](../../standards/framework-evidence.md) identifies external frameworks, locally authored workflows and the practices informed by competing skills. Those sources support specific implementation choices rather than a claim to have invented clear writing.
+One [presentation catalogue](../../standards/skill-catalogue.json) generates those overviews and supported client metadata. This applies the consistency observed in competitor package organisation without broadening activation descriptions or changing the explicit compatibility chooser.
 
-[Validation results](validation-results.md) separate package and generation checks, task trials, native client observations and human-reader evidence. The [two isolated editorial trials](../../evaluations/editorial-v1.6.0/README.md) retain their prompts, source facts and outputs for inspection.
+## Follow the attribution and evidence
+
+The [source map](../../standards/framework-evidence.md) distinguishes external inspiration from local workflows. The [implementation map](implementation-status.json) provides direct routes to the incorporated practices. Architecture rules retain their original authority, including their conditions and exceptions.
+
+[Validation results](validation-results.md) identify the scope of executed checks and recorded trials. The [isolated editorial cases](../../evaluations/editorial-v1.6.0/README.md) retain their source facts and outputs, while the [editorial-pattern trial](../../evaluations/editorial-patterns/README.md) shows a selected skill applied to a further task. These observations are available for inspection without being presented as a comparative prose-quality or human-comprehension study.

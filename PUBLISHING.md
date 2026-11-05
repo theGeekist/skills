@@ -2,18 +2,20 @@
 
 GitHub is the canonical source for the collection. A versioned release binds the plugin metadata, portable skills, references, branding and evaluation record to one commit.
 
-## Release v1.6.0
+## Release v1.7.0
+
+The v1.7.0 metadata and installation references are prepared together. The tag and archives become available after the release workflow publishes them.
 
 - Repository: <https://github.com/theGeekist/skills>
-- Release: <https://github.com/theGeekist/skills/releases/tag/v1.6.0>
-- Both plugin manifests use version `1.6.0`.
-- Release notes: [v1.6.0](release-notes/v1.6.0.md).
+- Release: <https://github.com/theGeekist/skills/releases/tag/v1.7.0>
+- Both plugin manifests use version `1.7.0`.
+- Release notes: [v1.7.0](release-notes/v1.7.0.md).
 - The distribution retains the existing `geekist-architecture-skills` plugin identifier for compatibility; its displayed name is Geekist Skills.
 
 Install the pinned collection:
 
 ```sh
-npx skills add https://github.com/theGeekist/skills/tree/v1.6.0
+npx skills add https://github.com/theGeekist/skills/tree/v1.7.0
 ```
 
 The skills CLI prompts for skills and target agents. Its default scope is the current project; add `-g` for a user-wide installation. Review the selected destinations rather than assuming every installed client has the same discovery path. ChatGPT personal-skill installation uses its own supported installation mechanism, separately from this CLI.
@@ -21,7 +23,7 @@ The skills CLI prompts for skills and target agents. Its default scope is the cu
 For a canonical checkout shared by local clients:
 
 ```sh
-git clone --branch v1.6.0 https://github.com/theGeekist/skills.git
+git clone --branch v1.7.0 https://github.com/theGeekist/skills.git
 cd skills
 ./scripts/link-local.sh --client all --dry-run
 ./scripts/link-local.sh --client all

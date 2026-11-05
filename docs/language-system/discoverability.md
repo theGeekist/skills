@@ -31,6 +31,16 @@ Activation descriptions remain authored in each `SKILL.md`. The generator checks
 
 Directory mirrors may publish different revisions or variants. Check the linked repository and commit before comparing instructions or relying on a package's description.
 
+## Directory presentation
+
+The root [skills.sh.json](../../skills.sh.json) groups the collection by purpose. Project language covers terminology and review, while project writing covers tasks and decisions alongside technical documentation. Product content has its own route, with architecture and the explicit workflow chooser kept separate.
+
+The configuration is generated from the same catalogue as the overview pages. It changes directory presentation without changing skill instructions or activation scope. The [skills.sh customisation guide](https://skills.sh/docs/customize) describes its supported fields and refresh process; adding a valid file does not establish that a cached listing has refreshed.
+
+Skill activation uses the descriptions in `SKILL.md`. Client presentation uses supported metadata such as `agents/openai.yaml` and plugin manifests. The README gives prospective users a broader explanation with practical examples and visible research attribution. Each surface carries the information relevant to its reader rather than relying on every directory to read the same file.
+
+The collection's landing-page destination is `https://geekist.co/skills`. Installation commands and research links in this repository remain direct, so those routes do not depend on the landing page's availability.
+
 ## Search visibility
 
 Descriptive page titles, useful examples and meaningful links help people and search engines understand the collection. They are not ranking guarantees. The [Google Search Central guide](https://developers.google.com/search/docs/fundamentals/seo-starter-guide) explains crawling, indexing and search presentation.

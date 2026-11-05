@@ -5,7 +5,7 @@ The collection contains eleven independently installable skills. Each package in
 ## Install the versioned collection
 
 ```sh
-npx skills add https://github.com/theGeekist/skills/tree/v1.6.0
+npx skills add https://github.com/theGeekist/skills/tree/v1.7.0
 ```
 
 Use `--skill <name>` to select one workflow. Each [skill overview](../skills/index.md) provides its exact command, example request and source links. Choose the target client and installation scope supported by that client.
@@ -14,13 +14,9 @@ For a canonical checkout shared by local clients, follow [the local installation
 
 ## Current source and tagged releases
 
-The E001–E008 editorial-pattern reference is included in the current `main` source. The immutable v1.6.0 package predates that reference. To use the current review skill, install it from `main`:
+The v1.7.0 source includes the E001–E008 editorial-pattern reference and explicit final editing passes. Its versioned command becomes available when the release is published. The immutable v1.6.0 package predates those additions.
 
-```sh
-npx skills add https://github.com/theGeekist/skills/tree/main --skill review-project-language
-```
-
-Use a versioned tag for a fixed released package, or pin a commit when evaluating newer instructions. Documentation and source changes do not move an existing release tag.
+Use a published versioned tag for a fixed package, or pin a commit when evaluating newer instructions. Documentation and source changes do not move an existing release tag.
 
 ## Verify the installed package
 

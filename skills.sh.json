@@ -1,0 +1,47 @@
+{
+  "$schema": "https://skills.sh/schemas/skills.sh.schema.json",
+  "notGrouped": "bottom",
+  "groupings": [
+    {
+      "title": "Project language",
+      "description": "Establish shared terminology and review its use across the project. Includes guidance for handling evidence gaps constructively.",
+      "skills": [
+        "establish-project-language",
+        "review-project-language",
+        "advance-with-uncertainty"
+      ]
+    },
+    {
+      "title": "Project writing",
+      "description": "Produce actionable implementation tasks and useful decision records. Includes technical documentation guidance organised around reader needs.",
+      "skills": [
+        "write-implementation-tasks",
+        "record-architecture-decisions",
+        "write-technical-documentation"
+      ]
+    },
+    {
+      "title": "Product content",
+      "description": "Explain product value through credible marketing content and provide clear interface guidance that reflects actual application behaviour.",
+      "skills": [
+        "write-marketing-content",
+        "write-interface-content"
+      ]
+    },
+    {
+      "title": "Architecture",
+      "description": "Apply the established backend and frontend architecture rules while preserving their technical meaning.",
+      "skills": [
+        "backend-slice-architecture",
+        "frontend-slice-architecture"
+      ]
+    },
+    {
+      "title": "Workflow chooser",
+      "description": "Select the writing workflow appropriate to a request without requiring callers to know the entire collection.",
+      "skills": [
+        "write-project-content"
+      ]
+    }
+  ]
+}

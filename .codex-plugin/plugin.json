@@ -1,38 +1,40 @@
 {
   "name": "geekist-architecture-skills",
-  "version": "1.6.0",
-  "description": "Clear agent prose, shared project terminology and practical architecture workflows from Geekist.",
+  "version": "1.7.0",
+  "description": "Eleven agent skills for clear writing, shared terminology and practical architecture, with actionable treatment of uncertainty. Informed by established frameworks and competing writing skills.",
   "author": {
     "name": "Geekist",
     "url": "https://geekist.co"
   },
-  "homepage": "https://geekist.co",
+  "homepage": "https://geekist.co/skills",
   "repository": "https://github.com/theGeekist/skills",
   "license": "MIT",
   "keywords": [
     "agent-skills",
+    "ai-writing",
     "plain-language",
     "technical-writing",
     "documentation",
     "terminology",
-    "architecture",
+    "architecture-decision-records",
     "copywriting",
-    "adr",
+    "content-design",
+    "software-architecture",
     "claude-code",
     "codex"
   ],
   "skills": "./skills/",
   "interface": {
     "displayName": "Geekist Skills",
-    "shortDescription": "Clear agent prose and consistent project meanings",
-    "longDescription": "Purpose-specific skills connect project terminology, evidence and reader needs across implementation tasks, decisions, documentation, marketing, interfaces and Jason’s architecture playbooks.",
+    "shortDescription": "Clear agent writing and consistent project meaning",
+    "longDescription": "Help agents produce useful implementation tasks, architecture decisions and technical documentation while preserving project meaning. Includes workflows for marketing and interface copy. Geekist draws on DDD, SKOS, Diátaxis and MADR, together with adapted practices from Humanizer and plain-language writing skills. Source-integrity checks and contextual editorial patterns support consistent writing across a project.",
     "developerName": "Geekist",
     "category": "Developer Tools",
     "capabilities": [
       "Read",
       "Write"
     ],
-    "websiteURL": "https://geekist.co",
+    "websiteURL": "https://geekist.co/skills",
     "defaultPrompt": [
       "Establish the concepts and vocabulary in this repository.",
       "Review this project explanation for clear prose and consistent meanings.",

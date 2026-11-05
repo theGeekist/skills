@@ -1,21 +1,23 @@
 {
   "version": 1,
-  "release": "v1.6.0",
+  "release": "v1.7.0",
   "repository": "https://github.com/theGeekist/skills",
   "plugin": {
-    "description": "Clear agent prose, shared project terminology and practical architecture workflows from Geekist.",
+    "description": "Eleven agent skills for clear writing, shared terminology and practical architecture, with actionable treatment of uncertainty. Informed by established frameworks and competing writing skills.",
     "display_name": "Geekist Skills",
-    "short_description": "Clear agent prose and consistent project meanings",
-    "long_description": "Purpose-specific skills connect project terminology, evidence and reader needs across implementation tasks, decisions, documentation, marketing, interfaces and Jason’s architecture playbooks.",
+    "short_description": "Clear agent writing and consistent project meaning",
+    "long_description": "Help agents produce useful implementation tasks, architecture decisions and technical documentation while preserving project meaning. Includes workflows for marketing and interface copy. Geekist draws on DDD, SKOS, Diátaxis and MADR, together with adapted practices from Humanizer and plain-language writing skills. Source-integrity checks and contextual editorial patterns support consistent writing across a project.",
     "keywords": [
       "agent-skills",
+      "ai-writing",
       "plain-language",
       "technical-writing",
       "documentation",
       "terminology",
-      "architecture",
+      "architecture-decision-records",
       "copywriting",
-      "adr",
+      "content-design",
+      "software-architecture",
       "claude-code",
       "codex"
     ],
@@ -24,12 +26,13 @@
       "Review this project explanation for clear prose and consistent meanings.",
       "Write this technical explanation for engineering and business readers.",
       "Turn this evidence gap into bounded next actions."
-    ]
+    ],
+    "homepage": "https://geekist.co/skills"
   },
   "skills": {
     "advance-with-uncertainty": {
       "title": "Advance through evidence gaps",
-      "purpose": "Keep honest evidence gaps actionable in tasks, decisions and handoffs.",
+      "purpose": "Describe evidence gaps accurately and connect them to useful next actions.",
       "when_to_use": "Use when an unrun check or uncertain claim is preventing independent authorised work.",
       "example_request": "Turn this untested adapter decision into bounded next actions and clear completion evidence.",
       "expected_result": "A precise gap, the next check, the dependent step and the work that can continue.",
@@ -38,7 +41,7 @@
         "after": "Implement the authorised adapter. Check one local client event before claiming compatibility; the check is still pending.",
         "source_facts": "The adapter implementation is authorised. Compatibility has not been checked. One local client-event check is required before claiming compatibility."
       },
-      "source_basis": "Jason’s continuation requirement is the authority. Related decision structure draws on MADR; this workflow is a local synthesis.",
+      "source_basis": "This skill implements the Geekist requirement to make evidence gaps actionable. Related decision principles draw on MADR. It helps agents describe what remains unresolved while identifying useful next actions, without treating ordinary pending work as a reason to abandon an authorised implementation.",
       "reference": "uncertainty.md",
       "sources": [
         {
@@ -58,7 +61,7 @@
     },
     "backend-slice-architecture": {
       "title": "Review backend ownership and boundaries",
-      "purpose": "Apply Jason’s capability-first backend rules while keeping coordination explicit.",
+      "purpose": "Apply capability-first organisation with explicit orchestration and protected public boundaries.",
       "when_to_use": "Use when designing or reviewing a backend against this chosen model.",
       "example_request": "Review this service boundary using the existing backend rules; preserve local naming and propose the smallest migration.",
       "expected_result": "A boundary recommendation tied to the existing rules, code and concrete consequences.",
@@ -67,7 +70,7 @@
         "after": "Keep checkout and stock rules inside their capabilities. Coordinate the cross-capability workflow in the existing application surface.",
         "source_facts": "Checkout and stock are separate owned capabilities. A workflow coordinates both through the existing application surface."
       },
-      "source_basis": "Jason’s original backend rules govern architecture. Microsoft and Google writing guidance improves their explanation; it does not add architectural requirements.",
+      "source_basis": "The backend playbook expresses [@pipewrk](https://github.com/pipewrk)'s capability-first architecture rules. Editorial guidance improves the presentation while retaining the public boundaries and orchestration requirements established by the architecture.",
       "reference": "placement-and-contracts.md",
       "sources": [
         {
@@ -91,7 +94,7 @@
     },
     "establish-project-language": {
       "title": "Establish shared project terminology",
-      "purpose": "Discover and maintain the meanings that code, decisions and documents share.",
+      "purpose": "Establish agreed meanings for project concepts before contributing agents develop incompatible vocabularies.",
       "when_to_use": "Use when onboarding to a domain, reconciling competing terms or introducing a consequential concept.",
       "example_request": "Find what eligible means in this project and reconcile the code, decisions and interface wording.",
       "expected_result": "A sourced terminology record with context, accepted meanings, aliases and unresolved differences.",
@@ -100,7 +103,7 @@
         "after": "Keep the three labels distinct until sources establish their meanings. Record which condition permits the account to proceed.",
         "source_facts": "The sources use ready, approved and eligible. Their equivalence has not been established, and each may express a different condition."
       },
-      "source_basis": "DDD informs context-specific meaning; SKOS informs concepts and labels; Good Docs informs terminology records. The local JSON registry is not a formal SKOS or ISO implementation.",
+      "source_basis": "This skill draws on DDD bounded contexts and SKOS concept distinctions, together with terminology practices from Good Docs. It helps contributors agree on the meanings used within a project so that subsequent documents can refer to the same concepts consistently.",
       "reference": "writing.md",
       "sources": [
         {
@@ -128,7 +131,7 @@
     },
     "frontend-slice-architecture": {
       "title": "Review frontend features and scenes",
-      "purpose": "Apply Jason’s feature-first frontend rules with explicit composition and earned sharing.",
+      "purpose": "Organise frontend features around clear ownership and appropriate shared components.",
       "when_to_use": "Use when designing or reviewing a frontend against this chosen model.",
       "example_request": "Review these feature and scene boundaries without changing the framework or underlying frontend rules.",
       "expected_result": "A targeted recommendation preserving feature ownership, public surfaces and scene composition.",
@@ -137,7 +140,7 @@
         "after": "Keep checkout workflow state in its feature. Let the scene compose the feature with shared UI primitives.",
         "source_facts": "Checkout owns its workflow state. The shared button is a UI primitive, and scenes compose features."
       },
-      "source_basis": "Jason’s original frontend rules govern architecture. Plain-language sources improve navigation and explanation; they do not introduce new frontend requirements.",
+      "source_basis": "The frontend playbook expresses [@pipewrk](https://github.com/pipewrk)'s feature-first architecture rules. Its guidance clarifies ownership and shared-component boundaries without changing the underlying engineering decisions.",
       "reference": "placement-and-contracts.md",
       "sources": [
         {
@@ -161,7 +164,7 @@
     },
     "record-architecture-decisions": {
       "title": "Record clear architecture decisions",
-      "purpose": "Explain one consequential decision, its viable options and its consequences.",
+      "purpose": "Document the reasoning behind technical decisions while that reasoning is still available to the people who made them.",
       "when_to_use": "Use when authoring or updating an architecture decision record, using the project’s format and authority.",
       "example_request": "Record why we chose a shared queue, including alternatives, the pending latency check and when to reconsider.",
       "expected_result": "A decision record with context, options, outcome, consequences and explicit evidence status.",
@@ -170,7 +173,7 @@
         "after": "Choose the shared queue for this prototype. Measure latency before claiming the target is met; record what result would trigger reconsideration.",
         "source_facts": "The shared queue is chosen for a prototype. Latency has not been measured, so meeting the target is still a pending claim."
       },
-      "source_basis": "MADR informs context, options, outcome and consequences. Evidence status and reconsideration guidance are local adaptations.",
+      "source_basis": "MADR informs the decision structure, while source checks preserve the status and authority of the decision. The guidance helps maintainers understand why an approach was selected, particularly after the original participants have moved on and the meeting that settled the matter has become a distant organisational legend.",
       "reference": "decisions.md",
       "sources": [
         {
@@ -190,7 +193,7 @@
     },
     "review-project-language": {
       "title": "Review clarity and consistent meaning",
-      "purpose": "Review terminology, reader navigation and consequential claims across project material.",
+      "purpose": "Improve writing while checking its consistency with established terminology and source material.",
       "when_to_use": "Use when auditing existing writing or requesting a revision across related artefacts.",
       "example_request": "Review this task, decision and announcement for consistent meanings and explain every consequential edit.",
       "expected_result": "Located findings or an authorised revision that preserves meanings, constraints and source claims.",
@@ -199,7 +202,7 @@
         "after": "Explain what eligibility and coverage mean here, then name the behaviour that should change. Keep eligibility and coverage distinct.",
         "source_facts": "Eligibility and coverage are distinct project concepts. Their definitions and the intended behaviour need to be established before rewriting the requirement."
       },
-      "source_basis": "Microsoft, Google and the ISO plain-language public abstract inform reader-focused review. The four repository outcomes are Jason’s priorities, not an ISO certification claim.",
+      "source_basis": "This skill combines document-first editing with source-integrity checks. It also provides for inspectable revisions where the consequences of an editorial change warrant explanation. Deliberate authorial voice is preserved rather than automatically normalised.",
       "reference": "review.md",
       "sources": [
         {
@@ -227,7 +230,7 @@
     },
     "write-implementation-tasks": {
       "title": "Write actionable implementation tasks",
-      "purpose": "Give the next worker an observable outcome, constraints and useful validation.",
+      "purpose": "Express implementation work through clear objectives and acceptance criteria, with the relevant constraints preserved.",
       "when_to_use": "Use for tickets, acceptance criteria and handoffs that another worker should be able to execute.",
       "example_request": "Write a task for members to export their own bookings; keep the access restriction and include failure cases.",
       "expected_result": "A task with observable behaviour, acceptance criteria, validation and precise dependencies.",
@@ -236,7 +239,7 @@
         "after": "Let members export their own bookings. Reject exports of another member’s bookings and verify both outcomes.",
         "source_facts": "Members may export their own bookings. They may not export another member’s bookings."
       },
-      "source_basis": "The task and handoff pattern is local guidance. Good Docs how-to material informs goal and completion-oriented structure without imposing a template or Scrum process.",
+      "source_basis": "Goal-oriented task structure is combined with source-preserving editing practices informed by Humanizer and Plain Writing. The skill helps agents describe work in terms an engineer can act upon, while retaining the constraints that determine whether the result is acceptable.",
       "reference": "tasks.md",
       "sources": [
         {
@@ -256,7 +259,7 @@
     },
     "write-interface-content": {
       "title": "Write interface copy for real states",
-      "purpose": "Explain what happened, what it means and what the user can do next.",
+      "purpose": "Explain application behaviour so users understand what happened and how to proceed.",
       "when_to_use": "Use for labels, errors, empty states, progress messages and dashboard wording.",
       "example_request": "Write the interrupted-export message using the actual state contract; do not imply the download completed.",
       "expected_result": "State-accurate interface wording, consistent action names and useful recovery.",
@@ -265,7 +268,7 @@
         "after": "Your export stopped before completion. Try again.",
         "source_facts": "The export stopped before completion. The product supports trying again."
       },
-      "source_basis": "Atlassian informs situational voice and tone. State distinctions, event-based progress and domain-preserving labels are local rules.",
+      "source_basis": "The guidance draws on Atlassian's state-aware content practices. It encourages wording that reflects application behaviour and provides useful recovery information, especially where a generic error message would leave the user wondering what the application expects them to do.",
       "reference": "interface-content.md",
       "sources": [
         {
@@ -285,7 +288,7 @@
     },
     "write-marketing-content": {
       "title": "Explain supported product value",
-      "purpose": "Connect audience needs with product capabilities and substantiated claims.",
+      "purpose": "Communicate product value through credible claims and an appropriate editorial voice.",
       "when_to_use": "Use for announcements, landing-page copy, positioning and customer explanations.",
       "example_request": "Announce booking exports for members; preserve that background scheduling has not shipped.",
       "expected_result": "Customer-facing value grounded in actual behaviour, with stronger claims separated for validation.",
@@ -294,7 +297,7 @@
         "after": "Download your bookings when you need them.",
         "source_facts": "Members can download bookings on demand. Automatic daily scheduling has not shipped."
       },
-      "source_basis": "Audience, value and claim patterns are a local synthesis. Microsoft and Google inform clear expression; they do not validate product claims or conversion performance.",
+      "source_basis": "This skill connects audience needs to supported product value, incorporating factual checks and voice-sensitive editing informed by Humanizer and Plain Language Editor. The resulting copy should be engaging while remaining accountable to actual product behaviour.",
       "reference": "marketing.md",
       "sources": [
         {
@@ -318,7 +321,7 @@
     },
     "write-project-content": {
       "title": "Choose a project writing workflow",
-      "purpose": "Select the relevant specialist when you explicitly want help choosing.",
+      "purpose": "Select the appropriate writing workflow without requiring callers to understand the entire collection.",
       "when_to_use": "Use on explicit request to choose a writing workflow; ordinary writing can select its specialist directly.",
       "example_request": "Choose the right workflow for explaining a decision and announcing the resulting feature.",
       "expected_result": "A purpose-specific route, with separate artefacts where readers have different needs.",
@@ -327,7 +330,7 @@
         "after": "Use marketing guidance for the announcement. Consult the decision record for the accepted choice and its constraints.",
         "source_facts": "The requested artefact is an announcement. An accepted decision record supplies the governing choice and constraints."
       },
-      "source_basis": "The routing table is a local compatibility aid. Agent Skills informs packaging and selective loading; Diátaxis distinguishes reader needs within technical documentation.",
+      "source_basis": "This locally authored compatibility workflow selects the appropriate writing skill for an explicit request. It gives agents access to relevant guidance without requiring every writing task to activate the entire collection.",
       "reference": "routing.md",
       "sources": [
         {
@@ -351,7 +354,7 @@
     },
     "write-technical-documentation": {
       "title": "Write navigable technical documentation",
-      "purpose": "Help readers learn, complete a task, look up a contract or understand a concept.",
+      "purpose": "Explain systems according to reader needs while retaining their technical contracts.",
       "when_to_use": "Use for tutorials, how-to guides, references, architecture explanations and developer guides.",
       "example_request": "Explain the export flow so a marketing reader can find its purpose and an engineer can find the access contract.",
       "expected_result": "A purpose-led document with explained terms, visible constraints and routes to exact technical detail.",
@@ -360,7 +363,7 @@
         "after": "The export prepares a file of the member’s bookings. Link the access rules and data contract where engineers need the exact details.",
         "source_facts": "The export prepares a file of the member’s bookings. Access rules and an exact data contract are available to link."
       },
-      "source_basis": "Diátaxis supplies four reader purposes. Good Docs informs procedures and explanations; selected arc42 views support architecture coverage without imposing a system design.",
+      "source_basis": "Diátaxis informs the organisation of documentation around reader purposes, supported by Good Docs and relevant arc42 architecture views. Editorial checks preserve technical contracts while improving the explanations around them.",
       "reference": "technical-documentation.md",
       "sources": [
         {
@@ -386,5 +389,50 @@
       },
       "allow_implicit_invocation": null
     }
+  },
+  "directory": {
+    "groupings": [
+      {
+        "title": "Project language",
+        "description": "Establish shared terminology and review its use across the project. Includes guidance for handling evidence gaps constructively.",
+        "skills": [
+          "establish-project-language",
+          "review-project-language",
+          "advance-with-uncertainty"
+        ]
+      },
+      {
+        "title": "Project writing",
+        "description": "Produce actionable implementation tasks and useful decision records. Includes technical documentation guidance organised around reader needs.",
+        "skills": [
+          "write-implementation-tasks",
+          "record-architecture-decisions",
+          "write-technical-documentation"
+        ]
+      },
+      {
+        "title": "Product content",
+        "description": "Explain product value through credible marketing content and provide clear interface guidance that reflects actual application behaviour.",
+        "skills": [
+          "write-marketing-content",
+          "write-interface-content"
+        ]
+      },
+      {
+        "title": "Architecture",
+        "description": "Apply the established backend and frontend architecture rules while preserving their technical meaning.",
+        "skills": [
+          "backend-slice-architecture",
+          "frontend-slice-architecture"
+        ]
+      },
+      {
+        "title": "Workflow chooser",
+        "description": "Select the writing workflow appropriate to a request without requiring callers to know the entire collection.",
+        "skills": [
+          "write-project-content"
+        ]
+      }
+    ]
   }
 }

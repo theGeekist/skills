@@ -42,18 +42,33 @@ The [Softaworks variant](https://github.com/softaworks/agent-toolkit/blob/3027f2
 
 The reviewed [instructions](https://github.com/marketingskills/plain-language-editor/blob/df7b314509eb47a722aa620f11784fab76a595e6/SKILL.md) combine document-level editing, factual checks, voice preservation and a generated pattern reference. They also prescribe aggressive shortening and particular sentence and punctuation rules. Check those preferences against the intended author and artefact.
 
-## Practices incorporated into Geekist
+## What we learnt and incorporated
 
-| Practice | Implementation |
-| --- | --- |
-| Demonstrate the result | [All eleven overviews](../skills/index.md) provide source facts, a before/after example and an example request |
-| Make consequential edits inspectable | [Review guidance](../../standards/review.md) provides an optional original/revision/reason/retained-constraint record |
-| Use specific checks and exceptions | [Editorial patterns](../../standards/editorial-patterns.md) provide stable identifiers, source-constrained examples and contextual exceptions |
-| Load detail by purpose | Each installable skill bundles the references relevant to its work; the full research catalogue is not a prerequisite |
-| Keep presentation consistent | [The presentation catalogue](../../standards/skill-catalogue.json) generates overview pages and client presentation, with drift checks |
-| Preserve source authority | [The evidence map](../../standards/framework-evidence.md) distinguishes external inspiration, local writing patterns and the original architecture rules |
+Existing agent writing skills approach the problem from several directions. Humanizer examines wording that can obscure the author's intention and checks whether a revision changes its claims. Plain-writing approaches make explanations easier to follow, while document-first editing gives greater attention to structure.
 
-The examples, revision format and editorial patterns are locally authored. Source notes identify the practices that informed them; competing HTML templates, pattern datasets and complete house styles are not copied into the collection.
+Some implementations also make revisions easier to inspect by explaining which changes matter. These practices were relevant to Geekist because improving a document requires understanding the information it carries and the audience it serves.
+
+| Practice | Inspiration | Geekist implementation |
+| --- | --- | --- |
+| Check revisions against their sources for additions, omissions and changed meaning | Humanizer | [Review workflow](../../skills/review-project-language/SKILL.md#check-the-finished-revision) and final passes in five drafting skills |
+| Improve document structure before sentence-level editing | Plain Language Editor; Plain Writing | [Review reference](../../standards/review.md#edit-structure-then-expression) |
+| Explain actual behaviour through concrete language | Plain Writing; Plain Language Editor | Final editing passes in [task writing](../../skills/write-implementation-tasks/SKILL.md#edit-before-delivery), [decision records](../../skills/record-architecture-decisions/SKILL.md#edit-before-delivery) and [technical documentation](../../skills/write-technical-documentation/SKILL.md#edit-before-delivery), with corresponding checks in [marketing](../../skills/write-marketing-content/SKILL.md#edit-before-delivery) and [interface content](../../skills/write-interface-content/SKILL.md#edit-before-delivery) |
+| Preserve deliberate voice and necessary terminology | Humanizer; Plain Language Editor | [Shared writing conventions](../../standards/writing.md#edit-without-flattening-the-writers-voice) and the review workflow |
+| Explain consequential revisions and identify retained constraints | Hamel's Plain Writing variant | [Optional revision record](../../standards/review.md#make-consequential-edits-inspectable) |
+| Use examples with contextual exceptions | Humanizer; Plain Language Editor | [Eight locally authored editorial patterns](../../standards/editorial-patterns.md) |
+| Keep skill entry points focused | Strunk-based variants; Agent Skills guidance | Purpose-specific instructions with [bundled references](../../standards/skill-profiles.json) |
+| Demonstrate the practical outcome before introducing implementation details | Competitor README and package organisation | [Eleven skill overviews](../skills/index.md) with source facts and before-and-after examples |
+| Keep public descriptions consistent | Competitor package organisation | [Presentation catalogue](../../standards/skill-catalogue.json) with generated overviews and client metadata |
+
+The examples and editorial patterns were written for Geekist. We adapted the underlying practices without copying upstream templates or pattern datasets. The [adoption guide](competitive-adoption.md) explains how these checks work together, and the [implementation map](implementation-status.json) identifies their source routes.
+
+## Where our approach differs
+
+Projects introduce complications when several documents depend upon the same underlying information. An architecture decision may establish a constraint that needs to remain visible in a developer guide. Marketing can describe the resulting feature in different language, provided that its explanation continues to respect what the product does.
+
+Geekist therefore treats accepted project terminology as a reference for subsequent writing. Source authority matters because a claim in one document may depend upon a qualification established elsewhere. Editorial judgement remains important: a technical reference needs precision, while promotional material benefits from an engaging voice. Applying an identical style to both would make the collection easier to describe but less useful in practice.
+
+Evidence gaps require similar care. A pending capacity test may limit performance claims without preventing an authorised implementation from proceeding. The uncertainty workflow helps authors describe that distinction, so an ordinary measurement does not acquire the authority of a constitutional crisis.
 
 ## Context and validation
 
