@@ -1,7 +1,7 @@
 {
   "name": "geekist-architecture-skills",
-  "version": "1.8.0",
-  "description": "Eleven reusable agent skills for clear writing across reports, research, project updates, tasks, architecture decisions, technical documentation, product messaging and interface copy.",
+  "version": "1.9.0",
+  "description": "Thirteen portable agent skills for clear project writing, evidence-led outreach research, authentic individual correspondence, technical documentation, decisions and product communication.",
   "author": {
     "name": "Geekist",
     "url": "https://geekist.co"
@@ -26,13 +26,19 @@
     "reports",
     "editing",
     "summarisation",
-    "project-updates"
+    "project-updates",
+    "outreach",
+    "commercial-research",
+    "prospect-research",
+    "crm",
+    "professional-writing",
+    "editorial-voice"
   ],
   "skills": "./skills/",
   "interface": {
     "displayName": "Geekist Skills",
-    "shortDescription": "Clear writing across project communication",
-    "longDescription": "Write and revise project reports, research notes, findings, summaries, implementation tasks, architecture decisions, technical documentation, product messaging and interface copy. Shared writing principles preserve meaning, readable structure and reader-appropriate language without forcing every deliverable into one template.",
+    "shortDescription": "Clear writing, research and authentic outreach",
+    "longDescription": "Write and revise project reports, research findings, technical documentation, architecture decisions and product content. Investigate commercial opportunities and write recipient-specific professional outreach grounded in actual relationships, current evidence and the author's editorial judgement. Shared writing principles preserve meaning without mandatory templates, sales sequences or unnecessary dependencies.",
     "developerName": "Geekist",
     "category": "Developer Tools",
     "capabilities": [
@@ -41,10 +47,10 @@
     ],
     "websiteURL": "https://geekist.co/skills",
     "defaultPrompt": [
-      "Write up these investigation findings as a clear project report.",
-      "Polish this draft without changing its meaning or voice.",
-      "Document what this technical investigation discovered.",
-      "Turn these decisions and next steps into a useful handoff."
+      "Research this company for credible collaboration or paid-work opportunities.",
+      "Write an individual founder email from these findings and the relationship history.",
+      "Polish this message so it sounds like the author, not a sales template.",
+      "Write up this project's technical investigation for the team."
     ]
   }
 }

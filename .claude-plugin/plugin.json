@@ -1,7 +1,7 @@
 {
   "name": "geekist-architecture-skills",
-  "version": "1.8.0",
-  "description": "Eleven reusable agent skills for clear writing across reports, research, project updates, tasks, architecture decisions, technical documentation, product messaging and interface copy.",
+  "version": "1.9.0",
+  "description": "Thirteen portable agent skills for clear project writing, evidence-led outreach research, authentic individual correspondence, technical documentation, decisions and product communication.",
   "author": {
     "name": "Geekist",
     "url": "https://geekist.co"
@@ -26,6 +26,12 @@
     "reports",
     "editing",
     "summarisation",
-    "project-updates"
+    "project-updates",
+    "outreach",
+    "commercial-research",
+    "prospect-research",
+    "crm",
+    "professional-writing",
+    "editorial-voice"
   ]
 }

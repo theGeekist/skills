@@ -222,6 +222,78 @@
         "write-project-content",
         "write-technical-documentation"
       ]
+    },
+    {
+      "id": "company-opportunity-investigation",
+      "prompt": "Investigate this company for an engineering collaboration. Our initial documentation-gap hypothesis may be outdated; compare current product evidence with existing relationship history.",
+      "primary": [
+        "research-outreach-opportunities"
+      ],
+      "allowed_companions": [],
+      "reject": [
+        "write-outreach",
+        "write-marketing-content"
+      ]
+    },
+    {
+      "id": "contact-reconnection-research",
+      "prompt": "Research this former professional connection and our previous exchanges. Is there something worthwhile to reconnect about? Don't draft a message yet.",
+      "primary": [
+        "research-outreach-opportunities"
+      ],
+      "allowed_companions": [],
+      "reject": [
+        "write-outreach",
+        "write-project-content"
+      ]
+    },
+    {
+      "id": "founder-message-from-research",
+      "prompt": "Use the existing findings and history to write a thoughtful note to the founder. Keep it conversational rather than a standard cold pitch.",
+      "primary": [
+        "write-outreach"
+      ],
+      "allowed_companions": [],
+      "reject": [
+        "research-outreach-opportunities",
+        "write-marketing-content"
+      ]
+    },
+    {
+      "id": "personal-message-revision",
+      "prompt": "Polish this LinkedIn message to an old colleague, keeping my natural conversational voice. Don't research the company again.",
+      "primary": [
+        "write-outreach"
+      ],
+      "allowed_companions": [],
+      "reject": [
+        "research-outreach-opportunities",
+        "review-project-language"
+      ]
+    },
+    {
+      "id": "no-pitch-required",
+      "prompt": "Investigate whether this prospect offers a worthwhile reason for conversation. It's acceptable if no business opportunity remains. No message needed.",
+      "primary": [
+        "research-outreach-opportunities"
+      ],
+      "allowed_companions": [],
+      "reject": [
+        "write-outreach",
+        "write-marketing-content"
+      ]
+    },
+    {
+      "id": "public-campaign-not-private",
+      "prompt": "Write a public launch announcement for our audience, not a personal email to an individual.",
+      "primary": [
+        "write-marketing-content"
+      ],
+      "allowed_companions": [],
+      "reject": [
+        "write-outreach",
+        "research-outreach-opportunities"
+      ]
     }
   ]
 }

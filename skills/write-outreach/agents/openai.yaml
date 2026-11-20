@@ -1,0 +1,6 @@
+interface:
+  icon_small: "./assets/geekist-small.svg"
+  icon_large: "./assets/geekist.svg"
+  display_name: "Write Outreach"
+  short_description: "Write authentic one-to-one professional messages"
+  default_prompt: "Use $write-outreach to write a message to this person using our actual relationship and research."

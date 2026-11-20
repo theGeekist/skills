@@ -42,6 +42,14 @@
       "skills": [
         "write-project-content"
       ]
+    },
+    {
+      "title": "Professional outreach",
+      "description": "Investigate commercial possibilities and write authentic individual outreach, with CRM history and current evidence when available.",
+      "skills": [
+        "research-outreach-opportunities",
+        "write-outreach"
+      ]
     }
   ]
 }

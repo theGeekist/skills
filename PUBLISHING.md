@@ -2,20 +2,20 @@
 
 GitHub is the canonical source for the collection. A versioned release binds the plugin metadata, portable skills, references, branding and evaluation record to one commit.
 
-## Release v1.8.0
+## Release v1.9.0
 
-The v1.8.0 metadata and installation references are prepared together. Writing-skill activation now covers general prose and broader natural requests alongside existing specialist workflows. The tag and archives become available after the release workflow publishes them.
+The v1.9.0 metadata and installation references are prepared together. The collection now includes portable outreach research and individual message writing, without hard-coded portfolios, schedules or storage destinations. The tag and archives become available after the release workflow publishes them.
 
 - Repository: <https://github.com/theGeekist/skills>
-- Release: <https://github.com/theGeekist/skills/releases/tag/v1.8.0>
+- Release: <https://github.com/theGeekist/skills/releases/tag/v1.9.0>
 - Both plugin manifests use version `1.7.0`.
-- Release notes: [v1.8.0](release-notes/v1.8.0.md).
+- Release notes: [v1.9.0](release-notes/v1.9.0.md).
 - The distribution retains the existing `geekist-architecture-skills` plugin identifier for compatibility; its displayed name is Geekist Skills.
 
 Install the pinned collection:
 
 ```sh
-npx skills add https://github.com/theGeekist/skills/tree/v1.8.0
+npx skills add https://github.com/theGeekist/skills/tree/v1.9.0
 ```
 
 The skills CLI prompts for skills and target agents. Its default scope is the current project; add `-g` for a user-wide installation. Review the selected destinations rather than assuming every installed client has the same discovery path. ChatGPT personal-skill installation uses its own supported installation mechanism, separately from this CLI.
@@ -23,7 +23,7 @@ The skills CLI prompts for skills and target agents. Its default scope is the cu
 For a canonical checkout shared by local clients:
 
 ```sh
-git clone --branch v1.8.0 https://github.com/theGeekist/skills.git
+git clone --branch v1.9.0 https://github.com/theGeekist/skills.git
 cd skills
 ./scripts/link-local.sh --client all --dry-run
 ./scripts/link-local.sh --client all
