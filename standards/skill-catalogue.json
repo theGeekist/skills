@@ -1,12 +1,12 @@
 {
   "version": 1,
-  "release": "v1.8.0",
+  "release": "v1.9.0",
   "repository": "https://github.com/theGeekist/skills",
   "plugin": {
-    "description": "Eleven reusable agent skills for clear writing across reports, research, project updates, tasks, architecture decisions, technical documentation, product messaging and interface copy.",
+    "description": "Thirteen portable agent skills for clear project writing, evidence-led outreach research, authentic individual correspondence, technical documentation, decisions and product communication.",
     "display_name": "Geekist Skills",
-    "short_description": "Clear writing across project communication",
-    "long_description": "Write and revise project reports, research notes, findings, summaries, implementation tasks, architecture decisions, technical documentation, product messaging and interface copy. Shared writing principles preserve meaning, readable structure and reader-appropriate language without forcing every deliverable into one template.",
+    "short_description": "Clear writing, research and authentic outreach",
+    "long_description": "Write and revise project reports, research findings, technical documentation, architecture decisions and product content. Investigate commercial opportunities and write recipient-specific professional outreach grounded in actual relationships, current evidence and the author's editorial judgement. Shared writing principles preserve meaning without mandatory templates, sales sequences or unnecessary dependencies.",
     "keywords": [
       "agent-skills",
       "ai-writing",
@@ -24,13 +24,19 @@
       "reports",
       "editing",
       "summarisation",
-      "project-updates"
+      "project-updates",
+      "outreach",
+      "commercial-research",
+      "prospect-research",
+      "crm",
+      "professional-writing",
+      "editorial-voice"
     ],
     "default_prompts": [
-      "Write up these investigation findings as a clear project report.",
-      "Polish this draft without changing its meaning or voice.",
-      "Document what this technical investigation discovered.",
-      "Turn these decisions and next steps into a useful handoff."
+      "Research this company for credible collaboration or paid-work opportunities.",
+      "Write an individual founder email from these findings and the relationship history.",
+      "Polish this message so it sounds like the author, not a sales template.",
+      "Write up this project's technical investigation for the team."
     ],
     "homepage": "https://geekist.co/skills"
   },
@@ -393,6 +399,76 @@
         "default_prompt": "Use $write-technical-documentation for this project artefact."
       },
       "allow_implicit_invocation": null
+    },
+    "research-outreach-opportunities": {
+      "allow_implicit_invocation": null,
+      "interface": {
+        "icon_small": "./assets/geekist-small.svg",
+        "icon_large": "./assets/geekist.svg",
+        "display_name": "Research Outreach Opportunities",
+        "short_description": "Research people and real business opportunities",
+        "default_prompt": "Use $research-outreach-opportunities to investigate this company, check existing CRM history, and identify worthwhile conversation angles."
+      },
+      "title": "Research Outreach Opportunities",
+      "purpose": "Investigate companies and professional connections to discover worthwhile conversations and commercially relevant possibilities.",
+      "when_to_use": "Use to research companies, founders, LinkedIn contacts and potential writing or engineering work; revisit an initial outreach hypothesis using current sources and connected CRM history.",
+      "example_request": "We thought this developer tool needed better documentation. Investigate whether that remains true and what other opportunities its customer implementations suggest.",
+      "expected_result": "Current evidence, significant discoveries, revised commercial interpretations and a considered outreach-readiness recommendation.",
+      "example": {
+        "source_facts": "A company's old documentation is limited. Newer official documentation now covers the SDK thoroughly. An independent customer implementation illustrates a richer product use case.",
+        "before": "Their developer documentation is poor. Pitch an SDK writing package.",
+        "after": "The current SDK documentation addresses the original gap. The customer implementation suggests an alternative: an engineering-led case study explaining the real integration. This is a conversation angle, not an existing commission."
+      },
+      "source_basis": "Geekist's evidence-led commercial discovery method challenges the initial opportunity hypothesis, distinguishes relationship history from current business evidence, and separates investigation from workflow-specific selection, schemas and sending.",
+      "reference": "outreach-research.md",
+      "sources": [
+        {
+          "label": "Agent Skills specification",
+          "url": "https://agentskills.io/specification"
+        },
+        {
+          "label": "Geekist Skills",
+          "url": "https://github.com/theGeekist/skills"
+        }
+      ],
+      "activation_description": "Research companies, prospects and professional connections to discover credible reasons for outreach, collaboration or paid work. Use when investigating a company, researching a founder or LinkedIn connection, qualifying a writing or engineering opportunity, examining a suspected documentation or content gap, or developing a commercially relevant point of view. Check existing CRM relationships, investigate current first-party and independent evidence, challenge the initial hypothesis, identify alternative opportunities and prepare evidence-backed findings for personalised outreach. Supports company-first and person-first workflows without manufacturing customer needs or sales pitches."
+    },
+    "write-outreach": {
+      "allow_implicit_invocation": null,
+      "interface": {
+        "icon_small": "./assets/geekist-small.svg",
+        "icon_large": "./assets/geekist.svg",
+        "display_name": "Write Outreach",
+        "short_description": "Write authentic one-to-one professional messages",
+        "default_prompt": "Use $write-outreach to write a message to this person using our actual relationship and research."
+      },
+      "title": "Write Outreach",
+      "purpose": "Compose and revise individual professional messages with genuine substance and the author's authentic voice.",
+      "when_to_use": "Use to draft, edit or review founder emails, one-to-one pitches, LinkedIn DMs, freelance enquiries, introductions, reconnections and follow-ups.",
+      "example_request": "Use the research and our earlier conversation to draft a genuine email to the founder. Don't turn it into a templated pitch.",
+      "expected_result": "A recipient-specific message grounded in real discoveries and relationship context, without invented familiarity, compulsory calls to action or generic sales scaffolding.",
+      "example": {
+        "source_facts": "An established contact has previously discussed developer integrations with the author. A recent independent example demonstrates a product capability. The author has not personally tested the integration.",
+        "before": "Hello, I am impressed by your innovative platform. I recently tested your solution and would love to pick your brain about synergy.",
+        "after": "That integration we discussed came to mind when I saw a customer using the shared-session API in a classroom app. Interesting how far beyond browser demos it goes. Have you seen other teams take it in that direction?"
+      },
+      "source_basis": "Adapts Anthropic Outreach Composer and Mangosteen POV alongside Geekist's writing principles. Emphasises relationship history, evidence-led observations, first-person truth, and transferable editorial lessons from authorised author corrections.",
+      "reference": "outreach-writing.md",
+      "sources": [
+        {
+          "label": "Anthropic Outreach Composer",
+          "url": "https://github.com/anthropics/knowledge-work-plugins/blob/main/small-business/skills/outreach-composer/SKILL.md"
+        },
+        {
+          "label": "Mangosteen POV",
+          "url": "https://github.com/Mangosteen-Studio/pov/blob/main/SKILL.md"
+        },
+        {
+          "label": "Geekist marketing writing",
+          "url": "https://github.com/theGeekist/skills/blob/main/skills/write-marketing-content/SKILL.md"
+        }
+      ],
+      "activation_description": "Write, revise and review authentic one-to-one professional outreach: founder emails, freelance and consulting enquiries, LinkedIn DMs, introductions, reconnections and follow-ups. Use when asked to draft, pitch, follow up, reconnect or make a message sound like its author. Ground the message in real research and relationship history, learn editorial judgement from approved correspondence, and avoid manufactured familiarity, generic pitches and compulsory sequences."
     }
   },
   "directory": {
@@ -436,6 +512,14 @@
         "description": "Write reports, research findings, summaries and other prose without a narrower specialist.",
         "skills": [
           "write-project-content"
+        ]
+      },
+      {
+        "title": "Professional outreach",
+        "description": "Investigate commercial possibilities and write authentic individual outreach, with CRM history and current evidence when available.",
+        "skills": [
+          "research-outreach-opportunities",
+          "write-outreach"
         ]
       }
     ]

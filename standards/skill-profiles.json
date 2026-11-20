@@ -57,6 +57,16 @@
         "uncertainty.md",
         "editorial-patterns.md"
       ]
+    },
+    "research-outreach-opportunities": {
+      "references": [
+        "outreach-research.md"
+      ]
+    },
+    "write-outreach": {
+      "references": [
+        "outreach-writing.md"
+      ]
     }
   }
 }
