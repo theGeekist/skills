@@ -1,6 +1,6 @@
 ---
 name: write-marketing-content
-description: "Write marketing copy, landing-page text, product announcements, positioning briefs and customer-facing explanations of technical capabilities. Use to connect audience needs with product value, substantiated claims and an appropriate call to action. Use interface-content guidance for in-product labels, errors and dashboard states."
+description: "Write or refine audience-facing product communication: landing pages, launch announcements, positioning, portfolio copy, newsletters, social posts and explanations of technical value. Use when the purpose is to communicate value and support a reader action; use interface content for in-product states and controls."
 ---
 
 # Write marketing content

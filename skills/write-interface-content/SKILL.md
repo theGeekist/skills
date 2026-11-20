@@ -1,6 +1,6 @@
 ---
 name: write-interface-content
-description: "Write in-product interface copy: action labels, forms, dashboard metrics, progress messages, errors, empty states, tooltips and notifications. Use for state-aware wording and useful next actions grounded in actual product behaviour. Use marketing-content guidance for campaigns and landing pages."
+description: "Write or revise UX and in-product language: button labels, forms, dashboards, status and progress messages, errors, empty states, tooltips, onboarding and notifications. Use when wording must reflect actual product behaviour and help people act. Use marketing content for campaigns and public positioning."
 ---
 
 # Write interface content

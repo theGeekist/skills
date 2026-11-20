@@ -1,7 +1,9 @@
-# Sources for choosing a writing workflow
+# Choosing writing guidance
 
-This router is a local compatibility aid. Its selection table follows the reader's requested outcome: a task, decision, guide, campaign, interface or review. It does not require every request to load every writing skill.
+The general-writing skill covers substantive prose without a narrower specialist: research notes, investigation findings, reports, project updates, meeting summaries and explanations. It also helps when explicitly asked to choose a workflow. It is not a mandatory prerequisite or document template.
 
-[Agent Skills](https://github.com/agentskills/agentskills) supplies the portable skill format and selective loading model. [Diátaxis](https://diataxis.fr/start-here/) distinguishes reader needs within technical documentation; it does not define this collection's entire routing table. Purpose-specific skills carry their own source notes and practical adaptations.
+Prefer the purpose-specific skill for an implementation task, architecture decision, technical guide, product message, interface state or editorial review. Use the general skill for other authored reports and syntheses. A mixed request can use multiple relevant skills without activating the whole collection. Conversation or factual Q&A alone is not an authoring request.
 
-Use this reference to inspect the router's basis, not as a prerequisite for choosing a workflow.
+[Agent Skills](https://github.com/agentskills/agentskills) supplies the portable skill format and selective loading model. [Diátaxis](https://diataxis.fr/start-here/) informs reader needs in technical documentation; neither prescribes one structure for all writing.
+
+This is a routing reference, not a prerequisite for ordinary authoring.
