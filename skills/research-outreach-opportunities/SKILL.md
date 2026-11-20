@@ -11,6 +11,16 @@ The objective is not to produce an account profile followed by personalised sale
 
 A successful investigation may confirm the original opportunity, reveal a better one, change the intended recipient, or conclude that outreach is premature.
 
+<!-- shared-baseline:start -->
+Use current project terms and decisions. Explain an unfamiliar term near its first consequential use; distinguish a proposed meaning from an accepted one. Preserve exact identifiers and technical constraints.
+
+Lead with the reader's purpose and main point, then explain the consequences and supporting detail. Make substantial technical material navigable by a reader outside engineering, with descriptive headings and meaningful source links. Match depth to the request; use British English in authored prose.
+
+Keep implementation progress separate from validation. Pair a material evidence gap with a bounded next action and completion evidence. Missing prior proof alone does not reject an option or halt authorised work. Name actual blockers precisely, continue independent authorised work, and preserve existing authorisation.
+
+Check consistency, accessibility, readability and repeatability. Use sources for claims and real events for progress. Preserve uncertainty that affects a decision without inventing certainty or unnecessary approval gates.
+<!-- shared-baseline:end -->
+
 ## Operating principles
 
 - Follow the evidence rather than defending the initial sales hypothesis.
@@ -55,22 +65,15 @@ Do not substitute one workflow's eligibility criteria for the other's.
 
 ## 2. Read existing knowledge before investigating externally
 
-Consult the relevant connected sources:
+Consult the user's available first-party systems before treating the subject as an unfamiliar prospect.
 
-- WriteWithJ CRM for company records, contacts, relationships, engagements and message history.
-- Existing research, discovery findings, previous qualification decisions and outreach drafts.
-- The user's authoritative professional profile and work-sample catalogue.
-- Connected files or project documentation where they contain useful context.
+When a connected CRM is available, use it as the primary source for company and person identities, relationships, existing engagements, correspondence, prior research and outreach history. For WriteWithJ workflows, this includes the connected WriteWithJ CRM. Prefer the existing records over reconstructing relationship history from public sources or creating competing records.
 
-For the current WriteWithJ workflows, the professional evidence catalogue is:
+Consult other relevant project records, research, professional evidence and work samples when available. The invoking task may identify authoritative portfolios, evidence catalogues or source documents; follow those references rather than assuming a particular storage provider or fixed file.
 
-https://drive.google.com/file/d/1PWHZnQm7yHKTQXZbXjBxRwxM8XVKKyDo/view
+Recognise previously researched companies and contacts. Reuse canonical identities and previous findings before investigating afresh. Fresh discoveries should enrich the current understanding rather than erase the original work.
 
-Read the full catalogue once per research batch when appropriate. Select relevant engineering, consulting, technical-writing and published-work evidence for each subject rather than applying a fixed shortlist.
-
-Recognise previously researched companies and contacts. Reuse existing canonical identities and research records. A new discovery should enrich the current record, not create a competing engagement for the same opportunity.
-
-Existing CRM history takes precedence over speculative relationship signals.
+If a service is unavailable, continue with accessible sources without fabricating missing history. Do not make the reader inspect internal retrieval failures unless they affect a material decision.
 
 ## 3. Investigate the actual business
 
@@ -87,7 +90,7 @@ Explore the material relevant to the opportunity, potentially including:
 - Pricing, customer segments and intended users.
 - Public statements from founders, leaders and developers.
 
-This is a discovery space, not a mandatory checklist. Follow promising evidence deeply rather than mechanically visiting every page.
+This is a discovery space, not a mandatory checklist. Investigate to the depth warranted by the question and discoveries: a published commission may need little further qualification, while conflicting documentation or an unexpected customer implementation may warrant deeper investigation. Follow promising evidence rather than mechanically visiting every page.
 
 Pay particular attention to differences between older and newer material.
 
@@ -211,29 +214,7 @@ A compelling discovery may be an impressive existing implementation, a significa
 
 Research is successful when it supplies a worthwhile observation or informed opinion, even if it does not yet justify an outbound message.
 
-### Hyperbeam: a reference example
-
-Initial hypothesis:
-An older getting-started site suggested an opportunity to improve developer documentation.
-
-Contradictory discovery:
-Hyperbeam had a newer, more substantial documentation site with SDK guides and practical examples.
-
-Further discovery:
-A third-party HappyDots classroom implementation demonstrated how Hyperbeam fitted into a larger collaborative application.
-
-Adjacent market comparison:
-Browserbase and Browserless published customer and developer stories that helped explain applications and value. Their markets are not identical to Hyperbeam's.
-
-Revised opportunity:
-Engineering-led customer stories and integration narratives could potentially help communicate how organisations use Hyperbeam.
-
-Commercial interpretation:
-This is a credible conversation angle, not proof of a content budget or an expressed commission.
-
-The important behaviour is that the research changed the opportunity.
-
-Do not reuse Hyperbeam's narrative structure, market comparisons or conclusions for unrelated prospects.
+For an example where more recent documentation overturned the initial hypothesis and an independent customer implementation suggested a different commercial angle, see [the Hyperbeam case](references/hyperbeam-case.md). Use it as a demonstration of investigative judgement, never as a template.
 
 ## 9. Prepare the research hand-off
 
@@ -263,17 +244,11 @@ This may be a discovery narrative, commercial enquiry, informed opinion or conti
 
 Provide the substance of the conversation, not a templated cold email.
 
-### Recommended disposition
+### Outreach readiness
 
-Use one of:
+Explain whether the findings support a worthwhile conversation now, require further judgement, or suggest deferring outreach. Identify the discovery that would materially change the assessment.
 
-- **READY FOR PERSONAL REVIEW:** A credible, specific conversational approach is available.
-- **REVIEW BEFORE SENDING:** A worthwhile approach exists but requires the user's judgement or confirmation.
-- **HOLD:** Research is useful, but there is not yet a natural reason to approach the recipient.
-
-For a HOLD, preserve the evidence and identify the discovery that would materially change the recommendation.
-
-These are outreach-review outcomes, not automatic CRM relationship statuses or definitive commercial qualification verdicts.
+Use the invoking workflow's disposition values where supplied; do not introduce new CRM status values or treat a recommendation as an automatic relationship change. Preserve useful research regardless of outreach readiness.
 
 ## 10. Editorial and evidence review
 
@@ -305,24 +280,18 @@ When the invoking workflow explicitly requests a message, it may use those compo
 
 Preserve genuine discovery sequences and natural conversational language. Never fabricate a research journey, a personal interaction or a customer need.
 
-The user's edited Hyperbeam email from 20 November 2026 is a useful quality reference: it acknowledges the newer documentation, follows the HappyDots discovery, draws a qualified market comparison and only then introduces the user's potential contribution.
-
-It is a reference for authenticity and investigative depth, not a template.
-
 ## Persistence and execution
 
-The invoking task owns candidate selection, pagination, quotas, scheduling and final delivery.
+The invoking workflow owns candidate selection, eligibility, pagination, quotas, scheduling, destination, delivery and any required record schemas.
 
-Use supported CRM research-save tools when the task authorises persistence. Preserve useful discoveries before final qualification decisions.
+When authorised to persist research, use the connected system responsible for the existing company, person or opportunity. Prefer enriching canonical records over creating duplicates. Preserve substantive findings, source links, observation dates and changed interpretations. Follow the current service contracts and verify writes before reporting completion.
 
-Use canonical company and person records. Do not create duplicate engagements merely to store another research update.
+Research completion does not authorise sending messages, changing relationship status or recording an interaction that did not occur. Do not create a CRM engagement solely to store another research draft.
 
-Save source links, dates, contact information and substantive findings. Retain the actual research rather than a compressed collection of outreach slogans.
+Preserve useful findings even if the strongest recommendation is to defer contact.
 
-Respect the CRM's current schemas, revisions and acknowledgement contracts. Verify writes before reporting completion.
+## Sources and adaptation
 
-Never treat a prepared message as sent. Never send outreach or alter relationship status solely because research or a draft exists.
-
-When another approach produces a more credible interpretation of the evidence, prefer it over this skill's examples or suggested investigative paths.
+The research method, distinction between investigation and execution, and example are Geekist's adaptation of evidence-led commercial discovery. See [research guidance and source context](references/outreach-research.md) and the [Hyperbeam case](references/hyperbeam-case.md). The examples are illustrative, not required investigative sequences.
 
 The desired result is informed commercial judgement that a person can recognise as worth sharing.
