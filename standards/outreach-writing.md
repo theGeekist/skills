@@ -6,6 +6,12 @@ A message should make a meaningful observation or request in an individual's own
 
 For one-off revisions, use the supplied draft and corrections. For batches, consult representative real correspondence across relationship types. A connected CRM can provide history; the skill does not require a particular CRM, storage provider or author identity.
 
+## Preserve editorial learning across tasks
+
+When an author makes a consequential correction, identify the reasoning that changed: emphasis, logical progression, intent, attribution or register. If a persistent voice reference is authorised and available, store the transferable lesson with the original passage and context so future workers can apply the judgement without imitating the wording. The invoking workflow owns the location and permission to update that reference.
+
+Never translate an author's contextual edits into banned-phrase lists, synonym swaps or universal templates. Do not write to a profile or CRM solely because a draft was revised.
+
 ## Contextual editing examples
 
 **"I particularly like" → "I like"**

@@ -34,6 +34,8 @@ Check consistency, accessibility, readability and repeatability. Use sources for
 
 The skill owns investigation and interpretation. It does not own scheduled execution, candidate pagination, quotas, outreach sending or automatic relationship changes. The invoking workflow supplies those responsibilities.
 
+**The workflow may require an investigation to be completed. It cannot require the investigation to discover a sales opportunity.**
+
 ## 1. Establish the research context
 
 Identify the subject and why research was initiated.
@@ -67,13 +69,15 @@ Do not substitute one workflow's eligibility criteria for the other's.
 
 Consult the user's available first-party systems before treating the subject as an unfamiliar prospect.
 
-When a connected CRM is available, use it as the primary source for company and person identities, relationships, existing engagements, correspondence, prior research and outreach history. For WriteWithJ workflows, this includes the connected WriteWithJ CRM. Prefer the existing records over reconstructing relationship history from public sources or creating competing records.
+When a connected CRM is available, consult it first for established identities, relationships, correspondence, previous research and outreach history. Use current first-party and relevant independent sources to investigate developments that may have changed the existing understanding. Preserve both the historical context and discoveries that supersede it.
+
+CRM records are authoritative for recorded relationships and history, not automatically for a company's current products, documentation, commercial activity or needs. The connected WriteWithJ CRM is one such source when available; no particular service is required.
 
 Consult other relevant project records, research, professional evidence and work samples when available. The invoking task may identify authoritative portfolios, evidence catalogues or source documents; follow those references rather than assuming a particular storage provider or fixed file.
 
 Recognise previously researched companies and contacts. Reuse canonical identities and previous findings before investigating afresh. Fresh discoveries should enrich the current understanding rather than erase the original work.
 
-If a service is unavailable, continue with accessible sources without fabricating missing history. Do not make the reader inspect internal retrieval failures unless they affect a material decision.
+If a service is unavailable, continue with accessible sources without fabricating missing history. Do not mistake historical CRM findings for current company evidence or make the reader inspect internal retrieval failures unless they affect a material decision.
 
 ## 3. Investigate the actual business
 

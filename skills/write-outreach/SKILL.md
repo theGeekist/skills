@@ -90,7 +90,9 @@ Observe how the author introduces ideas, chooses details, moves between thoughts
 
 Treat edits as valuable evidence. Compare the original and edited text: what changed in meaning, emphasis, logic, rhythm and authenticity? Was the original artificially persuasive? Is the lesson reusable or specific to this passage?
 
-Preserve useful principles in an authorised voice reference when the workflow supports one. Do not convert superficial word substitutions into universal prohibitions.
+When an author makes a consequential correction, identify the editorial judgement behind it. Where an authorised persistent voice reference exists, preserve the transferable principle alongside the original context. The invoking workflow determines its location and write permissions; without that authorisation, apply the correction to the current message without silently persisting it.
+
+Do not reduce corrections to prohibited words, preferred synonyms or reusable message templates.
 
 See [editorial examples](references/outreach-writing.md) for contextual corrections and source adaptations.
 
@@ -176,6 +178,8 @@ For revisions, preserve intended meaning and voice. Explain consequential edits 
 Keep research notes, source URLs, contact checks, qualification reasoning and editorial observations outside the clean message.
 
 A saved draft is not a sent message.
+
+**The workflow may require an outreach assessment. It cannot require that assessment to produce a message worth sending.**
 
 ## 10. Integrate without duplicating the workflow
 
