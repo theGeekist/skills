@@ -14,7 +14,7 @@ Choose by the work you need to do. Each page shows an example request, expected 
 | [Write actionable implementation tasks](write-implementation-tasks.md) | Express implementation work through clear objectives and acceptance criteria, with the relevant constraints preserved. |
 | [Write interface copy for real states](write-interface-content.md) | Explain application behaviour so users understand what happened and how to proceed. |
 | [Explain supported product value](write-marketing-content.md) | Communicate product value through credible claims and an appropriate editorial voice. |
-| [Choose a project writing workflow](write-project-content.md) | Select the appropriate writing workflow without requiring callers to understand the entire collection. |
+| [Write General Project Content](write-project-content.md) | Write and revise general project prose without imposing a document template. |
 | [Write navigable technical documentation](write-technical-documentation.md) | Explain systems according to reader needs while retaining their technical contracts. |
 
 See the [connected walkthrough](../language-system/skill-walkthrough.md), [source map](../../standards/framework-evidence.md) and [comparison with existing writing skills](../language-system/competing-writing-skills.md) for the reasoning behind the collection.

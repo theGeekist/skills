@@ -1,11 +1,11 @@
 ---
 name: record-architecture-decisions
-description: "Write, explain or update architecture decision records (ADRs), including context, viable options, decision drivers, consequences, status and reconsideration conditions. Use when the requested artefact is a decision record; use architecture skills for designing boundaries and technical documentation for general explanations."
+description: "Write, explain, revise or summarise the rationale for a consequential technical decision, formally as an ADR or informally for future readers. Use for accepted choices, alternatives, trade-offs, decision drivers, consequences and reconsideration conditions. Not for general architecture design or technical research without a decision."
 ---
 
 # Record architecture decisions
 
-Record one consequential choice so future readers can understand its reasons and effects.
+Capture or explain a consequential choice so future readers can understand its reasons and effects, whether or not a formal ADR was requested.
 
 <!-- shared-baseline:start -->
 Use current project terms and decisions. Explain an unfamiliar term near its first consequential use; distinguish a proposed meaning from an accepted one. Preserve exact identifiers and technical constraints.

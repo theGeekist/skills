@@ -17,7 +17,7 @@ Keep shared meaning and writing guidance independent of individual agent clients
 | Writing and reader-navigation conventions | [Writing](../../standards/writing.md) and [content patterns](../../standards/content-patterns.md) |
 | Discover or reconcile project meaning | [Establish project language](../../skills/establish-project-language/SKILL.md) |
 | Choose an authoring or review skill | [Purpose-specific skill table](../../README.md#choose-a-skill) |
-| Use the legacy entry point explicitly | [Writing workflow router](../../skills/write-project-content/SKILL.md) |
+| Write general reports and summaries | [General project writer](../../skills/write-project-content/SKILL.md) |
 | Continue work through evidence gaps | [Advance with uncertainty](../../skills/advance-with-uncertainty/SKILL.md) and [shared conventions](../../standards/uncertainty.md) |
 | Design goals and scope | [Requirements](requirements.md) |
 | Operating and maintaining the system | [Lifecycles](lifecycles.md) |
@@ -32,11 +32,11 @@ The four acceptance outcomes are consistency, accessibility, readability and rep
 
 Project owners retain their domain meanings and decision process. The shared system provides a record format and review method, rather than universal definitions for every project's vocabulary. Current repository decisions, schemas and tests inform discovery; contradictions require explicit resolution.
 
-The backend and frontend playbooks retain their architecture rules, with smaller decision cores and conditionally loaded local references. Six specialist writing/review skills replace the broad authoring scope: tasks, ADRs, technical documentation, marketing, interface content and language review. Terminology discovery and actionable uncertainty remain focused skills. `write-project-content` is retained as an explicit compatibility router.
+The backend and frontend playbooks retain their architecture rules, with smaller decision cores and conditionally loaded local references. Six specialist writing/review skills cover tasks, ADRs, technical documentation, marketing, interface content and language review. Terminology discovery and actionable uncertainty remain focused. `write-project-content` handles reports, research notes and other project prose when no narrower specialist fits. It is not a prerequisite.
 
 Every skill embeds the same short baseline generated from `standards/baseline.md`. This deliberate repetition makes the baseline available immediately after activation without requiring another skill or a full style guide. `standards/skill-profiles.json` declares purpose-specific bundled references. The sync checker detects drift in baseline blocks and reference copies. Read detail when the task requires it; bundling a file does not mean loading it on every invocation.
 
-The registry and rules remain independent of agent runtime. The portable name/description identifies purpose; optional `agents/openai.yaml` carries Codex-facing metadata. Disabling the router's implicit invocation there is not a universal cross-agent switch. Other clients still use their own selection and loading semantics.
+The registry and rules remain independent of agent runtime. The portable name/description identifies purpose; optional `agents/openai.yaml` carries Codex-facing metadata. General writing is eligible for implicit selection. Other clients still use their own selection and loading semantics.
 
 ## Checks and judgement
 

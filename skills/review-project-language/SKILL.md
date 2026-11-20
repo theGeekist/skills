@@ -1,11 +1,11 @@
 ---
 name: review-project-language
-description: "Review existing project text for inconsistent terminology, changed meanings, dense explanations, weak reader navigation and evidence language that stalls work. Use for editorial or cross-artefact language audits and requested revisions; use specialist writing skills when the primary request is to author a new artefact."
+description: "Edit, rewrite, polish or review existing prose for clarity, flow, faithful meaning, consistent terminology and accessible navigation. Use for requests such as clean this up, tighten this report, rewrite these findings, or review related documents. Preserve deliberate voice; for new writing, prefer the appropriate authoring skill."
 ---
 
 # Review project language
 
-Find the changes that make the requested material more consistent and easier to use without losing meaning.
+Improve existing prose while preserving its meaning, intended voice and useful detail.
 
 <!-- shared-baseline:start -->
 Use current project terms and decisions. Explain an unfamiliar term near its first consequential use; distinguish a proposed meaning from an accepted one. Preserve exact identifiers and technical constraints.
@@ -27,7 +27,7 @@ Assess whether readers can locate the purpose, main point, consequences and deep
 
 Load [review criteria](references/review.md) for a multi-artefact audit or structured editorial review. Load [uncertainty guidance](references/uncertainty.md) only when evidence language affects decisions or continued implementation. For a narrow review, inspect the relevant passages and sources rather than reading every reference.
 
-Report material findings with location, effect and smallest useful correction. Prioritise changed meaning and unsupported claims before cosmetic preferences. For an authorised revision, apply and check the requested changes. For review only, give actionable findings without editing unrelated material. State when no material defect is found.
+Report material findings with location, effect and smallest useful correction. Prioritise changed meaning and unsupported claims before cosmetic preferences. For an authorised rewrite, polish or revision, apply and check the requested changes; deliver revised prose rather than only editorial commentary. For review only, give actionable findings without editing unrelated material. State when no material defect is found.
 
 For a detailed editing pass, use the relevant [editorial patterns and exceptions](references/editorial-patterns.md). They support judgement about the text and its sources; they are not an AI-authorship score.
 

@@ -1,11 +1,11 @@
 ---
 name: write-implementation-tasks
-description: "Write implementation tasks and worker handoffs. Use for engineering tickets, implementation plans and acceptance criteria that need an observable outcome, concrete behaviour, validation and actionable dependencies. Use the ADR skill when the requested artefact is a decision record; use architecture skills for designing boundaries."
+description: "Write or refine actionable work: implementation tasks, tickets, acceptance criteria, worker handoffs, concrete follow-up actions and execution plans. Use when another person or agent needs outcomes, behaviour, validation and dependencies expressed clearly. Not for narrative progress reports or decisions already made."
 ---
 
 # Write implementation tasks
 
-Turn the requested outcome into a task another worker can execute without reconstructing the conversation.
+Turn outcomes, next actions and handoffs into work another person or agent can execute without reconstructing the conversation.
 
 <!-- shared-baseline:start -->
 Use current project terms and decisions. Explain an unfamiliar term near its first consequential use; distinguish a proposed meaning from an accepted one. Preserve exact identifiers and technical constraints.

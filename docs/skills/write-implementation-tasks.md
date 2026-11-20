@@ -7,7 +7,7 @@ Express implementation work through clear objectives and acceptance criteria, wi
 
 ## When to use it
 
-Use for tickets, acceptance criteria and handoffs that another worker should be able to execute.
+Use for engineering tickets, actionable follow-ups, implementation plans, acceptance criteria and worker handoffs.
 
 Example request:
 
@@ -34,7 +34,7 @@ This illustrative example starts from the source facts below.
 Install this skill from the versioned collection in a supported Agent Skills environment:
 
 ```sh
-npx skills add https://github.com/theGeekist/skills/tree/v1.7.0 --skill write-implementation-tasks
+npx skills add https://github.com/theGeekist/skills/tree/v1.8.0 --skill write-implementation-tasks
 ```
 
 Select the intended agent and installation scope when prompted. This CLI installation is separate from ChatGPT plugin registration and mobile availability. Client discovery and activation require their own verification.

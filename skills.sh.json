@@ -37,8 +37,8 @@
       ]
     },
     {
-      "title": "Workflow chooser",
-      "description": "Select the writing workflow appropriate to a request without requiring callers to know the entire collection.",
+      "title": "General writing",
+      "description": "Write reports, research findings, summaries and other prose without a narrower specialist.",
       "skills": [
         "write-project-content"
       ]

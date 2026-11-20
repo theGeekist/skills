@@ -1,12 +1,12 @@
 {
   "version": 1,
-  "release": "v1.7.0",
+  "release": "v1.8.0",
   "repository": "https://github.com/theGeekist/skills",
   "plugin": {
-    "description": "Eleven agent skills for clear writing, shared terminology and practical architecture, with actionable treatment of uncertainty. Informed by established frameworks and competing writing skills.",
+    "description": "Eleven reusable agent skills for clear writing across reports, research, project updates, tasks, architecture decisions, technical documentation, product messaging and interface copy.",
     "display_name": "Geekist Skills",
-    "short_description": "Clear agent writing and consistent project meaning",
-    "long_description": "Help agents produce useful implementation tasks, architecture decisions and technical documentation while preserving project meaning. Includes workflows for marketing and interface copy. Geekist draws on DDD, SKOS, Diátaxis and MADR, together with adapted practices from Humanizer and plain-language writing skills. Source-integrity checks and contextual editorial patterns support consistent writing across a project.",
+    "short_description": "Clear writing across project communication",
+    "long_description": "Write and revise project reports, research notes, findings, summaries, implementation tasks, architecture decisions, technical documentation, product messaging and interface copy. Shared writing principles preserve meaning, readable structure and reader-appropriate language without forcing every deliverable into one template.",
     "keywords": [
       "agent-skills",
       "ai-writing",
@@ -19,13 +19,18 @@
       "content-design",
       "software-architecture",
       "claude-code",
-      "codex"
+      "codex",
+      "research-writing",
+      "reports",
+      "editing",
+      "summarisation",
+      "project-updates"
     ],
     "default_prompts": [
-      "Establish the concepts and vocabulary in this repository.",
-      "Review this project explanation for clear prose and consistent meanings.",
-      "Write this technical explanation for engineering and business readers.",
-      "Turn this evidence gap into bounded next actions."
+      "Write up these investigation findings as a clear project report.",
+      "Polish this draft without changing its meaning or voice.",
+      "Document what this technical investigation discovered.",
+      "Turn these decisions and next steps into a useful handoff."
     ],
     "homepage": "https://geekist.co/skills"
   },
@@ -165,7 +170,7 @@
     "record-architecture-decisions": {
       "title": "Record clear architecture decisions",
       "purpose": "Document the reasoning behind technical decisions while that reasoning is still available to the people who made them.",
-      "when_to_use": "Use when authoring or updating an architecture decision record, using the project’s format and authority.",
+      "when_to_use": "Use for a formal decision record or a clear explanation of why a technical choice was made.",
       "example_request": "Record why we chose a shared queue, including alternatives, the pending latency check and when to reconsider.",
       "expected_result": "A decision record with context, options, outcome, consequences and explicit evidence status.",
       "example": {
@@ -181,7 +186,7 @@
           "url": "https://adr.github.io/madr/"
         }
       ],
-      "activation_description": "Write, explain or update architecture decision records (ADRs), including context, viable options, decision drivers, consequences, status and reconsideration conditions. Use when the requested artefact is a decision record; use architecture skills for designing boundaries and technical documentation for general explanations.",
+      "activation_description": "Write, explain, revise or summarise the rationale for a consequential technical decision, formally as an ADR or informally for future readers. Use for accepted choices, alternatives, trade-offs, decision drivers, consequences and reconsideration conditions. Not for general architecture design or technical research without a decision.",
       "interface": {
         "icon_small": "./assets/geekist-small.svg",
         "icon_large": "./assets/geekist.svg",
@@ -194,7 +199,7 @@
     "review-project-language": {
       "title": "Review clarity and consistent meaning",
       "purpose": "Improve writing while checking its consistency with established terminology and source material.",
-      "when_to_use": "Use when auditing existing writing or requesting a revision across related artefacts.",
+      "when_to_use": "Use to edit, rewrite, polish or review existing prose while keeping meaning, voice and technical detail.",
       "example_request": "Review this task, decision and announcement for consistent meanings and explain every consequential edit.",
       "expected_result": "Located findings or an authorised revision that preserves meanings, constraints and source claims.",
       "example": {
@@ -218,7 +223,7 @@
           "url": "https://www.iso.org/standard/78907.html"
         }
       ],
-      "activation_description": "Review existing project text for inconsistent terminology, changed meanings, dense explanations, weak reader navigation and evidence language that stalls work. Use for editorial or cross-artefact language audits and requested revisions; use specialist writing skills when the primary request is to author a new artefact.",
+      "activation_description": "Edit, rewrite, polish or review existing prose for clarity, flow, faithful meaning, consistent terminology and accessible navigation. Use for requests such as clean this up, tighten this report, rewrite these findings, or review related documents. Preserve deliberate voice; for new writing, prefer the appropriate authoring skill.",
       "interface": {
         "icon_small": "./assets/geekist-small.svg",
         "icon_large": "./assets/geekist.svg",
@@ -231,7 +236,7 @@
     "write-implementation-tasks": {
       "title": "Write actionable implementation tasks",
       "purpose": "Express implementation work through clear objectives and acceptance criteria, with the relevant constraints preserved.",
-      "when_to_use": "Use for tickets, acceptance criteria and handoffs that another worker should be able to execute.",
+      "when_to_use": "Use for engineering tickets, actionable follow-ups, implementation plans, acceptance criteria and worker handoffs.",
       "example_request": "Write a task for members to export their own bookings; keep the access restriction and include failure cases.",
       "expected_result": "A task with observable behaviour, acceptance criteria, validation and precise dependencies.",
       "example": {
@@ -247,7 +252,7 @@
           "url": "https://gitlab.com/tgdp/templates/-/tree/main/how-to"
         }
       ],
-      "activation_description": "Write implementation tasks and worker handoffs. Use for engineering tickets, implementation plans and acceptance criteria that need an observable outcome, concrete behaviour, validation and actionable dependencies. Use the ADR skill when the requested artefact is a decision record; use architecture skills for designing boundaries.",
+      "activation_description": "Write or refine actionable work: implementation tasks, tickets, acceptance criteria, worker handoffs, concrete follow-up actions and execution plans. Use when another person or agent needs outcomes, behaviour, validation and dependencies expressed clearly. Not for narrative progress reports or decisions already made.",
       "interface": {
         "icon_small": "./assets/geekist-small.svg",
         "icon_large": "./assets/geekist.svg",
@@ -276,7 +281,7 @@
           "url": "https://atlassian.design/foundations/content/voice-tone/"
         }
       ],
-      "activation_description": "Write in-product interface copy: action labels, forms, dashboard metrics, progress messages, errors, empty states, tooltips and notifications. Use for state-aware wording and useful next actions grounded in actual product behaviour. Use marketing-content guidance for campaigns and landing pages.",
+      "activation_description": "Write or revise UX and in-product language: button labels, forms, dashboards, status and progress messages, errors, empty states, tooltips, onboarding and notifications. Use when wording must reflect actual product behaviour and help people act. Use marketing content for campaigns and public positioning.",
       "interface": {
         "icon_small": "./assets/geekist-small.svg",
         "icon_large": "./assets/geekist.svg",
@@ -309,7 +314,7 @@
           "url": "https://developers.google.com/style/jargon"
         }
       ],
-      "activation_description": "Write marketing copy, landing-page text, product announcements, positioning briefs and customer-facing explanations of technical capabilities. Use to connect audience needs with product value, substantiated claims and an appropriate call to action. Use interface-content guidance for in-product labels, errors and dashboard states.",
+      "activation_description": "Write or refine audience-facing product communication: landing pages, launch announcements, positioning, portfolio copy, newsletters, social posts and explanations of technical value. Use when the purpose is to communicate value and support a reader action; use interface content for in-product states and controls.",
       "interface": {
         "icon_small": "./assets/geekist-small.svg",
         "icon_large": "./assets/geekist.svg",
@@ -320,17 +325,17 @@
       "allow_implicit_invocation": null
     },
     "write-project-content": {
-      "title": "Choose a project writing workflow",
-      "purpose": "Select the appropriate writing workflow without requiring callers to understand the entire collection.",
-      "when_to_use": "Use on explicit request to choose a writing workflow; ordinary writing can select its specialist directly.",
-      "example_request": "Choose the right workflow for explaining a decision and announcing the resulting feature.",
-      "expected_result": "A purpose-specific route, with separate artefacts where readers have different needs.",
+      "title": "Write General Project Content",
+      "purpose": "Write and revise general project prose without imposing a document template.",
+      "when_to_use": "Use for reports, research findings, project summaries, progress updates and other substantive writing when a narrower specialist does not fit. Also choose workflows on explicit request.",
+      "example_request": "Write up these investigation findings for the team. Keep observations, conclusions and next steps distinct.",
+      "expected_result": "A source-faithful, readable report organised for its reader, without unnecessary template sections.",
       "example": {
-        "before": "Load every writing and architecture guide before drafting the announcement.",
-        "after": "Use marketing guidance for the announcement. Consult the decision record for the accepted choice and its constraints.",
-        "source_facts": "The requested artefact is an announcement. An accepted decision record supplies the governing choice and constraints."
+        "before": "Investigation completed, several approaches evaluated and a final determination is forthcoming.",
+        "after": "We examined three approaches. Two meet the current requirements; the third needs a capacity test. We can choose between the first two now.",
+        "source_facts": "Three approaches were examined. Two meet current requirements. The third requires a capacity test. No final approach has been chosen."
       },
-      "source_basis": "This locally authored compatibility workflow selects the appropriate writing skill for an explicit request. It gives agents access to relevant guidance without requiring every writing task to activate the entire collection.",
+      "source_basis": "This skill uses Geekist's shared writing conventions for reports, summaries and other general prose when no specialist is a better match. It also supports explicit workflow selection without imposing a universal process.",
       "reference": "routing.md",
       "sources": [
         {
@@ -342,20 +347,20 @@
           "url": "https://diataxis.fr/start-here/"
         }
       ],
-      "activation_description": "Compatibility router for explicit requests to use write-project-content or to choose a project-writing workflow. Keep ordinary task, ADR, technical-documentation, marketing, interface-copy and language-review requests with their purpose-specific skills; this router is not their default prerequisite.",
+      "activation_description": "Write, rewrite and organise general project writing: research notes, investigation findings, reports, meeting summaries, progress updates, explanations and other substantive prose. Use when the user asks for a written deliverable without a more specific Geekist writing skill. Not for ordinary discussion or automatically invoking every specialist.",
       "interface": {
         "icon_small": "./assets/geekist-small.svg",
         "icon_large": "./assets/geekist.svg",
-        "display_name": "Choose a Project Writing Workflow",
-        "short_description": "Choose the relevant writing workflow",
-        "default_prompt": "Use $write-project-content to choose the appropriate project-writing workflow."
+        "display_name": "Write General Project Content",
+        "short_description": "Write and revise clear general project prose",
+        "default_prompt": "Use $write-project-content to write up these findings for the team."
       },
-      "allow_implicit_invocation": false
+      "allow_implicit_invocation": null
     },
     "write-technical-documentation": {
       "title": "Write navigable technical documentation",
       "purpose": "Explain systems according to reader needs while retaining their technical contracts.",
-      "when_to_use": "Use for tutorials, how-to guides, references, architecture explanations and developer guides.",
+      "when_to_use": "Use for technical discovery reports, spike findings, system explanations, tutorials, how-to guides, references and developer guides.",
       "example_request": "Explain the export flow so a marketing reader can find its purpose and an engineer can find the access contract.",
       "expected_result": "A purpose-led document with explained terms, visible constraints and routes to exact technical detail.",
       "example": {
@@ -379,7 +384,7 @@
           "url": "https://arc42.org/overview/"
         }
       ],
-      "activation_description": "Write technical documentation: tutorials, how-to guides, API or configuration references, architecture explanations and developer guides. Use for learning, task completion, contract lookup or conceptual understanding, including technical documents that business readers must navigate. Use the ADR skill for decision records.",
+      "activation_description": "Write or improve technical explanations, research write-ups, investigation and spike reports, system overviews, tutorials, how-to guides, API references and developer documentation. Use when the user asks to document technical findings or explain how something works; use the ADR skill for a decision record.",
       "interface": {
         "icon_small": "./assets/geekist-small.svg",
         "icon_large": "./assets/geekist.svg",
@@ -427,8 +432,8 @@
         ]
       },
       {
-        "title": "Workflow chooser",
-        "description": "Select the writing workflow appropriate to a request without requiring callers to know the entire collection.",
+        "title": "General writing",
+        "description": "Write reports, research findings, summaries and other prose without a narrower specialist.",
         "skills": [
           "write-project-content"
         ]

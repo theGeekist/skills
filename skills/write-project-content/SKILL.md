@@ -1,11 +1,11 @@
 ---
 name: write-project-content
-description: "Compatibility router for explicit requests to use write-project-content or to choose a project-writing workflow. Keep ordinary task, ADR, technical-documentation, marketing, interface-copy and language-review requests with their purpose-specific skills; this router is not their default prerequisite."
+description: "Write, rewrite and organise general project writing: research notes, investigation findings, reports, meeting summaries, progress updates, explanations and other substantive prose. Use when the user asks for a written deliverable without a more specific Geekist writing skill. Not for ordinary discussion or automatically invoking every specialist."
 ---
 
-# Choose a project-writing workflow
+# Write general project content
 
-Retain this entry point for existing callers. When invoked explicitly, select the workflow that matches the requested artefact; avoid loading an umbrella plus every specialist.
+Use this skill for substantive writing without a more specific home: reports, investigations, research notes, findings, summaries, project updates and explanations. This is an authoring and editing skill, not a mandatory document template or prerequisite for specialists.
 
 <!-- shared-baseline:start -->
 Use current project terms and decisions. Explain an unfamiliar term near its first consequential use; distinguish a proposed meaning from an accepted one. Preserve exact identifiers and technical constraints.
@@ -17,7 +17,15 @@ Keep implementation progress separate from validation. Pair a material evidence 
 Check consistency, accessibility, readability and repeatability. Use sources for claims and real events for progress. Preserve uncertainty that affects a decision without inventing certainty or unnecessary approval gates.
 <!-- shared-baseline:end -->
 
-## Match the request to a workflow
+## Write or revise general work
+
+Identify the reader, main point and whether the user wants a draft, rewrite or synthesis. Preserve the author's voice, accepted terminology, source authority and material conditions. Organise observations, conclusions and possible actions in the way the reader needs; don't invent results or impose universal report headings.
+
+For revisions, retain precise facts while improving flow and clarity. For investigation notes and reports, preserve useful findings and unresolved questions without turning the result into a list of disclaimers. Use prose for reasoning and headings, lists, links or tables only where they make the writing easier to read.
+
+A chat draft, Markdown file, Google Doc or other destination follows the user's requested format and existing conventions. This skill does not imply that a file must be created or grant filesystem access.
+
+## Use specialists when they fit better
 
 | Requested work | Preferred skill |
 | --- | --- |
@@ -30,10 +38,10 @@ Check consistency, accessibility, readability and repeatability. Use sources for
 | Discovering or reconciling project meanings | `establish-project-language` |
 | Evidence language causing unsupported rejection or stopped work | `advance-with-uncertainty` |
 
-Use an available specialist directly. For mixed requests, use only the workflows needed for distinct deliverables and keep their domain meanings aligned. If a named specialist is not installed, preserve this baseline and the existing project format, state the limited fallback and complete the bounded writing task without inventing dependency availability.
+For reports, meeting notes, project summaries and other general writing without a tighter match, use this skill directly. If a specialist clearly matches, select it instead: it need not load this general writer first. For mixed deliverables, choose only the relevant guidance.
 
-Do not require a marketing author to load an architecture skill merely because the subject is technical. Read source contracts when needed to support a claim. A normal conversation uses persistent guidance rather than activating this router for every response.
+If a specialist isn't installed, preserve the shared baseline and the existing format; complete the task without claiming the missing skill was loaded. Normal conversation, factual Q&A and exploratory discussion do not automatically imply a written artefact. Consult source contracts when claims depend on them, without loading architecture guidance just because a subject is technical.
 
 ## Sources and adaptation
 
-This router is a local workflow choice. See [its rationale and Agent Skills packaging source](references/routing.md). It does not introduce another writing framework or require every specialist to load together.
+This general writing entry point also supports explicit workflow choice. See [its rationale and Agent Skills packaging source](references/routing.md). It does not introduce another writing framework or require every specialist to load together.

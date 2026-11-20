@@ -95,12 +95,13 @@ class SkillLoadingTests(unittest.TestCase):
                 bundled = {path.name for path in (skill / "references").glob("*.md")}
                 self.assertEqual(bundled & all_specialist_references, {reference})
 
-    def test_compatibility_router_is_explicit_only_in_codex_metadata(self):
+    def test_general_writer_can_activate_implicitly_without_being_mandatory(self):
         metadata = (ROOT / "skills/write-project-content/agents/openai.yaml").read_text()
-        self.assertRegex(metadata, r"(?m)^policy:\s*$")
-        self.assertRegex(metadata, r"(?m)^\s+allow_implicit_invocation:\s*false\s*$")
-        description = (ROOT / "skills/write-project-content/SKILL.md").read_text().split("---", 2)[1]
-        self.assertRegex(description.lower(), r"explicit")
+        self.assertNotIn("allow_implicit_invocation", metadata)
+        description = (ROOT / "skills/write-project-content/SKILL.md").read_text().split("---", 2)[1].lower()
+        self.assertIn("general project writing", description)
+        self.assertIn("more specific", description)
+        self.assertIn("not for ordinary", description)
 
     def test_catalogue_cases_include_positive_mixed_and_no_skill_requests(self):
         cases = json.loads((ROOT / "evaluations/skill-selection/cases.json").read_text())["cases"]
