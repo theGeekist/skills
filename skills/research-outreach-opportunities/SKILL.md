@@ -1,0 +1,328 @@
+---
+name: research-outreach-opportunities
+description: Research companies, prospects and professional connections to discover credible reasons for outreach, collaboration or paid work. Use when investigating a company, researching a founder or LinkedIn connection, qualifying a writing or engineering opportunity, examining a suspected documentation or content gap, or developing a commercially relevant point of view. Check existing CRM relationships, investigate current first-party and independent evidence, challenge the initial hypothesis, identify alternative opportunities and prepare evidence-backed findings for personalised outreach. Supports company-first and person-first workflows without manufacturing customer needs or sales pitches.
+---
+
+# Research Outreach Opportunities
+
+Research the company or person deeply enough to understand why a conversation might be worthwhile.
+
+The objective is not to produce an account profile followed by personalised sales hooks. It is to discover something useful about the subject, understand its implications, and determine whether those findings create a credible reason to approach someone.
+
+A successful investigation may confirm the original opportunity, reveal a better one, change the intended recipient, or conclude that outreach is premature.
+
+## Operating principles
+
+- Follow the evidence rather than defending the initial sales hypothesis.
+- Investigate what already exists before proposing what might be missing.
+- Distinguish observable business activity from inferred commercial needs.
+- Treat positive discoveries as important evidence, not merely gaps and deficiencies.
+- Preserve useful alternatives when several commercial angles remain plausible.
+- Understand people through their actual relationships and history, not merely their employer.
+- Preserve substantive research even when no outreach is recommended.
+- Produce findings that another worker can turn into a convincing, genuinely individual conversation.
+
+The skill owns investigation and interpretation. It does not own scheduled execution, candidate pagination, quotas, outreach sending or automatic relationship changes. The invoking workflow supplies those responsibilities.
+
+## 1. Establish the research context
+
+Identify the subject and why research was initiated.
+
+Possible starting points include:
+
+- A company discovered through the existing lead inventory.
+- A founder or decision-maker associated with a potential client.
+- An existing first-degree professional connection.
+- An advertised commission, contract or position.
+- A potential technical, editorial or product opportunity.
+- A company the user has independently discovered.
+
+Establish the initial opportunity hypothesis without treating it as the conclusion.
+
+For example, an older developer documentation site might suggest an integration-guide opportunity. That is a starting hypothesis. It is not evidence that the company needs help writing documentation.
+
+Consider what discoveries would strengthen, weaken or replace that hypothesis.
+
+### Company-first and person-first research
+
+**Company-first:** Investigate possible work, relevant decision-makers, commercial activity, product positioning and opportunities for collaboration. Use the existing lead qualification rules when the invoking workflow supplies them.
+
+**Person-first:** Treat the individual and their relationship with the user as the research root. Examine existing conversations, shared professional context, current activity and credible reasons to reconnect.
+
+An existing first-degree connection does not need a qualifying company signal to deserve research. Nor does every connection require a sales pitch.
+
+Do not substitute one workflow's eligibility criteria for the other's.
+
+## 2. Read existing knowledge before investigating externally
+
+Consult the relevant connected sources:
+
+- WriteWithJ CRM for company records, contacts, relationships, engagements and message history.
+- Existing research, discovery findings, previous qualification decisions and outreach drafts.
+- The user's authoritative professional profile and work-sample catalogue.
+- Connected files or project documentation where they contain useful context.
+
+For the current WriteWithJ workflows, the professional evidence catalogue is:
+
+https://drive.google.com/file/d/1PWHZnQm7yHKTQXZbXjBxRwxM8XVKKyDo/view
+
+Read the full catalogue once per research batch when appropriate. Select relevant engineering, consulting, technical-writing and published-work evidence for each subject rather than applying a fixed shortlist.
+
+Recognise previously researched companies and contacts. Reuse existing canonical identities and research records. A new discovery should enrich the current record, not create a competing engagement for the same opportunity.
+
+Existing CRM history takes precedence over speculative relationship signals.
+
+## 3. Investigate the actual business
+
+Prefer the company's current primary sources.
+
+Explore the material relevant to the opportunity, potentially including:
+
+- Product website, positioning and commercial offerings.
+- Documentation, SDKs, repositories and runnable examples.
+- Customer stories, testimonials and public implementations.
+- Product announcements, changelogs and release history.
+- Engineering articles, technical tutorials and editorial programmes.
+- Careers, contributor programmes, commissions and partnerships.
+- Pricing, customer segments and intended users.
+- Public statements from founders, leaders and developers.
+
+This is a discovery space, not a mandatory checklist. Follow promising evidence deeply rather than mechanically visiting every page.
+
+Pay particular attention to differences between older and newer material.
+
+A company may have replaced an outdated documentation site, published a new SDK, expanded its examples or changed its product positioning. Such developments may invalidate the original opportunity.
+
+Establish what exists today before identifying what might be useful next.
+
+## 4. Investigate beyond the company's own website
+
+Search for independent evidence of how the product is understood and used.
+
+Useful sources may include:
+
+- Real customer implementations.
+- Third-party case studies.
+- Open-source projects integrating the product.
+- Technical discussions and community experiences.
+- Articles describing practical deployment decisions.
+- Partner integrations and independently published examples.
+- Adjacent products and their approaches to customer education.
+- Market developments that change the relevance of the offering.
+
+Look for discoveries that materially change the assessment.
+
+Compare the subject with relevant alternatives where doing so helps explain a possible commercial opportunity.
+
+Do not assume similar products are direct competitors. Sometimes an adjacent company's approach to developer education or customer storytelling is more informative than its technology.
+
+The purpose of comparison is to discover valuable possibilities, not to manufacture weaknesses.
+
+## 5. Challenge the initial hypothesis
+
+Revisit the reason research began.
+
+Consider:
+
+- Does the suspected problem still exist?
+- Has the company already addressed it?
+- What are they doing particularly well?
+- Did independent evidence reveal a different opportunity?
+- What does the company already demonstrate about its customers?
+- What valuable business question remains unanswered?
+- Is there evidence of actual demand, or only a reasonable possibility?
+- Would the proposed work complement the company's existing investment?
+
+If new findings invalidate the original idea, change direction.
+
+Do not continue recommending documentation services simply because documentation was the original research angle.
+
+Likewise, do not invent another deficiency merely to preserve the opportunity.
+
+A discovery can identify an interesting commercial hypothesis without establishing that the company wants to commission the work.
+
+Keep those distinctions in the research. They need not become defensive disclaimers in the eventual outreach.
+
+## 6. Explore the potential commercial value
+
+Translate relevant discoveries into possible work.
+
+Depending on the company and evidence, opportunities may involve:
+
+- Commissioned technical or editorial writing.
+- Customer stories and engineering case studies.
+- Developer education and application tutorials.
+- Working integrations with accompanying documentation.
+- Software engineering, architecture or consulting.
+- Technical training and workshops.
+- Product demonstrations or reusable examples.
+- Existing paid contracts, contributor programmes or employment opportunities.
+
+These are possibilities, not categories that every investigation must satisfy.
+
+For each promising angle, understand:
+
+**The opportunity:** What could realistically be offered?
+
+**The recipient's benefit:** Why might this matter to the company or individual?
+
+**The supporting evidence:** What discoveries make the proposition worth considering?
+
+**The user's contribution:** Which demonstrated capabilities or work samples make the user relevant?
+
+**The commercial status:** Is there an actual request, a credible inferred opportunity, or simply a possibility worth discussing?
+
+Preserve more than one angle when the evidence supports alternatives. Recommend the strongest without prematurely discarding the others.
+
+Avoid arbitrary numerical fit scores unless the invoking workflow requires them.
+
+## 7. Identify an appropriate conversational route
+
+Research the person who could reasonably engage with the opportunity.
+
+Consider their role, professional background, public activity and any prior relationship with the user.
+
+For an existing connection, read the actual conversation before suggesting another message. A thoughtful continuation may be more valuable than a new commercial proposition.
+
+For a new company, distinguish between technical validation, editorial ownership, product leadership and purchasing authority where relevant.
+
+Use published contact information and existing CRM records. Do not manufacture identities, addresses or relationships.
+
+The research should establish a real reason to approach the intended recipient, not merely identify an available inbox.
+
+## 8. Develop the point of view
+
+Before handing the research to an outreach writer, articulate what the investigation actually revealed.
+
+A useful account may explain:
+
+- Why the company or person was investigated.
+- What the original hypothesis suggested.
+- Which discovery changed that understanding.
+- What unexpected example, customer story or comparison became important.
+- What possible business value emerged.
+- Why the user might contribute meaningfully.
+
+Do not force these into a fixed narrative sequence.
+
+The point of view should emerge from the research itself.
+
+A compelling discovery may be an impressive existing implementation, a significant recent improvement, a contradiction between old and new material, or an overlooked connection between the product and its customers.
+
+Research is successful when it supplies a worthwhile observation or informed opinion, even if it does not yet justify an outbound message.
+
+### Hyperbeam: a reference example
+
+Initial hypothesis:
+An older getting-started site suggested an opportunity to improve developer documentation.
+
+Contradictory discovery:
+Hyperbeam had a newer, more substantial documentation site with SDK guides and practical examples.
+
+Further discovery:
+A third-party HappyDots classroom implementation demonstrated how Hyperbeam fitted into a larger collaborative application.
+
+Adjacent market comparison:
+Browserbase and Browserless published customer and developer stories that helped explain applications and value. Their markets are not identical to Hyperbeam's.
+
+Revised opportunity:
+Engineering-led customer stories and integration narratives could potentially help communicate how organisations use Hyperbeam.
+
+Commercial interpretation:
+This is a credible conversation angle, not proof of a content budget or an expressed commission.
+
+The important behaviour is that the research changed the opportunity.
+
+Do not reuse Hyperbeam's narrative structure, market comparisons or conclusions for unrelated prospects.
+
+## 9. Prepare the research hand-off
+
+Produce a concise, useful research record containing:
+
+### Subject and relationship
+Company or person, canonical CRM identifiers, relevant role and existing relationship context.
+
+### Initial hypothesis
+Why the investigation began.
+
+### Significant discoveries
+The findings that matter most, with source URLs and observation dates. Include meaningful positive findings and developments that changed the assessment.
+
+### Revised commercial interpretation
+The strongest current opportunity, the potential recipient benefit and any viable alternative angles.
+
+### Relevant proof
+Select specific engineering experience, commissioned work, published articles or shipped products from the user's portfolio that support the opportunity.
+
+Preserve public links and accurate attribution. Do not invent bylines for ghostwritten work.
+
+### Conversation opportunity
+Identify the likely recipient and explain what the research gives the user worth discussing with that person.
+
+This may be a discovery narrative, commercial enquiry, informed opinion or continuation of an existing relationship.
+
+Provide the substance of the conversation, not a templated cold email.
+
+### Recommended disposition
+
+Use one of:
+
+- **READY FOR PERSONAL REVIEW:** A credible, specific conversational approach is available.
+- **REVIEW BEFORE SENDING:** A worthwhile approach exists but requires the user's judgement or confirmation.
+- **HOLD:** Research is useful, but there is not yet a natural reason to approach the recipient.
+
+For a HOLD, preserve the evidence and identify the discovery that would materially change the recommendation.
+
+These are outreach-review outcomes, not automatic CRM relationship statuses or definitive commercial qualification verdicts.
+
+## 10. Editorial and evidence review
+
+Before finalising, consider the following questions:
+
+- Have we actually investigated the proposed problem?
+- Did we challenge our first interpretation?
+- Does the research contain something genuinely interesting about this specific subject?
+- Could another researcher trace the important conclusions to their sources?
+- Is the potential business value distinct from a generic content deficiency?
+- Are adjacent-company comparisons accurate?
+- Does the work we propose genuinely match the user's demonstrated experience?
+- Would an eventual message have a reason to exist beyond introducing the user?
+- Are we preserving useful discoveries even where outreach is not yet appropriate?
+
+If an answer reveals a material weakness, continue investigating or revise the conclusion.
+
+Avoid converting research notes into an outward-facing list of caveats. Keep operational uncertainty and incomplete evidence in the research record.
+
+Do not force a message merely because a scheduled task requests multiple completed research records.
+
+## Writing and outreach boundaries
+
+This skill prepares a substantive foundation for personalised outreach.
+
+A separate outreach-composition skill owns the final message, its voice, structure and editorial review.
+
+When the invoking workflow explicitly requests a message, it may use those composition instructions after the research is complete. Do not substitute this research brief for a finished message.
+
+Preserve genuine discovery sequences and natural conversational language. Never fabricate a research journey, a personal interaction or a customer need.
+
+The user's edited Hyperbeam email from 20 November 2026 is a useful quality reference: it acknowledges the newer documentation, follows the HappyDots discovery, draws a qualified market comparison and only then introduces the user's potential contribution.
+
+It is a reference for authenticity and investigative depth, not a template.
+
+## Persistence and execution
+
+The invoking task owns candidate selection, pagination, quotas, scheduling and final delivery.
+
+Use supported CRM research-save tools when the task authorises persistence. Preserve useful discoveries before final qualification decisions.
+
+Use canonical company and person records. Do not create duplicate engagements merely to store another research update.
+
+Save source links, dates, contact information and substantive findings. Retain the actual research rather than a compressed collection of outreach slogans.
+
+Respect the CRM's current schemas, revisions and acknowledgement contracts. Verify writes before reporting completion.
+
+Never treat a prepared message as sent. Never send outreach or alter relationship status solely because research or a draft exists.
+
+When another approach produces a more credible interpretation of the evidence, prefer it over this skill's examples or suggested investigative paths.
+
+The desired result is informed commercial judgement that a person can recognise as worth sharing.
