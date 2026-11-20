@@ -10,7 +10,7 @@ A marketing agent can select `write-marketing-content` from a customer-copy requ
 
 The previous broad writer covered tasks, decisions, developer documentation, marketing, interfaces and reviews. Its scope competed with specialist purposes and directed authors to broad shared material. The general entry point now fills the gap for reports and other writing without duplicating specialist workflows. The architecture playbooks loaded their full examples, mappings and checklists on every activation.
 
-The revised collection has eleven skills: two architecture playbooks, terminology discovery, actionable uncertainty, six writing/review specialists and one general writer and workflow chooser. The common baseline is 144 words. The specialist cores keep purpose, authority and reference-loading guidance together; current word counts are in the context budget.
+The collection now has thirteen skills: two architecture playbooks, terminology discovery, actionable uncertainty, six writing/review specialists, a general writer and workflow chooser, and two outreach skills. The outreach skills separate investigation and commercial interpretation from individual message composition and editorial learning. The common baseline is 144 words. The specialist cores keep purpose, authority and reference-loading guidance together; current word counts are in the context budget.
 
 The authored baseline is `standards/baseline.md`. The synchroniser embeds the same text in each skill and copies the references declared in `standards/skill-profiles.json`. Independent installation therefore preserves meaning without sibling dependencies. Authors should change the canonical file and regenerate, not edit generated copies separately.
 

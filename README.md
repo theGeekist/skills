@@ -4,11 +4,11 @@
 
 # Geekist Skills
 
-**Eleven agent skills for clearer writing and consistent project meaning.**
+**Thirteen agent skills for clear writing, commercial research and consistent project meaning.**
 
 [![Language checks](https://github.com/theGeekist/skills/actions/workflows/language-checks.yml/badge.svg)](https://github.com/theGeekist/skills/actions/workflows/language-checks.yml)
 [![Release](https://img.shields.io/github/v/release/theGeekist/skills)](https://github.com/theGeekist/skills/releases)
-[![Skills: 11](https://img.shields.io/badge/skills-11-ffde59)](#find-the-right-skill)
+[![Skills: 13](https://img.shields.io/badge/skills-13-ffde59)](#find-the-right-skill)
 [![Licence: MIT](https://img.shields.io/badge/Licence-MIT-blue.svg)](LICENSE)
 
 **[Install](#installation) · [Choose a skill](#find-the-right-skill) · [Worked example](docs/language-system/skill-walkthrough.md) · [Research](#we-looked-at-what-already-existed) · [Competitor comparison](docs/language-system/competing-writing-skills.md)**
@@ -70,13 +70,13 @@ Install the current collection:
 
 Choose the skills and agent environments appropriate to your work. Each skill provides a short baseline with more detailed references available when the task warrants them.
 
-The general writer fills gaps between specific writing purposes; no specialist needs to load it first. There's no requirement to invoke the entire collection whenever an agent needs to write something. Software development has already accumulated enough ceremony without making technical prose another spectator sport.
+The general writer fills gaps between specific writing purposes; no specialist needs to load it first. The outreach skills are complementary but independently useful: research need not discover a sales opportunity, and an outreach assessment need not produce a message worth sending. There's no requirement to invoke the entire collection whenever an agent needs to write something. Software development has already accumulated enough ceremony without making technical prose another spectator sport.
 
-For a reproducible installation of the v1.8.0 release:
+For a reproducible installation of the v1.9.0 release:
 
-`npx skills add https://github.com/theGeekist/skills/tree/v1.8.0`
+`npx skills add https://github.com/theGeekist/skills/tree/v1.9.0`
 
-This documentation accompanies v1.8.0. The versioned command becomes available when that release is published; the unversioned command installs the current default branch. See **[installation and client support](docs/language-system/integration.md)** for the available installation routes and supported client environments, including the separate ChatGPT plugin distribution process.
+This documentation accompanies v1.9.0. The versioned command becomes available when that release is published; the unversioned command installs the current default branch. See **[installation and client support](docs/language-system/integration.md)** for the available installation routes and supported client environments, including the separate ChatGPT plugin distribution process.
 
 <a id="choose-a-skill"></a>
 <a id="choose-a-language-skill"></a>
@@ -99,6 +99,8 @@ The collection covers several parts of project communication, from establishing 
 | **[Backend slice architecture](docs/skills/backend-slice-architecture.md)** | Apply capability-first organisation with explicit orchestration and protected public boundaries. |
 | **[Frontend slice architecture](docs/skills/frontend-slice-architecture.md)** | Organise frontend features around clear ownership and appropriate shared components. |
 | **[Write general project content](docs/skills/write-project-content.md)** | Write reports, research findings, project summaries and other prose without a narrower specialist. |
+| **[Research outreach opportunities](docs/skills/research-outreach-opportunities.md)** | Investigate people and businesses, challenge commercial hypotheses and preserve worthwhile discoveries. |
+| **[Write outreach](docs/skills/write-outreach.md)** | Compose individual correspondence grounded in actual relationships, meaningful discoveries and the author's voice. |
 
 Each skill has a dedicated overview with a practical example. The overview also provides installation instructions and references to the sources behind its guidance.
 
