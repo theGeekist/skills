@@ -2,15 +2,15 @@
 
 ## Decision
 
-Give each authoring purpose a direct entry point. Keep a short, canonical baseline inline in every independently installable skill, and load supporting detail only when the task needs it. Retain `write-project-content` as an explicit compatibility chooser rather than an authoring prerequisite.
+Give each authoring purpose a direct entry point. Keep a short, canonical baseline inline in every independently installable skill, and load supporting detail only when the task needs it. Use `write-project-content` for general writing without a narrower fit rather than as an authoring prerequisite.
 
 A marketing agent can select `write-marketing-content` from a customer-copy request. An ADR author can select `record-architecture-decisions` without loading the architecture playbooks; actual boundary design still belongs to those playbooks. The [skill table](../../README.md#choose-a-skill) maps the complete collection.
 
 ## Why this split
 
-The previous broad writer covered tasks, decisions, developer documentation, marketing, interfaces and reviews. Its main file was small, but its scope competed with specialist purposes and it directed authors to broad shared material. The architecture playbooks loaded their full examples, mappings and checklists on every activation.
+The previous broad writer covered tasks, decisions, developer documentation, marketing, interfaces and reviews. Its scope competed with specialist purposes and directed authors to broad shared material. The general entry point now fills the gap for reports and other writing without duplicating specialist workflows. The architecture playbooks loaded their full examples, mappings and checklists on every activation.
 
-The revised collection has eleven skills: two architecture playbooks, terminology discovery, actionable uncertainty, six writing/review specialists and one compatibility chooser. The common baseline is 144 words. The specialist cores keep purpose, authority and reference-loading guidance together; current word counts are in the context budget.
+The revised collection has eleven skills: two architecture playbooks, terminology discovery, actionable uncertainty, six writing/review specialists and one general writer and workflow chooser. The common baseline is 144 words. The specialist cores keep purpose, authority and reference-loading guidance together; current word counts are in the context budget.
 
 The authored baseline is `standards/baseline.md`. The synchroniser embeds the same text in each skill and copies the references declared in `standards/skill-profiles.json`. Independent installation therefore preserves meaning without sibling dependencies. Authors should change the canonical file and regenerate, not edit generated copies separately.
 
@@ -35,4 +35,4 @@ Keep four questions separate:
 
 The first three can be exercised here. The last requires the actual client and execution mode. The [portability report](portability.md) records primary sources, tool versions, offline checks and host limits. No universal activation claim follows from a shared file format.
 
-Codex's optional metadata disables implicit use of the compatibility router. That policy is not a portable universal switch. Its description also makes the explicit-only role clear, and other hosts need their own discovery checks. Persistent conversational guidance remains separate from task-specific skill activation.
+The general writer can activate implicitly from a matching writing request while specialists remain preferred for their own purposes. This is portable activation intent, not proof that every client will select it; each host needs separate discovery checks. Persistent conversational guidance remains separate from task-specific skill activation.

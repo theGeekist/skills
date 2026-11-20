@@ -27,13 +27,13 @@ python3 scripts/sync-skill-catalogue.py
 python3 scripts/sync-skill-catalogue.py --check
 ```
 
-Activation descriptions remain authored in each `SKILL.md`. The generator checks their agreement with the catalogue rather than rewriting their scope. It also preserves the stable plugin identity and the explicit compatibility-router policy.
+Activation descriptions remain authored in each `SKILL.md`. The generator checks their agreement with the catalogue rather than rewriting their scope. It also preserves the stable plugin identity and the general-writer activation and specialist precedence.
 
 Directory mirrors may publish different revisions or variants. Check the linked repository and commit before comparing instructions or relying on a package's description.
 
 ## Directory presentation
 
-The root [skills.sh.json](../../skills.sh.json) groups the collection by purpose. Project language covers terminology and review, while project writing covers tasks and decisions alongside technical documentation. Product content has its own route, with architecture and the explicit workflow chooser kept separate.
+The root [skills.sh.json](../../skills.sh.json) groups the collection by purpose. Project language covers terminology and review, while project writing covers tasks and decisions alongside technical documentation. Product content has its own route, with architecture and general writing kept separate.
 
 The configuration is generated from the same catalogue as the overview pages. It changes directory presentation without changing skill instructions or activation scope. The [skills.sh customisation guide](https://skills.sh/docs/customize) describes its supported fields and refresh process; adding a valid file does not establish that a cached listing has refreshed.
 

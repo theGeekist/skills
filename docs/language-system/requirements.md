@@ -21,7 +21,7 @@ The [uncertainty skill](../../skills/advance-with-uncertainty/SKILL.md) implemen
 
 ## Focused entry points
 
-Each of the eleven skills has a concrete purpose. Task, ADR, technical-documentation, marketing, interface and review requests can select their specialist directly. The compatibility router remains optional and explicit.
+Each of the eleven skills has a concrete purpose. Task, ADR, technical-documentation, marketing, interface and review requests can select their specialist directly. The general writer covers reports, findings and summaries when no narrower skill matches, without becoming mandatory for specialists.
 
 Every independently installed skill carries the same canonical baseline and its own required references. Supporting material is loaded by concern rather than by a compulsory full-research read. Architecture playbooks preserve their governing rules and exceptions while using the same reader-focused communication baseline.
 
