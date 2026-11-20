@@ -34,7 +34,7 @@ This illustrative example starts from the source facts below.
 Install this skill from the versioned collection in a supported Agent Skills environment:
 
 ```sh
-npx skills add https://github.com/theGeekist/skills/tree/v1.8.0 --skill write-technical-documentation
+npx skills add https://github.com/theGeekist/skills/tree/v1.9.0 --skill write-technical-documentation
 ```
 
 Select the intended agent and installation scope when prompted. This CLI installation is separate from ChatGPT plugin registration and mobile availability. Client discovery and activation require their own verification.
@@ -53,7 +53,7 @@ The [source-to-guidance map](../../standards/framework-evidence.md) explains how
 
 ## Follow the work
 
-- [Walk through all eleven skills](../language-system/skill-walkthrough.md)
+- [Explore the writing skill walkthrough](../language-system/skill-walkthrough.md)
 - [Original research](../language-system/research-baseline.md) and [framework evaluation](../language-system/framework-evaluation.md)
 - [Compare existing writing skills](../language-system/competing-writing-skills.md)
 - [Validation and evidence](../language-system/validation-results.md)
