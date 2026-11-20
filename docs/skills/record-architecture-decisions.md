@@ -7,7 +7,7 @@ Document the reasoning behind technical decisions while that reasoning is still 
 
 ## When to use it
 
-Use when authoring or updating an architecture decision record, using the project’s format and authority.
+Use for a formal decision record or a clear explanation of why a technical choice was made.
 
 Example request:
 
@@ -34,7 +34,7 @@ This illustrative example starts from the source facts below.
 Install this skill from the versioned collection in a supported Agent Skills environment:
 
 ```sh
-npx skills add https://github.com/theGeekist/skills/tree/v1.7.0 --skill record-architecture-decisions
+npx skills add https://github.com/theGeekist/skills/tree/v1.8.0 --skill record-architecture-decisions
 ```
 
 Select the intended agent and installation scope when prompted. This CLI installation is separate from ChatGPT plugin registration and mobile availability. Client discovery and activation require their own verification.
