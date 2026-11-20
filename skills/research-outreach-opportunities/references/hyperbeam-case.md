@@ -26,3 +26,9 @@ Do not reuse Hyperbeam's narrative structure, market comparisons or conclusions 
 ## How to apply the example
 
 Use the example to recognise how a discovery can change the opportunity. Do not repeat the company-specific comparison or infer that another prospect needs customer stories.
+
+## Public source
+
+The example's documentation observation can be revisited through [Hyperbeam's current getting-started guide](https://next.hyperbeam.com/docs/home/getting-started/) and [official product site](https://hyperbeam.com/). They illustrate the presence of usable SDK examples, not the availability of a paid content commission.
+
+The original third-party HappyDots discovery and adjacent-company interpretation are preserved as a historical example; their source URLs are not recorded here. Do not present this case as a current commercial assessment without fresh research.
