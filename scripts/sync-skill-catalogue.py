@@ -47,7 +47,7 @@ def load_catalogue(root):
                 raise ValueError(f'{name}: declared icon must stay inside the skill directory')
             if not icon.is_file():
                 raise ValueError(f'{name}: missing declared icon')
-        expected_policy = False if name == 'write-project-content' else None
+        expected_policy = None
         if skill['allow_implicit_invocation'] is not expected_policy:
             raise ValueError(f'{name}: unexpected implicit invocation policy')
         if not skill['sources'] or any(not source['url'].startswith('https://') for source in skill['sources']):

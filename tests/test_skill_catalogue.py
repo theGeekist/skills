@@ -50,10 +50,7 @@ class SkillCatalogueTests(unittest.TestCase):
             metadata = planned[ROOT / 'skills' / name / 'agents/openai.yaml']
             self.assertIn('./assets/geekist-small.svg', metadata)
             self.assertIn('./assets/geekist.svg', metadata)
-            if name == 'write-project-content':
-                self.assertIn('allow_implicit_invocation: false', metadata)
-            else:
-                self.assertNotIn('allow_implicit_invocation', metadata)
+            self.assertNotIn('allow_implicit_invocation', metadata)
         for manifest in ('.codex-plugin/plugin.json', '.claude-plugin/plugin.json'):
             before = json.loads((ROOT / manifest).read_text())
             after = json.loads(planned[ROOT / manifest])
@@ -125,7 +122,7 @@ class SkillCatalogueTests(unittest.TestCase):
             shutil.copytree(ROOT / 'skills', temporary / 'skills')
             path = temporary / 'standards/skill-catalogue.json'
             catalogue = json.loads(path.read_text())
-            catalogue['skills']['write-project-content']['allow_implicit_invocation'] = True
+            catalogue['skills']['write-project-content']['allow_implicit_invocation'] = False
             path.write_text(json.dumps(catalogue))
             with self.assertRaisesRegex(ValueError, 'unexpected implicit invocation policy'):
                 SYNC.load_catalogue(temporary)
