@@ -2,20 +2,20 @@
 
 GitHub is the canonical source for the collection. A versioned release binds the plugin metadata, portable skills, references, branding and evaluation record to one commit.
 
-## Release v1.9.0
+## Release v1.9.1
 
-The v1.9.0 metadata and installation references are prepared together. The collection now includes portable outreach research and individual message writing, without hard-coded portfolios, schedules or storage destinations. The tag and archives become available after the release workflow publishes them.
+The v1.9.1 metadata and installation references are prepared together. The collection now includes portable outreach research and individual message writing, without hard-coded portfolios, schedules or storage destinations. The tag and archives become available after the release workflow publishes them.
 
 - Repository: <https://github.com/theGeekist/skills>
-- Release: <https://github.com/theGeekist/skills/releases/tag/v1.9.0>
-- Both plugin manifests use version `1.7.0`.
-- Release notes: [v1.9.0](release-notes/v1.9.0.md).
+- Release: <https://github.com/theGeekist/skills/releases/tag/v1.9.1>
+- Both plugin manifests use version `1.9.1`.
+- Release notes: [v1.9.1](release-notes/v1.9.1.md).
 - The distribution retains the existing `geekist-architecture-skills` plugin identifier for compatibility; its displayed name is Geekist Skills.
 
 Install the pinned collection:
 
 ```sh
-npx skills add https://github.com/theGeekist/skills/tree/v1.9.0
+npx skills add https://github.com/theGeekist/skills/tree/v1.9.1
 ```
 
 The skills CLI prompts for skills and target agents. Its default scope is the current project; add `-g` for a user-wide installation. Review the selected destinations rather than assuming every installed client has the same discovery path. ChatGPT personal-skill installation uses its own supported installation mechanism, separately from this CLI.
@@ -23,7 +23,7 @@ The skills CLI prompts for skills and target agents. Its default scope is the cu
 For a canonical checkout shared by local clients:
 
 ```sh
-git clone --branch v1.9.0 https://github.com/theGeekist/skills.git
+git clone --branch v1.9.1 https://github.com/theGeekist/skills.git
 cd skills
 ./scripts/link-local.sh --client all --dry-run
 ./scripts/link-local.sh --client all
@@ -40,7 +40,7 @@ The workflow:
 1. Checks that both plugin versions and the versioned notes agree.
 2. Preserves an existing release and tag without changing their assets.
 3. Runs shared-source, terminology, deterministic and pinned portable-format checks.
-4. Builds deterministic Git source archives, checksums and a release manifest.
+4. Builds deterministic Git source archives, a dedicated ChatGPT plugin ZIP, checksums and a release manifest.
 5. Creates the tag at the checked commit if absent and publishes the GitHub release using the repository's normal Actions token.
 
 An existing tag is never moved. If a tag exists but its release is missing, a run on a different commit stops with a recovery instruction. Run the workflow on the existing tag to finish publication for that commit. A same-version metadata update after publication is a no-op; a new release requires a new version and notes.
@@ -50,6 +50,19 @@ An existing tag is never moved. If a tag exists but its release is missing, a ru
 Update `.codex-plugin/plugin.json` and `.claude-plugin/plugin.json` to the same next version. Set the same tag in `standards/skill-catalogue.json` and regenerate with `python3 scripts/sync-skill-catalogue.py`. Write `release-notes/vX.Y.Z.md`, update the install reference in this file and README, and run the checks documented in CONTRIBUTING. Review brand/source notices with the release contents. Merge the prepared change or manually run the workflow on its intended commit, then verify the published tag, manifest and checksums.
 
 Published tags and release assets are immutable. Use a new version when released contents change.
+
+## ChatGPT plugin upload
+
+Download the dedicated `geekist-skills-chatgpt-v1.9.1.zip` release asset, **not** the source archive `geekist-skills-v1.9.1.zip`. The ChatGPT archive includes only `.codex-plugin/plugin.json` and the complete `skills/` tree. It omits repository-level marketplace definitions, tests, scripts and documentation that make a source ZIP unsuitable for direct plugin upload.
+
+The build is reproducible:
+
+```sh
+python3 scripts/package-chatgpt-plugin.py --output dist/geekist-skills-chatgpt-v1.9.1.zip
+unzip -l dist/geekist-skills-chatgpt-v1.9.1.zip
+```
+
+In ChatGPT web, open Plugins → Personal → Add plugin and select that ZIP. The upload is an account-level installation, separate from local Fedora skills and from the GitHub release itself.
 
 ## Other distribution channels
 
