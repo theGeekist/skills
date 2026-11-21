@@ -95,7 +95,7 @@ jobs:
         run: |
           python3 -m pip install ./.validation/agentskills/skills-ref
           for skill_path in skills/*; do skills-ref validate "$skill_path" || exit; done
-      - name: Build reproducible source archives
+      - name: Build reproducible source archives and ChatGPT plugin ZIP
         if: steps.existing.outputs.skip != 'true'
         env:
           RELEASE_TAG: ${{ steps.version.outputs.tag }}
@@ -104,6 +104,7 @@ jobs:
           archive_name="geekist-skills-$RELEASE_TAG"
           git archive --format=tar --prefix="$archive_name/" "$GITHUB_SHA" | gzip -n > "dist/$archive_name.tar.gz"
           git archive --format=zip --prefix="$archive_name/" --output="dist/$archive_name.zip" "$GITHUB_SHA"
+          python3 scripts/package-chatgpt-plugin.py --output "dist/geekist-skills-chatgpt-$RELEASE_TAG.zip"
           python3 - <<'PY'
           import json, os, subprocess
           from pathlib import Path

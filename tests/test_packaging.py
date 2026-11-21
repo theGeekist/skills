@@ -8,6 +8,8 @@ import shutil
 import subprocess
 import tempfile
 import unittest
+import importlib.util
+from zipfile import ZipFile
 
 
 ROOT = Path(__file__).resolve().parents[1]
@@ -31,6 +33,41 @@ class PackagingTests(unittest.TestCase):
         for path in [*ROOT.glob(".*-plugin/*.json"), *ROOT.glob(".agents/plugins/*.json")]:
             with self.subTest(path=path):
                 self.assertIsInstance(json.loads(path.read_text()), dict)
+
+    def test_chatgpt_plugin_zip_has_one_root_and_every_skill(self):
+        module_path = ROOT / "scripts/package-chatgpt-plugin.py"
+        spec = importlib.util.spec_from_file_location("package_chatgpt_plugin", module_path)
+        package = importlib.util.module_from_spec(spec)
+        spec.loader.exec_module(package)
+        expected = {
+            ".codex-plugin/plugin.json",
+            *(p.relative_to(ROOT).as_posix()
+              for p in (ROOT / "skills").rglob("*") if p.is_file()),
+        }
+        skill_names = {p.parent.name for p in (ROOT / "skills").glob("*/SKILL.md")}
+        with tempfile.TemporaryDirectory() as temporary:
+            first = Path(temporary) / "first.zip"
+            second = Path(temporary) / "second.zip"
+            report = package.build_archive(ROOT, first)
+            package.build_archive(ROOT, second)
+            self.assertEqual(first.read_bytes(), second.read_bytes())
+            self.assertEqual(report["skills"], len(skill_names))
+            with ZipFile(first) as archive:
+                names = set(archive.namelist())
+                self.assertEqual(names, expected)
+                self.assertIsNone(archive.testzip())
+                self.assertEqual(
+                    {name.split("/")[1] for name in names if name.endswith("/SKILL.md")},
+                    skill_names,
+                )
+                self.assertFalse(any(name.startswith((".agents/", ".claude-plugin/",
+                    "docs/", "tests/", "scripts/")) for name in names))
+                self.assertEqual(
+                    json.loads(archive.read(".codex-plugin/plugin.json"))["skills"],
+                    "./skills/",
+                )
+                for name in names:
+                    self.assertEqual(archive.read(name), (ROOT / name).read_bytes())
 
     @unittest.skipUnless(os.environ.get("VALE_BINARY"), "set VALE_BINARY to test the optional Vale rule")
     def test_vale_flags_prose_but_preserves_code_and_british_spelling(self):
