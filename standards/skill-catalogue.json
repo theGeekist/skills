@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "release": "v1.9.0",
+  "release": "v1.9.1",
   "repository": "https://github.com/theGeekist/skills",
   "plugin": {
     "description": "Thirteen portable agent skills for clear project writing, evidence-led outreach research, authentic individual correspondence, technical documentation, decisions and product communication.",
