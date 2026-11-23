@@ -41,6 +41,7 @@ class PackagingTests(unittest.TestCase):
         spec.loader.exec_module(package)
         expected = {
             ".codex-plugin/plugin.json",
+            "LICENSE",
             *(p.relative_to(ROOT).as_posix()
               for p in (ROOT / "skills").rglob("*") if p.is_file()),
         }
