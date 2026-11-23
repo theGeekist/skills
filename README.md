@@ -72,13 +72,13 @@ Choose the skills and agent environments appropriate to your work. Each skill pr
 
 The general writer fills gaps between specific writing purposes; no specialist needs to load it first. The outreach skills are complementary but independently useful: research need not discover a sales opportunity, and an outreach assessment need not produce a message worth sending. There's no requirement to invoke the entire collection whenever an agent needs to write something. Software development has already accumulated enough ceremony without making technical prose another spectator sport.
 
-For a reproducible installation of the v1.9.2 release:
+For a reproducible installation of the v1.9.3 release:
 
-`npx skills add https://github.com/theGeekist/skills/tree/v1.9.2`
+`npx skills add https://github.com/theGeekist/skills/tree/v1.9.3`
 
-This documentation accompanies v1.9.2. The versioned command becomes available when that release is published; the unversioned command installs the current default branch.
+This documentation accompanies v1.9.3. The versioned command becomes available when that release is published; the unversioned command installs the current default branch.
 
-For **ChatGPT's Personal → Add plugin upload**, download the dedicated [Geekist ChatGPT plugin ZIP](https://github.com/theGeekist/skills/releases/download/v1.9.2/geekist-skills-chatgpt-v1.9.2.zip). The standard GitHub source ZIP is not the ChatGPT upload package. The dedicated archive contains the plugin manifest, MIT licence notice, and all 13 skills with their references. See **[installation and client support](docs/language-system/integration.md)** for the available installation routes and supported client environments, including the separate ChatGPT plugin distribution process.
+For **ChatGPT's Personal → Add plugin upload**, download the dedicated [Geekist ChatGPT plugin ZIP](https://github.com/theGeekist/skills/releases/download/v1.9.3/geekist-skills-chatgpt-v1.9.3.zip). The standard GitHub source ZIP is not the ChatGPT upload package. The dedicated archive contains the plugin manifest, MIT licence notice, and all 13 skills with their references. See **[installation and client support](docs/language-system/integration.md)** for the available installation routes and supported client environments, including the separate ChatGPT plugin distribution process.
 
 <a id="choose-a-skill"></a>
 <a id="choose-a-language-skill"></a>
