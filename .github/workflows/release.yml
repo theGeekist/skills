@@ -102,9 +102,17 @@ jobs:
         run: |
           mkdir -p dist
           archive_name="geekist-skills-$RELEASE_TAG"
-          git archive --format=tar --prefix="$archive_name/" "$GITHUB_SHA" | gzip -n > "dist/$archive_name.tar.gz"
-          git archive --format=zip --prefix="$archive_name/" --output="dist/$archive_name.zip" "$GITHUB_SHA"
+          git archive --format=tar --prefix="$archive_name/" "$GITHUB_SHA" -- . ':(exclude)evaluations/**' | gzip -n > "dist/$archive_name.tar.gz"
+          git archive --format=zip --prefix="$archive_name/" --output="dist/$archive_name.zip" "$GITHUB_SHA" -- . ':(exclude)evaluations/**'
           python3 scripts/package-chatgpt-plugin.py --output "dist/geekist-skills-chatgpt-$RELEASE_TAG.zip"
+          if tar -tzf "dist/$archive_name.tar.gz" | grep -q "^$archive_name/evaluations/"; then
+            echo "Evaluation artefacts must not be included in release archives" >&2
+            exit 1
+          fi
+          if unzip -Z1 "dist/$archive_name.zip" | grep -q "^$archive_name/evaluations/"; then
+            echo "Evaluation artefacts must not be included in release archives" >&2
+            exit 1
+          fi
           python3 - <<'PY'
           import json, os, subprocess
           from pathlib import Path
