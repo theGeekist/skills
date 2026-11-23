@@ -13,6 +13,7 @@ from zipfile import ZIP_DEFLATED, ZipFile, ZipInfo
 
 ROOT = Path(__file__).resolve().parent.parent
 MANIFEST = ".codex-plugin/plugin.json"
+LICENSE = "LICENSE"
 FIXED_TIME = (2026, 1, 1, 0, 0, 0)
 
 
@@ -20,8 +21,9 @@ def build_archive(root: Path, output: Path) -> dict:
     root = root.resolve()
     manifest = root / MANIFEST
     skills_root = root / "skills"
-    if not manifest.is_file() or not skills_root.is_dir():
-        raise ValueError("expected Codex plugin manifest and skills directory")
+    license_file = root / LICENSE
+    if not manifest.is_file() or not skills_root.is_dir() or not license_file.is_file():
+        raise ValueError("expected Codex plugin manifest, LICENSE and skills directory")
     definition = json.loads(manifest.read_text(encoding="utf-8"))
     if definition.get("skills") != "./skills/":
         raise ValueError("plugin manifest must point at ./skills/")
@@ -31,7 +33,7 @@ def build_archive(root: Path, output: Path) -> dict:
     skills = sorted(skills_root.glob("*/SKILL.md"))
     if not skills:
         raise ValueError("no installable SKILL.md files found")
-    files = [manifest]
+    files = [manifest, license_file]
     for path in sorted(skills_root.rglob("*")):
         if path.is_symlink():
             raise ValueError(f"cannot package symlink: {path}")
