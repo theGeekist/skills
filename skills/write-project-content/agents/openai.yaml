@@ -1,6 +1,6 @@
 interface:
   icon_small: "./assets/geekist-small.svg"
   icon_large: "./assets/geekist.svg"
-  display_name: "Write General Project Content"
-  short_description: "Write and revise clear general project prose"
-  default_prompt: "Use $write-project-content to write up these findings for the team."
+  display_name: "Project Reports and Writing"
+  short_description: "Write reports, notes, summaries and updates"
+  default_prompt: "Write this up for the team as a clear report with findings, decisions and next steps."

@@ -1,0 +1,6 @@
+interface:
+  icon_small: "./assets/geekist-small.svg"
+  icon_large: "./assets/geekist.svg"
+  display_name: "Developer Marketing Playbook"
+  short_description: "Reach and support developer audiences"
+  default_prompt: "Use $developer-marketing-playbook for this task."

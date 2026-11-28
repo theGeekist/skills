@@ -1,0 +1,9 @@
+interface:
+  icon_small: "./assets/geekist-small.svg"
+  icon_large: "./assets/geekist.svg"
+  display_name: "GitHub README and Profile Writing"
+  short_description: "Write credible, discoverable GitHub READMEs"
+  default_prompt: "Use $github-readme-and-profile-writing to inspect this repository or profile and draft an accurate, useful, and discoverable README."
+
+policy:
+  allow_implicit_invocation: true

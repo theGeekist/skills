@@ -34,12 +34,13 @@ def main(argv=None):
             if not isinstance(refs, list) or len(refs) != len(set(refs)):
                 raise ValueError('references must be a list of unique filenames')
             body_path = root / 'skills' / skill / 'SKILL.md'
-            body = body_path.read_text()
-            if body.count(START) != 1 or body.count(END) != 1 or body.index(START) > body.index(END):
-                raise ValueError(f'{skill}: expected one ordered baseline marker pair')
-            prefix, rest = body.split(START)
-            _, suffix = rest.split(END)
-            planned[body_path] = (prefix + START + '\n' + baseline + '\n' + END + suffix).encode()
+            if profile.get('baseline', True):
+                body = body_path.read_text()
+                if body.count(START) != 1 or body.count(END) != 1 or body.index(START) > body.index(END):
+                    raise ValueError(f'{skill}: expected one ordered baseline marker pair')
+                prefix, rest = body.split(START)
+                _, suffix = rest.split(END)
+                planned[body_path] = (prefix + START + '\n' + baseline + '\n' + END + suffix).encode()
             for name in refs:
                 if not isinstance(name, str) or Path(name).name != name or not name.endswith('.md'):
                     raise ValueError('reference must be a Markdown filename within standards')

@@ -1,0 +1,6 @@
+interface:
+  icon_small: "./assets/geekist-small.svg"
+  icon_large: "./assets/geekist.svg"
+  display_name: "Storytelling Framework"
+  short_description: "Build a product or brand story"
+  default_prompt: "Use $storytelling-framework for this task."

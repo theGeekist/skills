@@ -67,6 +67,141 @@
       "references": [
         "outreach-writing.md"
       ]
+    },
+    "readme-craft": {
+      "references": [],
+      "baseline": false,
+      "upstream": true
+    },
+    "github-launch-studio": {
+      "references": [],
+      "baseline": false,
+      "upstream": true
+    },
+    "repo-growth-operator": {
+      "references": [],
+      "baseline": false,
+      "upstream": true
+    },
+    "ecosystem-inclusion-operator": {
+      "references": [],
+      "baseline": false,
+      "upstream": true
+    },
+    "positioning-messaging-framework": {
+      "references": [],
+      "baseline": false,
+      "upstream": true
+    },
+    "voice-of-customer-synthesis": {
+      "references": [],
+      "baseline": false,
+      "upstream": true
+    },
+    "portfolio-positioning": {
+      "references": [],
+      "baseline": false,
+      "upstream": true
+    },
+    "storytelling-framework": {
+      "references": [],
+      "baseline": false,
+      "upstream": true
+    },
+    "obviously-awesome": {
+      "references": [],
+      "baseline": false,
+      "upstream": true
+    },
+    "made-to-stick": {
+      "references": [],
+      "baseline": false,
+      "upstream": true
+    },
+    "general-writing": {
+      "references": [],
+      "baseline": false,
+      "upstream": true
+    },
+    "non-autoregressive-writing-pass": {
+      "references": [],
+      "baseline": false,
+      "upstream": true
+    },
+    "writing-cadence": {
+      "references": [],
+      "baseline": false,
+      "upstream": true
+    },
+    "better-usage": {
+      "references": [],
+      "baseline": false,
+      "upstream": true
+    },
+    "academic-voice": {
+      "references": [],
+      "baseline": false,
+      "upstream": true
+    },
+    "humanizer": {
+      "references": [],
+      "baseline": false,
+      "upstream": true
+    },
+    "conversion-storytelling": {
+      "references": [],
+      "baseline": false,
+      "upstream": true
+    },
+    "github-readme-and-profile-writing": {
+      "references": [],
+      "baseline": false,
+      "upstream": true
+    },
+    "bespoke": {
+      "references": [],
+      "baseline": false,
+      "upstream": true
+    },
+    "work-humanizer": {
+      "references": [],
+      "baseline": false,
+      "upstream": true
+    },
+    "copywriting": {
+      "references": [],
+      "baseline": false,
+      "upstream": true
+    },
+    "product-marketing": {
+      "references": [],
+      "baseline": false,
+      "upstream": true
+    },
+    "developer-marketing-playbook": {
+      "references": [],
+      "baseline": false,
+      "upstream": true
+    },
+    "gingiris-github-star-growth": {
+      "references": [],
+      "baseline": false,
+      "upstream": true
+    },
+    "product-strategist": {
+      "references": [],
+      "baseline": false,
+      "upstream": true
+    },
+    "landing-page-architect": {
+      "references": [],
+      "baseline": false,
+      "upstream": true
+    },
+    "direct-response-copywriting": {
+      "references": [],
+      "baseline": false,
+      "upstream": true
     }
   }
 }

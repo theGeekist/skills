@@ -1,6 +1,6 @@
 ---
 name: review-project-language
-description: "Edit, rewrite, polish or review existing prose for clarity, flow, faithful meaning, consistent terminology and accessible navigation. Use for requests such as clean this up, tighten this report, rewrite these findings, or review related documents. Preserve deliberate voice; for new writing, prefer the appropriate authoring skill."
+description: "Use when someone asks to edit, review, proofread, tighten, polish, rewrite or improve prose. Works with drafts, READMEs, reports, research findings, implementation tasks, messages and documents, including a finishing pass after another skill has drafted them. Preserve the author's meaning and deliberate voice while improving clarity, flow, terminology and navigation."
 ---
 
 # Review project language

@@ -1,0 +1,6 @@
+interface:
+  icon_small: "./assets/geekist-small.svg"
+  icon_large: "./assets/geekist.svg"
+  display_name: "Ecosystem Inclusion Operator"
+  short_description: "Find ethical open-source growth paths"
+  default_prompt: "Use $ecosystem-inclusion-operator for this task."

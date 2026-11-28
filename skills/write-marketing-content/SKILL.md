@@ -1,6 +1,6 @@
 ---
 name: write-marketing-content
-description: "Write or refine audience-facing product communication: landing pages, launch announcements, positioning, portfolio copy, newsletters, social posts and explanations of technical value. Use when the purpose is to communicate value and support a reader action; use interface content for in-product states and controls."
+description: "Use when writing or improving product descriptions, value propositions, product positioning, README introductions, home or landing pages, portfolio narratives, launch announcements, newsletters or social posts. Also use when asked to make a product sound clearer, more compelling, interesting or memorable. Match the audience and support every product claim with source facts."
 ---
 
 # Write marketing content

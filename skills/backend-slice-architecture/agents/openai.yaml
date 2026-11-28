@@ -1,6 +1,6 @@
 interface:
   icon_small: "./assets/geekist-small.svg"
   icon_large: "./assets/geekist.svg"
-  display_name: "Backend Slice Architecture"
-  short_description: "Review backend ownership and orchestration"
-  default_prompt: "Use $backend-slice-architecture to review backend placement, public boundaries, orchestration, and incremental migration."
+  display_name: "Backend Architecture and Boundaries"
+  short_description: "Review backend modules, APIs and ownership"
+  default_prompt: "Review this backend structure for capability ownership, public APIs and clear orchestration."

@@ -1,6 +1,6 @@
 {
   "name": "geekist",
-  "description": "Thirteen portable agent skills for clear project writing, evidence-led outreach research, authentic individual correspondence, technical documentation, decisions and product communication.",
+  "description": "Forty independently usable agent skills for project writing, product narrative, developer adoption, commercial research and consistent project meaning.",
   "owner": {
     "name": "Geekist",
     "url": "https://geekist.co"
@@ -8,8 +8,9 @@
   "plugins": [
     {
       "name": "geekist-architecture-skills",
-      "description": "Thirteen portable agent skills for clear project writing, evidence-led outreach research, authentic individual correspondence, technical documentation, decisions and product communication.",
+      "description": "Forty independently usable agent skills for project writing, product narrative, developer adoption, commercial research and consistent project meaning.",
       "source": "."
     }
-  ]
+  ],
+  "version": ""
 }

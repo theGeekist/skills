@@ -1,0 +1,6 @@
+interface:
+  icon_small: "./assets/geekist-small.svg"
+  icon_large: "./assets/geekist.svg"
+  display_name: "Voice Of Customer Synthesis"
+  short_description: "Turn customer research into messaging"
+  default_prompt: "Use $voice-of-customer-synthesis for this task."

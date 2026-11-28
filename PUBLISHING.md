@@ -2,20 +2,20 @@
 
 GitHub is the canonical source for the collection. A versioned release binds the plugin metadata, portable skills, references and notices to one commit.
 
-## Release v1.9.3
+## Release v1.10.0 (prepared)
 
-The v1.9.3 release excludes non-production evaluation records from its downloadable source archives. The repository retains them for contributor and reviewer reference. The tag and archives become available after the release workflow publishes them.
+This change prepares a v1.10.0 release with 27 individually installable skills from 15 external MIT-licensed repositories. Their upstream instructions remain unchanged. Each imported package carries its original licence notice and commit-pinned attribution. See [the external skills evaluation](docs/language-system/external-skills-review.md) for the source-by-source assessment. The tag and downloadable archives become available after the release workflow publishes them.
 
 - Repository: <https://github.com/theGeekist/skills>
-- Release: <https://github.com/theGeekist/skills/releases/tag/v1.9.3>
-- Both plugin manifests use version `1.9.3`.
-- Release notes: [v1.9.3](release-notes/v1.9.3.md).
+- Release: <https://github.com/theGeekist/skills/releases/tag/v1.10.0>
+- Both plugin manifests use version `1.10.0`.
+- Release notes: [v1.10.0](release-notes/v1.10.0.md).
 - The distribution retains the existing `geekist-architecture-skills` plugin identifier for compatibility; its displayed name is Geekist Skills.
 
 Install the pinned collection:
 
 ```sh
-npx skills add https://github.com/theGeekist/skills/tree/v1.9.3
+npx skills add https://github.com/theGeekist/skills/tree/v1.10.0
 ```
 
 The skills CLI prompts for skills and target agents. Its default scope is the current project; add `-g` for a user-wide installation. Review the selected destinations rather than assuming every installed client has the same discovery path. ChatGPT personal-skill installation uses its own supported installation mechanism, separately from this CLI.
@@ -23,7 +23,7 @@ The skills CLI prompts for skills and target agents. Its default scope is the cu
 For a canonical checkout shared by local clients:
 
 ```sh
-git clone --branch v1.9.3 https://github.com/theGeekist/skills.git
+git clone --branch v1.10.0 https://github.com/theGeekist/skills.git
 cd skills
 ./scripts/link-local.sh --client all --dry-run
 ./scripts/link-local.sh --client all
@@ -54,13 +54,13 @@ Published tags and release assets are immutable. Use a new version when released
 
 ## ChatGPT plugin upload
 
-Download the dedicated `geekist-skills-chatgpt-v1.9.3.zip` release asset, **not** the source archive `geekist-skills-v1.9.3.zip`. The ChatGPT archive includes `.codex-plugin/plugin.json`, the MIT `LICENSE`, and the complete `skills/` tree. It omits repository-level marketplace definitions, evaluations, tests, scripts and documentation that make a source ZIP unsuitable for direct plugin upload. The source ZIP and tarball also omit `evaluations/`, including evaluation hash manifests and recorded outputs; contributors can still inspect that evidence in the repository.
+Download the dedicated `geekist-skills-chatgpt-v1.10.0.zip` release asset, **not** the source archive `geekist-skills-v1.10.0.zip`. The ChatGPT archive includes `.codex-plugin/plugin.json`, the MIT `LICENSE`, and the complete `skills/` tree. It omits repository-level marketplace definitions, evaluations, tests, scripts and documentation that make a source ZIP unsuitable for direct plugin upload. The source ZIP and tarball also omit `evaluations/`, including evaluation hash manifests and recorded outputs; contributors can still inspect that evidence in the repository.
 
 The build is reproducible:
 
 ```sh
-python3 scripts/package-chatgpt-plugin.py --output dist/geekist-skills-chatgpt-v1.9.3.zip
-unzip -l dist/geekist-skills-chatgpt-v1.9.3.zip
+python3 scripts/package-chatgpt-plugin.py --output dist/geekist-skills-chatgpt-v1.10.0.zip
+unzip -l dist/geekist-skills-chatgpt-v1.10.0.zip
 ```
 
 In ChatGPT web, open Plugins → Personal → Add plugin and select that ZIP. The upload is an account-level installation, separate from local Fedora skills and from the GitHub release itself.

@@ -1,0 +1,6 @@
+interface:
+  icon_small: "./assets/geekist-small.svg"
+  icon_large: "./assets/geekist.svg"
+  display_name: "Bespoke"
+  short_description: "Refine writing in the author's voice"
+  default_prompt: "Use $bespoke for this task."

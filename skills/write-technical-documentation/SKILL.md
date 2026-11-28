@@ -1,6 +1,6 @@
 ---
 name: write-technical-documentation
-description: "Write or improve technical explanations, research write-ups, investigation and spike reports, system overviews, tutorials, how-to guides, API references and developer documentation. Use when the user asks to document technical findings or explain how something works; use the ADR skill for a decision record."
+description: "Use when someone asks to explain a codebase, system, API, integration, architecture or technical behaviour. Covers README files, developer onboarding, guides, tutorials, how-to material, architecture overviews, API references, technical specifications, research write-ups and spike findings. Organise detail around what the reader needs to understand or do."
 ---
 
 # Write technical documentation

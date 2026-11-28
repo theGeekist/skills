@@ -1,0 +1,298 @@
+{
+  "version": 1,
+  "validator_notices": {
+    "bespoke": {
+      "messages": [
+        "Description exceeds 1024 character limit (1082 chars)"
+      ],
+      "consequence": "Strict Agent Skills validators reject the package metadata, which can prevent installation or discovery in clients that enforce the limit.",
+      "resolution": "The upstream description remains intact. A shorter adapter description or an upstream metadata update can remove the notice while preserving the skill body."
+    },
+    "developer-marketing-playbook": {
+      "messages": [
+        "Unexpected fields in frontmatter: source, tags. Only ['allowed-tools', 'compatibility', 'description', 'license', 'metadata', 'name'] are allowed."
+      ],
+      "consequence": "Strict validators reject the package frontmatter before loading the instructions.",
+      "resolution": "The source fields remain intact. The upstream author can move client-specific values into supported metadata, or a compatibility adapter can map them."
+    },
+    "gingiris-github-star-growth": {
+      "messages": [
+        "Unexpected fields in frontmatter: when_to_use. Only ['allowed-tools', 'compatibility', 'description', 'license', 'metadata', 'name'] are allowed."
+      ],
+      "consequence": "Strict validators reject the package frontmatter before loading the instructions.",
+      "resolution": "The source field remains intact. The upstream author can move the activation guidance into the supported description field, or a compatibility adapter can map it."
+    },
+    "portfolio-positioning": {
+      "messages": [
+        "Unexpected fields in frontmatter: argument-hint, version. Only ['allowed-tools', 'compatibility', 'description', 'license', 'metadata', 'name'] are allowed."
+      ],
+      "consequence": "Strict validators reject the package frontmatter before loading the instructions.",
+      "resolution": "The source fields remain intact. Supported metadata can carry the version and argument hint, or a compatibility adapter can map them."
+    },
+    "storytelling-framework": {
+      "messages": [
+        "Unexpected fields in frontmatter: argument-hint, version. Only ['allowed-tools', 'compatibility', 'description', 'license', 'metadata', 'name'] are allowed."
+      ],
+      "consequence": "Strict validators reject the package frontmatter before loading the instructions.",
+      "resolution": "The source fields remain intact. Supported metadata can carry the version and argument hint, or a compatibility adapter can map them."
+    }
+  },
+  "isolated_package_link_exceptions": [
+    {
+      "skill": "conversion-storytelling",
+      "document": "README.md",
+      "target": "../product-architecture-and-development/README.md",
+      "reason": "The upstream overview links to an optional companion skill outside this package.",
+      "consequence": "The link works in the source collection and resolves when that companion is installed alongside this skill; it has no destination in a one-skill installation.",
+      "resolution": "Install the companion from its source or use the skill's core messaging workflow independently."
+    },
+    {
+      "skill": "conversion-storytelling",
+      "document": "README.md",
+      "target": "../content-marketing-and-brand-growth/README.md",
+      "reason": "The upstream overview links to an optional companion skill outside this package.",
+      "consequence": "The link works in the source collection and resolves when that companion is installed alongside this skill; it has no destination in a one-skill installation.",
+      "resolution": "Install the companion from its source or use the skill's core messaging workflow independently."
+    },
+    {
+      "skill": "conversion-storytelling",
+      "document": "README.md",
+      "target": "../global-discovery-browsing-extraction/README.md",
+      "reason": "The upstream overview links to an optional companion skill outside this package.",
+      "consequence": "The link works in the source collection and resolves when that companion is installed alongside this skill; it has no destination in a one-skill installation.",
+      "resolution": "Install the companion from its source or use the skill's core messaging workflow independently."
+    },
+    {
+      "skill": "conversion-storytelling",
+      "document": "README.md",
+      "target": "../../README.md",
+      "reason": "The repository overview link targets the upstream collection root.",
+      "consequence": "A one-skill installation has no collection overview at that path.",
+      "resolution": "The skill instructions and bundled references contain its core workflow."
+    },
+    {
+      "skill": "general-writing",
+      "document": "SKILL.md",
+      "target": "../humanizer/SKILL.md",
+      "reason": "The upstream workflow explicitly composes the optional Humanizer skill.",
+      "consequence": "The linked editing pass is available when Humanizer is installed alongside this skill; the standalone package has no sibling file at that path.",
+      "resolution": "Install Humanizer separately for the composed editing pass; the remaining general-writing guidance stays available."
+    },
+    {
+      "skill": "github-readme-and-profile-writing",
+      "document": "README.md",
+      "target": "../product-architecture-and-development/README.md",
+      "reason": "The upstream overview links to an optional companion skill outside this package.",
+      "consequence": "The link works in the source collection and resolves when that companion is installed alongside this skill; it has no destination in a one-skill installation.",
+      "resolution": "Install the companion from its source or use the README workflow independently."
+    },
+    {
+      "skill": "github-readme-and-profile-writing",
+      "document": "README.md",
+      "target": "../conversion-storytelling/README.md",
+      "reason": "The upstream overview links to an optional companion skill outside this package.",
+      "consequence": "The link works in the source collection and resolves when that companion is installed alongside this skill; it has no destination in a one-skill installation.",
+      "resolution": "Install the companion from its source or use the README workflow independently."
+    },
+    {
+      "skill": "github-readme-and-profile-writing",
+      "document": "README.md",
+      "target": "../global-discovery-browsing-extraction/README.md",
+      "reason": "The upstream overview links to an optional companion skill outside this package.",
+      "consequence": "The link works in the source collection and resolves when that companion is installed alongside this skill; it has no destination in a one-skill installation.",
+      "resolution": "Install the companion from its source or use the README workflow independently."
+    },
+    {
+      "skill": "github-readme-and-profile-writing",
+      "document": "README.md",
+      "target": "../content-marketing-and-brand-growth/README.md",
+      "reason": "The upstream overview links to an optional companion skill outside this package.",
+      "consequence": "The link works in the source collection and resolves when that companion is installed alongside this skill; it has no destination in a one-skill installation.",
+      "resolution": "Install the companion from its source or use the README workflow independently."
+    },
+    {
+      "skill": "humanizer",
+      "document": "SKILL.md",
+      "target": "../better-usage/SKILL.md",
+      "reason": "The upstream workflow composes the sibling Better Usage skill.",
+      "consequence": "That optional pass is available when the sibling is installed; a one-skill package does not include it.",
+      "resolution": "Install Better Usage separately for the composed workflow; the Humanizer's main rewrite remains usable alone."
+    },
+    {
+      "skill": "humanizer",
+      "document": "SKILL.md",
+      "target": "../academic-voice/SKILL.md",
+      "reason": "The upstream workflow composes the sibling Academic Voice skill.",
+      "consequence": "That optional pass is available when the sibling is installed; a one-skill package does not include it.",
+      "resolution": "Install Academic Voice separately for the composed workflow; the Humanizer's main rewrite remains usable alone."
+    },
+    {
+      "skill": "humanizer",
+      "document": "SKILL.md",
+      "target": "../writing-cadence/SKILL.md",
+      "reason": "The upstream workflow composes the sibling Writing Cadence skill.",
+      "consequence": "That optional pass is available when the sibling is installed; a one-skill package does not include it.",
+      "resolution": "Install Writing Cadence separately for the composed workflow; the Humanizer's main rewrite remains usable alone."
+    },
+    {
+      "skill": "humanizer",
+      "document": "SKILL.md",
+      "target": "../non-autoregressive-writing-pass/SKILL.md",
+      "reason": "The upstream workflow composes the sibling Non-Autoregressive Writing Pass skill.",
+      "consequence": "That optional pass is available when the sibling is installed; a one-skill package does not include it.",
+      "resolution": "Install Non-Autoregressive Writing Pass separately for the composed workflow; the Humanizer's main rewrite remains usable alone."
+    },
+    {
+      "skill": "landing-page-architect",
+      "document": "README.md",
+      "target": "../../LICENSE",
+      "reason": "The upstream README links to a repository-root licence file outside the skill directory.",
+      "consequence": "The link has no destination in an isolated skill package.",
+      "resolution": "The package retains the source licence as LICENSE.upstream."
+    },
+    {
+      "skill": "readme-craft",
+      "document": "SKILL.md",
+      "target": "docs/X.md",
+      "reason": "The path is a placeholder in instructions for a README section created in the user's project.",
+      "consequence": "It is an example destination rather than a package resource.",
+      "resolution": "Replace X with the real project document name when applying the template."
+    },
+    {
+      "skill": "readme-craft",
+      "document": "assets/skill-readme.md",
+      "target": "docs/design.md",
+      "reason": "The template contains links intended for the README it generates in a user's project.",
+      "consequence": "Those links point into the generated project and do not resolve inside the skill package.",
+      "resolution": "The generated README supplies these destination files as its project grows."
+    },
+    {
+      "skill": "readme-craft",
+      "document": "assets/skill-readme.md",
+      "target": "docs/formatting.md",
+      "reason": "The template contains links intended for the README it generates in a user's project.",
+      "consequence": "Those links point into the generated project and do not resolve inside the skill package.",
+      "resolution": "The generated README supplies these destination files as its project grows."
+    },
+    {
+      "skill": "readme-craft",
+      "document": "assets/skill-readme.md",
+      "target": "docs/examples.md",
+      "reason": "The template contains links intended for the README it generates in a user's project.",
+      "consequence": "Those links point into the generated project and do not resolve inside the skill package.",
+      "resolution": "The generated README supplies these destination files as its project grows."
+    },
+    {
+      "skill": "readme-craft",
+      "document": "assets/skill-readme.md",
+      "target": "docs/how-it-works.md",
+      "reason": "The template contains links intended for the README it generates in a user's project.",
+      "consequence": "Those links point into the generated project and do not resolve inside the skill package.",
+      "resolution": "The generated README supplies these destination files as its project grows."
+    },
+    {
+      "skill": "readme-craft",
+      "document": "assets/skill-readme.md",
+      "target": "CONTRIBUTING.md",
+      "reason": "The template contains links intended for the README it generates in a user's project.",
+      "consequence": "Those links point into the generated project and do not resolve inside the skill package.",
+      "resolution": "The generated README supplies these destination files as its project grows."
+    },
+    {
+      "skill": "readme-craft",
+      "document": "assets/skill-readme.md",
+      "target": "LICENSE",
+      "reason": "The template contains links intended for the README it generates in a user's project.",
+      "consequence": "Those links point into the generated project and do not resolve inside the skill package.",
+      "resolution": "The generated README supplies these destination files as its project grows."
+    },
+    {
+      "skill": "readme-craft",
+      "document": "assets/universal-readme.md",
+      "target": "docs/architecture.md",
+      "reason": "The template contains links intended for the README it generates in a user's project.",
+      "consequence": "Those links point into the generated project and do not resolve inside the skill package.",
+      "resolution": "The generated README supplies these destination files as its project grows."
+    },
+    {
+      "skill": "readme-craft",
+      "document": "assets/universal-readme.md",
+      "target": "docs/configuration.md",
+      "reason": "The template contains links intended for the README it generates in a user's project.",
+      "consequence": "Those links point into the generated project and do not resolve inside the skill package.",
+      "resolution": "The generated README supplies these destination files as its project grows."
+    },
+    {
+      "skill": "readme-craft",
+      "document": "assets/universal-readme.md",
+      "target": "docs/configuration.md",
+      "reason": "The template contains links intended for the README it generates in a user's project.",
+      "consequence": "Those links point into the generated project and do not resolve inside the skill package.",
+      "resolution": "The generated README supplies these destination files as its project grows."
+    },
+    {
+      "skill": "readme-craft",
+      "document": "assets/universal-readme.md",
+      "target": "docs/faq.md",
+      "reason": "The template contains links intended for the README it generates in a user's project.",
+      "consequence": "Those links point into the generated project and do not resolve inside the skill package.",
+      "resolution": "The generated README supplies these destination files as its project grows."
+    },
+    {
+      "skill": "readme-craft",
+      "document": "assets/universal-readme.md",
+      "target": "docs/how-it-works.md",
+      "reason": "The template contains links intended for the README it generates in a user's project.",
+      "consequence": "Those links point into the generated project and do not resolve inside the skill package.",
+      "resolution": "The generated README supplies these destination files as its project grows."
+    },
+    {
+      "skill": "readme-craft",
+      "document": "assets/universal-readme.md",
+      "target": "docs/development.md",
+      "reason": "The template contains links intended for the README it generates in a user's project.",
+      "consequence": "Those links point into the generated project and do not resolve inside the skill package.",
+      "resolution": "The generated README supplies these destination files as its project grows."
+    },
+    {
+      "skill": "readme-craft",
+      "document": "assets/universal-readme.md",
+      "target": "CONTRIBUTING.md",
+      "reason": "The template contains links intended for the README it generates in a user's project.",
+      "consequence": "Those links point into the generated project and do not resolve inside the skill package.",
+      "resolution": "The generated README supplies these destination files as its project grows."
+    },
+    {
+      "skill": "readme-craft",
+      "document": "assets/universal-readme.md",
+      "target": "LICENSE",
+      "reason": "The template contains links intended for the README it generates in a user's project.",
+      "consequence": "Those links point into the generated project and do not resolve inside the skill package.",
+      "resolution": "The generated README supplies these destination files as its project grows."
+    },
+    {
+      "skill": "readme-craft",
+      "document": "assets/universal-readme.md",
+      "target": "<assets/demo.gif>",
+      "reason": "The template contains a commented image placeholder for a visual-output project.",
+      "consequence": "The placeholder describes a future project asset and has no package destination.",
+      "resolution": "Replace the placeholder with the user's project image when applying the template."
+    },
+    {
+      "skill": "readme-craft",
+      "document": "references/quality-checklist.md",
+      "target": "...",
+      "reason": "The checklist shows an abbreviated link in a prose example to illustrate a link with an anchor.",
+      "consequence": "The ellipsis is explanatory example text rather than a real resource path.",
+      "resolution": "Replace the ellipsis with the actual project link when adapting the example."
+    },
+    {
+      "skill": "readme-craft",
+      "document": "references/quality-checklist.md",
+      "target": "...",
+      "reason": "The checklist shows an abbreviated link in a prose example to illustrate a link with an anchor.",
+      "consequence": "The ellipsis is explanatory example text rather than a real resource path.",
+      "resolution": "Replace the ellipsis with the actual project link when adapting the example."
+    }
+  ]
+}

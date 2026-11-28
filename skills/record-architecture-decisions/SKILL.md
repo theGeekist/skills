@@ -1,6 +1,6 @@
 ---
 name: record-architecture-decisions
-description: "Write, explain, revise or summarise the rationale for a consequential technical decision, formally as an ADR or informally for future readers. Use for accepted choices, alternatives, trade-offs, decision drivers, consequences and reconsideration conditions. Not for general architecture design or technical research without a decision."
+description: "Use when recording or explaining an architecture or technical decision: ADRs, decision notes, accepted options, trade-offs, alternatives, consequences or reconsideration criteria. Also use when someone asks why a design was chosen or wants the decision captured for future contributors. The result can be formal or lightweight."
 ---
 
 # Record architecture decisions

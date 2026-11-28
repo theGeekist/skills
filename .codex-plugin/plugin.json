@@ -1,7 +1,7 @@
 {
   "name": "geekist-architecture-skills",
-  "version": "1.9.3",
-  "description": "Thirteen portable agent skills for clear project writing, evidence-led outreach research, authentic individual correspondence, technical documentation, decisions and product communication.",
+  "version": "1.10.0",
+  "description": "Forty independently usable agent skills for project writing, product narrative, developer adoption, commercial research and consistent project meaning.",
   "author": {
     "name": "Geekist",
     "url": "https://geekist.co"
@@ -32,13 +32,48 @@
     "prospect-research",
     "crm",
     "professional-writing",
-    "editorial-voice"
+    "editorial-voice",
+    "product-positioning",
+    "developer-marketing",
+    "open-source-growth",
+    "github-readme",
+    "storytelling",
+    "editorial-writing",
+    "implementation-tasks",
+    "tickets",
+    "acceptance-criteria",
+    "gherkin",
+    "worker-handoffs",
+    "adr",
+    "backend-architecture",
+    "frontend-architecture",
+    "domain-terminology",
+    "glossary",
+    "ux-writing",
+    "microcopy",
+    "interface-copy",
+    "project-reports",
+    "meeting-notes",
+    "progress-updates",
+    "technical-documentation",
+    "readme",
+    "system-explanations",
+    "product-copy",
+    "launch-copy",
+    "outreach-research",
+    "company-research",
+    "linkedin-messages",
+    "professional-emails",
+    "evidence-gaps",
+    "project-language",
+    "architecture",
+    "proofreading"
   ],
   "skills": "./skills/",
   "interface": {
     "displayName": "Geekist Skills",
-    "shortDescription": "Clear writing, research and authentic outreach",
-    "longDescription": "Write and revise project reports, research findings, technical documentation, architecture decisions and product content. Investigate commercial opportunities and write recipient-specific professional outreach grounded in actual relationships, current evidence and the author's editorial judgement. Shared writing principles preserve meaning without mandatory templates, sales sequences or unnecessary dependencies.",
+    "shortDescription": "Project writing, architecture and product skills",
+    "longDescription": "Geekist's 13 authored skills help with project language, architecture, tasks, reports, technical docs, UX copy, product communication and professional outreach. 27 independently usable upstream skills add further options for storytelling, README craft, editing and developer adoption. Choose each skill for the task at hand; combine skills when the work benefits from more than one perspective.",
     "developerName": "Geekist",
     "category": "Developer Tools",
     "capabilities": [
@@ -47,10 +82,12 @@
     ],
     "websiteURL": "https://geekist.co/skills",
     "defaultPrompt": [
-      "Research this company for credible collaboration or paid-work opportunities.",
-      "Write an individual founder email from these findings and the relationship history.",
-      "Polish this message so it sounds like the author, not a sales template.",
-      "Write up this project's technical investigation for the team."
+      "Turn these requirements into an actionable implementation task with acceptance criteria.",
+      "Explain this system in a README section for a new contributor.",
+      "Review this draft for clarity, flow and consistent terminology.",
+      "Clarify the domain terms in this codebase and make a concise glossary.",
+      "Write clear UI messages for these product states.",
+      "Research this company for credible collaboration or paid-work opportunities."
     ]
   }
 }

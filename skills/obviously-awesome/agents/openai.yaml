@@ -1,0 +1,6 @@
+interface:
+  icon_small: "./assets/geekist-small.svg"
+  icon_large: "./assets/geekist.svg"
+  display_name: "Obviously Awesome"
+  short_description: "Position products against alternatives"
+  default_prompt: "Use $obviously-awesome for this task."

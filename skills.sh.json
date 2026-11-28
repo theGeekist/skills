@@ -4,7 +4,7 @@
   "groupings": [
     {
       "title": "Project language",
-      "description": "Establish shared terminology and review its use across the project. Includes guidance for handling evidence gaps constructively.",
+      "description": "Domain terminology, naming, definitions, project glossaries, shared vocabulary and useful next steps for evidence gaps.",
       "skills": [
         "establish-project-language",
         "review-project-language",
@@ -13,7 +13,7 @@
     },
     {
       "title": "Project writing",
-      "description": "Produce actionable implementation tasks and useful decision records. Includes technical documentation guidance organised around reader needs.",
+      "description": "Implementation tasks, tickets, acceptance criteria, ADRs, technical documentation, system explanations and developer onboarding.",
       "skills": [
         "write-implementation-tasks",
         "record-architecture-decisions",
@@ -22,7 +22,7 @@
     },
     {
       "title": "Product content",
-      "description": "Explain product value through credible marketing content and provide clear interface guidance that reflects actual application behaviour.",
+      "description": "Product positioning, README introductions, launch copy, UX writing, interface microcopy, labels and product-state messages.",
       "skills": [
         "write-marketing-content",
         "write-interface-content"
@@ -30,7 +30,7 @@
     },
     {
       "title": "Architecture",
-      "description": "Apply the established backend and frontend architecture rules while preserving their technical meaning.",
+      "description": "Backend module placement, frontend feature ownership, public APIs, orchestration, scenes and shared UI boundaries.",
       "skills": [
         "backend-slice-architecture",
         "frontend-slice-architecture"
@@ -38,17 +38,50 @@
     },
     {
       "title": "General writing",
-      "description": "Write reports, research findings, summaries and other prose without a narrower specialist.",
+      "description": "Project reports, research findings, meeting notes, progress updates, briefs, postmortems and clear explanations.",
       "skills": [
         "write-project-content"
       ]
     },
     {
       "title": "Professional outreach",
-      "description": "Investigate commercial possibilities and write authentic individual outreach, with CRM history and current evidence when available.",
+      "description": "Company and prospect research, commercial opportunities, founder outreach, professional emails, LinkedIn messages and follow-ups.",
       "skills": [
         "research-outreach-opportunities",
         "write-outreach"
+      ]
+    },
+    {
+      "title": "Upstream product and writing skills",
+      "description": "Independently installable upstream skills for product positioning, storytelling, open-source adoption, README craft, editing and developer marketing. Each retains its source instructions and attribution.",
+      "skills": [
+        "readme-craft",
+        "github-launch-studio",
+        "repo-growth-operator",
+        "ecosystem-inclusion-operator",
+        "positioning-messaging-framework",
+        "voice-of-customer-synthesis",
+        "portfolio-positioning",
+        "storytelling-framework",
+        "obviously-awesome",
+        "made-to-stick",
+        "general-writing",
+        "non-autoregressive-writing-pass",
+        "writing-cadence",
+        "better-usage",
+        "academic-voice",
+        "humanizer",
+        "conversion-storytelling",
+        "github-readme-and-profile-writing",
+        "bespoke",
+        "work-humanizer",
+        "copywriting",
+        "direct-response-copywriting",
+        "product-marketing",
+        "developer-marketing-playbook",
+        "gingiris-github-star-growth",
+        "product-strategist",
+        "landing-page-architect"
       ]
     }
   ]

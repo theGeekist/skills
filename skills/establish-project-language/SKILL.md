@@ -1,6 +1,6 @@
 ---
 name: establish-project-language
-description: "Discover, reconcile and maintain project concepts and terminology from code, schemas, tests, decisions and existing content. Use when starting a project, onboarding to an existing domain, resolving competing meanings, proposing new terms, or establishing shared language across agents and artefacts."
+description: "Use when a term is unclear, overloaded or used in conflicting ways; when onboarding to a codebase; when creating a glossary; or when deciding how a new concept should be named. Trace terms through code, schemas, tests, decisions, interfaces and documents, then record the meanings and unresolved differences. Helpful requests include what does this mean here, are these two concepts the same, and make a glossary for this project."
 ---
 
 # Establish project language

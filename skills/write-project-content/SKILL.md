@@ -1,6 +1,6 @@
 ---
 name: write-project-content
-description: "Write, rewrite and organise general project writing: research notes, investigation findings, reports, meeting summaries, progress updates, explanations and other substantive prose. Use when the user asks for a written deliverable without a more specific Geekist writing skill. Not for ordinary discussion or automatically invoking every specialist."
+description: "Use for general project writing whenever a request involves writing up, summarising, explaining or organising project information. Covers research notes, investigation findings, reports, meeting notes, project briefs, progress updates, postmortems, status summaries, technical context and other substantive prose. Choose a useful structure for the reader and combine with a specialist when that improves the result."
 ---
 
 # Write general project content

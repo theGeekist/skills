@@ -1,6 +1,6 @@
 interface:
   icon_small: "./assets/geekist-small.svg"
   icon_large: "./assets/geekist.svg"
-  display_name: "Write Interface Content"
-  short_description: "Write clear copy for actual product states"
-  default_prompt: "Use $write-interface-content for this project artefact."
+  display_name: "UX Writing and Interface Copy"
+  short_description: "Write clear labels, errors and product messages"
+  default_prompt: "Write the UI copy for these states so people understand what happened and what they can do."

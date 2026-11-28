@@ -34,15 +34,19 @@ class SkillLoadingTests(unittest.TestCase):
                 self.assertFalse(any(line.endswith("---") and line != "---"
                                      for line in lines[1:closing]))
 
-    def test_one_canonical_baseline_is_inline_in_every_skill(self):
+    def test_canonical_baseline_is_inline_only_in_geekist_authored_skills(self):
         expected = (ROOT / "standards/baseline.md").read_text().strip()
-        for name in self.profiles():
+        for name, profile in self.profiles().items():
             with self.subTest(skill=name):
                 text = (ROOT / "skills" / name / "SKILL.md").read_text()
-                self.assertEqual(text.count(START), 1)
-                self.assertEqual(text.count(END), 1)
-                actual = text.split(START, 1)[1].split(END, 1)[0].strip()
-                self.assertEqual(actual, expected)
+                if profile.get("baseline", True):
+                    self.assertEqual(text.count(START), 1)
+                    self.assertEqual(text.count(END), 1)
+                    actual = text.split(START, 1)[1].split(END, 1)[0].strip()
+                    self.assertEqual(actual, expected)
+                else:
+                    self.assertNotIn(START, text)
+                    self.assertNotIn(END, text)
 
     def test_declared_reference_is_local_direct_and_matches_its_source(self):
         for name, profile in self.profiles().items():
@@ -55,11 +59,17 @@ class SkillLoadingTests(unittest.TestCase):
                     self.assertEqual(copied.read_bytes(), canonical.read_bytes())
 
     def test_each_skill_exposes_a_local_source_route(self):
-        # Attribution must survive an independent install; this does not prove
-        # semantic equivalence or that an external source endorses a local rule.
-        for name in self.profiles():
+        # Attribution must survive an independent install.
+        for name, profile in self.profiles().items():
             with self.subTest(skill=name):
                 folder = ROOT / "skills" / name
+                if profile.get("upstream"):
+                    attribution = (folder / "references/GEEKIST-UPSTREAM.md").read_text()
+                    licence = (folder / "LICENSE.upstream").read_text()
+                    self.assertIn("https://github.com/", attribution)
+                    self.assertIn("MIT License", licence)
+                    self.assertIn("commit", attribution.lower())
+                    continue
                 body = (folder / "SKILL.md").read_text()
                 source_section = re.search(r"(?ms)^## Sources[^\n]*\n(.*?)(?=^## |\Z)", body)
                 self.assertIsNotNone(source_section, name)
@@ -100,8 +110,9 @@ class SkillLoadingTests(unittest.TestCase):
         self.assertNotIn("allow_implicit_invocation", metadata)
         description = (ROOT / "skills/write-project-content/SKILL.md").read_text().split("---", 2)[1].lower()
         self.assertIn("general project writing", description)
-        self.assertIn("more specific", description)
-        self.assertIn("not for ordinary", description)
+        self.assertIn("whenever a request involves", description)
+        self.assertIn("improves the result", description)
+        self.assertNotIn("not for ordinary", description)
 
     def test_catalogue_cases_include_positive_mixed_and_no_skill_requests(self):
         cases = json.loads((ROOT / "evaluations/skill-selection/cases.json").read_text())["cases"]

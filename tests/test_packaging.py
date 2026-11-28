@@ -9,6 +9,7 @@ import subprocess
 import tempfile
 import unittest
 import importlib.util
+from collections import Counter
 from zipfile import ZipFile
 
 
@@ -17,17 +18,30 @@ ROOT = Path(__file__).resolve().parents[1]
 
 class PackagingTests(unittest.TestCase):
     def test_bundled_references_work_without_repository_siblings(self):
+        known = json.loads((ROOT / "standards/upstream-compatibility.json").read_text())
+        exceptions = Counter(
+            (item["skill"], item["document"], item["target"])
+            for item in known["isolated_package_link_exceptions"]
+        )
+        seen_exceptions = Counter()
         for skill in (ROOT / "skills").iterdir():
             with self.subTest(skill=skill.name), tempfile.TemporaryDirectory() as temporary:
                 isolated = Path(temporary) / skill.name
                 shutil.copytree(skill, isolated)
                 for document in isolated.rglob("*.md"):
-                    for target in re.findall(r"\]\(([^)]+)\)", document.read_text()):
+                    source = re.sub(r"(?ms)^\x60\x60\x60.*?^\x60\x60\x60\s*", "", document.read_text())
+                    targets = re.findall(r"\]\(([^)]+)\)", source)
+                    targets.extend(re.findall(r"<(?:img|source)\b[^>]*?\bsrc=\"([^\"]+)\"", source))
+                    for target in targets:
                         if re.match(r"[a-z]+:", target) or target.startswith("#"):
                             continue
                         path = (document.parent / target.split("#", 1)[0]).resolve()
-                        self.assertTrue(path.is_relative_to(isolated), target)
-                        self.assertTrue(path.exists(), target)
+                        package_issue = not path.is_relative_to(isolated) or not path.exists()
+                        if package_issue:
+                            key = (skill.name, document.relative_to(isolated).as_posix(), target)
+                            self.assertIn(key, exceptions, f"new isolated-package link issue: {key}")
+                            seen_exceptions[key] += 1
+        self.assertEqual(seen_exceptions, exceptions, "remove resolved or stale package-link exceptions")
 
     def test_json_metadata_is_parseable(self):
         for path in [*ROOT.glob(".*-plugin/*.json"), *ROOT.glob(".agents/plugins/*.json")]:
