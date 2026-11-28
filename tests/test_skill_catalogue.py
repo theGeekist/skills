@@ -46,11 +46,15 @@ class SkillCatalogueTests(unittest.TestCase):
     def test_implicit_policy_icons_and_plugin_identity_are_preserved(self):
         catalogue = SYNC.load_catalogue(ROOT)
         planned = SYNC.render(ROOT, catalogue)
-        for name in catalogue['skills']:
+        for name, skill in catalogue['skills'].items():
             metadata = planned[ROOT / 'skills' / name / 'agents/openai.yaml']
             self.assertIn('./assets/geekist-small.svg', metadata)
             self.assertIn('./assets/geekist.svg', metadata)
-            self.assertNotIn('allow_implicit_invocation', metadata)
+            policy = skill['allow_implicit_invocation']
+            if policy is None:
+                self.assertNotIn('allow_implicit_invocation', metadata)
+            else:
+                self.assertIn(f'allow_implicit_invocation: {str(policy).lower()}', metadata)
         for manifest in ('.codex-plugin/plugin.json', '.claude-plugin/plugin.json'):
             before = json.loads((ROOT / manifest).read_text())
             after = json.loads(planned[ROOT / manifest])
