@@ -2,5 +2,5 @@ interface:
   icon_small: "./assets/geekist-interface/geekist-small.svg"
   icon_large: "./assets/geekist-interface/geekist.svg"
   display_name: "Copywriting"
-  short_description: "Copywriting: When the user wants to write or rewrite page copy ("
+  short_description: "Write clear, persuasive product copy"
   default_prompt: "Use $copywriting for this task."

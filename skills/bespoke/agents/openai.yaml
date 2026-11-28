@@ -2,5 +2,5 @@ interface:
   icon_small: "./assets/geekist-interface/geekist-small.svg"
   icon_large: "./assets/geekist-interface/geekist.svg"
   display_name: "Bespoke"
-  short_description: "Bespoke: Act as Bespoke, a content refiner that builds writing f"
+  short_description: "Refine writing in the author's voice"
   default_prompt: "Use $bespoke for this task."

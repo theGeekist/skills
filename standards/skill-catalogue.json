@@ -478,7 +478,7 @@
     },
     "readme-craft": {
       "title": "Readme Craft",
-      "purpose": "Generate and improve README files using a 3-tier layout strategy, GitHub-native formatting patterns, badge guidance, and a state-driven workflow. Use when the user says \"write a README\", \"generate a README\", \"create a README\", \"improve this README\", \"review my README\", \"make my README better\", \"add ",
+      "purpose": "Shape a clear, visual GitHub README that guides readers from first impression to first use.",
       "when_to_use": "Generate and improve README files using a 3-tier layout strategy, GitHub-native formatting patterns, badge guidance, and a state-driven workflow. Use when the user says \"write a README\", \"generate a README\", \"create a README\", \"improve this README\", \"review my README\", \"make my README better\", \"add badges\", or \"fix my README layout\".",
       "example_request": "Use readme-craft to improve this work using its complete upstream guidance.",
       "expected_result": "An output shaped by the complete upstream instructions, source material and the task at hand.",
@@ -500,7 +500,7 @@
         "icon_small": "./assets/geekist-interface/geekist-small.svg",
         "icon_large": "./assets/geekist-interface/geekist.svg",
         "display_name": "Readme Craft",
-        "short_description": "Readme Craft: Generate and improve README files using a 3-tier l",
+        "short_description": "Shape a clear, visual GitHub README",
         "default_prompt": "Use $readme-craft for this task."
       },
       "allow_implicit_invocation": null,
@@ -508,7 +508,7 @@
     },
     "github-launch-studio": {
       "title": "Github Launch Studio",
-      "purpose": "Plan and produce launch-ready GitHub open-source projects—positioning, README, demo assets, release notes, and bilingual announcement copy—for first launches, major releases, or growth-focused repository makeovers.",
+      "purpose": "Prepare a cohesive GitHub launch with positioning, a README, demos and release copy.",
       "when_to_use": "Plan and produce launch-ready GitHub open-source projects—positioning, README, demo assets, release notes, and bilingual announcement copy—for first launches, major releases, or growth-focused repository makeovers.",
       "example_request": "Use github-launch-studio to improve this work using its complete upstream guidance.",
       "expected_result": "An output shaped by the complete upstream instructions, source material and the task at hand.",
@@ -527,18 +527,15 @@
       ],
       "activation_description": "Plan and produce launch-ready GitHub open-source projects—positioning, README, demo assets, release notes, and bilingual announcement copy—for first launches, major releases, or growth-focused repository makeovers.",
       "interface": {
-        "icon_small": "./assets/geekist-interface/geekist-small.svg",
-        "icon_large": "./assets/geekist-interface/geekist.svg",
-        "display_name": "Github Launch Studio",
-        "short_description": "Github Launch Studio: Plan and produce launch-ready GitHub open-",
-        "default_prompt": "Use $github-launch-studio for this task."
+        "display_name": "GitHub Launch Studio",
+        "short_description": "Audit, package, and launch GitHub open-source projects"
       },
       "allow_implicit_invocation": null,
       "upstream": true
     },
     "repo-growth-operator": {
       "title": "Repo Growth Operator",
-      "purpose": "Grow an open-source agent skill repo by auditing positioning, README, install flow, demos, launch assets, marketplace metadata, contribution paths, and OSS-to-paid conversion. Use when the user wants to increase GitHub stars, installs, contributors, repo trust, agent-skill directory visibility, or r",
+      "purpose": "Improve open-source discovery, trust, adoption and revenue with practical repository changes.",
       "when_to_use": "Grow an open-source agent skill repo by auditing positioning, README, install flow, demos, launch assets, marketplace metadata, contribution paths, and OSS-to-paid conversion. Use when the user wants to increase GitHub stars, installs, contributors, repo trust, agent-skill directory visibility, or revenue from an open-source repo.",
       "example_request": "Use repo-growth-operator to improve this work using its complete upstream guidance.",
       "expected_result": "An output shaped by the complete upstream instructions, source material and the task at hand.",
@@ -560,7 +557,7 @@
         "icon_small": "./assets/geekist-interface/geekist-small.svg",
         "icon_large": "./assets/geekist-interface/geekist.svg",
         "display_name": "Repo Growth Operator",
-        "short_description": "Repo Growth Operator: Grow an open-source agent skill repo by au",
+        "short_description": "Improve open-source reach and adoption",
         "default_prompt": "Use $repo-growth-operator for this task."
       },
       "allow_implicit_invocation": null,
@@ -568,7 +565,7 @@
     },
     "ecosystem-inclusion-operator": {
       "title": "Ecosystem Inclusion Operator",
-      "purpose": "Find relevant open-source ecosystems, directories, awesome lists, templates, examples, and integration repos where a project genuinely belongs. Score targets, prepare useful PRs, open issues or PRs, and maintain a durable progress log so the workflow can continue through repeated /loop runs. Use whe",
+      "purpose": "Find relevant open-source ecosystems and contribute useful, non-spammy integrations.",
       "when_to_use": "Find relevant open-source ecosystems, directories, awesome lists, templates, examples, and integration repos where a project genuinely belongs. Score targets, prepare useful PRs, open issues or PRs, and maintain a durable progress log so the workflow can continue through repeated /loop runs. Use when the user wants to grow an open-source repo through ethical ecosystem inclusion.",
       "example_request": "Use ecosystem-inclusion-operator to improve this work using its complete upstream guidance.",
       "expected_result": "An output shaped by the complete upstream instructions, source material and the task at hand.",
@@ -590,7 +587,7 @@
         "icon_small": "./assets/geekist-interface/geekist-small.svg",
         "icon_large": "./assets/geekist-interface/geekist.svg",
         "display_name": "Ecosystem Inclusion Operator",
-        "short_description": "Ecosystem Inclusion Operator: Find relevant open-source ecosyste",
+        "short_description": "Find ethical open-source growth paths",
         "default_prompt": "Use $ecosystem-inclusion-operator for this task."
       },
       "allow_implicit_invocation": null,
@@ -598,7 +595,7 @@
     },
     "positioning-messaging-framework": {
       "title": "Positioning Messaging Framework",
-      "purpose": "Create sharp B2B positioning and messaging from customer truth, segmentation choices, real alternatives, differentiated value, and proof.",
+      "purpose": "Build B2B positioning from customer truth, market alternatives, differentiated value and proof.",
       "when_to_use": "Create sharp B2B positioning and messaging from customer truth, segmentation choices, real alternatives, differentiated value, and proof.",
       "example_request": "Use positioning-messaging-framework to improve this work using its complete upstream guidance.",
       "expected_result": "An output shaped by the complete upstream instructions, source material and the task at hand.",
@@ -620,7 +617,7 @@
         "icon_small": "./assets/geekist-interface/geekist-small.svg",
         "icon_large": "./assets/geekist-interface/geekist.svg",
         "display_name": "Positioning Messaging Framework",
-        "short_description": "Positioning Messaging Framework: Create sharp B2B positioning an",
+        "short_description": "Build evidence-led B2B positioning",
         "default_prompt": "Use $positioning-messaging-framework for this task."
       },
       "allow_implicit_invocation": null,
@@ -628,7 +625,7 @@
     },
     "voice-of-customer-synthesis": {
       "title": "Voice Of Customer Synthesis",
-      "purpose": "Turn customer notes, call transcripts, sales feedback, and research into PMM-ready voice-of-customer inputs: pains, triggers, status quo, JTBD, exact language, objections, proof, and messaging implications.",
+      "purpose": "Turn customer research into clear pains, triggers, objections, proof and messaging implications.",
       "when_to_use": "Turn customer notes, call transcripts, sales feedback, and research into PMM-ready voice-of-customer inputs: pains, triggers, status quo, JTBD, exact language, objections, proof, and messaging implications.",
       "example_request": "Use voice-of-customer-synthesis to improve this work using its complete upstream guidance.",
       "expected_result": "An output shaped by the complete upstream instructions, source material and the task at hand.",
@@ -650,7 +647,7 @@
         "icon_small": "./assets/geekist-interface/geekist-small.svg",
         "icon_large": "./assets/geekist-interface/geekist.svg",
         "display_name": "Voice Of Customer Synthesis",
-        "short_description": "Voice Of Customer Synthesis: Turn customer notes, call transcrip",
+        "short_description": "Turn customer research into messaging",
         "default_prompt": "Use $voice-of-customer-synthesis for this task."
       },
       "allow_implicit_invocation": null,
@@ -658,7 +655,7 @@
     },
     "portfolio-positioning": {
       "title": "Portfolio Positioning",
-      "purpose": "Creates positioning, messaging, and brand architecture frameworks for multi-product companies. Use when the user wants to 'position a product suite,' 'multi-product positioning,' 'portfolio positioning,' 'brand architecture,' 'core narrative,' 'house of brands vs branded house,' 'product portfolio m",
+      "purpose": "Clarify how products relate under a portfolio, parent brand or shared narrative.",
       "when_to_use": "Creates positioning, messaging, and brand architecture frameworks for multi-product companies. Use when the user wants to 'position a product suite,' 'multi-product positioning,' 'portfolio positioning,' 'brand architecture,' 'core narrative,' 'house of brands vs branded house,' 'product portfolio messaging,' 'launch a second product,' 'launch a new product into our suite,' 'audit our portfolio messaging,' or 'are our products fighting each other.' Sits above product-positioning and product-messaging in the hierarchy. Forces a brand architecture decision first, then builds the layered framework that single-product skills run inside of.",
       "example_request": "Use portfolio-positioning to improve this work using its complete upstream guidance.",
       "expected_result": "An output shaped by the complete upstream instructions, source material and the task at hand.",
@@ -680,7 +677,7 @@
         "icon_small": "./assets/geekist-interface/geekist-small.svg",
         "icon_large": "./assets/geekist-interface/geekist.svg",
         "display_name": "Portfolio Positioning",
-        "short_description": "Portfolio Positioning: Creates positioning, messaging, and brand",
+        "short_description": "Position a multi-product portfolio",
         "default_prompt": "Use $portfolio-positioning for this task."
       },
       "allow_implicit_invocation": null,
@@ -688,7 +685,7 @@
     },
     "storytelling-framework": {
       "title": "Storytelling Framework",
-      "purpose": "Builds a complete product or brand storytelling framework, adaptable to B2B, B2C, and hybrid businesses. Use when the user wants a 'storytelling framework,' 'brand story,' 'product story,' 'customer story,' 'narrative framework,' 'story framework,' asks to 'tell our story,' or references StoryBrand,",
+      "purpose": "Build a product or brand story grounded in its audience, value and proof.",
       "when_to_use": "Builds a complete product or brand storytelling framework, adaptable to B2B, B2C, and hybrid businesses. Use when the user wants a 'storytelling framework,' 'brand story,' 'product story,' 'customer story,' 'narrative framework,' 'story framework,' asks to 'tell our story,' or references StoryBrand, the Hero's Journey, or a strategic narrative for a pitch/webinar/case study.",
       "example_request": "Use storytelling-framework to improve this work using its complete upstream guidance.",
       "expected_result": "An output shaped by the complete upstream instructions, source material and the task at hand.",
@@ -710,7 +707,7 @@
         "icon_small": "./assets/geekist-interface/geekist-small.svg",
         "icon_large": "./assets/geekist-interface/geekist.svg",
         "display_name": "Storytelling Framework",
-        "short_description": "Storytelling Framework: Builds a complete product or brand story",
+        "short_description": "Build a product or brand story",
         "default_prompt": "Use $storytelling-framework for this task."
       },
       "allow_implicit_invocation": null,
@@ -718,7 +715,7 @@
     },
     "obviously-awesome": {
       "title": "Obviously Awesome",
-      "purpose": "Define product positioning by mapping competitive alternatives, unique attributes, and best-fit customers to the right market category. Use when the user mentions \"positioning\", \"competitive alternatives\", \"how to position\", \"market category\", \"positioning canvas\", \"repositioning\", \"category creatio",
+      "purpose": "Position a product through alternatives, unique strengths, best-fit customers and category.",
       "when_to_use": "Define product positioning by mapping competitive alternatives, unique attributes, and best-fit customers to the right market category. Use when the user mentions \"positioning\", \"competitive alternatives\", \"how to position\", \"market category\", \"positioning canvas\", \"repositioning\", \"category creation\", \"what category are we in\", or \"why prospects dont get what we do\". Also trigger when launching a new product, entering a crowded market, or diagnosing why prospects dont grasp the product's value. Covers the positioning canvas and team workshops. For customer jobs analysis, see jobs-to-be-done. For go-to-market, see crossing-the-chasm.",
       "example_request": "Use obviously-awesome to improve this work using its complete upstream guidance.",
       "expected_result": "An output shaped by the complete upstream instructions, source material and the task at hand.",
@@ -740,7 +737,7 @@
         "icon_small": "./assets/geekist-interface/geekist-small.svg",
         "icon_large": "./assets/geekist-interface/geekist.svg",
         "display_name": "Obviously Awesome",
-        "short_description": "Obviously Awesome: Define product positioning by mapping competi",
+        "short_description": "Position products against alternatives",
         "default_prompt": "Use $obviously-awesome for this task."
       },
       "allow_implicit_invocation": null,
@@ -748,7 +745,7 @@
     },
     "made-to-stick": {
       "title": "Made To Stick",
-      "purpose": "Craft messages that are understood, remembered, and drive action using the SUCCESs checklist (Simple, Unexpected, Concrete, Credible, Emotional, Stories). Use when the user mentions \"make it memorable\", \"no one remembers our pitch\", \"tagline\", \"value proposition\", \"why the message isnt landing\", \"cu",
+      "purpose": "Make a message easier to understand, remember and act on.",
       "when_to_use": "Craft messages that are understood, remembered, and drive action using the SUCCESs checklist (Simple, Unexpected, Concrete, Credible, Emotional, Stories). Use when the user mentions \"make it memorable\", \"no one remembers our pitch\", \"tagline\", \"value proposition\", \"why the message isnt landing\", \"curse of knowledge\", or \"concrete language\". Also trigger when writing a pitch deck, simplifying a complex product explanation, or making a presentation more compelling. Covers the six SUCCESs traits and the curse of knowledge. For narrative brand frameworks, see storybrand-messaging. For viral sharing, see contagious.",
       "example_request": "Use made-to-stick to improve this work using its complete upstream guidance.",
       "expected_result": "An output shaped by the complete upstream instructions, source material and the task at hand.",
@@ -770,7 +767,7 @@
         "icon_small": "./assets/geekist-interface/geekist-small.svg",
         "icon_large": "./assets/geekist-interface/geekist.svg",
         "display_name": "Made To Stick",
-        "short_description": "Made To Stick: Craft messages that are understood, remembered, a",
+        "short_description": "Make messages memorable and clear",
         "default_prompt": "Use $made-to-stick for this task."
       },
       "allow_implicit_invocation": null,
@@ -778,7 +775,7 @@
     },
     "general-writing": {
       "title": "General Writing",
-      "purpose": "Edit drafts into clearer, sharper, more human prose while preserving the writer's meaning and personal voice, or audit prose for specific AI-slop patterns without rewriting it. Use for general writing, line editing, clarity and voice revisions, concision, directness, AI-sounding prose, or requests t",
+      "purpose": "Edit prose for clarity, cadence and voice while preserving the writer's meaning.",
       "when_to_use": "Edit drafts into clearer, sharper, more human prose while preserving the writer's meaning and personal voice, or audit prose for specific AI-slop patterns without rewriting it. Use for general writing, line editing, clarity and voice revisions, concision, directness, AI-sounding prose, or requests to detect whether writing reads like AI.",
       "example_request": "Use general-writing to improve this work using its complete upstream guidance.",
       "expected_result": "An output shaped by the complete upstream instructions, source material and the task at hand.",
@@ -797,18 +794,16 @@
       ],
       "activation_description": "Edit drafts into clearer, sharper, more human prose while preserving the writer's meaning and personal voice, or audit prose for specific AI-slop patterns without rewriting it. Use for general writing, line editing, clarity and voice revisions, concision, directness, AI-sounding prose, or requests to detect whether writing reads like AI.",
       "interface": {
-        "icon_small": "./assets/geekist-interface/geekist-small.svg",
-        "icon_large": "./assets/geekist-interface/geekist.svg",
         "display_name": "General Writing",
-        "short_description": "General Writing: Edit drafts into clearer, sharper, more human p",
-        "default_prompt": "Use $general-writing for this task."
+        "short_description": "Edit prose clearly while preserving personal voice",
+        "default_prompt": "Use $general-writing to sharpen this draft while preserving my voice and meaning."
       },
       "allow_implicit_invocation": null,
       "upstream": true
     },
     "non-autoregressive-writing-pass": {
       "title": "Non Autoregressive Writing Pass",
-      "purpose": "Revisit a completed draft with global knowledge of its argument, then revise its title, subtitle, headings, paragraph heads, and paragraph-to-paragraph transitions. Use when display text no longer fits the finished work; when openings feel generic, abrupt, weak, or begin with a rejected alternative ",
+      "purpose": "Revise a completed draft's title, headings and transitions with the whole piece in view.",
       "when_to_use": "Revisit a completed draft with global knowledge of its argument, then revise its title, subtitle, headings, paragraph heads, and paragraph-to-paragraph transitions. Use when display text no longer fits the finished work; when openings feel generic, abrupt, weak, or begin with a rejected alternative before reaching the point; when paragraphs are individually clear but do not build on one another; when a finished abstract needs a stronger first sentence; or when final sentences do not close one paragraph naturally or prepare the relation to the next.",
       "example_request": "Use non-autoregressive-writing-pass to improve this work using its complete upstream guidance.",
       "expected_result": "An output shaped by the complete upstream instructions, source material and the task at hand.",
@@ -827,18 +822,16 @@
       ],
       "activation_description": "Revisit a completed draft with global knowledge of its argument, then revise its title, subtitle, headings, paragraph heads, and paragraph-to-paragraph transitions. Use when display text no longer fits the finished work; when openings feel generic, abrupt, weak, or begin with a rejected alternative before reaching the point; when paragraphs are individually clear but do not build on one another; when a finished abstract needs a stronger first sentence; or when final sentences do not close one paragraph naturally or prepare the relation to the next.",
       "interface": {
-        "icon_small": "./assets/geekist-interface/geekist-small.svg",
-        "icon_large": "./assets/geekist-interface/geekist.svg",
-        "display_name": "Non Autoregressive Writing Pass",
-        "short_description": "Non Autoregressive Writing Pass: Revisit a completed draft with ",
-        "default_prompt": "Use $non-autoregressive-writing-pass for this task."
+        "display_name": "Non-Autoregressive Writing Pass",
+        "short_description": "Rework titles, paragraph heads, and transitions",
+        "default_prompt": "Use $non-autoregressive-writing-pass to revise this finished draft's title, headings, paragraph heads, and transitions."
       },
       "allow_implicit_invocation": null,
       "upstream": true
     },
     "writing-cadence": {
       "title": "Writing Cadence",
-      "purpose": "Diagnose and revise prose with staccato runs, uniform sentence lengths, repeated openings, mechanical clause structures, repeated contrast formulas, or abstract process framing that hides the actor and delays the real comparison. Use for requests about cadence, rhythm, meter, sentence variety, chopp",
+      "purpose": "Improve sentence rhythm and variety while preserving an author's style.",
       "when_to_use": "Diagnose and revise prose with staccato runs, uniform sentence lengths, repeated openings, mechanical clause structures, repeated contrast formulas, or abstract process framing that hides the actor and delays the real comparison. Use for requests about cadence, rhythm, meter, sentence variety, choppy prose, monotonous prose, or patterns such as \"not X but Y\" and \"treats X as Y, not Z.\"",
       "example_request": "Use writing-cadence to improve this work using its complete upstream guidance.",
       "expected_result": "An output shaped by the complete upstream instructions, source material and the task at hand.",
@@ -857,18 +850,16 @@
       ],
       "activation_description": "Diagnose and revise prose with staccato runs, uniform sentence lengths, repeated openings, mechanical clause structures, repeated contrast formulas, or abstract process framing that hides the actor and delays the real comparison. Use for requests about cadence, rhythm, meter, sentence variety, choppy prose, monotonous prose, or patterns such as \"not X but Y\" and \"treats X as Y, not Z.\"",
       "interface": {
-        "icon_small": "./assets/geekist-interface/geekist-small.svg",
-        "icon_large": "./assets/geekist-interface/geekist.svg",
         "display_name": "Writing Cadence",
-        "short_description": "Writing Cadence: Diagnose and revise prose with staccato runs, u",
-        "default_prompt": "Use $writing-cadence for this task."
+        "short_description": "Shape varied, natural prose rhythm",
+        "default_prompt": "Use $writing-cadence to revise this prose for varied, purposeful rhythm."
       },
       "allow_implicit_invocation": null,
       "upstream": true
     },
     "better-usage": {
       "title": "Better Usage",
-      "purpose": "Diagnose and repair semantically mismatched word combinations while preserving the intended claim. Use when prose is grammatical but a verb does not literally fit its subject or object, a claim or section is given an action it cannot perform, an abstract relation is hidden by vague personification, ",
+      "purpose": "Repair word choices whose meaning does not fit the claim or relationship.",
       "when_to_use": "Diagnose and repair semantically mismatched word combinations while preserving the intended claim. Use when prose is grammatical but a verb does not literally fit its subject or object, a claim or section is given an action it cannot perform, an abstract relation is hidden by vague personification, an abstract process hides the actor or implies a review that the source does not establish, or replacing one verb still leaves a sloppy relation that needs an intermediate noun.",
       "example_request": "Use better-usage to improve this work using its complete upstream guidance.",
       "expected_result": "An output shaped by the complete upstream instructions, source material and the task at hand.",
@@ -887,18 +878,16 @@
       ],
       "activation_description": "Diagnose and repair semantically mismatched word combinations while preserving the intended claim. Use when prose is grammatical but a verb does not literally fit its subject or object, a claim or section is given an action it cannot perform, an abstract relation is hidden by vague personification, an abstract process hides the actor or implies a review that the source does not establish, or replacing one verb still leaves a sloppy relation that needs an intermediate noun.",
       "interface": {
-        "icon_small": "./assets/geekist-interface/geekist-small.svg",
-        "icon_large": "./assets/geekist-interface/geekist.svg",
         "display_name": "Better Usage",
-        "short_description": "Better Usage: Diagnose and repair semantically mismatched word c",
-        "default_prompt": "Use $better-usage for this task."
+        "short_description": "Match words to the relations they express",
+        "default_prompt": "Use $better-usage to repair semantically mismatched words in this prose."
       },
       "allow_implicit_invocation": null,
       "upstream": true
     },
     "academic-voice": {
       "title": "Academic Voice",
-      "purpose": "Write or revise prose in the voice of a thoughtful, careful, precise academic who cares deeply about reader understanding and writes with personality and purpose. Use for research exposition, scholarly articles, textbook-style explanations, academic summaries, or drafts that should avoid corporate, ",
+      "purpose": "Write research prose with precision, personality and care for the reader.",
       "when_to_use": "Write or revise prose in the voice of a thoughtful, careful, precise academic who cares deeply about reader understanding and writes with personality and purpose. Use for research exposition, scholarly articles, textbook-style explanations, academic summaries, or drafts that should avoid corporate, LinkedIn, Reddit, and GitHub register.",
       "example_request": "Use academic-voice to improve this work using its complete upstream guidance.",
       "expected_result": "An output shaped by the complete upstream instructions, source material and the task at hand.",
@@ -917,18 +906,16 @@
       ],
       "activation_description": "Write or revise prose in the voice of a thoughtful, careful, precise academic who cares deeply about reader understanding and writes with personality and purpose. Use for research exposition, scholarly articles, textbook-style explanations, academic summaries, or drafts that should avoid corporate, LinkedIn, Reddit, and GitHub register.",
       "interface": {
-        "icon_small": "./assets/geekist-interface/geekist-small.svg",
-        "icon_large": "./assets/geekist-interface/geekist.svg",
         "display_name": "Academic Voice",
-        "short_description": "Academic Voice: Write or revise prose in the voice of a thoughtf",
-        "default_prompt": "Use $academic-voice for this task."
+        "short_description": "Write with precise, reader-minded purpose",
+        "default_prompt": "Use $academic-voice to revise this passage in a clear, thoughtful academic voice."
       },
       "allow_implicit_invocation": null,
       "upstream": true
     },
     "humanizer": {
       "title": "Humanizer",
-      "purpose": "Remove signs of AI-generated writing from text. Use when editing or reviewing",
+      "purpose": "Find and revise common patterns that make prose sound AI-generated.",
       "when_to_use": "Remove signs of AI-generated writing from text. Use when editing or reviewing\ntext to make it sound more natural and human-written. Based on Wikipedia's\ncomprehensive \"Signs of AI writing\" guide. Detects and fixes patterns including:\ninflated symbolism, promotional language, superficial -ing analyses, vague\nattributions, em dash overuse, rule of three, AI vocabulary words, passive\nvoice, negative parallelisms, question-word clause wrappers, mechanical\nrelative clauses, readerless corporate shorthand, loose catalogs, list sprawl,\nsemantically mismatched relations, uneven cadence, mechanical paragraph\nendings, weak topic sentences, broken paragraph transitions, register\nmismatch, and filler phrases.",
       "example_request": "Use humanizer to improve this work using its complete upstream guidance.",
       "expected_result": "An output shaped by the complete upstream instructions, source material and the task at hand.",
@@ -947,18 +934,16 @@
       ],
       "activation_description": "Remove signs of AI-generated writing from text. Use when editing or reviewing\ntext to make it sound more natural and human-written. Based on Wikipedia's\ncomprehensive \"Signs of AI writing\" guide. Detects and fixes patterns including:\ninflated symbolism, promotional language, superficial -ing analyses, vague\nattributions, em dash overuse, rule of three, AI vocabulary words, passive\nvoice, negative parallelisms, question-word clause wrappers, mechanical\nrelative clauses, readerless corporate shorthand, loose catalogs, list sprawl,\nsemantically mismatched relations, uneven cadence, mechanical paragraph\nendings, weak topic sentences, broken paragraph transitions, register\nmismatch, and filler phrases.",
       "interface": {
-        "icon_small": "./assets/geekist-interface/geekist-small.svg",
-        "icon_large": "./assets/geekist-interface/geekist.svg",
         "display_name": "Humanizer",
-        "short_description": "Humanizer: Remove signs of AI-generated writing from text",
-        "default_prompt": "Use $humanizer for this task."
+        "short_description": "Remove AI writing patterns from prose",
+        "default_prompt": "Use $humanizer to make this text sound natural while preserving its meaning and facts."
       },
       "allow_implicit_invocation": null,
       "upstream": true
     },
     "conversion-storytelling": {
       "title": "Conversion Storytelling",
-      "purpose": "Shapes truthful product narratives, message maps, proof, and CTAs for websites, landing pages, pricing, checkout, onboarding, and app flows, and adapts approved stories to video, thumbnail, and social briefs. Use when a surface must move a qualified audience to a credible next action without losing ",
+      "purpose": "Shape product stories and proof for websites, pricing and onboarding flows.",
       "when_to_use": "Shapes truthful product narratives, message maps, proof, and CTAs for websites, landing pages, pricing, checkout, onboarding, and app flows, and adapts approved stories to video, thumbnail, and social briefs. Use when a surface must move a qualified audience to a credible next action without losing SEO, accessibility, or truth.",
       "example_request": "Use conversion-storytelling to improve this work using its complete upstream guidance.",
       "expected_result": "An output shaped by the complete upstream instructions, source material and the task at hand.",
@@ -977,18 +962,16 @@
       ],
       "activation_description": "Shapes truthful product narratives, message maps, proof, and CTAs for websites, landing pages, pricing, checkout, onboarding, and app flows, and adapts approved stories to video, thumbnail, and social briefs. Use when a surface must move a qualified audience to a credible next action without losing SEO, accessibility, or truth.",
       "interface": {
-        "icon_small": "./assets/geekist-interface/geekist-small.svg",
-        "icon_large": "./assets/geekist-interface/geekist.svg",
         "display_name": "Conversion Storytelling",
-        "short_description": "Conversion Storytelling: Shapes truthful product narratives, mes",
-        "default_prompt": "Use $conversion-storytelling for this task."
+        "short_description": "Shape truthful product stories and journeys",
+        "default_prompt": "Use $conversion-storytelling to clarify missing context, follow my approved strategy or choose a framework only when useful, and adapt the result into a truthful, professional experience for this product and requested surface."
       },
       "allow_implicit_invocation": null,
       "upstream": true
     },
     "github-readme-and-profile-writing": {
       "title": "Github Readme And Profile Writing",
-      "purpose": "Writes and improves GitHub READMEs for projects, skills, organizations, and personal profiles—clear positioning, install and quick start, visual proof, badges, and one next action. Use when creating, auditing, or rewriting a README or profile README.",
+      "purpose": "Write GitHub READMEs with clear positioning, install steps and visual proof.",
       "when_to_use": "Writes and improves GitHub READMEs for projects, skills, organizations, and personal profiles—clear positioning, install and quick start, visual proof, badges, and one next action. Use when creating, auditing, or rewriting a README or profile README.",
       "example_request": "Use github-readme-and-profile-writing to improve this work using its complete upstream guidance.",
       "expected_result": "An output shaped by the complete upstream instructions, source material and the task at hand.",
@@ -1007,18 +990,16 @@
       ],
       "activation_description": "Writes and improves GitHub READMEs for projects, skills, organizations, and personal profiles—clear positioning, install and quick start, visual proof, badges, and one next action. Use when creating, auditing, or rewriting a README or profile README.",
       "interface": {
-        "icon_small": "./assets/geekist-interface/geekist-small.svg",
-        "icon_large": "./assets/geekist-interface/geekist.svg",
-        "display_name": "Github Readme And Profile Writing",
-        "short_description": "Github Readme And Profile Writing: Writes and improves GitHub RE",
-        "default_prompt": "Use $github-readme-and-profile-writing for this task."
+        "display_name": "GitHub README and Profile Writing",
+        "short_description": "Write credible, discoverable GitHub READMEs",
+        "default_prompt": "Use $github-readme-and-profile-writing to inspect this repository or profile and draft an accurate, useful, and discoverable README."
       },
-      "allow_implicit_invocation": null,
+      "allow_implicit_invocation": true,
       "upstream": true
     },
     "bespoke": {
       "title": "Bespoke",
-      "purpose": "Act as Bespoke, a content refiner that builds writing from a specific person's real voice instead of generic prose. Use for LinkedIn posts, X/Threads, Substack articles, emails, or Slack messages when the person wants their own personality in the writing, says \"write in my voice,\" \"humanize this,\" \"",
+      "purpose": "Refine writing in the author's own voice.",
       "when_to_use": "Act as Bespoke, a content refiner that builds writing from a specific person's real voice instead of generic prose. Use for LinkedIn posts, X/Threads, Substack articles, emails, or Slack messages when the person wants their own personality in the writing, says \"write in my voice,\" \"humanize this,\" \"make this sound like me,\" or hasn't defined a voice yet. Also usable as a file-mode or embedded-mode rewriter (Section 10). Opens with a short intake (Voice, Platform/Task, Audience, Intention) and asks only for what's missing; Voice is an explicit own-style-or-default choice, and own style requires a real writing sample of at least 100 words, not adjectives. Grounded in stylometric voice-fingerprinting, plain-style diagnostics (five pattern clusters covering promotional inflation, hedging, and mechanical uniformity alongside Orwell's four faults), formulaic-language research, and forensic content-analysis criteria for genuine versus fabricated detail, not a fixed list of banned phrases. Engagement tactics that require deceiving the reader are gated to disclosed contexts.",
       "example_request": "Use bespoke to improve this work using its complete upstream guidance.",
       "expected_result": "An output shaped by the complete upstream instructions, source material and the task at hand.",
@@ -1040,7 +1021,7 @@
         "icon_small": "./assets/geekist-interface/geekist-small.svg",
         "icon_large": "./assets/geekist-interface/geekist.svg",
         "display_name": "Bespoke",
-        "short_description": "Bespoke: Act as Bespoke, a content refiner that builds writing f",
+        "short_description": "Refine writing in the author's voice",
         "default_prompt": "Use $bespoke for this task."
       },
       "allow_implicit_invocation": null,
@@ -1048,7 +1029,7 @@
     },
     "work-humanizer": {
       "title": "Work Humanizer",
-      "purpose": "Edit AI-sounding text so it reads like a careful person wrote it, without changing",
+      "purpose": "Make work prose sound human while preserving every fact and commitment.",
       "when_to_use": "Edit AI-sounding text so it reads like a careful person wrote it, without changing\nwhat it says or commits to. Built for work writing where the wording matters: sales\nand marketing copy, support replies, HR and legal letters, emails, docs, release\nnotes, posts, landing pages. Two modes. Rewrite: edit the text you are given.\nInterview: when a draft is AI-composed and thin, ask the writer 3-5 sharp questions\nand build the piece from their answers, in their words. Also writes from the\nwriter's own notes or a voice-memo transcript. Calibrated on measured differences\nbetween human and AI writing.",
       "example_request": "Use work-humanizer to improve this work using its complete upstream guidance.",
       "expected_result": "An output shaped by the complete upstream instructions, source material and the task at hand.",
@@ -1070,7 +1051,7 @@
         "icon_small": "./assets/geekist-interface/geekist-small.svg",
         "icon_large": "./assets/geekist-interface/geekist.svg",
         "display_name": "Work Humanizer",
-        "short_description": "Work Humanizer: Edit AI-sounding text so it reads like a careful",
+        "short_description": "Humanise work prose without changing meaning",
         "default_prompt": "Use $work-humanizer for this task."
       },
       "allow_implicit_invocation": null,
@@ -1078,7 +1059,7 @@
     },
     "copywriting": {
       "title": "Copywriting",
-      "purpose": "When the user wants to write or rewrite page copy (homepage, landing, pricing, feature), or asks which headline, promise, or message to lead with. Diagnoses the input first (blank brief, real voice, or point edit) and changes only what it calls for. Claims must be supportable; a declined claim names",
+      "purpose": "Write or refine clear, persuasive website and product copy.",
       "when_to_use": "When the user wants to write or rewrite page copy (homepage, landing, pricing, feature), or asks which headline, promise, or message to lead with. Diagnoses the input first (blank brief, real voice, or point edit) and changes only what it calls for. Claims must be supportable; a declined claim names the evidence that would unlock it. No AI tells like 'it's not X, it's Y' or 'no X, no Y, no Z'. For editing, see copy-editing. For emails, see emails. For the offer, see offers.",
       "example_request": "Use copywriting to improve this work using its complete upstream guidance.",
       "expected_result": "An output shaped by the complete upstream instructions, source material and the task at hand.",
@@ -1100,7 +1081,7 @@
         "icon_small": "./assets/geekist-interface/geekist-small.svg",
         "icon_large": "./assets/geekist-interface/geekist.svg",
         "display_name": "Copywriting",
-        "short_description": "Copywriting: When the user wants to write or rewrite page copy (",
+        "short_description": "Write clear, persuasive product copy",
         "default_prompt": "Use $copywriting for this task."
       },
       "allow_implicit_invocation": null,
@@ -1108,7 +1089,7 @@
     },
     "product-marketing": {
       "title": "Product Marketing",
-      "purpose": "When the user wants to create or update the product marketing context doc (.agents/product-marketing.md), or asks what belongs in it or whether positioning or ICP is clear enough: product, ICP, positioning, competitors, customer language, brand voice. Use it before other marketing skills on a new pr",
+      "purpose": "Define product marketing context for consistent positioning and messaging.",
       "when_to_use": "When the user wants to create or update the product marketing context doc (.agents/product-marketing.md), or asks what belongs in it or whether positioning or ICP is clear enough: product, ICP, positioning, competitors, customer language, brand voice. Use it before other marketing skills on a new project, when the audience or positioning changes, and to log learnings.",
       "example_request": "Use product-marketing to improve this work using its complete upstream guidance.",
       "expected_result": "An output shaped by the complete upstream instructions, source material and the task at hand.",
@@ -1130,7 +1111,7 @@
         "icon_small": "./assets/geekist-interface/geekist-small.svg",
         "icon_large": "./assets/geekist-interface/geekist.svg",
         "display_name": "Product Marketing",
-        "short_description": "Product Marketing: When the user wants to create or update the p",
+        "short_description": "Define product marketing context",
         "default_prompt": "Use $product-marketing for this task."
       },
       "allow_implicit_invocation": null,
@@ -1138,7 +1119,7 @@
     },
     "developer-marketing-playbook": {
       "title": "Developer Marketing Playbook",
-      "purpose": "Complete developer marketing playbook covering DevRel programs, documentation as marketing, API developer experience, community building, and hackathon strategy. For dev-tool founders who need to reach engineers. Follow @WeiYipei on X.",
+      "purpose": "Reach developers through docs, developer experience, community and DevRel.",
       "when_to_use": "Complete developer marketing playbook covering DevRel programs, documentation as marketing, API developer experience, community building, and hackathon strategy. For dev-tool founders who need to reach engineers. Follow @WeiYipei on X.",
       "example_request": "Use developer-marketing-playbook to improve this work using its complete upstream guidance.",
       "expected_result": "An output shaped by the complete upstream instructions, source material and the task at hand.",
@@ -1160,7 +1141,7 @@
         "icon_small": "./assets/geekist-interface/geekist-small.svg",
         "icon_large": "./assets/geekist-interface/geekist.svg",
         "display_name": "Developer Marketing Playbook",
-        "short_description": "Developer Marketing Playbook: Complete developer marketing playb",
+        "short_description": "Reach and support developer audiences",
         "default_prompt": "Use $developer-marketing-playbook for this task."
       },
       "allow_implicit_invocation": null,
@@ -1168,7 +1149,7 @@
     },
     "gingiris-github-star-growth": {
       "title": "Gingiris Github Star Growth",
-      "purpose": "🇺🇸 GitHub Star Sustained Growth Playbook — Monthly 300+ star growth SOP. Content rhythm, community ops, event-driven growth, contributor & ambassador systems. Battle-tested: AFFiNE 0→60K+, Client Project A 0→10K stars.",
+      "purpose": "Plan sustained GitHub growth and contributor engagement.",
       "when_to_use": "🇺🇸 GitHub Star Sustained Growth Playbook — Monthly 300+ star growth SOP. Content rhythm, community ops, event-driven growth, contributor & ambassador systems. Battle-tested: AFFiNE 0→60K+, Client Project A 0→10K stars.\n\n🇨🇳 GitHub Star 持续增长实操手册 — 月增 300+ Star 的完整 SOP。内容节奏、社区运营、活动驱动增长、Contributor 与 Ambassador 体系。实战验证：AFFiNE 0→60K+、Client Project A 0→10K Star。\n\n🇯🇵 GitHub Star 持続成長プレイブック — 月間300+ Star成長SOP。コンテンツリズム、コミュニティ運営、イベント駆動成長、Contributor＆Ambassadorシステム。実戦検証：AFFiNE 0→60K+、Client Project A 0→10K Star。\n\n🇰🇷 GitHub Star 지속 성장 플레이북 — 월 300+ 스타 성장 SOP. 콘텐츠 리듬, 커뮤니티 운영, 이벤트 기반 성장, Contributor & Ambassador 시스템. 실전 검증: AFFiNE 0→60K+, Client Project A 0→10K 스타.\n\nTriggers: \"GitHub star growth\" | \"sustained star growth\" | \"monthly star growth\" | \"star growth SOP\" | \"contributor system\" | \"ambassador program\" | \"open source community\" | \"community growth\" | \"developer community growth\" | \"star持续增长\" | \"Star增长\" | \"开源社区运营\" | \"贡献者体系\"",
       "example_request": "Use gingiris-github-star-growth to improve this work using its complete upstream guidance.",
       "expected_result": "An output shaped by the complete upstream instructions, source material and the task at hand.",
@@ -1190,7 +1171,7 @@
         "icon_small": "./assets/geekist-interface/geekist-small.svg",
         "icon_large": "./assets/geekist-interface/geekist.svg",
         "display_name": "Gingiris Github Star Growth",
-        "short_description": "Gingiris Github Star Growth: 🇺🇸 GitHub Star Sustained Growth P",
+        "short_description": "Grow GitHub stars and contributors",
         "default_prompt": "Use $gingiris-github-star-growth for this task."
       },
       "allow_implicit_invocation": null,
@@ -1198,7 +1179,7 @@
     },
     "product-strategist": {
       "title": "Product Strategist",
-      "purpose": "Strategic product leadership toolkit for Head of Product covering OKR cascade generation, quarterly planning, competitive landscape analysis, product vision documents, and team scaling proposals. Use when creating quarterly OKR documents, defining product goals or KPIs, building product roadmaps, ru",
+      "purpose": "Create product strategy artefacts such as OKRs, roadmaps and competitive reviews.",
       "when_to_use": "Strategic product leadership toolkit for Head of Product covering OKR cascade generation, quarterly planning, competitive landscape analysis, product vision documents, and team scaling proposals. Use when creating quarterly OKR documents, defining product goals or KPIs, building product roadmaps, running competitive analysis, drafting team structure or hiring plans, aligning product strategy across engineering and design, or generating cascaded goal hierarchies from company to team level.",
       "example_request": "Use product-strategist to improve this work using its complete upstream guidance.",
       "expected_result": "An output shaped by the complete upstream instructions, source material and the task at hand.",
@@ -1220,7 +1201,7 @@
         "icon_small": "./assets/geekist-interface/geekist-small.svg",
         "icon_large": "./assets/geekist-interface/geekist.svg",
         "display_name": "Product Strategist",
-        "short_description": "Product Strategist: Strategic product leadership toolkit for Hea",
+        "short_description": "Develop product strategy and plans",
         "default_prompt": "Use $product-strategist for this task."
       },
       "allow_implicit_invocation": null,
@@ -1228,7 +1209,7 @@
     },
     "landing-page-architect": {
       "title": "Landing Page Architect",
-      "purpose": "Create, audit, or rewrite product and service landing pages using offer diagnosis, bottleneck-aware structure, concrete block-by-block copy, proof, risk reduction, decision details, and CTA guidance. Use when Codex is asked to write landing-page copy, choose a landing-page structure, diagnose conver",
+      "purpose": "Audit or write landing pages with clear offers, proof and decision paths.",
       "when_to_use": "Create, audit, or rewrite product and service landing pages using offer diagnosis, bottleneck-aware structure, concrete block-by-block copy, proof, risk reduction, decision details, and CTA guidance. Use when Codex is asked to write landing-page copy, choose a landing-page structure, diagnose conversion issues, improve hero/value proposition/CTA/proof/FAQ/pricing blocks, or create product, service, SaaS, AI, developer-tool, startup, lead-gen, demo-request, waitlist, consultation, local-service, or high-ticket offer pages.",
       "example_request": "Use landing-page-architect to improve this work using its complete upstream guidance.",
       "expected_result": "An output shaped by the complete upstream instructions, source material and the task at hand.",
@@ -1247,13 +1228,11 @@
       ],
       "activation_description": "Create, audit, or rewrite product and service landing pages using offer diagnosis, bottleneck-aware structure, concrete block-by-block copy, proof, risk reduction, decision details, and CTA guidance. Use when Codex is asked to write landing-page copy, choose a landing-page structure, diagnose conversion issues, improve hero/value proposition/CTA/proof/FAQ/pricing blocks, or create product, service, SaaS, AI, developer-tool, startup, lead-gen, demo-request, waitlist, consultation, local-service, or high-ticket offer pages.",
       "interface": {
-        "icon_small": "./assets/geekist-interface/geekist-small.svg",
-        "icon_large": "./assets/geekist-interface/geekist.svg",
         "display_name": "Landing Page Architect",
-        "short_description": "Landing Page Architect: Create, audit, or rewrite product and se",
-        "default_prompt": "Use $landing-page-architect for this task."
+        "short_description": "Create and audit landing pages",
+        "default_prompt": "Use $landing-page-architect to create or audit a landing page structure and copy."
       },
-      "allow_implicit_invocation": null,
+      "allow_implicit_invocation": true,
       "upstream": true
     }
   },

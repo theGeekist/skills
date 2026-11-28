@@ -2,5 +2,5 @@ interface:
   icon_small: "./assets/geekist-interface/geekist-small.svg"
   icon_large: "./assets/geekist-interface/geekist.svg"
   display_name: "Repo Growth Operator"
-  short_description: "Repo Growth Operator: Grow an open-source agent skill repo by au"
+  short_description: "Improve open-source reach and adoption"
   default_prompt: "Use $repo-growth-operator for this task."

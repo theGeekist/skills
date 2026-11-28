@@ -2,5 +2,5 @@ interface:
   icon_small: "./assets/geekist-interface/geekist-small.svg"
   icon_large: "./assets/geekist-interface/geekist.svg"
   display_name: "Positioning Messaging Framework"
-  short_description: "Positioning Messaging Framework: Create sharp B2B positioning an"
+  short_description: "Build evidence-led B2B positioning"
   default_prompt: "Use $positioning-messaging-framework for this task."

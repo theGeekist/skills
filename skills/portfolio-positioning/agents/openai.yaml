@@ -2,5 +2,5 @@ interface:
   icon_small: "./assets/geekist-interface/geekist-small.svg"
   icon_large: "./assets/geekist-interface/geekist.svg"
   display_name: "Portfolio Positioning"
-  short_description: "Portfolio Positioning: Creates positioning, messaging, and brand"
+  short_description: "Position a multi-product portfolio"
   default_prompt: "Use $portfolio-positioning for this task."

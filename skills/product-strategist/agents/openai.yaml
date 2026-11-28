@@ -2,5 +2,5 @@ interface:
   icon_small: "./assets/geekist-interface/geekist-small.svg"
   icon_large: "./assets/geekist-interface/geekist.svg"
   display_name: "Product Strategist"
-  short_description: "Product Strategist: Strategic product leadership toolkit for Hea"
+  short_description: "Develop product strategy and plans"
   default_prompt: "Use $product-strategist for this task."
