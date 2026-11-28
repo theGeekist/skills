@@ -17,7 +17,13 @@
 
 ## Why Geekist Skills
 
-An agent can make a sentence sound polished while quietly changing what a project means. A queue becomes a service, an untested assumption becomes a release claim, and each document introduces a new name for the same feature.
+Agents have become remarkably articulate. They can produce technical documentation that would impress a committee of architects, draft elaborate implementation plans and explain relatively ordinary features with the sort of vocabulary once reserved for doctoral dissertations. Given enough encouragement, an agent could probably produce an entire philosophy of button placement before anyone gets around to implementing the button.
+
+The difficulty becomes apparent when several agents begin working on the same project.
+
+A feature originally described as a *project queue* might become a *tenant-isolated processing capability* in an architecture decision. Another agent subsequently documents its *request serialisation service*, while marketing announces a *distributed workflow engine* that the engineering team has yet to encounter.
+
+Some of these descriptions might even be technically defensible. Unfortunately, the people responsible for implementing the feature must now establish whether everyone is discussing the same thing.
 
 Geekist Skills help teams carry shared meaning through everyday project work. Use them to clarify terms, shape implementation work, explain systems, write product copy and prepare professional outreach with the source facts in view.
 
@@ -30,7 +36,7 @@ Geekist Skills help teams carry shared meaning through everyday project work. Us
 - **Research and write professional outreach.** Find a credible reason to contact someone and write a message that reflects the real relationship.
 - **Choose among distinct methods.** Thirteen Geekist-authored skills sit alongside 27 attributed skills for positioning, storytelling, editing, README craft and developer adoption.
 
-Each skill can be installed on its own. Combine skills when a task benefits from more than one perspective.
+The general writer fills gaps between specific writing purposes; no specialist needs to load it first. The outreach skills are complementary but independently useful: research need not discover a sales opportunity, and an outreach assessment need not produce a message worth sending. There's no requirement to invoke the entire collection whenever an agent needs to write something. Software development has already accumulated enough ceremony without making technical prose another spectator sport.
 
 ## Quick start
 
@@ -67,6 +73,20 @@ npx skills@latest add theGeekist/skills --skill establish-project-language
 [Browse all 40 skills](docs/skills/index.md) to compare their purposes, examples and sources.
 
 ## See the method in context
+
+Consider an ordinary feature. Administrators need to export data to CSV, with each project using a separate queue. The implementation has been authorised, although capacity testing across projects remains outstanding.
+
+An agent might produce the following task:
+
+| Before | After |
+|---|---|
+| Implementation of the administrator-scoped CSV export capability is authorised, with project-isolated request serialisation. Cross-project capacity qualification remains outstanding. | Build CSV export for administrators, with a separate queue for each project. Test capacity across projects before making a capacity claim. |
+
+The original statement sounds important enough to warrant a steering committee, but the revised task is much easier to act upon.
+
+Administrator permissions remain explicit, as does the requirement for queue isolation. The outstanding test has become an actionable item rather than a vaguely ominous qualification attached to the implementation.
+
+*The example uses invented source facts for demonstration.*
 
 The walkthrough follows one feature from its original facts through an implementation task, an architecture decision and developer documentation. It shows how the wording changes for each reader while the underlying meaning stays consistent.
 
