@@ -1,4 +1,6 @@
 interface:
+  icon_small: "./assets/geekist-small.svg"
+  icon_large: "./assets/geekist.svg"
   display_name: "General Writing"
   short_description: "Edit prose clearly while preserving personal voice"
   default_prompt: "Use $general-writing to sharpen this draft while preserving my voice and meaning."

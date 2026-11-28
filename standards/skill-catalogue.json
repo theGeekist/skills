@@ -527,6 +527,8 @@
       ],
       "activation_description": "Plan and produce launch-ready GitHub open-source projects—positioning, README, demo assets, release notes, and bilingual announcement copy—for first launches, major releases, or growth-focused repository makeovers.",
       "interface": {
+        "icon_small": "./assets/geekist-small.svg",
+        "icon_large": "./assets/geekist.svg",
         "display_name": "GitHub Launch Studio",
         "short_description": "Audit, package, and launch GitHub open-source projects"
       },
@@ -794,6 +796,8 @@
       ],
       "activation_description": "Edit drafts into clearer, sharper, more human prose while preserving the writer's meaning and personal voice, or audit prose for specific AI-slop patterns without rewriting it. Use for general writing, line editing, clarity and voice revisions, concision, directness, AI-sounding prose, or requests to detect whether writing reads like AI.",
       "interface": {
+        "icon_small": "./assets/geekist-small.svg",
+        "icon_large": "./assets/geekist.svg",
         "display_name": "General Writing",
         "short_description": "Edit prose clearly while preserving personal voice",
         "default_prompt": "Use $general-writing to sharpen this draft while preserving my voice and meaning."
@@ -822,6 +826,8 @@
       ],
       "activation_description": "Revisit a completed draft with global knowledge of its argument, then revise its title, subtitle, headings, paragraph heads, and paragraph-to-paragraph transitions. Use when display text no longer fits the finished work; when openings feel generic, abrupt, weak, or begin with a rejected alternative before reaching the point; when paragraphs are individually clear but do not build on one another; when a finished abstract needs a stronger first sentence; or when final sentences do not close one paragraph naturally or prepare the relation to the next.",
       "interface": {
+        "icon_small": "./assets/geekist-small.svg",
+        "icon_large": "./assets/geekist.svg",
         "display_name": "Non-Autoregressive Writing Pass",
         "short_description": "Rework titles, paragraph heads, and transitions",
         "default_prompt": "Use $non-autoregressive-writing-pass to revise this finished draft's title, headings, paragraph heads, and transitions."
@@ -850,6 +856,8 @@
       ],
       "activation_description": "Diagnose and revise prose with staccato runs, uniform sentence lengths, repeated openings, mechanical clause structures, repeated contrast formulas, or abstract process framing that hides the actor and delays the real comparison. Use for requests about cadence, rhythm, meter, sentence variety, choppy prose, monotonous prose, or patterns such as \"not X but Y\" and \"treats X as Y, not Z.\"",
       "interface": {
+        "icon_small": "./assets/geekist-small.svg",
+        "icon_large": "./assets/geekist.svg",
         "display_name": "Writing Cadence",
         "short_description": "Shape varied, natural prose rhythm",
         "default_prompt": "Use $writing-cadence to revise this prose for varied, purposeful rhythm."
@@ -878,6 +886,8 @@
       ],
       "activation_description": "Diagnose and repair semantically mismatched word combinations while preserving the intended claim. Use when prose is grammatical but a verb does not literally fit its subject or object, a claim or section is given an action it cannot perform, an abstract relation is hidden by vague personification, an abstract process hides the actor or implies a review that the source does not establish, or replacing one verb still leaves a sloppy relation that needs an intermediate noun.",
       "interface": {
+        "icon_small": "./assets/geekist-small.svg",
+        "icon_large": "./assets/geekist.svg",
         "display_name": "Better Usage",
         "short_description": "Match words to the relations they express",
         "default_prompt": "Use $better-usage to repair semantically mismatched words in this prose."
@@ -906,6 +916,8 @@
       ],
       "activation_description": "Write or revise prose in the voice of a thoughtful, careful, precise academic who cares deeply about reader understanding and writes with personality and purpose. Use for research exposition, scholarly articles, textbook-style explanations, academic summaries, or drafts that should avoid corporate, LinkedIn, Reddit, and GitHub register.",
       "interface": {
+        "icon_small": "./assets/geekist-small.svg",
+        "icon_large": "./assets/geekist.svg",
         "display_name": "Academic Voice",
         "short_description": "Write with precise, reader-minded purpose",
         "default_prompt": "Use $academic-voice to revise this passage in a clear, thoughtful academic voice."
@@ -934,6 +946,8 @@
       ],
       "activation_description": "Remove signs of AI-generated writing from text. Use when editing or reviewing\ntext to make it sound more natural and human-written. Based on Wikipedia's\ncomprehensive \"Signs of AI writing\" guide. Detects and fixes patterns including:\ninflated symbolism, promotional language, superficial -ing analyses, vague\nattributions, em dash overuse, rule of three, AI vocabulary words, passive\nvoice, negative parallelisms, question-word clause wrappers, mechanical\nrelative clauses, readerless corporate shorthand, loose catalogs, list sprawl,\nsemantically mismatched relations, uneven cadence, mechanical paragraph\nendings, weak topic sentences, broken paragraph transitions, register\nmismatch, and filler phrases.",
       "interface": {
+        "icon_small": "./assets/geekist-small.svg",
+        "icon_large": "./assets/geekist.svg",
         "display_name": "Humanizer",
         "short_description": "Remove AI writing patterns from prose",
         "default_prompt": "Use $humanizer to make this text sound natural while preserving its meaning and facts."
@@ -962,6 +976,8 @@
       ],
       "activation_description": "Shapes truthful product narratives, message maps, proof, and CTAs for websites, landing pages, pricing, checkout, onboarding, and app flows, and adapts approved stories to video, thumbnail, and social briefs. Use when a surface must move a qualified audience to a credible next action without losing SEO, accessibility, or truth.",
       "interface": {
+        "icon_small": "./assets/geekist-small.svg",
+        "icon_large": "./assets/geekist.svg",
         "display_name": "Conversion Storytelling",
         "short_description": "Shape truthful product stories and journeys",
         "default_prompt": "Use $conversion-storytelling to clarify missing context, follow my approved strategy or choose a framework only when useful, and adapt the result into a truthful, professional experience for this product and requested surface."
@@ -990,6 +1006,8 @@
       ],
       "activation_description": "Writes and improves GitHub READMEs for projects, skills, organizations, and personal profiles—clear positioning, install and quick start, visual proof, badges, and one next action. Use when creating, auditing, or rewriting a README or profile README.",
       "interface": {
+        "icon_small": "./assets/geekist-small.svg",
+        "icon_large": "./assets/geekist.svg",
         "display_name": "GitHub README and Profile Writing",
         "short_description": "Write credible, discoverable GitHub READMEs",
         "default_prompt": "Use $github-readme-and-profile-writing to inspect this repository or profile and draft an accurate, useful, and discoverable README."
@@ -1228,6 +1246,8 @@
       ],
       "activation_description": "Create, audit, or rewrite product and service landing pages using offer diagnosis, bottleneck-aware structure, concrete block-by-block copy, proof, risk reduction, decision details, and CTA guidance. Use when Codex is asked to write landing-page copy, choose a landing-page structure, diagnose conversion issues, improve hero/value proposition/CTA/proof/FAQ/pricing blocks, or create product, service, SaaS, AI, developer-tool, startup, lead-gen, demo-request, waitlist, consultation, local-service, or high-ticket offer pages.",
       "interface": {
+        "icon_small": "./assets/geekist-small.svg",
+        "icon_large": "./assets/geekist.svg",
         "display_name": "Landing Page Architect",
         "short_description": "Create and audit landing pages",
         "default_prompt": "Use $landing-page-architect to create or audit a landing page structure and copy."

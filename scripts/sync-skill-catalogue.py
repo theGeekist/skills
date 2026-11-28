@@ -67,17 +67,15 @@ def load_catalogue(root):
             raise ValueError(f'{name}: missing bundled source reference')
         if not 25 <= len(skill['interface']['short_description']) <= 64:
             raise ValueError(f'{name}: short description must contain 25–64 characters')
-        has_upstream_interface = skill.get('upstream') and 'icon_small' not in skill['interface']
-        if not has_upstream_interface:
-            skill_root = (root / 'skills' / name).resolve()
-            for field in ('icon_small', 'icon_large'):
-                declared = Path(skill['interface'][field].removeprefix('./'))
-                icon = (skill_root / declared).resolve()
-                if declared.is_absolute() or not icon.is_relative_to(skill_root):
-                    raise ValueError(f'{name}: declared icon must stay inside the skill directory')
-                if not icon.is_file():
-                    raise ValueError(f'{name}: missing declared icon')
-        expected_policy = skill['allow_implicit_invocation'] if has_upstream_interface else None
+        skill_root = (root / 'skills' / name).resolve()
+        for field in ('icon_small', 'icon_large'):
+            declared = Path(skill['interface'][field].removeprefix('./'))
+            icon = (skill_root / declared).resolve()
+            if declared.is_absolute() or not icon.is_relative_to(skill_root):
+                raise ValueError(f'{name}: declared icon must stay inside the skill directory')
+            if not icon.is_file():
+                raise ValueError(f'{name}: missing declared icon')
+        expected_policy = skill['allow_implicit_invocation'] if skill.get('upstream') else None
         if skill['allow_implicit_invocation'] is not expected_policy:
             raise ValueError(f'{name}: unexpected implicit invocation policy')
         if not skill['sources'] or any(not source['url'].startswith('https://') for source in skill['sources']):

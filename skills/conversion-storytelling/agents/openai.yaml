@@ -1,4 +1,6 @@
 interface:
+  icon_small: "./assets/geekist-small.svg"
+  icon_large: "./assets/geekist.svg"
   display_name: "Conversion Storytelling"
   short_description: "Shape truthful product stories and journeys"
   default_prompt: "Use $conversion-storytelling to clarify missing context, follow my approved strategy or choose a framework only when useful, and adapt the result into a truthful, professional experience for this product and requested surface."

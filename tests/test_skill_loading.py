@@ -111,7 +111,7 @@ class SkillLoadingTests(unittest.TestCase):
         description = (ROOT / "skills/write-project-content/SKILL.md").read_text().split("---", 2)[1].lower()
         self.assertIn("general project writing", description)
         self.assertIn("whenever a request involves", description)
-        self.assertIn("adds value", description)
+        self.assertIn("improves the result", description)
         self.assertNotIn("not for ordinary", description)
 
     def test_catalogue_cases_include_positive_mixed_and_no_skill_requests(self):
