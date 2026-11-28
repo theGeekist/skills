@@ -1,6 +1,6 @@
 interface:
-  icon_small: "./assets/geekist-interface/geekist-small.svg"
-  icon_large: "./assets/geekist-interface/geekist.svg"
+  icon_small: "./assets/geekist-small.svg"
+  icon_large: "./assets/geekist.svg"
   display_name: "Copywriting"
   short_description: "Write clear, persuasive product copy"
   default_prompt: "Use $copywriting for this task."

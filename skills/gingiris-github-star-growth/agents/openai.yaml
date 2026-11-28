@@ -1,6 +1,6 @@
 interface:
-  icon_small: "./assets/geekist-interface/geekist-small.svg"
-  icon_large: "./assets/geekist-interface/geekist.svg"
+  icon_small: "./assets/geekist-small.svg"
+  icon_large: "./assets/geekist.svg"
   display_name: "Gingiris Github Star Growth"
   short_description: "Grow GitHub stars and contributors"
   default_prompt: "Use $gingiris-github-star-growth for this task."
