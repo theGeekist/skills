@@ -390,7 +390,7 @@
           "url": "https://diataxis.fr/start-here/"
         }
       ],
-      "activation_description": "Use whenever someone asks to write up, summarise, explain or organise project information. Covers research notes, investigation findings, reports, meeting notes, project briefs, progress updates, postmortems, status summaries, technical context and other substantive prose. Choose a useful structure for the reader and combine with a specialist when that improves the result.",
+      "activation_description": "Use for general project writing: write up, summarise, explain or organise project information. Covers research notes, investigation findings, reports, meeting notes, project briefs, progress updates, postmortems, status summaries, technical context and other substantive prose. Choose a useful structure for the reader and combine with a specialist when that improves the result.",
       "interface": {
         "icon_small": "./assets/geekist-small.svg",
         "icon_large": "./assets/geekist.svg",
