@@ -17,12 +17,16 @@ ROOT = Path(__file__).resolve().parents[1]
 
 class PackagingTests(unittest.TestCase):
     def test_bundled_references_work_without_repository_siblings(self):
+        profiles = json.loads((ROOT / "standards/skill-profiles.json").read_text())["skills"]
         for skill in (ROOT / "skills").iterdir():
+            if profiles[skill.name].get("upstream"):
+                continue  # Upstream packages retain their own source links and examples.
             with self.subTest(skill=skill.name), tempfile.TemporaryDirectory() as temporary:
                 isolated = Path(temporary) / skill.name
                 shutil.copytree(skill, isolated)
                 for document in isolated.rglob("*.md"):
-                    for target in re.findall(r"\]\(([^)]+)\)", document.read_text()):
+                    source = re.sub(r"(?ms)^\x60\x60\x60.*?^\x60\x60\x60\s*", "", document.read_text())
+                    for target in re.findall(r"\]\(([^)]+)\)", source):
                         if re.match(r"[a-z]+:", target) or target.startswith("#"):
                             continue
                         path = (document.parent / target.split("#", 1)[0]).resolve()

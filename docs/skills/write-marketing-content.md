@@ -7,7 +7,7 @@ Communicate product value through credible claims and an appropriate editorial v
 
 ## When to use it
 
-Use for announcements, landing-page copy, positioning and customer explanations.
+Use for audience-facing product communication, including product descriptions, README introductions, landing pages, positioning, portfolio narratives, launches, newsletters and social posts. Interface content remains a separate specialist when needed.
 
 Example request:
 

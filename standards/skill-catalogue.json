@@ -211,7 +211,7 @@
     "review-project-language": {
       "title": "Review clarity and consistent meaning",
       "purpose": "Improve writing while checking its consistency with established terminology and source material.",
-      "when_to_use": "Use to edit, rewrite, polish or review existing prose while keeping meaning, voice and technical detail.",
+      "when_to_use": "Use when existing prose needs editing, rewriting, polishing or review, including drafts, READMEs, reports, messages and research findings. It can also provide a finishing pass after another writing skill.",
       "example_request": "Review this task, decision and announcement for consistent meanings and explain every consequential edit.",
       "expected_result": "Located findings or an authorised revision that preserves meanings, constraints and source claims.",
       "example": {
@@ -248,7 +248,7 @@
     "write-implementation-tasks": {
       "title": "Write actionable implementation tasks",
       "purpose": "Express implementation work through clear objectives and acceptance criteria, with the relevant constraints preserved.",
-      "when_to_use": "Use for engineering tickets, actionable follow-ups, implementation plans, acceptance criteria and worker handoffs.",
+      "when_to_use": "Use when outcomes, behaviour, validation, dependencies or ownership need to be expressed clearly in a task, acceptance criteria, handoff or plan.",
       "example_request": "Write a task for members to export their own bookings; keep the access restriction and include failure cases.",
       "expected_result": "A task with observable behaviour, acceptance criteria, validation and precise dependencies.",
       "example": {
@@ -306,7 +306,7 @@
     "write-marketing-content": {
       "title": "Explain supported product value",
       "purpose": "Communicate product value through credible claims and an appropriate editorial voice.",
-      "when_to_use": "Use for announcements, landing-page copy, positioning and customer explanations.",
+      "when_to_use": "Use for audience-facing product communication, including product descriptions, README introductions, landing pages, positioning, portfolio narratives, launches, newsletters and social posts. Interface content remains a separate specialist when needed.",
       "example_request": "Announce booking exports for members; preserve that background scheduling has not shipped.",
       "expected_result": "Customer-facing value grounded in actual behaviour, with stronger claims separated for validation.",
       "example": {
@@ -339,7 +339,7 @@
     "write-project-content": {
       "title": "Write General Project Content",
       "purpose": "Write and revise general project prose without imposing a document template.",
-      "when_to_use": "Use for reports, research findings, project summaries, progress updates and other substantive writing when a narrower specialist does not fit. Also choose workflows on explicit request.",
+      "when_to_use": "Use whenever a request needs substantive project prose, including research notes, reports, findings, summaries, progress updates and explanations. Add a specialist when it improves the result.",
       "example_request": "Write up these investigation findings for the team. Keep observations, conclusions and next steps distinct.",
       "expected_result": "A source-faithful, readable report organised for its reader, without unnecessary template sections.",
       "example": {
@@ -359,7 +359,7 @@
           "url": "https://diataxis.fr/start-here/"
         }
       ],
-      "activation_description": "Write, revise, organise or explain substantive project writing, including research notes, investigation findings, reports, meeting summaries, progress updates, README content and other useful prose. Use whenever a request involves shaping written material; combine with a specialist when that adds value.",
+      "activation_description": "Write, revise, organise or explain general project writing, including research notes, investigation findings, reports, meeting summaries, progress updates, README content and other useful prose. Use whenever a request involves shaping written material; add a more specific skill when it improves the result.",
       "interface": {
         "icon_small": "./assets/geekist-small.svg",
         "icon_large": "./assets/geekist.svg",
@@ -372,7 +372,7 @@
     "write-technical-documentation": {
       "title": "Write navigable technical documentation",
       "purpose": "Explain systems according to reader needs while retaining their technical contracts.",
-      "when_to_use": "Use for technical discovery reports, spike findings, system explanations, tutorials, how-to guides, references and developer guides.",
+      "when_to_use": "Use when explaining how a system works or presenting technical findings, from README material and research write-ups to tutorials, API references and developer guides. Use the ADR skill when the deliverable records a decision.",
       "example_request": "Explain the export flow so a marketing reader can find its purpose and an engineer can find the access contract.",
       "expected_result": "A purpose-led document with explained terms, visible constraints and routes to exact technical detail.",
       "example": {

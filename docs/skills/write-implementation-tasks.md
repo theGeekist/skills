@@ -7,7 +7,7 @@ Express implementation work through clear objectives and acceptance criteria, wi
 
 ## When to use it
 
-Use for engineering tickets, actionable follow-ups, implementation plans, acceptance criteria and worker handoffs.
+Use when outcomes, behaviour, validation, dependencies or ownership need to be expressed clearly in a task, acceptance criteria, handoff or plan.
 
 Example request:
 

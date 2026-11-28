@@ -7,7 +7,7 @@ Improve writing while checking its consistency with established terminology and 
 
 ## When to use it
 
-Use to edit, rewrite, polish or review existing prose while keeping meaning, voice and technical detail.
+Use when existing prose needs editing, rewriting, polishing or review, including drafts, READMEs, reports, messages and research findings. It can also provide a finishing pass after another writing skill.
 
 Example request:
 

@@ -7,7 +7,7 @@ Explain systems according to reader needs while retaining their technical contra
 
 ## When to use it
 
-Use for technical discovery reports, spike findings, system explanations, tutorials, how-to guides, references and developer guides.
+Use when explaining how a system works or presenting technical findings, from README material and research write-ups to tutorials, API references and developer guides. Use the ADR skill when the deliverable records a decision.
 
 Example request:
 

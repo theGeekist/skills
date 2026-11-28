@@ -7,7 +7,7 @@ Write and revise general project prose without imposing a document template.
 
 ## When to use it
 
-Use for reports, research findings, project summaries, progress updates and other substantive writing when a narrower specialist does not fit. Also choose workflows on explicit request.
+Use whenever a request needs substantive project prose, including research notes, reports, findings, summaries, progress updates and explanations. Add a specialist when it improves the result.
 
 Example request:
 

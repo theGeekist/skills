@@ -48,6 +48,6 @@ All 14 selected source repositories were checked for an MIT licence before their
 
 ## Limitations and next evaluation
 
-This is not a quality benchmark. The skills have not been tested against PulseGraph or another Geekist repository, and their generated README or product narratives have not been compared with current Geekist writing. Several packages contain scripts or external workflow instructions. Those files were copied but not executed.
+This is not a quality benchmark. The skills have not been tested against PulseGraph or another Geekist repository, and their generated README or product narratives have not been compared with current Geekist writing. Several packages contain scripts or external workflow instructions. Those files were copied but not executed. Source-relative links, sibling-skill references and illustrative paths are preserved rather than rewritten; these can point outside a single isolated skill folder, and one open-source-growth example references an image path that is absent from its upstream commit.
 
 A useful comparison would give a few relevant skills the same verified product facts, repository context and target reader. Review the outputs for positioning accuracy, intrigue, specificity, visual demonstration and technical trust. Keep all skills individually available regardless of the results.
