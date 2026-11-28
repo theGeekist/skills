@@ -31,27 +31,7 @@ jobs:
           repository: agentskills/agentskills
           ref: 69ef37e9424c0a7ea9dd2293b559e43ec8176379
           path: .validation/agentskills
-      - name: Validate Geekist skills and report upstream compatibility
+      - name: Validate skills with recorded upstream compatibility notices
         run: |
           python3 -m pip install ./.validation/agentskills/skills-ref
-          python3 - <<'PY'
-          import json
-          from pathlib import Path
-          import subprocess
-          import sys
-
-          catalogue = json.loads(Path("standards/skill-catalogue.json").read_text())
-          upstream = {name for name, skill in catalogue["skills"].items() if skill.get("upstream")}
-          failures = []
-          for skill_path in sorted(Path("skills").glob("*/SKILL.md")):
-              name = skill_path.parent.name
-              result = subprocess.run(["skills-ref", "validate", str(skill_path.parent)], check=False)
-              if result.returncode:
-                  if name in upstream:
-                      print(f"UPSTREAM COMPATIBILITY NOTICE: {name} is preserved as licensed source.")
-                  else:
-                      failures.append(name)
-          if failures:
-              print("Invalid Geekist-authored skills: " + ", ".join(failures), file=sys.stderr)
-              sys.exit(1)
-          PY
+          python3 scripts/check-agent-skills.py

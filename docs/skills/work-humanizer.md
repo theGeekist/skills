@@ -26,7 +26,7 @@ Expected result: An output shaped by the complete upstream instructions, source 
 
 This illustrative example starts from the source facts below.
 
-**Source facts and constraints:** Illustrative example only; this is not a benchmark of the upstream skill.
+**Source facts and constraints:** Illustrative example; this entry records source and package review.
 
 **Before**
 

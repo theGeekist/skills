@@ -7,7 +7,7 @@ Revise a completed draft's title, headings and transitions with the whole piece 
 
 ## When to use it
 
-Revisit a completed draft with global knowledge of its argument, then revise its title, subtitle, headings, paragraph heads, and paragraph-to-paragraph transitions. Use when display text no longer fits the finished work; when openings feel generic, abrupt, weak, or begin with a rejected alternative before reaching the point; when paragraphs are individually clear but do not build on one another; when a finished abstract needs a stronger first sentence; or when final sentences do not close one paragraph naturally or prepare the relation to the next.
+Use when display text needs to match a finished argument; when an opening feels generic, abrupt or leads with an alternative before the point; when paragraphs read clearly on their own but fail to build; when a finished abstract needs a stronger first sentence; or when final sentences need to close one paragraph and prepare the next.
 
 Example request:
 
@@ -19,7 +19,7 @@ Expected result: An output shaped by the complete upstream instructions, source 
 
 This illustrative example starts from the source facts below.
 
-**Source facts and constraints:** Illustrative example only; this is not a benchmark of the upstream skill.
+**Source facts and constraints:** Illustrative example; this entry records source and package review.
 
 **Before**
 

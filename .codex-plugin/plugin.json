@@ -73,7 +73,7 @@
   "interface": {
     "displayName": "Geekist Skills",
     "shortDescription": "Project writing, architecture and product skills",
-    "longDescription": "Geekist's 13 authored skills help with project language, architecture, tasks, reports, technical docs, UX copy, product communication and professional outreach. 26 independently usable upstream skills add further options for storytelling, README craft, editing and developer adoption. Each skill can be chosen for the task at hand; no sequence is required.",
+    "longDescription": "Geekist's 13 authored skills help with project language, architecture, tasks, reports, technical docs, UX copy, product communication and professional outreach. 26 independently usable upstream skills add further options for storytelling, README craft, editing and developer adoption. Choose each skill for the task at hand; combine skills when the work benefits from more than one perspective.",
     "developerName": "Geekist",
     "category": "Developer Tools",
     "capabilities": [

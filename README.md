@@ -1,258 +1,114 @@
 <p align="center">
-  <a href="https://geekist.co"><img src="assets/branding/readme-banner.svg" width="900" alt="Geekist"></a>
+  <a href="https://geekist.co"><img src="assets/branding/readme-banner.svg" width="720" alt="Geekist Skills: clear agent prose, consistent project meaning"></a>
 </p>
 
 # Geekist Skills
 
-**13 Geekist-authored skills for everyday project work, plus 26 attributed skills for product narrative, writing and developer adoption.**
+**Keep project meaning clear as agents turn decisions into tasks, documentation, product experiences and launch copy.**
 
-[![Language checks](https://github.com/theGeekist/skills/actions/workflows/language-checks.yml/badge.svg)](https://github.com/theGeekist/skills/actions/workflows/language-checks.yml)
-[![Release](https://img.shields.io/github/v/release/theGeekist/skills)](https://github.com/theGeekist/skills/releases)
-[![Skills: 39](https://img.shields.io/badge/skills-39-ffde59)](#find-the-right-skill)
-[![Licence: MIT](https://img.shields.io/badge/Licence-MIT-blue.svg)](LICENSE)
+[![Language checks][checks-badge]][checks-url]
+[![Latest release][release-badge]][release-url]
+[![39 skills][skills-badge]][catalogue-url]
+[![MIT licence][license-badge]][license-url]
 
-**[Install](#installation) · [Choose a skill](#find-the-right-skill) · [Worked example](docs/language-system/skill-walkthrough.md) · [Research](#we-looked-at-what-already-existed) · [Competitor comparison](docs/language-system/competing-writing-skills.md)**
+[Install](#quick-start) · [Choose a skill](#choose-by-the-work) · [See the walkthrough](docs/language-system/skill-walkthrough.md) · [Explore the research](#research-and-design)
 
-Agents have become remarkably articulate. They can produce technical documentation that would impress a committee of architects, draft elaborate implementation plans and explain relatively ordinary features with the sort of vocabulary once reserved for doctoral dissertations. Given enough encouragement, an agent could probably produce an entire philosophy of button placement before anyone gets around to implementing the button.
+## Why Geekist Skills
 
-The difficulty becomes apparent when several agents begin working on the same project.
+An agent can make a sentence sound polished while quietly changing what a project means. A queue becomes a service, an untested assumption becomes a release claim, and each document introduces a new name for the same feature.
 
-A feature originally described as a *project queue* might become a *tenant-isolated processing capability* in an architecture decision. Another agent subsequently documents its *request serialisation service*, while marketing announces a *distributed workflow engine* that the engineering team has yet to encounter.
+Geekist Skills help teams carry shared meaning through everyday project work. Use them to clarify terms, shape implementation work, explain systems, write product copy and prepare professional outreach with the source facts in view.
 
-Some of these descriptions might even be technically defensible. Unfortunately, the people responsible for implementing the feature must now establish whether everyone is discussing the same thing.
+## What you can do
 
-Similar problems appear throughout project documentation. Implementation tasks acquire elaborate abstractions that obscure fairly straightforward requirements. Architecture decisions explain the technology without adequately explaining the decision. Meanwhile, an outstanding capacity test can inspire an agent to declare the entire undertaking inadequately validated, despite the work being authorised and otherwise ready to proceed.
+- **Keep project language aligned.** Define domain terms and reuse them across code, decisions and documentation.
+- **Turn decisions into useful work.** Write implementation tasks, acceptance criteria and architecture records with clear consequences.
+- **Explain systems for their readers.** Create technical documentation, reports, interface messages and product stories from project facts.
+- **Prepare product and launch content.** Clarify positioning, improve READMEs and shape launch materials for developers and customers.
+- **Research and write professional outreach.** Find a credible reason to contact someone and write a message that reflects the real relationship.
+- **Choose among distinct methods.** Thirteen Geekist-authored skills sit alongside 26 attributed skills for positioning, storytelling, editing, README craft and developer adoption.
 
-**Geekist Skills** grew out of these frustrations. We wanted agents to establish a common language for the work they were doing, with writing practices that remained useful as that work moved between different documents and audiences.
+Each skill can be installed on its own. Combine skills when a task benefits from more than one perspective.
 
-Four principles guide the collection:
+## Quick start
 
-| Principle | What it means |
-|---|---|
-| **Consistency** | Establish shared meanings and preserve them throughout a project. |
-| **Accessibility** | Explain concepts at a level appropriate to the reader without sacrificing technical accuracy. |
-| **Readability** | Organise information around its purpose and express it in natural language. |
-| **Repeatability** | Give contributing agents dependable writing practices they can apply across the project. |
-
-These principles matter because project documentation serves people with different responsibilities. An engineer may need a precise contract, while a product manager needs to understand what the capability makes possible. Marketing should be able to explain its value without accidentally inventing new functionality.
-
-The language should adapt to the reader while the underlying meaning remains dependable.
-
-## From impressive prose to useful work
-
-Consider an ordinary feature. Administrators need to export data to CSV, with each project using a separate queue. The implementation has been authorised, although capacity testing across projects remains outstanding.
-
-An agent might produce the following task:
-
-| Before | After |
-|---|---|
-| Implementation of the administrator-scoped CSV export capability is authorised, with project-isolated request serialisation. Cross-project capacity qualification remains outstanding. | Build CSV export for administrators, with a separate queue for each project. Test capacity across projects before making a capacity claim. |
-
-The original statement sounds important enough to warrant a steering committee, but the revised task is much easier to act upon.
-
-Administrator permissions remain explicit, as does the requirement for queue isolation. The outstanding test has become an actionable item rather than a vaguely ominous qualification attached to the implementation.
-
-This is a modest example of the approach behind Geekist. Improving a document requires understanding its source material and the reader's purpose, then making editorial decisions that preserve the requirements.
-
-*The example uses invented source facts for demonstration.*
-
-The **[worked example](docs/language-system/skill-walkthrough.md)** follows this feature through the project lifecycle. It shows how the implementation task informs an architecture decision and how that decision can subsequently be explained in developer documentation. The customer-facing material then presents the same capability in language appropriate to its audience.
-
-The documents serve different purposes, but they remain accountable to the same source facts.
-
-<a id="install"></a>
-
-## Installation
-
-Install the current collection:
-
-`npx skills add theGeekist/skills`
-
-Choose the skills and agent environments appropriate to your work. Each skill provides a short baseline with more detailed references available when the task warrants them.
-
-The general writer fills gaps between specific writing purposes; no specialist needs to load it first. The outreach skills are complementary but independently useful: research need not discover a sales opportunity, and an outreach assessment need not produce a message worth sending. There's no requirement to invoke the entire collection whenever an agent needs to write something. Software development has already accumulated enough ceremony without making technical prose another spectator sport.
-
-For a reproducible installation of the v1.10.0 release:
-
-`npx skills add https://github.com/theGeekist/skills/tree/v1.10.0`
-
-This documentation accompanies v1.10.0. The versioned command becomes available when that release is published; the unversioned command installs the current default branch.
-
-For **ChatGPT's Personal → Add plugin upload**, download the dedicated [Geekist ChatGPT plugin ZIP](https://github.com/theGeekist/skills/releases/download/v1.10.0/geekist-skills-chatgpt-v1.10.0.zip). The standard GitHub source ZIP is not the ChatGPT upload package. The dedicated archive contains the plugin manifest, Geekist MIT licence notice, all 39 skills and their references, plus the preserved upstream licence notices. See **[installation and client support](docs/language-system/integration.md)** for the available installation routes and supported client environments, including the separate ChatGPT plugin distribution process.
-
-<a id="choose-a-skill"></a>
-<a id="choose-a-language-skill"></a>
-<a id="included-architecture-skills"></a>
-
-## Pick a skill by the job
-
-You can ask for these directly in ordinary language. The collection is designed to meet requests where they arise; you do not need to name a skill or start a workflow.
-
-### Project language
-
-Domain terminology, naming, definitions, project glossaries, shared vocabulary and useful next steps for evidence gaps.
-
-| Skill | Use it when… |
-|---|---|
-| [Define project terms and shared vocabulary](../../docs/skills/establish-project-language.md) | Clarify domain concepts, definitions, naming and the meanings used across code and project content. |
-| [Edit, polish and improve project writing](../../docs/skills/review-project-language.md) | Improve clarity, flow, voice and consistency in drafts, READMEs, reports, tasks and messages. |
-| [Turn unknowns into actionable next steps](../../docs/skills/advance-with-uncertainty.md) | Make open questions, missing evidence, pending checks and real blockers clear enough to act on. |
-
-### Project writing
-
-Implementation tasks, tickets, acceptance criteria, ADRs, technical documentation, system explanations and developer onboarding.
-
-| Skill | Use it when… |
-|---|---|
-| [Turn requirements into clear implementation tasks](../../docs/skills/write-implementation-tasks.md) | Translate goals and decisions into work with observable outcomes, acceptance criteria and useful handoffs. |
-| [Write architecture decision records and rationale](../../docs/skills/record-architecture-decisions.md) | Explain why a technical option was chosen, what alternatives were considered and what follows from the decision. |
-| [Explain systems and write developer docs](../../docs/skills/write-technical-documentation.md) | Help technical and non-technical readers understand how a system works and how to use it. |
-
-### Product content
-
-Product positioning, README introductions, launch copy, UX writing, interface microcopy, labels and product-state messages.
-
-| Skill | Use it when… |
-|---|---|
-| [Write product positioning and launch copy](../../docs/skills/write-marketing-content.md) | Explain why a product matters to its audience through clear positioning, supported claims and memorable copy. |
-| [Write UI copy and UX microcopy](../../docs/skills/write-interface-content.md) | Write labels, messages and product interface text that reflect real behaviour and help people act. |
-
-### Architecture
-
-Backend module placement, frontend feature ownership, public APIs, orchestration, scenes and shared UI boundaries.
-
-| Skill | Use it when… |
-|---|---|
-| [Review backend capabilities and boundaries](../../docs/skills/backend-slice-architecture.md) | Organise backend code around owned capabilities, clear public APIs and explicit orchestration. |
-| [Review frontend features and scene boundaries](../../docs/skills/frontend-slice-architecture.md) | Organise frontend code around feature ownership, public APIs and thin scene-level composition. |
-
-### General writing
-
-Project reports, research findings, meeting notes, progress updates, briefs, postmortems and clear explanations.
-
-| Skill | Use it when… |
-|---|---|
-| [Write project reports, summaries and updates](../../docs/skills/write-project-content.md) | Turn project information into useful prose without forcing it into a document template. |
-
-### Professional outreach
-
-Company and prospect research, commercial opportunities, founder outreach, professional emails, LinkedIn messages and follow-ups.
-
-| Skill | Use it when… |
-|---|---|
-| [Research companies and commercial opportunities](../../docs/skills/research-outreach-opportunities.md) | Find credible reasons to contact, collaborate with or offer useful work to a person or company. |
-| [Write individual professional outreach](../../docs/skills/write-outreach.md) | Compose one-to-one professional messages that sound like their author and reflect the real relationship. |
-
-The [full directory](docs/skills/index.md) includes all 39 individual skills. The 26 upstream additions remain separate and retain their original instructions and attribution.
-
-<a id="research-and-inspiration"></a>
-<a id="alternatives-and-differences"></a>
-
-## We looked at what already existed
-
-The problems that motivated Geekist have been studied for considerably longer than agents have been producing documentation.
-
-Domain-driven design introduced many engineers to the importance of shared terminology. Technical-writing frameworks have explored how documentation should be organised around the reader's purpose. Editorial guidance has spent decades encouraging authors to communicate clearly, often with the heroic ambition of convincing technical specialists to use ordinary verbs.
-
-More recently, agent skills have brought these practices into automated writing workflows.
-
-We examined existing implementations to understand the approaches they offered. Some were especially useful for preserving meaning during revision, while others addressed document structure or the recognisable habits of generated prose.
-
-The research informed changes to our own skills, with the resulting practices incorporated into their instructions and supporting material.
-
-| Existing skill | Practices incorporated |
-|---|---|
-| **Humanizer** | Check revisions for invented claims and changed meaning. Preserve deliberate authorial voice where appropriate. |
-| **Plain Writing** | Prefer concrete explanations over needless abstraction. |
-| **Hamel's Plain Writing variant** | Make consequential edits inspectable by showing the original and explaining what changed. |
-| **Plain Language Editor** | Examine a document's purpose and structure before concentrating on individual sentences. |
-| **Writing Clearly and Concisely** | Keep instructions economical while providing deeper references when needed. |
-
-Our original Geekist skills adapt selected practices, with locally authored examples and clear attribution. This release also includes complete upstream skills as separate, independently installable packages. Their original instructions remain intact, and each package carries its own attribution and MIT notice.
-
-This distinction is important because writing serves different purposes. A reflective essay may benefit from an unusual rhythm, while an architecture decision depends upon exact technical qualifications. Marketing presents another editorial problem altogether.
-
-An approach that flattens every document into the same voice may improve superficial consistency at the expense of the writing itself.
-
-**[Competitor comparison](docs/language-system/competing-writing-skills.md) · [Incorporated practices](docs/language-system/competitive-adoption.md) · [Implementation map](docs/language-system/implementation-status.json)**
-
-## Frameworks behind the collection
-
-Our research also explored established frameworks whose principles could support consistent project communication.
-
-| Foundation | Contribution |
-|---|---|
-| **DDD and SKOS** | Shared concepts and context-specific meanings, with distinctions between concepts and their labels. |
-| **Good Docs terminology guidance** | Practical patterns for defining project language. |
-| **Diátaxis and Good Docs** | Documentation organised around what readers need to accomplish. |
-| **MADR** | Recording decisions with their context and consequences. |
-| **arc42** | Useful architecture views and supporting technical explanations. |
-| **Microsoft, Google and plain-language guidance** | Reader-focused expression and concrete explanations. |
-| **Atlassian content guidance** | Interface writing informed by the user's situation. |
-
-Each framework addresses a particular concern. DDD provides a useful foundation for establishing meaning within a bounded context, while Diátaxis helps authors recognise that a tutorial serves a different purpose from a reference document.
-
-MADR offers a disciplined way to explain architecture decisions, particularly when future maintainers need to understand why an alternative was rejected.
-
-Geekist brings these ideas into workflows that agents can apply during ordinary project work. The research remains available for anyone interested in the original approaches and our adaptations.
-
-**[Original research](docs/language-system/research-baseline.md) · [Framework adaptations](docs/language-system/framework-evaluation.md) · [Source references](standards/framework-evidence.md)**
-
-## Keeping a project consistent
-
-One of the limitations of treating writing as an isolated editing problem is that a document can become clearer while the project becomes more confusing.
-
-Imagine an engineering report stating that the required checks have been completed. A subsequent release announcement describes the feature as approved, although the report never established that approval had been granted.
-
-The distinction may seem minor to someone concentrating exclusively on sentence quality. It becomes much more significant when the announcement is used to justify a release.
-
-Geekist approaches writing through the meaning established by its sources. The terminology belongs to the project, and each document has a responsibility to represent that terminology accurately. Editorial changes may improve how information is presented, but they must respect the authority of the material being revised.
-
-The approach also applies to uncertainty. When an assumption requires testing, the documentation should explain what remains to be established. Where the work can proceed within known constraints, an agent should be able to express that position without turning every pending measurement into a constitutional crisis.
-
-This becomes especially useful across long-running projects, where new contributors inherit decisions made months earlier. A shared language reduces the effort required to understand what has already been established and helps prevent subsequent documents from quietly redefining it.
-
-Each skill carries the common writing baseline and refers to more specialised guidance when needed. That allows the collection to remain coherent without burdening every small writing task with unrelated instructions.
-
-## Architecture rules have an owner
-
-The backend and frontend playbooks express **[@pipewrk](https://github.com/pipewrk)'s architecture rules**.
-
-Those rules describe particular engineering choices. Geekist's editorial guidance helps explain them more clearly while preserving the underlying decisions.
-
-The distinction deserves explicit attribution. Readers should understand that the architecture rules originate with @pipewrk, while the writing practices provide a consistent way to communicate them.
-
-**[Backend rules](skills/backend-slice-architecture/SKILL.md) · [Frontend rules](skills/frontend-slice-architecture/SKILL.md) · [Architecture source and preservation](docs/language-system/architecture-rule-preservation.md)**
-
-## Inspect the work
-
-We have made the research available alongside the implementation so readers can examine the sources and understand how particular practices found their way into the collection.
-
-| Area | References |
-|---|---|
-| How the skills work together | **[Walkthrough](docs/language-system/skill-walkthrough.md) · [System design](docs/language-system/architecture.md)** |
-| Research foundations | **[Research](#we-looked-at-what-already-existed) · [Source map](standards/framework-evidence.md) · [Competitor comparison](docs/language-system/competing-writing-skills.md)** |
-| Validation evidence | **[Validation results](docs/language-system/validation-results.md) · [Recorded trials](evaluations/README.md) · [Context measurements](docs/language-system/context-budget.json)** |
-| Maintenance and distribution | **[Contributing](CONTRIBUTING.md) · [Publishing](PUBLISHING.md) · [Client integration](docs/language-system/integration.md)** |
-
-The recorded trials and package checks are presented with their actual scope. They provide useful evidence about implementation behaviour, although their results should not be interpreted as controlled studies of human comprehension.
-
-That distinction is particularly relevant for a collection whose purpose includes preserving source integrity. Our own documentation should meet the same standards we expect agents to apply elsewhere.
-
-<details>
-<summary><strong>Use a canonical local checkout</strong></summary>
+Install the collection in an Agent Skills-compatible environment:
 
 ```sh
-git clone https://github.com/theGeekist/skills.git
-cd skills
-./scripts/link-local.sh --client all --dry-run
-./scripts/link-local.sh --client all
+npx skills@latest add theGeekist/skills
 ```
 
-Review conflicts before using `--adopt`; the linker preserves existing destinations. Update a clean checkout with `./scripts/update-local.sh --dry-run`, then `./scripts/update-local.sh`. Client paths and limitations are documented in [integration](docs/language-system/integration.md).
+Then ask for the work in ordinary language. For example:
 
-Canonical references live in `standards/`; independently installable copies live in `skills/`. Presentation data in `standards/skill-catalogue.json` generates metadata and `docs/skills/` overviews. See [contributing](CONTRIBUTING.md) for generation and drift checks.
+```text
+Clarify what “eligible” means in this project. Check the code, tests and product copy, then summarize the definitions and any conflicts.
+```
 
-</details>
+To install a single skill, add `--skill` and its name:
 
-Published by **[Geekist](https://geekist.co)** · Architecture by **[@pipewrk](https://github.com/pipewrk)** · **[MIT licence](LICENSE)**
+```sh
+npx skills@latest add theGeekist/skills --skill establish-project-language
+```
+
+## Choose by the work
+
+| Work you have | Start with |
+|---|---|
+| A term has several meanings across code and documents | [Establish Project Language](docs/skills/establish-project-language.md) |
+| A decision needs to become a ticket, plan or handoff | [Write Implementation Tasks](docs/skills/write-implementation-tasks.md) |
+| A system needs an explanation for developers or customers | [Write Technical Documentation](docs/skills/write-technical-documentation.md) |
+| Product claims and launch messages need a clear story | [Write Marketing Content](docs/skills/write-marketing-content.md) |
+| A README needs stronger structure and visual guidance | [Readme Craft](docs/skills/readme-craft.md) |
+| A professional contact needs relevant research and a personal message | [Research Opportunities](docs/skills/research-outreach-opportunities.md) and [Write Outreach](docs/skills/write-outreach.md) |
+
+[Browse all 39 skills](docs/skills/index.md) to compare their purposes, examples and sources.
+
+## See the method in context
+
+The walkthrough follows one feature from its original facts through an implementation task, an architecture decision and developer documentation. It shows how the wording changes for each reader while the underlying meaning stays consistent.
+
+→ [Read the project walkthrough](docs/language-system/skill-walkthrough.md)
+
+## Installation options
+
+The `skills` CLI installs the full collection or an individual skill into a supported agent environment. After v1.10.0 is published, install that release with:
+
+```sh
+npx skills@latest add https://github.com/theGeekist/skills/tree/v1.10.0
+```
+
+The v1.10.0 release will include a dedicated ChatGPT plugin archive. [Client support and installation routes](docs/language-system/integration.md) describe the separate plugin distribution and local checkout options.
+
+## Research and design
+
+The Geekist-authored skills follow four principles:
+
+| Principle | How it helps |
+|---|---|
+| **Consistency** | Keep shared meanings stable across project work. |
+| **Accessibility** | Explain ideas at the level the reader needs while preserving technical accuracy. |
+| **Readability** | Organise content around its purpose and use natural language. |
+| **Repeatability** | Give contributors practices they can apply across tasks and documents. |
+
+Read the [research foundations](docs/language-system/research-baseline.md), [framework adaptations](docs/language-system/framework-evaluation.md), [source map](standards/framework-evidence.md) and [comparison with other writing skills](docs/language-system/competing-writing-skills.md).
+
+### Source and architecture
+
+The 26 imported skills keep their upstream instructions, commit-pinned attribution and original MIT licence notices. The [external skills review](docs/language-system/external-skills-review.md) records package compatibility, runtime requirements and the source evaluation.
+
+The backend and frontend playbooks express [@pipewrk's architecture rules](docs/language-system/architecture-rule-preservation.md). Geekist's writing guidance helps explain those decisions while their architecture remains attributed to its authors.
+
+## Contribute and inspect
+
+Canonical writing references live in `standards/`; generated skill overviews live in `docs/skills/`. [Contributing](CONTRIBUTING.md) explains how to update references, regenerate outputs and run local checks. [Validation results](docs/language-system/validation-results.md) and [recorded evaluations](evaluations/README.md) describe the scope of available evidence.
+
+Published by [Geekist](https://geekist.co) · Architecture by [@pipewrk](https://github.com/pipewrk) · [MIT licence](LICENSE)
+
+[checks-badge]: https://github.com/theGeekist/skills/actions/workflows/language-checks.yml/badge.svg
+[checks-url]: https://github.com/theGeekist/skills/actions/workflows/language-checks.yml
+[release-badge]: https://img.shields.io/github/v/release/theGeekist/skills
+[release-url]: https://github.com/theGeekist/skills/releases
+[skills-badge]: https://img.shields.io/badge/skills-39-ffde59
+[catalogue-url]: docs/skills/index.md
+[license-badge]: https://img.shields.io/badge/licence-MIT-blue.svg
+[license-url]: LICENSE

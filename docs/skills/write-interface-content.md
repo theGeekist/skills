@@ -11,7 +11,7 @@ Use for UX writing and in-product language: UI labels, buttons, forms, errors, e
 
 Example request:
 
-> Write the interrupted-export message using the actual state contract; do not imply the download completed.
+> Write the interrupted-export message from the state contract and explain that the download is still in progress.
 
 Expected result: State-accurate interface wording, consistent action names and useful recovery.
 

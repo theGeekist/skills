@@ -6,7 +6,7 @@
     "description": "Thirty-nine independently usable agent skills for project writing, product narrative, developer adoption, commercial research and consistent project meaning.",
     "display_name": "Geekist Skills",
     "short_description": "Project writing, architecture and product skills",
-    "long_description": "Geekist's 13 authored skills help with project language, architecture, tasks, reports, technical docs, UX copy, product communication and professional outreach. 26 independently usable upstream skills add further options for storytelling, README craft, editing and developer adoption. Each skill can be chosen for the task at hand; no sequence is required.",
+    "long_description": "Geekist's 13 authored skills help with project language, architecture, tasks, reports, technical docs, UX copy, product communication and professional outreach. 26 independently usable upstream skills add further options for storytelling, README craft, editing and developer adoption. Choose each skill for the task at hand; combine skills when the work benefits from more than one perspective.",
     "keywords": [
       "agent-skills",
       "ai-writing",
@@ -85,7 +85,7 @@
       "example_request": "Turn this untested adapter decision into bounded next actions and clear completion evidence.",
       "expected_result": "A precise gap, the next check, the dependent step and the work that can continue.",
       "example": {
-        "before": "Compatibility is unproven. Stop implementation.",
+        "before": "Compatibility has not been checked, so the implementation is paused.",
         "after": "Implement the authorised adapter. Check one local client event before claiming compatibility; the check is still pending.",
         "source_facts": "The adapter implementation is authorised. Compatibility has not been checked. One local client-event check is required before claiming compatibility."
       },
@@ -309,7 +309,7 @@
       "title": "Write UI copy and UX microcopy",
       "purpose": "Write labels, messages and product interface text that reflect real behaviour and help people act.",
       "when_to_use": "Use for UX writing and in-product language: UI labels, buttons, forms, errors, empty states, progress, onboarding and notifications.",
-      "example_request": "Write the interrupted-export message using the actual state contract; do not imply the download completed.",
+      "example_request": "Write the interrupted-export message from the state contract and explain that the download is still in progress.",
       "expected_result": "State-accurate interface wording, consistent action names and useful recovery.",
       "example": {
         "before": "Export success: processing incomplete.",
@@ -482,7 +482,7 @@
       "title": "Write individual professional outreach",
       "purpose": "Compose one-to-one professional messages that sound like their author and reflect the real relationship.",
       "when_to_use": "Use to write or revise individual professional emails, LinkedIn messages, pitches, introductions, referrals, reconnections and follow-ups.",
-      "example_request": "Use the research and our earlier conversation to draft a genuine email to the founder. Don't turn it into a templated pitch.",
+      "example_request": "Use the research and our earlier conversation to write a personal email to the founder that reflects the real reason for reaching out.",
       "expected_result": "A recipient-specific message grounded in real discoveries and relationship context, without invented familiarity, compulsory calls to action or generic sales scaffolding.",
       "example": {
         "source_facts": "An established contact has previously discussed developer integrations with the author. A recent independent example demonstrates a product capability. The author has not personally tested the integration.",
@@ -510,13 +510,13 @@
     "readme-craft": {
       "title": "Readme Craft",
       "purpose": "Shape a clear, visual GitHub README that guides readers from first impression to first use.",
-      "when_to_use": "Generate and improve README files using a 3-tier layout strategy, GitHub-native formatting patterns, badge guidance, and a state-driven workflow. Use when the user says \"write a README\", \"generate a README\", \"create a README\", \"improve this README\", \"review my README\", \"make my README better\", \"add badges\", or \"fix my README layout\".",
+      "when_to_use": "Generate and improve README files using a 3-tier layout strategy, GitHub-native formatting patterns, badge guidance, and a state-driven workflow. Use when the user says \"write a README\", \"generate a README\", \"create a README\", \"improve this README\", \"review my README\", \"make my README better\", \"add badges\", or \"fix my README layout\". For logo generation and comparison screenshots, Node.js 18+ and the npm packages listed in package.json power the bundled scripts; scripts/setup.sh installs those packages.",
       "example_request": "Use readme-craft to improve this work using its complete upstream guidance.",
       "expected_result": "An output shaped by the complete upstream instructions, source material and the task at hand.",
       "example": {
         "before": "The product has features and should be easier to understand.",
         "after": "Use the skill's complete instructions to shape a specific, source-faithful result for its intended reader.",
-        "source_facts": "Illustrative example only; this is not a benchmark of the upstream skill."
+        "source_facts": "Illustrative example; this entry records source and package review."
       },
       "source_basis": "Upstream skill from motiful/readme-craft; copied without editorial changes. Attribution and the exact MIT licence notice accompany the files.",
       "reference": "GEEKIST-UPSTREAM.md",
@@ -546,7 +546,7 @@
       "example": {
         "before": "The product has features and should be easier to understand.",
         "after": "Use the skill's complete instructions to shape a specific, source-faithful result for its intended reader.",
-        "source_facts": "Illustrative example only; this is not a benchmark of the upstream skill."
+        "source_facts": "Illustrative example; this entry records source and package review."
       },
       "source_basis": "Upstream skill from MJorgin/github-launch-studio; copied without editorial changes. Attribution and the exact MIT licence notice accompany the files.",
       "reference": "GEEKIST-UPSTREAM.md",
@@ -575,7 +575,7 @@
       "example": {
         "before": "The product has features and should be easier to understand.",
         "after": "Use the skill's complete instructions to shape a specific, source-faithful result for its intended reader.",
-        "source_facts": "Illustrative example only; this is not a benchmark of the upstream skill."
+        "source_facts": "Illustrative example; this entry records source and package review."
       },
       "source_basis": "Upstream skill from marketingskills/open-source-growth; copied without editorial changes. Attribution and the exact MIT licence notice accompany the files.",
       "reference": "GEEKIST-UPSTREAM.md",
@@ -605,7 +605,7 @@
       "example": {
         "before": "The product has features and should be easier to understand.",
         "after": "Use the skill's complete instructions to shape a specific, source-faithful result for its intended reader.",
-        "source_facts": "Illustrative example only; this is not a benchmark of the upstream skill."
+        "source_facts": "Illustrative example; this entry records source and package review."
       },
       "source_basis": "Upstream skill from marketingskills/open-source-growth; copied without editorial changes. Attribution and the exact MIT licence notice accompany the files.",
       "reference": "GEEKIST-UPSTREAM.md",
@@ -635,7 +635,7 @@
       "example": {
         "before": "The product has features and should be easier to understand.",
         "after": "Use the skill's complete instructions to shape a specific, source-faithful result for its intended reader.",
-        "source_facts": "Illustrative example only; this is not a benchmark of the upstream skill."
+        "source_facts": "Illustrative example; this entry records source and package review."
       },
       "source_basis": "Upstream skill from adam-lagerhausen/b2b-marketing-skills; copied without editorial changes. Attribution and the exact MIT licence notice accompany the files.",
       "reference": "GEEKIST-UPSTREAM.md",
@@ -665,7 +665,7 @@
       "example": {
         "before": "The product has features and should be easier to understand.",
         "after": "Use the skill's complete instructions to shape a specific, source-faithful result for its intended reader.",
-        "source_facts": "Illustrative example only; this is not a benchmark of the upstream skill."
+        "source_facts": "Illustrative example; this entry records source and package review."
       },
       "source_basis": "Upstream skill from adam-lagerhausen/b2b-marketing-skills; copied without editorial changes. Attribution and the exact MIT licence notice accompany the files.",
       "reference": "GEEKIST-UPSTREAM.md",
@@ -695,7 +695,7 @@
       "example": {
         "before": "The product has features and should be easier to understand.",
         "after": "Use the skill's complete instructions to shape a specific, source-faithful result for its intended reader.",
-        "source_facts": "Illustrative example only; this is not a benchmark of the upstream skill."
+        "source_facts": "Illustrative example; this entry records source and package review."
       },
       "source_basis": "Upstream skill from realjaymes/marketingagentskills; copied without editorial changes. Attribution and the exact MIT licence notice accompany the files.",
       "reference": "GEEKIST-UPSTREAM.md",
@@ -725,7 +725,7 @@
       "example": {
         "before": "The product has features and should be easier to understand.",
         "after": "Use the skill's complete instructions to shape a specific, source-faithful result for its intended reader.",
-        "source_facts": "Illustrative example only; this is not a benchmark of the upstream skill."
+        "source_facts": "Illustrative example; this entry records source and package review."
       },
       "source_basis": "Upstream skill from realjaymes/marketingagentskills; copied without editorial changes. Attribution and the exact MIT licence notice accompany the files.",
       "reference": "GEEKIST-UPSTREAM.md",
@@ -755,7 +755,7 @@
       "example": {
         "before": "The product has features and should be easier to understand.",
         "after": "Use the skill's complete instructions to shape a specific, source-faithful result for its intended reader.",
-        "source_facts": "Illustrative example only; this is not a benchmark of the upstream skill."
+        "source_facts": "Illustrative example; this entry records source and package review."
       },
       "source_basis": "Upstream skill from wondelai/skills; copied without editorial changes. Attribution and the exact MIT licence notice accompany the files.",
       "reference": "GEEKIST-UPSTREAM.md",
@@ -785,7 +785,7 @@
       "example": {
         "before": "The product has features and should be easier to understand.",
         "after": "Use the skill's complete instructions to shape a specific, source-faithful result for its intended reader.",
-        "source_facts": "Illustrative example only; this is not a benchmark of the upstream skill."
+        "source_facts": "Illustrative example; this entry records source and package review."
       },
       "source_basis": "Upstream skill from wondelai/skills; copied without editorial changes. Attribution and the exact MIT licence notice accompany the files.",
       "reference": "GEEKIST-UPSTREAM.md",
@@ -815,7 +815,7 @@
       "example": {
         "before": "The product has features and should be easier to understand.",
         "after": "Use the skill's complete instructions to shape a specific, source-faithful result for its intended reader.",
-        "source_facts": "Illustrative example only; this is not a benchmark of the upstream skill."
+        "source_facts": "Illustrative example; this entry records source and package review."
       },
       "source_basis": "Upstream skill from msimchowitz/writing-skills; copied without editorial changes. Attribution and the exact MIT licence notice accompany the files.",
       "reference": "GEEKIST-UPSTREAM.md",
@@ -839,13 +839,13 @@
     "non-autoregressive-writing-pass": {
       "title": "Non Autoregressive Writing Pass",
       "purpose": "Revise a completed draft's title, headings and transitions with the whole piece in view.",
-      "when_to_use": "Revisit a completed draft with global knowledge of its argument, then revise its title, subtitle, headings, paragraph heads, and paragraph-to-paragraph transitions. Use when display text no longer fits the finished work; when openings feel generic, abrupt, weak, or begin with a rejected alternative before reaching the point; when paragraphs are individually clear but do not build on one another; when a finished abstract needs a stronger first sentence; or when final sentences do not close one paragraph naturally or prepare the relation to the next.",
+      "when_to_use": "Use when display text needs to match a finished argument; when an opening feels generic, abrupt or leads with an alternative before the point; when paragraphs read clearly on their own but fail to build; when a finished abstract needs a stronger first sentence; or when final sentences need to close one paragraph and prepare the next.",
       "example_request": "Use non-autoregressive-writing-pass to improve this work using its complete upstream guidance.",
       "expected_result": "An output shaped by the complete upstream instructions, source material and the task at hand.",
       "example": {
         "before": "The product has features and should be easier to understand.",
         "after": "Use the skill's complete instructions to shape a specific, source-faithful result for its intended reader.",
-        "source_facts": "Illustrative example only; this is not a benchmark of the upstream skill."
+        "source_facts": "Illustrative example; this entry records source and package review."
       },
       "source_basis": "Upstream skill from msimchowitz/writing-skills; copied without editorial changes. Attribution and the exact MIT licence notice accompany the files.",
       "reference": "GEEKIST-UPSTREAM.md",
@@ -875,7 +875,7 @@
       "example": {
         "before": "The product has features and should be easier to understand.",
         "after": "Use the skill's complete instructions to shape a specific, source-faithful result for its intended reader.",
-        "source_facts": "Illustrative example only; this is not a benchmark of the upstream skill."
+        "source_facts": "Illustrative example; this entry records source and package review."
       },
       "source_basis": "Upstream skill from msimchowitz/writing-skills; copied without editorial changes. Attribution and the exact MIT licence notice accompany the files.",
       "reference": "GEEKIST-UPSTREAM.md",
@@ -898,14 +898,14 @@
     },
     "better-usage": {
       "title": "Better Usage",
-      "purpose": "Repair word choices whose meaning does not fit the claim or relationship.",
-      "when_to_use": "Diagnose and repair semantically mismatched word combinations while preserving the intended claim. Use when prose is grammatical but a verb does not literally fit its subject or object, a claim or section is given an action it cannot perform, an abstract relation is hidden by vague personification, an abstract process hides the actor or implies a review that the source does not establish, or replacing one verb still leaves a sloppy relation that needs an intermediate noun.",
+      "purpose": "Repair word choices that misstate the action or relationship.",
+      "when_to_use": "Use when prose is grammatical but a verb misstates its subject or object; when a claim or section appears to act; when vague personification hides a relationship; when an abstract process hides its actor or implies a review absent from the sources; or when a verb replacement still leaves a relation that needs a concrete intermediate noun.",
       "example_request": "Use better-usage to improve this work using its complete upstream guidance.",
       "expected_result": "An output shaped by the complete upstream instructions, source material and the task at hand.",
       "example": {
         "before": "The product has features and should be easier to understand.",
         "after": "Use the skill's complete instructions to shape a specific, source-faithful result for its intended reader.",
-        "source_facts": "Illustrative example only; this is not a benchmark of the upstream skill."
+        "source_facts": "Illustrative example; this entry records source and package review."
       },
       "source_basis": "Upstream skill from msimchowitz/writing-skills; copied without editorial changes. Attribution and the exact MIT licence notice accompany the files.",
       "reference": "GEEKIST-UPSTREAM.md",
@@ -935,7 +935,7 @@
       "example": {
         "before": "The product has features and should be easier to understand.",
         "after": "Use the skill's complete instructions to shape a specific, source-faithful result for its intended reader.",
-        "source_facts": "Illustrative example only; this is not a benchmark of the upstream skill."
+        "source_facts": "Illustrative example; this entry records source and package review."
       },
       "source_basis": "Upstream skill from msimchowitz/writing-skills; copied without editorial changes. Attribution and the exact MIT licence notice accompany the files.",
       "reference": "GEEKIST-UPSTREAM.md",
@@ -965,7 +965,7 @@
       "example": {
         "before": "The product has features and should be easier to understand.",
         "after": "Use the skill's complete instructions to shape a specific, source-faithful result for its intended reader.",
-        "source_facts": "Illustrative example only; this is not a benchmark of the upstream skill."
+        "source_facts": "Illustrative example; this entry records source and package review."
       },
       "source_basis": "Upstream skill from msimchowitz/writing-skills; copied without editorial changes. Attribution and the exact MIT licence notice accompany the files.",
       "reference": "GEEKIST-UPSTREAM.md",
@@ -995,7 +995,7 @@
       "example": {
         "before": "The product has features and should be easier to understand.",
         "after": "Use the skill's complete instructions to shape a specific, source-faithful result for its intended reader.",
-        "source_facts": "Illustrative example only; this is not a benchmark of the upstream skill."
+        "source_facts": "Illustrative example; this entry records source and package review."
       },
       "source_basis": "Upstream skill from hridoy43/agent-skills; copied without editorial changes. Attribution and the exact MIT licence notice accompany the files.",
       "reference": "GEEKIST-UPSTREAM.md",
@@ -1025,7 +1025,7 @@
       "example": {
         "before": "The product has features and should be easier to understand.",
         "after": "Use the skill's complete instructions to shape a specific, source-faithful result for its intended reader.",
-        "source_facts": "Illustrative example only; this is not a benchmark of the upstream skill."
+        "source_facts": "Illustrative example; this entry records source and package review."
       },
       "source_basis": "Upstream skill from hridoy43/agent-skills; copied without editorial changes. Attribution and the exact MIT licence notice accompany the files.",
       "reference": "GEEKIST-UPSTREAM.md",
@@ -1055,7 +1055,7 @@
       "example": {
         "before": "The product has features and should be easier to understand.",
         "after": "Use the skill's complete instructions to shape a specific, source-faithful result for its intended reader.",
-        "source_facts": "Illustrative example only; this is not a benchmark of the upstream skill."
+        "source_facts": "Illustrative example; this entry records source and package review."
       },
       "source_basis": "Upstream skill from blisse-code/bespoke; copied without editorial changes. Attribution and the exact MIT licence notice accompany the files.",
       "reference": "GEEKIST-UPSTREAM.md",
@@ -1085,7 +1085,7 @@
       "example": {
         "before": "The product has features and should be easier to understand.",
         "after": "Use the skill's complete instructions to shape a specific, source-faithful result for its intended reader.",
-        "source_facts": "Illustrative example only; this is not a benchmark of the upstream skill."
+        "source_facts": "Illustrative example; this entry records source and package review."
       },
       "source_basis": "Upstream skill from phuryn/work-humanizer; copied without editorial changes. Attribution and the exact MIT licence notice accompany the files.",
       "reference": "GEEKIST-UPSTREAM.md",
@@ -1115,7 +1115,7 @@
       "example": {
         "before": "The product has features and should be easier to understand.",
         "after": "Use the skill's complete instructions to shape a specific, source-faithful result for its intended reader.",
-        "source_facts": "Illustrative example only; this is not a benchmark of the upstream skill."
+        "source_facts": "Illustrative example; this entry records source and package review."
       },
       "source_basis": "Upstream skill from coreyhaines31/marketingskills; copied without editorial changes. Attribution and the exact MIT licence notice accompany the files.",
       "reference": "GEEKIST-UPSTREAM.md",
@@ -1145,7 +1145,7 @@
       "example": {
         "before": "The product has features and should be easier to understand.",
         "after": "Use the skill's complete instructions to shape a specific, source-faithful result for its intended reader.",
-        "source_facts": "Illustrative example only; this is not a benchmark of the upstream skill."
+        "source_facts": "Illustrative example; this entry records source and package review."
       },
       "source_basis": "Upstream skill from coreyhaines31/marketingskills; copied without editorial changes. Attribution and the exact MIT licence notice accompany the files.",
       "reference": "GEEKIST-UPSTREAM.md",
@@ -1175,7 +1175,7 @@
       "example": {
         "before": "The product has features and should be easier to understand.",
         "after": "Use the skill's complete instructions to shape a specific, source-faithful result for its intended reader.",
-        "source_facts": "Illustrative example only; this is not a benchmark of the upstream skill."
+        "source_facts": "Illustrative example; this entry records source and package review."
       },
       "source_basis": "Upstream skill from Gingiris-1031/gingiris-skills; copied without editorial changes. Attribution and the exact MIT licence notice accompany the files.",
       "reference": "GEEKIST-UPSTREAM.md",
@@ -1205,7 +1205,7 @@
       "example": {
         "before": "The product has features and should be easier to understand.",
         "after": "Use the skill's complete instructions to shape a specific, source-faithful result for its intended reader.",
-        "source_facts": "Illustrative example only; this is not a benchmark of the upstream skill."
+        "source_facts": "Illustrative example; this entry records source and package review."
       },
       "source_basis": "Upstream skill from Gingiris-1031/gingiris-skills; copied without editorial changes. Attribution and the exact MIT licence notice accompany the files.",
       "reference": "GEEKIST-UPSTREAM.md",
@@ -1235,7 +1235,7 @@
       "example": {
         "before": "The product has features and should be easier to understand.",
         "after": "Use the skill's complete instructions to shape a specific, source-faithful result for its intended reader.",
-        "source_facts": "Illustrative example only; this is not a benchmark of the upstream skill."
+        "source_facts": "Illustrative example; this entry records source and package review."
       },
       "source_basis": "Upstream skill from Infrasity-Labs/dev-gtm-claude-skills; copied without editorial changes. Attribution and the exact MIT licence notice accompany the files.",
       "reference": "GEEKIST-UPSTREAM.md",
@@ -1265,7 +1265,7 @@
       "example": {
         "before": "The product has features and should be easier to understand.",
         "after": "Use the skill's complete instructions to shape a specific, source-faithful result for its intended reader.",
-        "source_facts": "Illustrative example only; this is not a benchmark of the upstream skill."
+        "source_facts": "Illustrative example; this entry records source and package review."
       },
       "source_basis": "Upstream skill from alex-kashkarov/skills; copied without editorial changes. Attribution and the exact MIT licence notice accompany the files.",
       "reference": "GEEKIST-UPSTREAM.md",

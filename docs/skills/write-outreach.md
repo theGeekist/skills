@@ -11,7 +11,7 @@ Use to write or revise individual professional emails, LinkedIn messages, pitche
 
 Example request:
 
-> Use the research and our earlier conversation to draft a genuine email to the founder. Don't turn it into a templated pitch.
+> Use the research and our earlier conversation to write a personal email to the founder that reflects the real reason for reaching out.
 
 Expected result: A recipient-specific message grounded in real discoveries and relationship context, without invented familiarity, compulsory calls to action or generic sales scaffolding.
 

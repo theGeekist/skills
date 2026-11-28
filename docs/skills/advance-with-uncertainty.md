@@ -23,7 +23,7 @@ This illustrative example starts from the source facts below.
 
 **Before**
 
-> Compatibility is unproven. Stop implementation.
+> Compatibility has not been checked, so the implementation is paused.
 
 **After**
 

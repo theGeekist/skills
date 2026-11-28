@@ -7,7 +7,7 @@ Shape a clear, visual GitHub README that guides readers from first impression to
 
 ## When to use it
 
-Generate and improve README files using a 3-tier layout strategy, GitHub-native formatting patterns, badge guidance, and a state-driven workflow. Use when the user says "write a README", "generate a README", "create a README", "improve this README", "review my README", "make my README better", "add badges", or "fix my README layout".
+Generate and improve README files using a 3-tier layout strategy, GitHub-native formatting patterns, badge guidance, and a state-driven workflow. Use when the user says "write a README", "generate a README", "create a README", "improve this README", "review my README", "make my README better", "add badges", or "fix my README layout". For logo generation and comparison screenshots, Node.js 18+ and the npm packages listed in package.json power the bundled scripts; scripts/setup.sh installs those packages.
 
 Example request:
 
@@ -19,7 +19,7 @@ Expected result: An output shaped by the complete upstream instructions, source 
 
 This illustrative example starts from the source facts below.
 
-**Source facts and constraints:** Illustrative example only; this is not a benchmark of the upstream skill.
+**Source facts and constraints:** Illustrative example; this entry records source and package review.
 
 **Before**
 
