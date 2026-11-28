@@ -1,0 +1,6 @@
+interface:
+  icon_small: "./assets/geekist-interface/geekist-small.svg"
+  icon_large: "./assets/geekist-interface/geekist.svg"
+  display_name: "Ecosystem Inclusion Operator"
+  short_description: "Ecosystem Inclusion Operator: Find relevant open-source ecosyste"
+  default_prompt: "Use $ecosystem-inclusion-operator for this task."

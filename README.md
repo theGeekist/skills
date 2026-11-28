@@ -4,11 +4,11 @@
 
 # Geekist Skills
 
-**Thirteen agent skills for clear writing, commercial research and consistent project meaning.**
+**Thirty-nine agent skills for clear writing, commercial research and consistent project meaning.**
 
 [![Language checks](https://github.com/theGeekist/skills/actions/workflows/language-checks.yml/badge.svg)](https://github.com/theGeekist/skills/actions/workflows/language-checks.yml)
 [![Release](https://img.shields.io/github/v/release/theGeekist/skills)](https://github.com/theGeekist/skills/releases)
-[![Skills: 13](https://img.shields.io/badge/skills-13-ffde59)](#find-the-right-skill)
+[![Skills: 13](https://img.shields.io/badge/skills-39-ffde59)](#find-the-right-skill)
 [![Licence: MIT](https://img.shields.io/badge/Licence-MIT-blue.svg)](LICENSE)
 
 **[Install](#installation) · [Choose a skill](#find-the-right-skill) · [Worked example](docs/language-system/skill-walkthrough.md) · [Research](#we-looked-at-what-already-existed) · [Competitor comparison](docs/language-system/competing-writing-skills.md)**
@@ -72,13 +72,13 @@ Choose the skills and agent environments appropriate to your work. Each skill pr
 
 The general writer fills gaps between specific writing purposes; no specialist needs to load it first. The outreach skills are complementary but independently useful: research need not discover a sales opportunity, and an outreach assessment need not produce a message worth sending. There's no requirement to invoke the entire collection whenever an agent needs to write something. Software development has already accumulated enough ceremony without making technical prose another spectator sport.
 
-For a reproducible installation of the v1.9.3 release:
+For a reproducible installation of the v1.10.0 release:
 
-`npx skills add https://github.com/theGeekist/skills/tree/v1.9.3`
+`npx skills add https://github.com/theGeekist/skills/tree/v1.10.0`
 
-This documentation accompanies v1.9.3. The versioned command becomes available when that release is published; the unversioned command installs the current default branch.
+This documentation accompanies v1.10.0. The versioned command becomes available when that release is published; the unversioned command installs the current default branch.
 
-For **ChatGPT's Personal → Add plugin upload**, download the dedicated [Geekist ChatGPT plugin ZIP](https://github.com/theGeekist/skills/releases/download/v1.9.3/geekist-skills-chatgpt-v1.9.3.zip). The standard GitHub source ZIP is not the ChatGPT upload package. The dedicated archive contains the plugin manifest, MIT licence notice, and all 13 skills with their references. See **[installation and client support](docs/language-system/integration.md)** for the available installation routes and supported client environments, including the separate ChatGPT plugin distribution process.
+For **ChatGPT's Personal → Add plugin upload**, download the dedicated [Geekist ChatGPT plugin ZIP](https://github.com/theGeekist/skills/releases/download/v1.10.0/geekist-skills-chatgpt-v1.10.0.zip). The standard GitHub source ZIP is not the ChatGPT upload package. The dedicated archive contains the plugin manifest, Geekist MIT licence notice, all 39 skills and their references, plus the preserved upstream licence notices. See **[installation and client support](docs/language-system/integration.md)** for the available installation routes and supported client environments, including the separate ChatGPT plugin distribution process.
 
 <a id="choose-a-skill"></a>
 <a id="choose-a-language-skill"></a>
@@ -104,7 +104,7 @@ The collection covers several parts of project communication, from establishing 
 | **[Research outreach opportunities](docs/skills/research-outreach-opportunities.md)** | Investigate people and businesses, challenge commercial hypotheses and preserve worthwhile discoveries. |
 | **[Write outreach](docs/skills/write-outreach.md)** | Compose individual correspondence grounded in actual relationships, meaningful discoveries and the author's voice. |
 
-Each skill has a dedicated overview with a practical example. The overview also provides installation instructions and references to the sources behind its guidance.
+Each of the 39 skills has a dedicated overview with an example and installation instructions. Browse the [complete skill directory](docs/skills/index.md) to find and install any skill individually. The new product, README, storytelling, editing and developer-adoption skills are copied from their upstream repositories with their original instructions intact, their MIT licence notices preserved, and source attribution alongside each skill. They remain individually usable; no sequence is required. See the [source evaluation](docs/language-system/external-skills-review.md) for the candidate-by-candidate assessment.
 
 <a id="research-and-inspiration"></a>
 <a id="alternatives-and-differences"></a>
@@ -129,7 +129,7 @@ The research informed changes to our own skills, with the resulting practices in
 | **Plain Language Editor** | Examine a document's purpose and structure before concentrating on individual sentences. |
 | **Writing Clearly and Concisely** | Keep instructions economical while providing deeper references when needed. |
 
-We adapted these practices rather than importing complete editorial systems. The examples and editorial patterns in Geekist are locally authored, with attribution to the work that influenced them.
+Our original Geekist skills adapt selected practices, with locally authored examples and clear attribution. This release also includes complete upstream skills as separate, independently installable packages. Their original instructions remain intact, and each package carries its own attribution and MIT notice.
 
 This distinction is important because writing serves different purposes. A reflective essay may benefit from an unusual rhythm, while an architecture decision depends upon exact technical qualifications. Marketing presents another editorial problem altogether.
 

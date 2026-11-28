@@ -1,0 +1,6 @@
+interface:
+  icon_small: "./assets/geekist-interface/geekist-small.svg"
+  icon_large: "./assets/geekist-interface/geekist.svg"
+  display_name: "Voice Of Customer Synthesis"
+  short_description: "Voice Of Customer Synthesis: Turn customer notes, call transcrip"
+  default_prompt: "Use $voice-of-customer-synthesis for this task."

@@ -50,6 +50,38 @@
         "research-outreach-opportunities",
         "write-outreach"
       ]
+    },
+    {
+      "title": "Upstream product and writing skills",
+      "description": "Independently installable upstream skills for product positioning, storytelling, open-source adoption, README craft, editing and developer marketing. Each retains its source instructions and attribution.",
+      "skills": [
+        "readme-craft",
+        "github-launch-studio",
+        "repo-growth-operator",
+        "ecosystem-inclusion-operator",
+        "positioning-messaging-framework",
+        "voice-of-customer-synthesis",
+        "portfolio-positioning",
+        "storytelling-framework",
+        "obviously-awesome",
+        "made-to-stick",
+        "general-writing",
+        "non-autoregressive-writing-pass",
+        "writing-cadence",
+        "better-usage",
+        "academic-voice",
+        "humanizer",
+        "conversion-storytelling",
+        "github-readme-and-profile-writing",
+        "bespoke",
+        "work-humanizer",
+        "copywriting",
+        "product-marketing",
+        "developer-marketing-playbook",
+        "gingiris-github-star-growth",
+        "product-strategist",
+        "landing-page-architect"
+      ]
     }
   ]
 }

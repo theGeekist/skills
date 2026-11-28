@@ -1,0 +1,6 @@
+interface:
+  icon_small: "./assets/geekist-interface/geekist-small.svg"
+  icon_large: "./assets/geekist-interface/geekist.svg"
+  display_name: "Work Humanizer"
+  short_description: "Work Humanizer: Edit AI-sounding text so it reads like a careful"
+  default_prompt: "Use $work-humanizer for this task."

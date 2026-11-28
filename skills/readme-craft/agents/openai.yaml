@@ -1,0 +1,6 @@
+interface:
+  icon_small: "./assets/geekist-interface/geekist-small.svg"
+  icon_large: "./assets/geekist-interface/geekist.svg"
+  display_name: "Readme Craft"
+  short_description: "Readme Craft: Generate and improve README files using a 3-tier l"
+  default_prompt: "Use $readme-craft for this task."

@@ -1,0 +1,6 @@
+interface:
+  icon_small: "./assets/geekist-interface/geekist-small.svg"
+  icon_large: "./assets/geekist-interface/geekist.svg"
+  display_name: "Product Marketing"
+  short_description: "Product Marketing: When the user wants to create or update the p"
+  default_prompt: "Use $product-marketing for this task."

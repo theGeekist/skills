@@ -1,0 +1,6 @@
+interface:
+  icon_small: "./assets/geekist-interface/geekist-small.svg"
+  icon_large: "./assets/geekist-interface/geekist.svg"
+  display_name: "Made To Stick"
+  short_description: "Made To Stick: Craft messages that are understood, remembered, a"
+  default_prompt: "Use $made-to-stick for this task."

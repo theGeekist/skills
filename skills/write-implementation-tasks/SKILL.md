@@ -1,6 +1,6 @@
 ---
 name: write-implementation-tasks
-description: "Write or refine actionable work: implementation tasks, tickets, acceptance criteria, worker handoffs, concrete follow-up actions and execution plans. Use when another person or agent needs outcomes, behaviour, validation and dependencies expressed clearly. Not for narrative progress reports or decisions already made."
+description: "Write or refine actionable work, including implementation tasks, tickets, acceptance criteria, worker handoffs, follow-up actions and execution plans. Use when outcomes, behaviour, validation, dependencies or ownership need to be expressed clearly."
 ---
 
 # Write implementation tasks

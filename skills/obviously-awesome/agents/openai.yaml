@@ -1,0 +1,6 @@
+interface:
+  icon_small: "./assets/geekist-interface/geekist-small.svg"
+  icon_large: "./assets/geekist-interface/geekist.svg"
+  display_name: "Obviously Awesome"
+  short_description: "Obviously Awesome: Define product positioning by mapping competi"
+  default_prompt: "Use $obviously-awesome for this task."
