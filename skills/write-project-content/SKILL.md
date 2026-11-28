@@ -1,6 +1,6 @@
 ---
 name: write-project-content
-description: "Write, revise, organise or explain general project writing, including research notes, investigation findings, reports, meeting summaries, progress updates, README content and other useful prose. Use whenever a request involves shaping written material; add a more specific skill when it improves the result."
+description: "Use whenever someone asks to write up, summarise, explain or organise project information. Covers research notes, investigation findings, reports, meeting notes, project briefs, progress updates, postmortems, status summaries, technical context and other substantive prose. Choose a useful structure for the reader and combine with a specialist when that improves the result."
 ---
 
 # Write general project content

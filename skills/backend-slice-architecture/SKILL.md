@@ -1,6 +1,6 @@
 ---
 name: backend-slice-architecture
-description: "Use when creating, refactoring, reviewing, or incrementally migrating backend architecture towards a capability-first, package-shaped model with explicit public APIs, clear orchestration, and earned shared infrastructure across apps, packages, libraries, modules, or equivalent project roots."
+description: "Use when reviewing or changing backend architecture, package or folder structure, service boundaries, module ownership, APIs, cross-capability workflows or shared infrastructure. Helpful requests include where should this code live, what belongs in this module, review this backend structure and how should these services coordinate. Apply the Geekist capability-first rules while preserving the repository's stack and existing decisions."
 license: MIT
 metadata:
   author: Geekist

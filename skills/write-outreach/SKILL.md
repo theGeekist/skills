@@ -1,6 +1,6 @@
 ---
 name: write-outreach
-description: "Write, revise and review authentic one-to-one professional outreach: founder emails, freelance and consulting enquiries, LinkedIn DMs, introductions, reconnections and follow-ups. Use when asked to draft, pitch, follow up, reconnect or make a message sound like its author. Ground the message in real research and relationship history, learn editorial judgement from approved correspondence, and avoid manufactured familiarity, generic pitches and compulsory sequences."
+description: "Use when drafting, editing or reviewing an email, LinkedIn DM, pitch, introduction, referral request, reconnection or follow-up to one person. Works for founder outreach, freelance and consulting enquiries, recruiting messages and professional relationship-building. Ground the message in what the author knows and wants to say; keep the voice natural and the ask appropriate."
 ---
 
 # Write outreach

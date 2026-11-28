@@ -4,7 +4,7 @@
 
 # Geekist Skills
 
-**Thirty-nine agent skills for project writing, product narrative, developer adoption and commercial research.**
+**13 Geekist-authored skills for everyday project work, plus 26 attributed skills for product narrative, writing and developer adoption.**
 
 [![Language checks](https://github.com/theGeekist/skills/actions/workflows/language-checks.yml/badge.svg)](https://github.com/theGeekist/skills/actions/workflows/language-checks.yml)
 [![Release](https://img.shields.io/github/v/release/theGeekist/skills)](https://github.com/theGeekist/skills/releases)
@@ -84,27 +84,66 @@ For **ChatGPT's Personal → Add plugin upload**, download the dedicated [Geekis
 <a id="choose-a-language-skill"></a>
 <a id="included-architecture-skills"></a>
 
-## Find the right skill
+## Pick a skill by the job
 
-The collection covers several parts of project communication, from establishing terminology through to producing the documents that depend upon it. Architecture guidance is included because the way we organise a system influences the language used to describe it.
+You can ask for these directly in ordinary language. The collection is designed to meet requests where they arise; you do not need to name a skill or start a workflow.
 
-| Skill | Purpose |
+### Project language
+
+Domain terminology, naming, definitions, project glossaries, shared vocabulary and useful next steps for evidence gaps.
+
+| Skill | Use it when… |
 |---|---|
-| **[Establish project language](docs/skills/establish-project-language.md)** | Establish agreed meanings for project concepts before contributing agents develop incompatible vocabularies. |
-| **[Advance with uncertainty](docs/skills/advance-with-uncertainty.md)** | Describe evidence gaps accurately and connect them to useful next actions. |
-| **[Write implementation tasks](docs/skills/write-implementation-tasks.md)** | Express implementation work through clear objectives and acceptance criteria, with the relevant constraints preserved. |
-| **[Record architecture decisions](docs/skills/record-architecture-decisions.md)** | Document the reasoning behind technical decisions while that reasoning is still available to the people who made them. |
-| **[Write technical documentation](docs/skills/write-technical-documentation.md)** | Explain systems according to reader needs while retaining their technical contracts. |
-| **[Write marketing content](docs/skills/write-marketing-content.md)** | Communicate product value through credible claims and an appropriate editorial voice. |
-| **[Write interface content](docs/skills/write-interface-content.md)** | Explain application behaviour so users understand what happened and how to proceed. |
-| **[Review project language](docs/skills/review-project-language.md)** | Improve writing while checking its consistency with established terminology and source material. |
-| **[Backend slice architecture](docs/skills/backend-slice-architecture.md)** | Apply capability-first organisation with explicit orchestration and protected public boundaries. |
-| **[Frontend slice architecture](docs/skills/frontend-slice-architecture.md)** | Organise frontend features around clear ownership and appropriate shared components. |
-| **[Write general project content](docs/skills/write-project-content.md)** | Write reports, research findings, project summaries and other prose without a narrower specialist. |
-| **[Research outreach opportunities](docs/skills/research-outreach-opportunities.md)** | Investigate people and businesses, challenge commercial hypotheses and preserve worthwhile discoveries. |
-| **[Write outreach](docs/skills/write-outreach.md)** | Compose individual correspondence grounded in actual relationships, meaningful discoveries and the author's voice. |
+| [Define project terms and shared vocabulary](../../docs/skills/establish-project-language.md) | Clarify domain concepts, definitions, naming and the meanings used across code and project content. |
+| [Edit, polish and improve project writing](../../docs/skills/review-project-language.md) | Improve clarity, flow, voice and consistency in drafts, READMEs, reports, tasks and messages. |
+| [Turn unknowns into actionable next steps](../../docs/skills/advance-with-uncertainty.md) | Make open questions, missing evidence, pending checks and real blockers clear enough to act on. |
 
-Each of the 39 skills has a dedicated overview with an example and installation instructions. Browse the [complete skill directory](docs/skills/index.md) to find and install any skill individually. The new product, README, storytelling, editing and developer-adoption skills are copied from their upstream repositories with their original instructions intact, their MIT licence notices preserved, and source attribution alongside each skill. They remain individually usable; no sequence is required. See the [source evaluation](docs/language-system/external-skills-review.md) for the candidate-by-candidate assessment.
+### Project writing
+
+Implementation tasks, tickets, acceptance criteria, ADRs, technical documentation, system explanations and developer onboarding.
+
+| Skill | Use it when… |
+|---|---|
+| [Turn requirements into clear implementation tasks](../../docs/skills/write-implementation-tasks.md) | Translate goals and decisions into work with observable outcomes, acceptance criteria and useful handoffs. |
+| [Write architecture decision records and rationale](../../docs/skills/record-architecture-decisions.md) | Explain why a technical option was chosen, what alternatives were considered and what follows from the decision. |
+| [Explain systems and write developer docs](../../docs/skills/write-technical-documentation.md) | Help technical and non-technical readers understand how a system works and how to use it. |
+
+### Product content
+
+Product positioning, README introductions, launch copy, UX writing, interface microcopy, labels and product-state messages.
+
+| Skill | Use it when… |
+|---|---|
+| [Write product positioning and launch copy](../../docs/skills/write-marketing-content.md) | Explain why a product matters to its audience through clear positioning, supported claims and memorable copy. |
+| [Write UI copy and UX microcopy](../../docs/skills/write-interface-content.md) | Write labels, messages and product interface text that reflect real behaviour and help people act. |
+
+### Architecture
+
+Backend module placement, frontend feature ownership, public APIs, orchestration, scenes and shared UI boundaries.
+
+| Skill | Use it when… |
+|---|---|
+| [Review backend capabilities and boundaries](../../docs/skills/backend-slice-architecture.md) | Organise backend code around owned capabilities, clear public APIs and explicit orchestration. |
+| [Review frontend features and scene boundaries](../../docs/skills/frontend-slice-architecture.md) | Organise frontend code around feature ownership, public APIs and thin scene-level composition. |
+
+### General writing
+
+Project reports, research findings, meeting notes, progress updates, briefs, postmortems and clear explanations.
+
+| Skill | Use it when… |
+|---|---|
+| [Write project reports, summaries and updates](../../docs/skills/write-project-content.md) | Turn project information into useful prose without forcing it into a document template. |
+
+### Professional outreach
+
+Company and prospect research, commercial opportunities, founder outreach, professional emails, LinkedIn messages and follow-ups.
+
+| Skill | Use it when… |
+|---|---|
+| [Research companies and commercial opportunities](../../docs/skills/research-outreach-opportunities.md) | Find credible reasons to contact, collaborate with or offer useful work to a person or company. |
+| [Write individual professional outreach](../../docs/skills/write-outreach.md) | Compose one-to-one professional messages that sound like their author and reflect the real relationship. |
+
+The [full directory](docs/skills/index.md) includes all 39 individual skills. The 26 upstream additions remain separate and retain their original instructions and attribution.
 
 <a id="research-and-inspiration"></a>
 <a id="alternatives-and-differences"></a>

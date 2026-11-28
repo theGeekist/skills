@@ -1,6 +1,6 @@
 ---
 name: advance-with-uncertainty
-description: "Turn evidence gaps and unresolved questions into bounded next actions while preserving honest claims and actual blockers. Use when drafting or reviewing tasks, ADRs, plans, assessments or worker handoffs, especially when labels such as unproven, unqualified or no evidence are being used to reject options or halt authorised implementation."
+description: "Use when a task, review, plan, report, handoff or status update contains unknowns, untested assumptions, missing evidence, pending checks or unclear blockers. Turn phrases such as not proven, no evidence, unverified or still pending into the next useful check, the affected decision and work that can continue."
 ---
 
 # Advance with uncertainty

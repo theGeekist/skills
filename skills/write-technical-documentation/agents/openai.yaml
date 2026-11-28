@@ -1,6 +1,6 @@
 interface:
   icon_small: "./assets/geekist-small.svg"
   icon_large: "./assets/geekist.svg"
-  display_name: "Write Technical Documentation"
-  short_description: "Write guides for technical and business readers"
-  default_prompt: "Use $write-technical-documentation for this project artefact."
+  display_name: "Technical Docs and System Guides"
+  short_description: "Explain systems, APIs and developer workflows"
+  default_prompt: "Explain how this system works for its intended reader and point to the useful technical details."

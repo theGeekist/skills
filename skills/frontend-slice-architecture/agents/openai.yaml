@@ -1,6 +1,6 @@
 interface:
   icon_small: "./assets/geekist-small.svg"
   icon_large: "./assets/geekist.svg"
-  display_name: "Frontend Slice Architecture"
-  short_description: "Review feature ownership and scene composition"
-  default_prompt: "Use $frontend-slice-architecture to review frontend placement, public boundaries, scene composition, and incremental migration."
+  display_name: "Frontend Architecture and Features"
+  short_description: "Review frontend features, scenes and UI ownership"
+  default_prompt: "Review this frontend structure for feature ownership, scene composition and shared UI boundaries."

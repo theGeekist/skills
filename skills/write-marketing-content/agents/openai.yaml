@@ -1,6 +1,6 @@
 interface:
   icon_small: "./assets/geekist-small.svg"
   icon_large: "./assets/geekist.svg"
-  display_name: "Write Marketing Content"
-  short_description: "Explain product value with supported claims"
-  default_prompt: "Use $write-marketing-content for this project artefact."
+  display_name: "Product Positioning and Copy"
+  short_description: "Position products and write compelling copy"
+  default_prompt: "Explain why this product matters to its audience using only the facts and proof we have."

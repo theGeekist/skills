@@ -1,6 +1,6 @@
 ---
 name: write-implementation-tasks
-description: "Write or refine actionable work, including implementation tasks, tickets, acceptance criteria, worker handoffs, follow-up actions and execution plans. Use when outcomes, behaviour, validation, dependencies or ownership need to be expressed clearly."
+description: "Use when turning a request, decision, defect, feature, research result or remediation finding into actionable work. Covers implementation tasks, tickets, GitHub issues, acceptance criteria, Gherkin scenarios, subtasks, execution plans, worker briefs, handoffs and follow-up actions. Make the expected behaviour, ownership, dependencies and validation clear enough for another person or agent to act."
 ---
 
 # Write implementation tasks

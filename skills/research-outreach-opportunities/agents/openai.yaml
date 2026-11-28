@@ -1,6 +1,6 @@
 interface:
   icon_small: "./assets/geekist-small.svg"
   icon_large: "./assets/geekist.svg"
-  display_name: "Research Outreach Opportunities"
-  short_description: "Research people and real business opportunities"
-  default_prompt: "Use $research-outreach-opportunities to investigate this company, check existing CRM history, and identify worthwhile conversation angles."
+  display_name: "Company and Opportunity Research"
+  short_description: "Research companies, prospects and opportunities"
+  default_prompt: "Research this company and identify credible opportunities and conversation angles from current evidence."

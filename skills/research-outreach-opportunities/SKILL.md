@@ -1,6 +1,6 @@
 ---
 name: research-outreach-opportunities
-description: Research companies, prospects and professional connections to discover credible reasons for outreach, collaboration or paid work. Use when investigating a company, researching a founder or LinkedIn connection, qualifying a writing or engineering opportunity, examining a suspected documentation or content gap, or developing a commercially relevant point of view. Check existing CRM relationships, investigate current first-party and independent evidence, challenge the initial hypothesis, identify alternative opportunities and prepare evidence-backed findings for personalised outreach. Supports company-first and person-first workflows without manufacturing customer needs or sales pitches.
+description: "Use for company, account, prospect, founder or LinkedIn research; commercial opportunity discovery; paid-work and partnership exploration; or investigating a possible content, documentation or engineering gap. Check current first-party and independent evidence alongside known CRM history, then prepare findings and useful conversation angles for personalised outreach."
 ---
 
 # Research Outreach Opportunities

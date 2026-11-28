@@ -5,8 +5,8 @@
   "plugin": {
     "description": "Thirty-nine independently usable agent skills for project writing, product narrative, developer adoption, commercial research and consistent project meaning.",
     "display_name": "Geekist Skills",
-    "short_description": "Writing, product narrative and developer growth",
-    "long_description": "Choose a focused skill for the work at hand: shape product positioning and story, write a compelling GitHub README, improve developer adoption, refine prose, or continue Geekist's project writing, architecture and research practices. Upstream skills are preserved with attribution and can be installed individually. There is no required sequence.",
+    "short_description": "Project writing, architecture and product skills",
+    "long_description": "Geekist's 13 authored skills help with project language, architecture, tasks, reports, technical docs, UX copy, product communication and professional outreach. 26 independently usable upstream skills add further options for storytelling, README craft, editing and developer adoption. Each skill can be chosen for the task at hand; no sequence is required.",
     "keywords": [
       "agent-skills",
       "ai-writing",
@@ -36,21 +36,52 @@
       "open-source-growth",
       "github-readme",
       "storytelling",
-      "editorial-writing"
+      "editorial-writing",
+      "implementation-tasks",
+      "tickets",
+      "acceptance-criteria",
+      "gherkin",
+      "worker-handoffs",
+      "adr",
+      "backend-architecture",
+      "frontend-architecture",
+      "domain-terminology",
+      "glossary",
+      "ux-writing",
+      "microcopy",
+      "interface-copy",
+      "project-reports",
+      "meeting-notes",
+      "progress-updates",
+      "technical-documentation",
+      "readme",
+      "system-explanations",
+      "product-copy",
+      "launch-copy",
+      "outreach-research",
+      "company-research",
+      "linkedin-messages",
+      "professional-emails",
+      "evidence-gaps",
+      "project-language",
+      "architecture",
+      "proofreading"
     ],
     "default_prompts": [
-      "Make this GitHub README more compelling while staying faithful to the product.",
-      "Position this product for the developers who will benefit from it.",
-      "Improve this writing while preserving its meaning and voice.",
+      "Turn these requirements into an actionable implementation task with acceptance criteria.",
+      "Explain this system in a README section for a new contributor.",
+      "Review this draft for clarity, flow and consistent terminology.",
+      "Clarify the domain terms in this codebase and make a concise glossary.",
+      "Write clear UI messages for these product states.",
       "Research this company for credible collaboration or paid-work opportunities."
     ],
     "homepage": "https://geekist.co/skills"
   },
   "skills": {
     "advance-with-uncertainty": {
-      "title": "Advance through evidence gaps",
-      "purpose": "Describe evidence gaps accurately and connect them to useful next actions.",
-      "when_to_use": "Use when an unrun check or uncertain claim is preventing independent authorised work.",
+      "title": "Turn unknowns into actionable next steps",
+      "purpose": "Make open questions, missing evidence, pending checks and real blockers clear enough to act on.",
+      "when_to_use": "Use when a request mentions an unknown, assumption, pending check, evidence gap, unverified claim or blocker. Helps turn uncertainty in implementation tasks, pull-request reviews, plans, research notes, reports and handoffs into clear next steps.",
       "example_request": "Turn this untested adapter decision into bounded next actions and clear completion evidence.",
       "expected_result": "A precise gap, the next check, the dependent step and the work that can continue.",
       "example": {
@@ -66,20 +97,20 @@
           "url": "https://adr.github.io/madr/"
         }
       ],
-      "activation_description": "Turn evidence gaps and unresolved questions into bounded next actions while preserving honest claims and actual blockers. Use when drafting or reviewing tasks, ADRs, plans, assessments or worker handoffs, especially when labels such as unproven, unqualified or no evidence are being used to reject options or halt authorised implementation.",
+      "activation_description": "Use when a task, review, plan, report, handoff or status update contains unknowns, untested assumptions, missing evidence, pending checks or unclear blockers. Turn phrases such as not proven, no evidence, unverified or still pending into the next useful check, the affected decision and work that can continue.",
       "interface": {
         "icon_small": "./assets/geekist-small.svg",
         "icon_large": "./assets/geekist.svg",
-        "display_name": "Advance With Uncertainty",
-        "short_description": "Turn evidence gaps into bounded next actions",
-        "default_prompt": "Use $advance-with-uncertainty to record this evidence gap and continue the authorised work with clear validation and blocker criteria."
+        "display_name": "Evidence Gaps and Next Steps",
+        "short_description": "Turn unknowns into useful next actions",
+        "default_prompt": "Clarify what is still unknown here, name the next check and show which work can proceed."
       },
       "allow_implicit_invocation": null
     },
     "backend-slice-architecture": {
-      "title": "Review backend ownership and boundaries",
-      "purpose": "Apply capability-first organisation with explicit orchestration and protected public boundaries.",
-      "when_to_use": "Use when designing or reviewing a backend against this chosen model.",
+      "title": "Review backend capabilities and boundaries",
+      "purpose": "Organise backend code around owned capabilities, clear public APIs and explicit orchestration.",
+      "when_to_use": "Use for backend architecture reviews, folder and package placement, module boundaries, public APIs, orchestration, refactoring or incremental migrations.",
       "example_request": "Review this service boundary using the existing backend rules; preserve local naming and propose the smallest migration.",
       "expected_result": "A boundary recommendation tied to the existing rules, code and concrete consequences.",
       "example": {
@@ -99,20 +130,20 @@
           "url": "https://developers.google.com/style/jargon"
         }
       ],
-      "activation_description": "Use when creating, refactoring, reviewing, or incrementally migrating backend architecture towards a capability-first, package-shaped model with explicit public APIs, clear orchestration, and earned shared infrastructure across apps, packages, libraries, modules, or equivalent project roots.",
+      "activation_description": "Use when reviewing or changing backend architecture, package or folder structure, service boundaries, module ownership, APIs, cross-capability workflows or shared infrastructure. Helpful requests include where should this code live, what belongs in this module, review this backend structure and how should these services coordinate. Apply the Geekist capability-first rules while preserving the repository's stack and existing decisions.",
       "interface": {
         "icon_small": "./assets/geekist-small.svg",
         "icon_large": "./assets/geekist.svg",
-        "display_name": "Backend Slice Architecture",
-        "short_description": "Review backend ownership and orchestration",
-        "default_prompt": "Use $backend-slice-architecture to review backend placement, public boundaries, orchestration, and incremental migration."
+        "display_name": "Backend Architecture and Boundaries",
+        "short_description": "Review backend modules, APIs and ownership",
+        "default_prompt": "Review this backend structure for capability ownership, public APIs and clear orchestration."
       },
       "allow_implicit_invocation": null
     },
     "establish-project-language": {
-      "title": "Establish shared project terminology",
-      "purpose": "Establish agreed meanings for project concepts before contributing agents develop incompatible vocabularies.",
-      "when_to_use": "Use when onboarding to a domain, reconciling competing terms or introducing a consequential concept.",
+      "title": "Define project terms and shared vocabulary",
+      "purpose": "Clarify domain concepts, definitions, naming and the meanings used across code and project content.",
+      "when_to_use": "Use for domain terminology, glossary creation, onboarding, naming decisions, conflicting definitions or shared language across code, schemas, tests and documents.",
       "example_request": "Find what eligible means in this project and reconcile the code, decisions and interface wording.",
       "expected_result": "A sourced terminology record with context, accepted meanings, aliases and unresolved differences.",
       "example": {
@@ -136,20 +167,20 @@
           "url": "https://gitlab.com/tgdp/templates/-/tree/main/terminology-system"
         }
       ],
-      "activation_description": "Discover, reconcile and maintain project concepts and terminology from code, schemas, tests, decisions and existing content. Use when starting a project, onboarding to an existing domain, resolving competing meanings, proposing new terms, or establishing shared language across agents and artefacts.",
+      "activation_description": "Use when a term is unclear, overloaded or used in conflicting ways; when onboarding to a codebase; when creating a glossary; or when deciding how a new concept should be named. Trace terms through code, schemas, tests, decisions, interfaces and documents, then record the meanings and unresolved differences. Helpful requests include what does this mean here, are these two concepts the same, and make a glossary for this project.",
       "interface": {
         "icon_small": "./assets/geekist-small.svg",
         "icon_large": "./assets/geekist.svg",
-        "display_name": "Establish Project Language",
-        "short_description": "Establish shared project terms and meanings",
-        "default_prompt": "Use $establish-project-language to establish the concepts and vocabulary in this repository."
+        "display_name": "Project Terms and Glossary",
+        "short_description": "Clarify domain terms, names and definitions",
+        "default_prompt": "Map these terms to their meanings in the codebase and identify any conflicts or missing definitions."
       },
       "allow_implicit_invocation": null
     },
     "frontend-slice-architecture": {
-      "title": "Review frontend features and scenes",
-      "purpose": "Organise frontend features around clear ownership and appropriate shared components.",
-      "when_to_use": "Use when designing or reviewing a frontend against this chosen model.",
+      "title": "Review frontend features and scene boundaries",
+      "purpose": "Organise frontend code around feature ownership, public APIs and thin scene-level composition.",
+      "when_to_use": "Use for frontend architecture reviews, feature and scene boundaries, component placement, shared UI and hooks, refactoring or incremental migrations.",
       "example_request": "Review these feature and scene boundaries without changing the framework or underlying frontend rules.",
       "expected_result": "A targeted recommendation preserving feature ownership, public surfaces and scene composition.",
       "example": {
@@ -169,20 +200,20 @@
           "url": "https://developers.google.com/style/jargon"
         }
       ],
-      "activation_description": "Use when creating, refactoring, reviewing, or incrementally migrating frontend architecture towards a feature-first, package-shaped model with explicit public APIs, thin scene-level composition, and earned shared UI and hooks.",
+      "activation_description": "Use when reviewing or changing frontend architecture, feature and folder structure, scene composition, component ownership, shared UI or hooks. Helpful requests include where should this component live, is this feature boundary clear, review this screen architecture and what belongs in a shared component. Apply the Geekist feature-first rules while preserving the project's framework and existing decisions.",
       "interface": {
         "icon_small": "./assets/geekist-small.svg",
         "icon_large": "./assets/geekist.svg",
-        "display_name": "Frontend Slice Architecture",
-        "short_description": "Review feature ownership and scene composition",
-        "default_prompt": "Use $frontend-slice-architecture to review frontend placement, public boundaries, scene composition, and incremental migration."
+        "display_name": "Frontend Architecture and Features",
+        "short_description": "Review frontend features, scenes and UI ownership",
+        "default_prompt": "Review this frontend structure for feature ownership, scene composition and shared UI boundaries."
       },
       "allow_implicit_invocation": null
     },
     "record-architecture-decisions": {
-      "title": "Record clear architecture decisions",
-      "purpose": "Document the reasoning behind technical decisions while that reasoning is still available to the people who made them.",
-      "when_to_use": "Use for a formal decision record or a clear explanation of why a technical choice was made.",
+      "title": "Write architecture decision records and rationale",
+      "purpose": "Explain why a technical option was chosen, what alternatives were considered and what follows from the decision.",
+      "when_to_use": "Use for ADRs, technical decision records, decision summaries, design rationale, trade-off notes or explanations of why an option was chosen.",
       "example_request": "Record why we chose a shared queue, including alternatives, the pending latency check and when to reconsider.",
       "expected_result": "A decision record with context, options, outcome, consequences and explicit evidence status.",
       "example": {
@@ -198,20 +229,20 @@
           "url": "https://adr.github.io/madr/"
         }
       ],
-      "activation_description": "Write, explain, revise or summarise the rationale for a consequential technical decision, formally as an ADR or informally for future readers. Use for accepted choices, alternatives, trade-offs, decision drivers, consequences and reconsideration conditions. Not for general architecture design or technical research without a decision.",
+      "activation_description": "Use when recording or explaining an architecture or technical decision: ADRs, decision notes, accepted options, trade-offs, alternatives, consequences or reconsideration criteria. Also use when someone asks why a design was chosen or wants the decision captured for future contributors. The result can be formal or lightweight.",
       "interface": {
         "icon_small": "./assets/geekist-small.svg",
         "icon_large": "./assets/geekist.svg",
-        "display_name": "Record Architecture Decisions",
-        "short_description": "Explain decisions, options and consequences",
-        "default_prompt": "Use $record-architecture-decisions for this project artefact."
+        "display_name": "Architecture Decisions and ADRs",
+        "short_description": "Record decisions, trade-offs and consequences",
+        "default_prompt": "Record why we chose this approach, the alternatives, consequences and what would make us reconsider."
       },
       "allow_implicit_invocation": null
     },
     "review-project-language": {
-      "title": "Review clarity and consistent meaning",
-      "purpose": "Improve writing while checking its consistency with established terminology and source material.",
-      "when_to_use": "Use when existing prose needs editing, rewriting, polishing or review, including drafts, READMEs, reports, messages and research findings. It can also provide a finishing pass after another writing skill.",
+      "title": "Edit, polish and improve project writing",
+      "purpose": "Improve clarity, flow, voice and consistency in drafts, READMEs, reports, tasks and messages.",
+      "when_to_use": "Use for editing, proofreading, polishing, rewriting, tightening or reviewing prose, including READMEs, reports, research findings, tasks and messages.",
       "example_request": "Review this task, decision and announcement for consistent meanings and explain every consequential edit.",
       "expected_result": "Located findings or an authorised revision that preserves meanings, constraints and source claims.",
       "example": {
@@ -235,20 +266,20 @@
           "url": "https://www.iso.org/standard/78907.html"
         }
       ],
-      "activation_description": "Review, edit, rewrite or polish existing prose for clarity, flow, faithful meaning, consistent terminology, voice and accessible navigation. Use when a draft, README, report, research finding, message or other writing needs improvement, including a finishing pass after another writing skill.",
+      "activation_description": "Use when someone asks to edit, review, proofread, tighten, polish, rewrite or improve prose. Works with drafts, READMEs, reports, research findings, implementation tasks, messages and documents, including a finishing pass after another skill has drafted them. Preserve the author's meaning and deliberate voice while improving clarity, flow, terminology and navigation.",
       "interface": {
         "icon_small": "./assets/geekist-small.svg",
         "icon_large": "./assets/geekist.svg",
-        "display_name": "Review Project Language",
-        "short_description": "Review clarity, claims and consistent meaning",
-        "default_prompt": "Use $review-project-language for this project artefact."
+        "display_name": "Edit and Review Writing",
+        "short_description": "Polish drafts, docs, reports and messages",
+        "default_prompt": "Improve this draft's clarity and flow while preserving its meaning, details and voice."
       },
       "allow_implicit_invocation": null
     },
     "write-implementation-tasks": {
-      "title": "Write actionable implementation tasks",
-      "purpose": "Express implementation work through clear objectives and acceptance criteria, with the relevant constraints preserved.",
-      "when_to_use": "Use when outcomes, behaviour, validation, dependencies or ownership need to be expressed clearly in a task, acceptance criteria, handoff or plan.",
+      "title": "Turn requirements into clear implementation tasks",
+      "purpose": "Translate goals and decisions into work with observable outcomes, acceptance criteria and useful handoffs.",
+      "when_to_use": "Use to create or revise tickets, implementation tasks, acceptance criteria, Gherkin scenarios, subtasks, plans, remediation work or worker handoffs.",
       "example_request": "Write a task for members to export their own bookings; keep the access restriction and include failure cases.",
       "expected_result": "A task with observable behaviour, acceptance criteria, validation and precise dependencies.",
       "example": {
@@ -264,20 +295,20 @@
           "url": "https://gitlab.com/tgdp/templates/-/tree/main/how-to"
         }
       ],
-      "activation_description": "Write or refine actionable work, including implementation tasks, tickets, acceptance criteria, worker handoffs, follow-up actions and execution plans. Use when outcomes, behaviour, validation, dependencies or ownership need to be expressed clearly.",
+      "activation_description": "Use when turning a request, decision, defect, feature, research result or remediation finding into actionable work. Covers implementation tasks, tickets, GitHub issues, acceptance criteria, Gherkin scenarios, subtasks, execution plans, worker briefs, handoffs and follow-up actions. Make the expected behaviour, ownership, dependencies and validation clear enough for another person or agent to act.",
       "interface": {
         "icon_small": "./assets/geekist-small.svg",
         "icon_large": "./assets/geekist.svg",
-        "display_name": "Write Implementation Tasks",
-        "short_description": "Write tasks with observable outcomes",
-        "default_prompt": "Use $write-implementation-tasks for this project artefact."
+        "display_name": "Tasks and Acceptance Criteria",
+        "short_description": "Turn requirements into actionable tasks",
+        "default_prompt": "Turn this outcome into an implementation task with observable behaviour and acceptance criteria."
       },
       "allow_implicit_invocation": null
     },
     "write-interface-content": {
-      "title": "Write interface copy for real states",
-      "purpose": "Explain application behaviour so users understand what happened and how to proceed.",
-      "when_to_use": "Use for labels, errors, empty states, progress messages and dashboard wording.",
+      "title": "Write UI copy and UX microcopy",
+      "purpose": "Write labels, messages and product interface text that reflect real behaviour and help people act.",
+      "when_to_use": "Use for UX writing and in-product language: UI labels, buttons, forms, errors, empty states, progress, onboarding and notifications.",
       "example_request": "Write the interrupted-export message using the actual state contract; do not imply the download completed.",
       "expected_result": "State-accurate interface wording, consistent action names and useful recovery.",
       "example": {
@@ -293,20 +324,20 @@
           "url": "https://atlassian.design/foundations/content/voice-tone/"
         }
       ],
-      "activation_description": "Write or revise UX and in-product language: button labels, forms, dashboards, status and progress messages, errors, empty states, tooltips, onboarding and notifications. Use when wording must reflect actual product behaviour and help people act. Use marketing content for campaigns and public positioning.",
+      "activation_description": "Use when writing or reviewing UX copy, microcopy or text inside an app or website: buttons, labels, forms, field hints, validation, errors, empty and loading states, progress, success messages, dashboards, onboarding, tooltips and notifications. Ground each message in what the product actually does and make the next action clear.",
       "interface": {
         "icon_small": "./assets/geekist-small.svg",
         "icon_large": "./assets/geekist.svg",
-        "display_name": "Write Interface Content",
-        "short_description": "Write clear copy for actual product states",
-        "default_prompt": "Use $write-interface-content for this project artefact."
+        "display_name": "UX Writing and Interface Copy",
+        "short_description": "Write clear labels, errors and product messages",
+        "default_prompt": "Write the UI copy for these states so people understand what happened and what they can do."
       },
       "allow_implicit_invocation": null
     },
     "write-marketing-content": {
-      "title": "Explain supported product value",
-      "purpose": "Communicate product value through credible claims and an appropriate editorial voice.",
-      "when_to_use": "Use for audience-facing product communication, including product descriptions, README introductions, landing pages, positioning, portfolio narratives, launches, newsletters and social posts. Interface content remains a separate specialist when needed.",
+      "title": "Write product positioning and launch copy",
+      "purpose": "Explain why a product matters to its audience through clear positioning, supported claims and memorable copy.",
+      "when_to_use": "Use for product positioning, product and feature descriptions, README openings, landing pages, portfolio stories, launch copy, newsletters and social posts.",
       "example_request": "Announce booking exports for members; preserve that background scheduling has not shipped.",
       "expected_result": "Customer-facing value grounded in actual behaviour, with stronger claims separated for validation.",
       "example": {
@@ -326,20 +357,20 @@
           "url": "https://developers.google.com/style/jargon"
         }
       ],
-      "activation_description": "Write or refine audience-facing product communication, including product descriptions, README introductions, landing pages, positioning, portfolio narratives, launch announcements, newsletters and social posts. Use when explaining a product to its audience, whether or not a call to action is specified; use interface content for in-product states and controls.",
+      "activation_description": "Use when writing or improving product descriptions, value propositions, product positioning, README introductions, home or landing pages, portfolio narratives, launch announcements, newsletters or social posts. Also use when asked to make a product sound clearer, more compelling, interesting or memorable. Match the audience and support every product claim with source facts.",
       "interface": {
         "icon_small": "./assets/geekist-small.svg",
         "icon_large": "./assets/geekist.svg",
-        "display_name": "Write Marketing Content",
-        "short_description": "Explain product value with supported claims",
-        "default_prompt": "Use $write-marketing-content for this project artefact."
+        "display_name": "Product Positioning and Copy",
+        "short_description": "Position products and write compelling copy",
+        "default_prompt": "Explain why this product matters to its audience using only the facts and proof we have."
       },
       "allow_implicit_invocation": null
     },
     "write-project-content": {
-      "title": "Write General Project Content",
-      "purpose": "Write and revise general project prose without imposing a document template.",
-      "when_to_use": "Use whenever a request needs substantive project prose, including research notes, reports, findings, summaries, progress updates and explanations. Add a specialist when it improves the result.",
+      "title": "Write project reports, summaries and updates",
+      "purpose": "Turn project information into useful prose without forcing it into a document template.",
+      "when_to_use": "Use for project reports, research findings, meeting notes, project briefs, progress updates, postmortems, status summaries and written explanations.",
       "example_request": "Write up these investigation findings for the team. Keep observations, conclusions and next steps distinct.",
       "expected_result": "A source-faithful, readable report organised for its reader, without unnecessary template sections.",
       "example": {
@@ -359,20 +390,20 @@
           "url": "https://diataxis.fr/start-here/"
         }
       ],
-      "activation_description": "Write, revise, organise or explain general project writing, including research notes, investigation findings, reports, meeting summaries, progress updates, README content and other useful prose. Use whenever a request involves shaping written material; add a more specific skill when it improves the result.",
+      "activation_description": "Use whenever someone asks to write up, summarise, explain or organise project information. Covers research notes, investigation findings, reports, meeting notes, project briefs, progress updates, postmortems, status summaries, technical context and other substantive prose. Choose a useful structure for the reader and combine with a specialist when that improves the result.",
       "interface": {
         "icon_small": "./assets/geekist-small.svg",
         "icon_large": "./assets/geekist.svg",
-        "display_name": "Write General Project Content",
-        "short_description": "Write and revise clear general project prose",
-        "default_prompt": "Use $write-project-content to write up these findings for the team."
+        "display_name": "Project Reports and Writing",
+        "short_description": "Write reports, notes, summaries and updates",
+        "default_prompt": "Write this up for the team as a clear report with findings, decisions and next steps."
       },
       "allow_implicit_invocation": null
     },
     "write-technical-documentation": {
-      "title": "Write navigable technical documentation",
-      "purpose": "Explain systems according to reader needs while retaining their technical contracts.",
-      "when_to_use": "Use when explaining how a system works or presenting technical findings, from README material and research write-ups to tutorials, API references and developer guides. Use the ADR skill when the deliverable records a decision.",
+      "title": "Explain systems and write developer docs",
+      "purpose": "Help technical and non-technical readers understand how a system works and how to use it.",
+      "when_to_use": "Use to explain systems, APIs, integrations, codebases, architecture and technical findings in READMEs, guides, tutorials, references or onboarding docs.",
       "example_request": "Explain the export flow so a marketing reader can find its purpose and an engineer can find the access contract.",
       "expected_result": "A purpose-led document with explained terms, visible constraints and routes to exact technical detail.",
       "example": {
@@ -396,13 +427,13 @@
           "url": "https://arc42.org/overview/"
         }
       ],
-      "activation_description": "Write or improve technical explanations, README content, research write-ups, investigation and spike reports, system overviews, tutorials, how-to guides, API references and developer documentation. Use when explaining how a system works or presenting technical findings; use the ADR skill when the deliverable records a decision.",
+      "activation_description": "Use when someone asks to explain a codebase, system, API, integration, architecture or technical behaviour. Covers README files, developer onboarding, guides, tutorials, how-to material, architecture overviews, API references, technical specifications, research write-ups and spike findings. Organise detail around what the reader needs to understand or do.",
       "interface": {
         "icon_small": "./assets/geekist-small.svg",
         "icon_large": "./assets/geekist.svg",
-        "display_name": "Write Technical Documentation",
-        "short_description": "Write guides for technical and business readers",
-        "default_prompt": "Use $write-technical-documentation for this project artefact."
+        "display_name": "Technical Docs and System Guides",
+        "short_description": "Explain systems, APIs and developer workflows",
+        "default_prompt": "Explain how this system works for its intended reader and point to the useful technical details."
       },
       "allow_implicit_invocation": null
     },
@@ -411,13 +442,13 @@
       "interface": {
         "icon_small": "./assets/geekist-small.svg",
         "icon_large": "./assets/geekist.svg",
-        "display_name": "Research Outreach Opportunities",
-        "short_description": "Research people and real business opportunities",
-        "default_prompt": "Use $research-outreach-opportunities to investigate this company, check existing CRM history, and identify worthwhile conversation angles."
+        "display_name": "Company and Opportunity Research",
+        "short_description": "Research companies, prospects and opportunities",
+        "default_prompt": "Research this company and identify credible opportunities and conversation angles from current evidence."
       },
-      "title": "Research Outreach Opportunities",
-      "purpose": "Investigate companies and professional connections to discover worthwhile conversations and commercially relevant possibilities.",
-      "when_to_use": "Use to research companies, founders, LinkedIn contacts and potential writing or engineering work; revisit an initial outreach hypothesis using current sources and connected CRM history.",
+      "title": "Research companies and commercial opportunities",
+      "purpose": "Find credible reasons to contact, collaborate with or offer useful work to a person or company.",
+      "when_to_use": "Use for company and prospect research, founder research, paid-work opportunities, collaboration ideas, commercial discovery or a suspected content or engineering gap.",
       "example_request": "We thought this developer tool needed better documentation. Investigate whether that remains true and what other opportunities its customer implementations suggest.",
       "expected_result": "Current evidence, significant discoveries, revised commercial interpretations and a considered outreach-readiness recommendation.",
       "example": {
@@ -437,20 +468,20 @@
           "url": "https://github.com/theGeekist/skills"
         }
       ],
-      "activation_description": "Research companies, prospects and professional connections to discover credible reasons for outreach, collaboration or paid work. Use when investigating a company, researching a founder or LinkedIn connection, qualifying a writing or engineering opportunity, examining a suspected documentation or content gap, or developing a commercially relevant point of view. Check existing CRM relationships, investigate current first-party and independent evidence, challenge the initial hypothesis, identify alternative opportunities and prepare evidence-backed findings for personalised outreach. Supports company-first and person-first workflows without manufacturing customer needs or sales pitches."
+      "activation_description": "Use for company, account, prospect, founder or LinkedIn research; commercial opportunity discovery; paid-work and partnership exploration; or investigating a possible content, documentation or engineering gap. Check current first-party and independent evidence alongside known CRM history, then prepare findings and useful conversation angles for personalised outreach."
     },
     "write-outreach": {
       "allow_implicit_invocation": null,
       "interface": {
         "icon_small": "./assets/geekist-small.svg",
         "icon_large": "./assets/geekist.svg",
-        "display_name": "Write Outreach",
-        "short_description": "Write authentic one-to-one professional messages",
-        "default_prompt": "Use $write-outreach to write a message to this person using our actual relationship and research."
+        "display_name": "Professional Emails and LinkedIn Messages",
+        "short_description": "Write individual emails, DMs and follow-ups",
+        "default_prompt": "Draft a natural message to this person using the real context and the author's voice."
       },
-      "title": "Write Outreach",
-      "purpose": "Compose and revise individual professional messages with genuine substance and the author's authentic voice.",
-      "when_to_use": "Use to draft, edit or review founder emails, one-to-one pitches, LinkedIn DMs, freelance enquiries, introductions, reconnections and follow-ups.",
+      "title": "Write individual professional outreach",
+      "purpose": "Compose one-to-one professional messages that sound like their author and reflect the real relationship.",
+      "when_to_use": "Use to write or revise individual professional emails, LinkedIn messages, pitches, introductions, referrals, reconnections and follow-ups.",
       "example_request": "Use the research and our earlier conversation to draft a genuine email to the founder. Don't turn it into a templated pitch.",
       "expected_result": "A recipient-specific message grounded in real discoveries and relationship context, without invented familiarity, compulsory calls to action or generic sales scaffolding.",
       "example": {
@@ -474,7 +505,7 @@
           "url": "https://github.com/theGeekist/skills/blob/main/skills/write-marketing-content/SKILL.md"
         }
       ],
-      "activation_description": "Write, revise and review authentic one-to-one professional outreach: founder emails, freelance and consulting enquiries, LinkedIn DMs, introductions, reconnections and follow-ups. Use when asked to draft, pitch, follow up, reconnect or make a message sound like its author. Ground the message in real research and relationship history, learn editorial judgement from approved correspondence, and avoid manufactured familiarity, generic pitches and compulsory sequences."
+      "activation_description": "Use when drafting, editing or reviewing an email, LinkedIn DM, pitch, introduction, referral request, reconnection or follow-up to one person. Works for founder outreach, freelance and consulting enquiries, recruiting messages and professional relationship-building. Ground the message in what the author knows and wants to say; keep the voice natural and the ask appropriate."
     },
     "readme-craft": {
       "title": "Readme Craft",
@@ -1260,7 +1291,7 @@
     "groupings": [
       {
         "title": "Project language",
-        "description": "Establish shared terminology and review its use across the project. Includes guidance for handling evidence gaps constructively.",
+        "description": "Domain terminology, naming, definitions, project glossaries, shared vocabulary and useful next steps for evidence gaps.",
         "skills": [
           "establish-project-language",
           "review-project-language",
@@ -1269,7 +1300,7 @@
       },
       {
         "title": "Project writing",
-        "description": "Produce actionable implementation tasks and useful decision records. Includes technical documentation guidance organised around reader needs.",
+        "description": "Implementation tasks, tickets, acceptance criteria, ADRs, technical documentation, system explanations and developer onboarding.",
         "skills": [
           "write-implementation-tasks",
           "record-architecture-decisions",
@@ -1278,7 +1309,7 @@
       },
       {
         "title": "Product content",
-        "description": "Explain product value through credible marketing content and provide clear interface guidance that reflects actual application behaviour.",
+        "description": "Product positioning, README introductions, launch copy, UX writing, interface microcopy, labels and product-state messages.",
         "skills": [
           "write-marketing-content",
           "write-interface-content"
@@ -1286,7 +1317,7 @@
       },
       {
         "title": "Architecture",
-        "description": "Apply the established backend and frontend architecture rules while preserving their technical meaning.",
+        "description": "Backend module placement, frontend feature ownership, public APIs, orchestration, scenes and shared UI boundaries.",
         "skills": [
           "backend-slice-architecture",
           "frontend-slice-architecture"
@@ -1294,14 +1325,14 @@
       },
       {
         "title": "General writing",
-        "description": "Write reports, research findings, summaries and other prose without a narrower specialist.",
+        "description": "Project reports, research findings, meeting notes, progress updates, briefs, postmortems and clear explanations.",
         "skills": [
           "write-project-content"
         ]
       },
       {
         "title": "Professional outreach",
-        "description": "Investigate commercial possibilities and write authentic individual outreach, with CRM history and current evidence when available.",
+        "description": "Company and prospect research, commercial opportunities, founder outreach, professional emails, LinkedIn messages and follow-ups.",
         "skills": [
           "research-outreach-opportunities",
           "write-outreach"

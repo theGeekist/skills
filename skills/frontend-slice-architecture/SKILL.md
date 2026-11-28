@@ -1,6 +1,6 @@
 ---
 name: frontend-slice-architecture
-description: Use when creating, refactoring, reviewing, or incrementally migrating frontend architecture towards a feature-first, package-shaped model with explicit public APIs, thin scene-level composition, and earned shared UI and hooks.
+description: "Use when reviewing or changing frontend architecture, feature and folder structure, scene composition, component ownership, shared UI or hooks. Helpful requests include where should this component live, is this feature boundary clear, review this screen architecture and what belongs in a shared component. Apply the Geekist feature-first rules while preserving the project's framework and existing decisions."
 license: MIT
 metadata:
   author: Geekist

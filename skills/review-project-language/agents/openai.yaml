@@ -1,6 +1,6 @@
 interface:
   icon_small: "./assets/geekist-small.svg"
   icon_large: "./assets/geekist.svg"
-  display_name: "Review Project Language"
-  short_description: "Review clarity, claims and consistent meaning"
-  default_prompt: "Use $review-project-language for this project artefact."
+  display_name: "Edit and Review Writing"
+  short_description: "Polish drafts, docs, reports and messages"
+  default_prompt: "Improve this draft's clarity and flow while preserving its meaning, details and voice."

@@ -1,6 +1,6 @@
 interface:
   icon_small: "./assets/geekist-small.svg"
   icon_large: "./assets/geekist.svg"
-  display_name: "Record Architecture Decisions"
-  short_description: "Explain decisions, options and consequences"
-  default_prompt: "Use $record-architecture-decisions for this project artefact."
+  display_name: "Architecture Decisions and ADRs"
+  short_description: "Record decisions, trade-offs and consequences"
+  default_prompt: "Record why we chose this approach, the alternatives, consequences and what would make us reconsider."
