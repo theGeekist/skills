@@ -8,7 +8,7 @@ Choose by the job you need done. Start with the Geekist-authored skills for ever
 Domain terminology, naming, definitions, project glossaries, shared vocabulary and useful next steps for evidence gaps.
 
 | Skill overview | Purpose |
-|---|---|
+| --- | --- |
 | [Define project terms and shared vocabulary](establish-project-language.md) | Clarify domain concepts, definitions, naming and the meanings used across code and project content. |
 | [Edit, polish and improve project writing](review-project-language.md) | Improve clarity, flow, voice and consistency in drafts, READMEs, reports, tasks and messages. |
 | [Turn unknowns into actionable next steps](advance-with-uncertainty.md) | Make open questions, missing evidence, pending checks and real blockers clear enough to act on. |
@@ -18,7 +18,7 @@ Domain terminology, naming, definitions, project glossaries, shared vocabulary a
 Implementation tasks, tickets, acceptance criteria, ADRs, technical documentation, system explanations and developer onboarding.
 
 | Skill overview | Purpose |
-|---|---|
+| --- | --- |
 | [Turn requirements into clear implementation tasks](write-implementation-tasks.md) | Translate goals and decisions into work with observable outcomes, acceptance criteria and useful handoffs. |
 | [Write architecture decision records and rationale](record-architecture-decisions.md) | Explain why a technical option was chosen, what alternatives were considered and what follows from the decision. |
 | [Explain systems and write developer docs](write-technical-documentation.md) | Help technical and non-technical readers understand how a system works and how to use it. |
@@ -28,7 +28,7 @@ Implementation tasks, tickets, acceptance criteria, ADRs, technical documentatio
 Product positioning, README introductions, launch copy, UX writing, interface microcopy, labels and product-state messages.
 
 | Skill overview | Purpose |
-|---|---|
+| --- | --- |
 | [Write product positioning and launch copy](write-marketing-content.md) | Explain why a product matters to its audience through clear positioning, supported claims and memorable copy. |
 | [Write UI copy and UX microcopy](write-interface-content.md) | Write labels, messages and product interface text that reflect real behaviour and help people act. |
 
@@ -37,7 +37,7 @@ Product positioning, README introductions, launch copy, UX writing, interface mi
 Backend module placement, frontend feature ownership, public APIs, orchestration, scenes and shared UI boundaries.
 
 | Skill overview | Purpose |
-|---|---|
+| --- | --- |
 | [Review backend capabilities and boundaries](backend-slice-architecture.md) | Organise backend code around owned capabilities, clear public APIs and explicit orchestration. |
 | [Review frontend features and scene boundaries](frontend-slice-architecture.md) | Organise frontend code around feature ownership, public APIs and thin scene-level composition. |
 
@@ -46,7 +46,7 @@ Backend module placement, frontend feature ownership, public APIs, orchestration
 Project reports, research findings, meeting notes, progress updates, briefs, postmortems and clear explanations.
 
 | Skill overview | Purpose |
-|---|---|
+| --- | --- |
 | [Write project reports, summaries and updates](write-project-content.md) | Turn project information into useful prose without forcing it into a document template. |
 
 ## Professional outreach
@@ -54,7 +54,7 @@ Project reports, research findings, meeting notes, progress updates, briefs, pos
 Company and prospect research, commercial opportunities, founder outreach, professional emails, LinkedIn messages and follow-ups.
 
 | Skill overview | Purpose |
-|---|---|
+| --- | --- |
 | [Research companies and commercial opportunities](research-outreach-opportunities.md) | Find credible reasons to contact, collaborate with or offer useful work to a person or company. |
 | [Write individual professional outreach](write-outreach.md) | Compose one-to-one professional messages that sound like their author and reflect the real relationship. |
 
@@ -63,7 +63,7 @@ Company and prospect research, commercial opportunities, founder outreach, profe
 Independently installable upstream skills for product positioning, storytelling, open-source adoption, README craft, editing and developer marketing. Each retains its source instructions and attribution.
 
 | Skill overview | Purpose |
-|---|---|
+| --- | --- |
 | [Readme Craft](readme-craft.md) | Shape a clear, visual GitHub README that guides readers from first impression to first use. |
 | [Github Launch Studio](github-launch-studio.md) | Prepare a cohesive GitHub launch with positioning, a README, demos and release copy. |
 | [Repo Growth Operator](repo-growth-operator.md) | Improve open-source discovery, trust, adoption and revenue with practical repository changes. |
