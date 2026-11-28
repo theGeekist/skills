@@ -1,7 +1,7 @@
 {
   "name": "geekist-architecture-skills",
   "version": "1.10.0",
-  "description": "Thirty-nine independently usable agent skills for project writing, product narrative, developer adoption, commercial research and consistent project meaning.",
+  "description": "Forty independently usable agent skills for project writing, product narrative, developer adoption, commercial research and consistent project meaning.",
   "author": {
     "name": "Geekist",
     "url": "https://geekist.co"
@@ -73,7 +73,7 @@
   "interface": {
     "displayName": "Geekist Skills",
     "shortDescription": "Project writing, architecture and product skills",
-    "longDescription": "Geekist's 13 authored skills help with project language, architecture, tasks, reports, technical docs, UX copy, product communication and professional outreach. 26 independently usable upstream skills add further options for storytelling, README craft, editing and developer adoption. Choose each skill for the task at hand; combine skills when the work benefits from more than one perspective.",
+    "longDescription": "Geekist's 13 authored skills help with project language, architecture, tasks, reports, technical docs, UX copy, product communication and professional outreach. 27 independently usable upstream skills add further options for storytelling, README craft, editing and developer adoption. Choose each skill for the task at hand; combine skills when the work benefits from more than one perspective.",
     "developerName": "Geekist",
     "category": "Developer Tools",
     "capabilities": [

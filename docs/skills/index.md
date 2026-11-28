@@ -13,6 +13,7 @@ Choose by the work you need to do. Each page shows an example request, expected 
 | [Conversion Storytelling](conversion-storytelling.md) | Shape product stories and proof for websites, pricing and onboarding flows. |
 | [Copywriting](copywriting.md) | Write or refine clear, persuasive website and product copy. |
 | [Developer Marketing Playbook](developer-marketing-playbook.md) | Reach developers through docs, developer experience, community and DevRel. |
+| [Direct Response Copywriting](direct-response-copywriting.md) | Write persuasive sales and marketing copy around a clear reader, story and offer. |
 | [Ecosystem Inclusion Operator](ecosystem-inclusion-operator.md) | Find relevant open-source ecosystems and contribute useful, non-spammy integrations. |
 | [Define project terms and shared vocabulary](establish-project-language.md) | Clarify domain concepts, definitions, naming and the meanings used across code and project content. |
 | [Review frontend features and scene boundaries](frontend-slice-architecture.md) | Organise frontend code around feature ownership, public APIs and thin scene-level composition. |

@@ -1,6 +1,6 @@
 {
   "name": "geekist",
-  "description": "Thirty-nine independently usable agent skills for project writing, product narrative, developer adoption, commercial research and consistent project meaning.",
+  "description": "Forty independently usable agent skills for project writing, product narrative, developer adoption, commercial research and consistent project meaning.",
   "owner": {
     "name": "Geekist",
     "url": "https://geekist.co"
@@ -8,7 +8,7 @@
   "plugins": [
     {
       "name": "geekist-architecture-skills",
-      "description": "Thirty-nine independently usable agent skills for project writing, product narrative, developer adoption, commercial research and consistent project meaning.",
+      "description": "Forty independently usable agent skills for project writing, product narrative, developer adoption, commercial research and consistent project meaning.",
       "source": "."
     }
   ],

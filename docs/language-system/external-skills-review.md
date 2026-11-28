@@ -1,6 +1,6 @@
 # External skill source evaluation
 
-This review covers each repository and reference raised in the product-narrative discussion. The 26 selected skills are compiled as separate packages. Their upstream `SKILL.md` files and selected supporting files are copied verbatim. Geekist adds catalogue/interface metadata, the original licence notice, attribution records and local interface icons.
+This review covers each repository and reference raised in the product-narrative discussion. The 27 selected skills are compiled as separate packages from pinned upstream commits, with selected supporting files included. When a source name already exists in the collection, the package metadata gets a distinct name while the upstream instructions stay intact. Geekist adds catalogue and interface metadata, the original licence notice, attribution records and local interface icons.
 
 ## Evaluation scope
 
@@ -23,6 +23,7 @@ Each source link is pinned to the commit included in this collection. Every copi
 | [`blisse-code/bespoke`](https://github.com/blisse-code/bespoke/tree/92edcd70b121d13d52fbf6ed2cc1b813205e86ed) | `bespoke` | A distinct voice-profiling and content-refinement approach. Relevant when the README or launch writing should sound like a particular author rather than generic product copy. |
 | [`phuryn/work-humanizer`](https://github.com/phuryn/work-humanizer/tree/0a9065791d021f3dda695f3887cb2ae4c0eacbcf) | `work-humanizer` | Workplace-specific rewrite and interview modes, with attention to facts and commitments. Adjacent to the general humanizer; useful as a separate, narrower option. |
 | [`coreyhaines31/marketingskills`](https://github.com/coreyhaines31/marketingskills/tree/2bf95edb4ebd37198ab7fd18b99ba95c2145ec64) | `copywriting`, `product-marketing` | Useful pair for direct web copy and a durable product-marketing context. Both skills remain in the collection alongside separately authored alternatives. |
+| [`Prajeevan/copywriting-skill`](https://github.com/Prajeevan/copywriting-skill/tree/fcce41e3a3617beca31e7a534c9db13502e2d97d) | `direct-response-copywriting` | Adds a distinct direct-response method centred on a specific reader, hook, story, proof and offer, drawn from Sam Parr's interviews and Joseph Sugarman's work. The candidate repository includes an MIT licence and a standalone skill file with no supporting-file or runtime dependency. The package uses a distinct skill name because Corey Haines's `copywriting` skill is already included. Its attribution record pins commit `fcce41e3a3617beca31e7a534c9db13502e2d97d`; its original MIT notice is preserved in `LICENSE.upstream`. |
 | [`Gingiris-1031/gingiris-skills`](https://github.com/Gingiris-1031/gingiris-skills/tree/d22f7ae693568981b4a254b9469256c4b9e0e1b9) | `developer-marketing-playbook`, `gingiris-github-star-growth` | Adds developer relations, documentation, community and distribution playbooks. The two skills serve different scopes. Their source claims and promotional language remain unedited. |
 | [`Infrasity-Labs/dev-gtm-claude-skills`](https://github.com/Infrasity-Labs/dev-gtm-claude-skills/tree/a9fe6aa9de4c86a64d9d2a216b42bdba74c2aa30) | `product-strategist` | Broader than README craft: product strategy, OKRs and competitive work can establish useful context before narrative writing. Included as an adjacent capability rather than a copywriting specialist. |
 | [`alex-kashkarov/skills`](https://github.com/alex-kashkarov/skills/tree/c83409df59e0382201bd75940e850e537594b15d) | `landing-page-architect` | Focuses on landing-page structure, offer clarity and proof. Not a README tool, but a complementary product-narrative surface. |
@@ -34,7 +35,6 @@ Each source link is pinned to the commit included in this collection. Every copi
 | [Flagrare Agent Skills](https://github.com/Flagrare/agent-skills) | The repository had no published reuse licence at review time. Keep the source link for future reassessment. |
 | [Charm's open-source marketing philosophy](https://charm.land/blog/100k/) | A useful reference on product demonstrations, personality and portfolio identity. It is an article, so the collection treats it as context rather than an installable skill. |
 | [Gingiris Open Source mirror](https://github.com/Gingiris-1031/gingiris-open-source) | The mirror is archived. The current `gingiris-skills` repository supplies the two relevant playbooks. |
-| [Prajeevan/copywriting-skill](https://github.com/Prajeevan/copywriting-skill/tree/fcce41e3a3617beca31e7a534c9db13502e2d97d) | Relevant and self-contained, with a distinct direct-response emphasis based on Sam Parr and Joseph Sugarman. The repository includes an MIT licence, a 38 KB `SKILL.md`, and no supporting files or runtime dependencies. Its own README attributes substantial material to interviews and *The Adweek Copywriting Handbook*, and the skill includes numerous attributed formulations from those sources. Separate evidence of reuse rights for those third-party passages would support a future review. The existing Corey Haines `copywriting` and `product-marketing` skills remain included. |
 
 ## Why these remain separate
 
@@ -44,7 +44,7 @@ The catalogue also widens five Geekist writing triggers so ordinary requests can
 
 ## Licence handling
 
-All 14 selected source repositories were checked for an MIT licence before their files were copied. Every imported package has the full original notice in `LICENSE.upstream`, preserving the upstream copyright holder and permission terms. Each upstream notice continues to apply to its source material alongside Geekist's root licence for Geekist-authored work.
+All 15 selected source repositories were checked for an MIT licence before their files were copied. Every imported package has the full original notice in `LICENSE.upstream`, preserving the upstream copyright holder and permission terms. Each upstream notice continues to apply to its source material alongside Geekist's root licence for Geekist-authored work.
 
 ## Limitations and next evaluation
 

@@ -3,10 +3,10 @@
   "release": "v1.10.0",
   "repository": "https://github.com/theGeekist/skills",
   "plugin": {
-    "description": "Thirty-nine independently usable agent skills for project writing, product narrative, developer adoption, commercial research and consistent project meaning.",
+    "description": "Forty independently usable agent skills for project writing, product narrative, developer adoption, commercial research and consistent project meaning.",
     "display_name": "Geekist Skills",
     "short_description": "Project writing, architecture and product skills",
-    "long_description": "Geekist's 13 authored skills help with project language, architecture, tasks, reports, technical docs, UX copy, product communication and professional outreach. 26 independently usable upstream skills add further options for storytelling, README craft, editing and developer adoption. Choose each skill for the task at hand; combine skills when the work benefits from more than one perspective.",
+    "long_description": "Geekist's 13 authored skills help with project language, architecture, tasks, reports, technical docs, UX copy, product communication and professional outreach. 27 independently usable upstream skills add further options for storytelling, README craft, editing and developer adoption. Choose each skill for the task at hand; combine skills when the work benefits from more than one perspective.",
     "keywords": [
       "agent-skills",
       "ai-writing",
@@ -1285,6 +1285,36 @@
       },
       "allow_implicit_invocation": true,
       "upstream": true
+    },
+    "direct-response-copywriting": {
+      "title": "Direct Response Copywriting",
+      "purpose": "Write persuasive sales and marketing copy around a clear reader, story and offer.",
+      "when_to_use": "Use for persuasive copy across ads, headlines, landing pages, email, video scripts, product descriptions, sales pages and calls to action. Its direct-response approach centres the reader, hook, story, proof and offer.",
+      "example_request": "Use direct-response-copywriting to draft a landing page for our product from these verified claims and customer examples.",
+      "expected_result": "A reader-focused sales page with a clear hook, persuasive story, evidence and an actionable offer.",
+      "example": {
+        "before": "Write ads and landing pages.",
+        "after": "Write the hook your reader wants to follow. Build the story with proof. Make the next step clear.",
+        "source_facts": "The source teaches direct-response copy through reader focus, hooks, story, proof and offers. This example makes no measured conversion claim."
+      },
+      "source_basis": "Upstream skill from Prajeevan/copywriting-skill; included with its MIT licence and commit-pinned attribution. Its direct-response focus complements Corey Haines’s product-copy approach.",
+      "reference": "GEEKIST-UPSTREAM.md",
+      "sources": [
+        {
+          "label": "Prajeevan/copywriting-skill",
+          "url": "https://github.com/Prajeevan/copywriting-skill/blob/fcce41e3a3617beca31e7a534c9db13502e2d97d/skills/copywriting/SKILL.md"
+        }
+      ],
+      "activation_description": "Write persuasive copy that gets read and converts — ads, headlines, landing pages, email, video scripts (VSLs/short-form), product descriptions, sales pages, CTAs. Use when the user asks to write, rewrite, sharpen, or critique any marketing/sales/persuasive copy, craft a hook or headline, or make writing \"convert\" or \"punchier.\" Built on classic direct-response frameworks (Ogilvy, Hopkins, Sugarman, Wall Street Journal) as taught by Sam Parr (founder of The Hustle, co-host of My First Million).",
+      "interface": {
+        "icon_small": "./assets/geekist-small.svg",
+        "icon_large": "./assets/geekist.svg",
+        "display_name": "Direct Response Copywriting",
+        "short_description": "Write persuasive direct-response copy",
+        "default_prompt": "Use $direct-response-copywriting to shape this persuasive sales copy."
+      },
+      "allow_implicit_invocation": null,
+      "upstream": true
     }
   },
   "directory": {
@@ -1363,6 +1393,7 @@
           "bespoke",
           "work-humanizer",
           "copywriting",
+          "direct-response-copywriting",
           "product-marketing",
           "developer-marketing-playbook",
           "gingiris-github-star-growth",

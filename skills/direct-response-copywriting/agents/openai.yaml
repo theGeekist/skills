@@ -1,0 +1,6 @@
+interface:
+  icon_small: "./assets/geekist-small.svg"
+  icon_large: "./assets/geekist.svg"
+  display_name: "Direct Response Copywriting"
+  short_description: "Write persuasive direct-response copy"
+  default_prompt: "Use $direct-response-copywriting to shape this persuasive sales copy."

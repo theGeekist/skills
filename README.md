@@ -4,11 +4,13 @@
 
 # Geekist Skills
 
-**Keep project meaning clear as agents turn decisions into tasks, documentation, product experiences and launch copy.**
+**Give AI agents a shared language for your project.**
+
+13 Geekist-authored skills help teams carry terms, decisions and product facts into tasks, docs and customer-facing copy. 27 attributed skills add distinct approaches to README craft, positioning, storytelling and developer adoption.
 
 [![Language checks][checks-badge]][checks-url]
 [![Latest release][release-badge]][release-url]
-[![39 skills][skills-badge]][catalogue-url]
+[![40 skills][skills-badge]][catalogue-url]
 [![MIT licence][license-badge]][license-url]
 
 [Install](#quick-start) · [Choose a skill](#choose-by-the-work) · [See the walkthrough](docs/language-system/skill-walkthrough.md) · [Explore the research](#research-and-design)
@@ -26,7 +28,7 @@ Geekist Skills help teams carry shared meaning through everyday project work. Us
 - **Explain systems for their readers.** Create technical documentation, reports, interface messages and product stories from project facts.
 - **Prepare product and launch content.** Clarify positioning, improve READMEs and shape launch materials for developers and customers.
 - **Research and write professional outreach.** Find a credible reason to contact someone and write a message that reflects the real relationship.
-- **Choose among distinct methods.** Thirteen Geekist-authored skills sit alongside 26 attributed skills for positioning, storytelling, editing, README craft and developer adoption.
+- **Choose among distinct methods.** Thirteen Geekist-authored skills sit alongside 27 attributed skills for positioning, storytelling, editing, README craft and developer adoption.
 
 Each skill can be installed on its own. Combine skills when a task benefits from more than one perspective.
 
@@ -59,9 +61,10 @@ npx skills@latest add theGeekist/skills --skill establish-project-language
 | A system needs an explanation for developers or customers | [Write Technical Documentation](docs/skills/write-technical-documentation.md) |
 | Product claims and launch messages need a clear story | [Write Marketing Content](docs/skills/write-marketing-content.md) |
 | A README needs stronger structure and visual guidance | [Readme Craft](docs/skills/readme-craft.md) |
+| Ads and sales copy need a strong hook, story and offer | [Direct Response Copywriting](docs/skills/direct-response-copywriting.md) |
 | A professional contact needs relevant research and a personal message | [Research Opportunities](docs/skills/research-outreach-opportunities.md) and [Write Outreach](docs/skills/write-outreach.md) |
 
-[Browse all 39 skills](docs/skills/index.md) to compare their purposes, examples and sources.
+[Browse all 40 skills](docs/skills/index.md) to compare their purposes, examples and sources.
 
 ## See the method in context
 
@@ -94,7 +97,7 @@ Read the [research foundations](docs/language-system/research-baseline.md), [fra
 
 ### Source and architecture
 
-The 26 imported skills keep their upstream instructions, commit-pinned attribution and original MIT licence notices. The [external skills review](docs/language-system/external-skills-review.md) records package compatibility, runtime requirements and the source evaluation.
+The 27 imported skills keep their upstream instructions, commit-pinned attribution and original MIT licence notices. The [external skills review](docs/language-system/external-skills-review.md) records package compatibility, runtime requirements and the source evaluation.
 
 The backend and frontend playbooks express [@pipewrk's architecture rules](docs/language-system/architecture-rule-preservation.md). Geekist's writing guidance helps explain those decisions while their architecture remains attributed to its authors.
 
@@ -102,13 +105,13 @@ The backend and frontend playbooks express [@pipewrk's architecture rules](docs/
 
 Canonical writing references live in `standards/`; generated skill overviews live in `docs/skills/`. [Contributing](CONTRIBUTING.md) explains how to update references, regenerate outputs and run local checks. [Validation results](docs/language-system/validation-results.md) and [recorded evaluations](evaluations/README.md) describe the scope of available evidence.
 
-Published by [Geekist](https://geekist.co) · Architecture by [@pipewrk](https://github.com/pipewrk) · [MIT licence](LICENSE)
+README crafted with [Readme Craft](docs/skills/readme-craft.md) · Published by [Geekist](https://geekist.co) · Architecture by [@pipewrk](https://github.com/pipewrk) · [MIT licence](LICENSE)
 
 [checks-badge]: https://github.com/theGeekist/skills/actions/workflows/language-checks.yml/badge.svg
 [checks-url]: https://github.com/theGeekist/skills/actions/workflows/language-checks.yml
 [release-badge]: https://img.shields.io/github/v/release/theGeekist/skills
 [release-url]: https://github.com/theGeekist/skills/releases
-[skills-badge]: https://img.shields.io/badge/skills-39-ffde59
+[skills-badge]: https://img.shields.io/badge/skills-40-ffde59
 [catalogue-url]: docs/skills/index.md
 [license-badge]: https://img.shields.io/badge/licence-MIT-blue.svg
 [license-url]: LICENSE
