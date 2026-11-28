@@ -4,7 +4,7 @@ GitHub is the canonical source for the collection. A versioned release binds the
 
 ## Release v1.10.0 (prepared)
 
-The v1.10.0 release adds 26 individually installable upstream skills for product positioning, storytelling, writing and developer adoption. Upstream instructions remain unchanged, with the original MIT licence and attribution preserved in each package. The source review is recorded in [external skills evaluation](docs/language-system/external-skills-review.md). The repository retains them for contributor and reviewer reference. The tag and archives become available after the release workflow publishes them.
+This change prepares a v1.10.0 release with 26 individually installable skills from external MIT-licensed repositories. Their upstream instructions remain unchanged. Each imported package carries its original licence notice and commit-pinned attribution. See [the external skills evaluation](docs/language-system/external-skills-review.md) for the source-by-source assessment. The tag and downloadable archives become available after the release workflow publishes them.
 
 - Repository: <https://github.com/theGeekist/skills>
 - Release: <https://github.com/theGeekist/skills/releases/tag/v1.10.0>

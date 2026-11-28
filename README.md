@@ -4,11 +4,11 @@
 
 # Geekist Skills
 
-**Thirty-nine agent skills for clear writing, commercial research and consistent project meaning.**
+**Thirty-nine agent skills for project writing, product narrative, developer adoption and commercial research.**
 
 [![Language checks](https://github.com/theGeekist/skills/actions/workflows/language-checks.yml/badge.svg)](https://github.com/theGeekist/skills/actions/workflows/language-checks.yml)
 [![Release](https://img.shields.io/github/v/release/theGeekist/skills)](https://github.com/theGeekist/skills/releases)
-[![Skills: 13](https://img.shields.io/badge/skills-39-ffde59)](#find-the-right-skill)
+[![Skills: 39](https://img.shields.io/badge/skills-39-ffde59)](#find-the-right-skill)
 [![Licence: MIT](https://img.shields.io/badge/Licence-MIT-blue.svg)](LICENSE)
 
 **[Install](#installation) · [Choose a skill](#find-the-right-skill) · [Worked example](docs/language-system/skill-walkthrough.md) · [Research](#we-looked-at-what-already-existed) · [Competitor comparison](docs/language-system/competing-writing-skills.md)**
